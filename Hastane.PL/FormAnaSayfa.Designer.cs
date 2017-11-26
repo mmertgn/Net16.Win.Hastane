@@ -43,13 +43,15 @@
             this.btnCikis = new ns1.BunifuFlatButton();
             this.pbSeciliSayfa = new System.Windows.Forms.PictureBox();
             this.btnSistemYonetimi = new ns1.BunifuFlatButton();
-            this.bunifuFlatButton6 = new ns1.BunifuFlatButton();
-            this.bunifuFlatButton1 = new ns1.BunifuFlatButton();
+            this.btnOdemeIslemleri = new ns1.BunifuFlatButton();
+            this.btnTahlilIslemleri = new ns1.BunifuFlatButton();
             this.btnRandevu = new ns1.BunifuFlatButton();
-            this.bunifuFlatButton5 = new ns1.BunifuFlatButton();
+            this.btnPersonelIslemleri = new ns1.BunifuFlatButton();
             this.btnHastaKabul = new ns1.BunifuFlatButton();
             this.btnAnaSayfa = new ns1.BunifuFlatButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lblTarih = new ns1.BunifuFlatButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pnlLogo.SuspendLayout();
@@ -72,15 +74,16 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnSistemYonetimi);
+            this.panel2.Controls.Add(this.btnTahlilIslemleri);
+            this.panel2.Controls.Add(this.btnOdemeIslemleri);
+            this.panel2.Controls.Add(this.btnHastaKabul);
+            this.panel2.Controls.Add(this.lblTarih);
+            this.panel2.Controls.Add(this.btnRandevu);
+            this.panel2.Controls.Add(this.btnPersonelIslemleri);
             this.panel2.Controls.Add(this.pbSeciliSayfa);
             this.panel2.Controls.Add(this.btnDoktorIslemleri);
             this.panel2.Controls.Add(this.btnCikis);
-            this.panel2.Controls.Add(this.btnSistemYonetimi);
-            this.panel2.Controls.Add(this.bunifuFlatButton6);
-            this.panel2.Controls.Add(this.bunifuFlatButton1);
-            this.panel2.Controls.Add(this.btnRandevu);
-            this.panel2.Controls.Add(this.bunifuFlatButton5);
-            this.panel2.Controls.Add(this.btnHastaKabul);
             this.panel2.Controls.Add(this.btnAnaSayfa);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 53);
@@ -181,7 +184,7 @@
             this.btnDoktorIslemleri.IconVisible = true;
             this.btnDoktorIslemleri.IconZoom = 60D;
             this.btnDoktorIslemleri.IsTab = false;
-            this.btnDoktorIslemleri.Location = new System.Drawing.Point(0, 308);
+            this.btnDoktorIslemleri.Location = new System.Drawing.Point(0, 44);
             this.btnDoktorIslemleri.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDoktorIslemleri.Name = "btnDoktorIslemleri";
             this.btnDoktorIslemleri.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
@@ -189,7 +192,7 @@
             this.btnDoktorIslemleri.OnHoverTextColor = System.Drawing.Color.White;
             this.btnDoktorIslemleri.selected = false;
             this.btnDoktorIslemleri.Size = new System.Drawing.Size(181, 44);
-            this.btnDoktorIslemleri.TabIndex = 8;
+            this.btnDoktorIslemleri.TabIndex = 1;
             this.btnDoktorIslemleri.Text = "Doktor İşlemleri";
             this.btnDoktorIslemleri.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnDoktorIslemleri.Textcolor = System.Drawing.Color.White;
@@ -227,7 +230,7 @@
             this.btnCikis.OnHoverTextColor = System.Drawing.Color.White;
             this.btnCikis.selected = false;
             this.btnCikis.Size = new System.Drawing.Size(181, 44);
-            this.btnCikis.TabIndex = 7;
+            this.btnCikis.TabIndex = 8;
             this.btnCikis.Text = "Çıkış";
             this.btnCikis.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCikis.Textcolor = System.Drawing.Color.White;
@@ -266,7 +269,7 @@
             this.btnSistemYonetimi.IconVisible = true;
             this.btnSistemYonetimi.IconZoom = 60D;
             this.btnSistemYonetimi.IsTab = false;
-            this.btnSistemYonetimi.Location = new System.Drawing.Point(0, 264);
+            this.btnSistemYonetimi.Location = new System.Drawing.Point(0, 308);
             this.btnSistemYonetimi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSistemYonetimi.Name = "btnSistemYonetimi";
             this.btnSistemYonetimi.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
@@ -274,86 +277,88 @@
             this.btnSistemYonetimi.OnHoverTextColor = System.Drawing.Color.White;
             this.btnSistemYonetimi.selected = false;
             this.btnSistemYonetimi.Size = new System.Drawing.Size(181, 44);
-            this.btnSistemYonetimi.TabIndex = 6;
+            this.btnSistemYonetimi.TabIndex = 7;
             this.btnSistemYonetimi.Text = "Sistem Yönetimi";
             this.btnSistemYonetimi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSistemYonetimi.Textcolor = System.Drawing.Color.White;
             this.btnSistemYonetimi.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSistemYonetimi.Click += new System.EventHandler(this.btnSistemYonetimi_Click);
             // 
-            // bunifuFlatButton6
+            // btnOdemeIslemleri
             // 
-            this.bunifuFlatButton6.Activecolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
-            this.bunifuFlatButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton6.BorderRadius = 0;
-            this.bunifuFlatButton6.ButtonText = "Ödeme İşlemleri";
-            this.bunifuFlatButton6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton6.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bunifuFlatButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bunifuFlatButton6.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton6.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton6.Iconimage")));
-            this.bunifuFlatButton6.Iconimage_right = null;
-            this.bunifuFlatButton6.Iconimage_right_Selected = null;
-            this.bunifuFlatButton6.Iconimage_Selected = null;
-            this.bunifuFlatButton6.IconMarginLeft = 0;
-            this.bunifuFlatButton6.IconMarginRight = 0;
-            this.bunifuFlatButton6.IconRightVisible = true;
-            this.bunifuFlatButton6.IconRightZoom = 0D;
-            this.bunifuFlatButton6.IconVisible = true;
-            this.bunifuFlatButton6.IconZoom = 60D;
-            this.bunifuFlatButton6.IsTab = false;
-            this.bunifuFlatButton6.Location = new System.Drawing.Point(0, 220);
-            this.bunifuFlatButton6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuFlatButton6.Name = "bunifuFlatButton6";
-            this.bunifuFlatButton6.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
-            this.bunifuFlatButton6.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.bunifuFlatButton6.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton6.selected = false;
-            this.bunifuFlatButton6.Size = new System.Drawing.Size(181, 44);
-            this.bunifuFlatButton6.TabIndex = 5;
-            this.bunifuFlatButton6.Text = "Ödeme İşlemleri";
-            this.bunifuFlatButton6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton6.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton6.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOdemeIslemleri.Activecolor = System.Drawing.Color.Transparent;
+            this.btnOdemeIslemleri.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
+            this.btnOdemeIslemleri.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnOdemeIslemleri.BorderRadius = 0;
+            this.btnOdemeIslemleri.ButtonText = "Ödeme İşlemleri";
+            this.btnOdemeIslemleri.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOdemeIslemleri.DisabledColor = System.Drawing.Color.Gray;
+            this.btnOdemeIslemleri.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnOdemeIslemleri.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnOdemeIslemleri.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnOdemeIslemleri.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnOdemeIslemleri.Iconimage")));
+            this.btnOdemeIslemleri.Iconimage_right = null;
+            this.btnOdemeIslemleri.Iconimage_right_Selected = null;
+            this.btnOdemeIslemleri.Iconimage_Selected = null;
+            this.btnOdemeIslemleri.IconMarginLeft = 0;
+            this.btnOdemeIslemleri.IconMarginRight = 0;
+            this.btnOdemeIslemleri.IconRightVisible = true;
+            this.btnOdemeIslemleri.IconRightZoom = 0D;
+            this.btnOdemeIslemleri.IconVisible = true;
+            this.btnOdemeIslemleri.IconZoom = 60D;
+            this.btnOdemeIslemleri.IsTab = false;
+            this.btnOdemeIslemleri.Location = new System.Drawing.Point(0, 220);
+            this.btnOdemeIslemleri.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnOdemeIslemleri.Name = "btnOdemeIslemleri";
+            this.btnOdemeIslemleri.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
+            this.btnOdemeIslemleri.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.btnOdemeIslemleri.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnOdemeIslemleri.selected = false;
+            this.btnOdemeIslemleri.Size = new System.Drawing.Size(181, 44);
+            this.btnOdemeIslemleri.TabIndex = 5;
+            this.btnOdemeIslemleri.Text = "Ödeme İşlemleri";
+            this.btnOdemeIslemleri.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnOdemeIslemleri.Textcolor = System.Drawing.Color.White;
+            this.btnOdemeIslemleri.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOdemeIslemleri.Click += new System.EventHandler(this.btnOdemeIslemleri_Click);
             // 
-            // bunifuFlatButton1
+            // btnTahlilIslemleri
             // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
-            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton1.BorderRadius = 0;
-            this.bunifuFlatButton1.ButtonText = "Tahlil İşlemleri";
-            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bunifuFlatButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton1.Iconimage")));
-            this.bunifuFlatButton1.Iconimage_right = null;
-            this.bunifuFlatButton1.Iconimage_right_Selected = null;
-            this.bunifuFlatButton1.Iconimage_Selected = null;
-            this.bunifuFlatButton1.IconMarginLeft = 0;
-            this.bunifuFlatButton1.IconMarginRight = 0;
-            this.bunifuFlatButton1.IconRightVisible = true;
-            this.bunifuFlatButton1.IconRightZoom = 0D;
-            this.bunifuFlatButton1.IconVisible = true;
-            this.bunifuFlatButton1.IconZoom = 60D;
-            this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(0, 176);
-            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(181, 44);
-            this.bunifuFlatButton1.TabIndex = 1;
-            this.bunifuFlatButton1.Text = "Tahlil İşlemleri";
-            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTahlilIslemleri.Activecolor = System.Drawing.Color.Transparent;
+            this.btnTahlilIslemleri.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
+            this.btnTahlilIslemleri.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTahlilIslemleri.BorderRadius = 0;
+            this.btnTahlilIslemleri.ButtonText = "Tahlil İşlemleri";
+            this.btnTahlilIslemleri.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTahlilIslemleri.DisabledColor = System.Drawing.Color.Gray;
+            this.btnTahlilIslemleri.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTahlilIslemleri.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnTahlilIslemleri.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnTahlilIslemleri.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnTahlilIslemleri.Iconimage")));
+            this.btnTahlilIslemleri.Iconimage_right = null;
+            this.btnTahlilIslemleri.Iconimage_right_Selected = null;
+            this.btnTahlilIslemleri.Iconimage_Selected = null;
+            this.btnTahlilIslemleri.IconMarginLeft = 0;
+            this.btnTahlilIslemleri.IconMarginRight = 0;
+            this.btnTahlilIslemleri.IconRightVisible = true;
+            this.btnTahlilIslemleri.IconRightZoom = 0D;
+            this.btnTahlilIslemleri.IconVisible = true;
+            this.btnTahlilIslemleri.IconZoom = 60D;
+            this.btnTahlilIslemleri.IsTab = false;
+            this.btnTahlilIslemleri.Location = new System.Drawing.Point(0, 264);
+            this.btnTahlilIslemleri.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTahlilIslemleri.Name = "btnTahlilIslemleri";
+            this.btnTahlilIslemleri.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
+            this.btnTahlilIslemleri.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.btnTahlilIslemleri.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnTahlilIslemleri.selected = false;
+            this.btnTahlilIslemleri.Size = new System.Drawing.Size(181, 44);
+            this.btnTahlilIslemleri.TabIndex = 6;
+            this.btnTahlilIslemleri.Text = "Tahlil İşlemleri";
+            this.btnTahlilIslemleri.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnTahlilIslemleri.Textcolor = System.Drawing.Color.White;
+            this.btnTahlilIslemleri.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTahlilIslemleri.Click += new System.EventHandler(this.btnTahlilIslemleri_Click);
             // 
             // btnRandevu
             // 
@@ -386,49 +391,50 @@
             this.btnRandevu.OnHoverTextColor = System.Drawing.Color.White;
             this.btnRandevu.selected = false;
             this.btnRandevu.Size = new System.Drawing.Size(181, 44);
-            this.btnRandevu.TabIndex = 1;
+            this.btnRandevu.TabIndex = 3;
             this.btnRandevu.Text = "Randevu İşlemleri";
             this.btnRandevu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnRandevu.Textcolor = System.Drawing.Color.White;
             this.btnRandevu.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRandevu.Click += new System.EventHandler(this.btnRandevu_Click);
             // 
-            // bunifuFlatButton5
+            // btnPersonelIslemleri
             // 
-            this.bunifuFlatButton5.Activecolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
-            this.bunifuFlatButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton5.BorderRadius = 0;
-            this.bunifuFlatButton5.ButtonText = "Personel İşlemleri";
-            this.bunifuFlatButton5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton5.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bunifuFlatButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bunifuFlatButton5.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton5.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton5.Iconimage")));
-            this.bunifuFlatButton5.Iconimage_right = null;
-            this.bunifuFlatButton5.Iconimage_right_Selected = null;
-            this.bunifuFlatButton5.Iconimage_Selected = null;
-            this.bunifuFlatButton5.IconMarginLeft = 0;
-            this.bunifuFlatButton5.IconMarginRight = 0;
-            this.bunifuFlatButton5.IconRightVisible = true;
-            this.bunifuFlatButton5.IconRightZoom = 0D;
-            this.bunifuFlatButton5.IconVisible = true;
-            this.bunifuFlatButton5.IconZoom = 60D;
-            this.bunifuFlatButton5.IsTab = false;
-            this.bunifuFlatButton5.Location = new System.Drawing.Point(0, 88);
-            this.bunifuFlatButton5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuFlatButton5.Name = "bunifuFlatButton5";
-            this.bunifuFlatButton5.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
-            this.bunifuFlatButton5.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.bunifuFlatButton5.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton5.selected = false;
-            this.bunifuFlatButton5.Size = new System.Drawing.Size(181, 44);
-            this.bunifuFlatButton5.TabIndex = 4;
-            this.bunifuFlatButton5.Text = "Personel İşlemleri";
-            this.bunifuFlatButton5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton5.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton5.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPersonelIslemleri.Activecolor = System.Drawing.Color.Transparent;
+            this.btnPersonelIslemleri.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
+            this.btnPersonelIslemleri.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPersonelIslemleri.BorderRadius = 0;
+            this.btnPersonelIslemleri.ButtonText = "Personel İşlemleri";
+            this.btnPersonelIslemleri.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPersonelIslemleri.DisabledColor = System.Drawing.Color.Gray;
+            this.btnPersonelIslemleri.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPersonelIslemleri.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnPersonelIslemleri.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnPersonelIslemleri.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnPersonelIslemleri.Iconimage")));
+            this.btnPersonelIslemleri.Iconimage_right = null;
+            this.btnPersonelIslemleri.Iconimage_right_Selected = null;
+            this.btnPersonelIslemleri.Iconimage_Selected = null;
+            this.btnPersonelIslemleri.IconMarginLeft = 0;
+            this.btnPersonelIslemleri.IconMarginRight = 0;
+            this.btnPersonelIslemleri.IconRightVisible = true;
+            this.btnPersonelIslemleri.IconRightZoom = 0D;
+            this.btnPersonelIslemleri.IconVisible = true;
+            this.btnPersonelIslemleri.IconZoom = 60D;
+            this.btnPersonelIslemleri.IsTab = false;
+            this.btnPersonelIslemleri.Location = new System.Drawing.Point(0, 88);
+            this.btnPersonelIslemleri.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPersonelIslemleri.Name = "btnPersonelIslemleri";
+            this.btnPersonelIslemleri.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
+            this.btnPersonelIslemleri.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.btnPersonelIslemleri.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnPersonelIslemleri.selected = false;
+            this.btnPersonelIslemleri.Size = new System.Drawing.Size(181, 44);
+            this.btnPersonelIslemleri.TabIndex = 2;
+            this.btnPersonelIslemleri.Text = "Personel İşlemleri";
+            this.btnPersonelIslemleri.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnPersonelIslemleri.Textcolor = System.Drawing.Color.White;
+            this.btnPersonelIslemleri.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPersonelIslemleri.Click += new System.EventHandler(this.btnPersonelIslemleri_Click);
             // 
             // btnHastaKabul
             // 
@@ -453,7 +459,7 @@
             this.btnHastaKabul.IconVisible = true;
             this.btnHastaKabul.IconZoom = 60D;
             this.btnHastaKabul.IsTab = false;
-            this.btnHastaKabul.Location = new System.Drawing.Point(0, 44);
+            this.btnHastaKabul.Location = new System.Drawing.Point(0, 176);
             this.btnHastaKabul.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnHastaKabul.Name = "btnHastaKabul";
             this.btnHastaKabul.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
@@ -461,7 +467,7 @@
             this.btnHastaKabul.OnHoverTextColor = System.Drawing.Color.White;
             this.btnHastaKabul.selected = false;
             this.btnHastaKabul.Size = new System.Drawing.Size(181, 44);
-            this.btnHastaKabul.TabIndex = 2;
+            this.btnHastaKabul.TabIndex = 4;
             this.btnHastaKabul.Text = "Hasta Kabul";
             this.btnHastaKabul.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnHastaKabul.Textcolor = System.Drawing.Color.White;
@@ -499,7 +505,7 @@
             this.btnAnaSayfa.OnHoverTextColor = System.Drawing.Color.White;
             this.btnAnaSayfa.selected = false;
             this.btnAnaSayfa.Size = new System.Drawing.Size(181, 44);
-            this.btnAnaSayfa.TabIndex = 3;
+            this.btnAnaSayfa.TabIndex = 0;
             this.btnAnaSayfa.Text = "Anasayfa";
             this.btnAnaSayfa.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAnaSayfa.Textcolor = System.Drawing.Color.White;
@@ -516,6 +522,49 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // lblTarih
+            // 
+            this.lblTarih.Activecolor = System.Drawing.Color.Transparent;
+            this.lblTarih.BackColor = System.Drawing.Color.Transparent;
+            this.lblTarih.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.lblTarih.BorderRadius = 0;
+            this.lblTarih.ButtonText = "Tarih : ";
+            this.lblTarih.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.lblTarih.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
+            this.lblTarih.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lblTarih.Enabled = false;
+            this.lblTarih.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblTarih.Iconcolor = System.Drawing.Color.Transparent;
+            this.lblTarih.Iconimage = null;
+            this.lblTarih.Iconimage_right = null;
+            this.lblTarih.Iconimage_right_Selected = null;
+            this.lblTarih.Iconimage_Selected = null;
+            this.lblTarih.IconMarginLeft = 20;
+            this.lblTarih.IconMarginRight = 0;
+            this.lblTarih.IconRightVisible = true;
+            this.lblTarih.IconRightZoom = 0D;
+            this.lblTarih.IconVisible = true;
+            this.lblTarih.IconZoom = 90D;
+            this.lblTarih.IsTab = false;
+            this.lblTarih.Location = new System.Drawing.Point(0, 627);
+            this.lblTarih.Margin = new System.Windows.Forms.Padding(4);
+            this.lblTarih.Name = "lblTarih";
+            this.lblTarih.Normalcolor = System.Drawing.Color.DarkRed;
+            this.lblTarih.OnHovercolor = System.Drawing.Color.Firebrick;
+            this.lblTarih.OnHoverTextColor = System.Drawing.Color.White;
+            this.lblTarih.selected = true;
+            this.lblTarih.Size = new System.Drawing.Size(181, 44);
+            this.lblTarih.TabIndex = 9;
+            this.lblTarih.Text = "Tarih : ";
+            this.lblTarih.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTarih.Textcolor = System.Drawing.Color.White;
+            this.lblTarih.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             // 
             // FormAnaSayfa
             // 
@@ -551,10 +600,10 @@
         private System.Windows.Forms.Panel pnlHeader;
         private System.Windows.Forms.Panel pnlKullaniciBilgileri;
         private System.Windows.Forms.Panel pnlIcerik;
-        private ns1.BunifuFlatButton bunifuFlatButton1;
+        private ns1.BunifuFlatButton btnTahlilIslemleri;
         private ns1.BunifuFlatButton btnSistemYonetimi;
-        private ns1.BunifuFlatButton bunifuFlatButton6;
-        private ns1.BunifuFlatButton bunifuFlatButton5;
+        private ns1.BunifuFlatButton btnOdemeIslemleri;
+        private ns1.BunifuFlatButton btnPersonelIslemleri;
         private ns1.BunifuFlatButton btnAnaSayfa;
         private ns1.BunifuFlatButton btnHastaKabul;
         private ns1.BunifuFlatButton btnRandevu;
@@ -565,5 +614,7 @@
         private ns1.BunifuFlatButton btnDoktorIslemleri;
         private ns1.BunifuElipse bunifuElipse1;
         private ns1.BunifuDragControl bunifuDragControl1;
+        private System.Windows.Forms.Timer timer1;
+        private ns1.BunifuFlatButton lblTarih;
     }
 }

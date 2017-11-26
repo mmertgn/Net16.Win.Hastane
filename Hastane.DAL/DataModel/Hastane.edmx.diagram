@@ -4,22 +4,22 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="01961c1df93940239822e2b31633076e" Name="Diagram1">
-        <EntityTypeShape EntityType="HastaneModel.HastaGecmisi" Width="1.5" PointX="3" PointY="8.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="HastaneModel.HastaHizmetHareketler" Width="1.5" PointX="7.5" PointY="21.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="HastaneModel.HastaKabul" Width="1.5" PointX="3" PointY="14.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="HastaneModel.Hastalar" Width="1.5" PointX="0.75" PointY="9.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="HastaneModel.HastaSikayetleri" Width="1.5" PointX="8.25" PointY="15.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="HastaneModel.Hizmetler" Width="1.5" PointX="3" PointY="22.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="HastaneModel.Klinikler" Width="1.5" PointX="0.75" PointY="15.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="HastaneModel.Kurumlar" Width="1.5" PointX="1.5" PointY="5.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="HastaneModel.Odemeler" Width="1.5" PointX="5.25" PointY="21" IsExpanded="true" />
-        <EntityTypeShape EntityType="HastaneModel.Personeller" Width="1.5" PointX="6" PointY="14.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="HastaneModel.Randevular" Width="1.5" PointX="10.25" PointY="19.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="HastaneModel.Receteler" Width="1.5" PointX="11.25" PointY="15.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="HastaneModel.Tahliller" Width="1.5" PointX="5.25" PointY="28.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="HastaneModel.Teshisler" Width="1.5" PointX="8.25" PointY="11.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="HastaneModel.Unvanlar" Width="1.5" PointX="3.75" PointY="12.125" IsExpanded="true" />
+      <Diagram DiagramId="01961c1df93940239822e2b31633076e" Name="Diagram1" ZoomLevel="93">
+        <EntityTypeShape EntityType="HastaneModel.HastaGecmisi" Width="1.5" PointX="24.625" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HastaneModel.HastaHizmetHareketler" Width="1.5" PointX="29.125" PointY="21.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HastaneModel.HastaKabul" Width="1.5" PointX="24.625" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HastaneModel.Hastalar" Width="1.5" PointX="22.375" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="HastaneModel.HastaSikayetleri" Width="1.5" PointX="29.875" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HastaneModel.Hizmetler" Width="1.5" PointX="24.625" PointY="22.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HastaneModel.Klinikler" Width="1.5" PointX="22.375" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HastaneModel.Kurumlar" Width="1.5" PointX="23.125" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HastaneModel.Odemeler" Width="1.5" PointX="26.875" PointY="20.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HastaneModel.Personeller" Width="1.5" PointX="27.625" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HastaneModel.Randevular" Width="1.5" PointX="31.875" PointY="19.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HastaneModel.Receteler" Width="1.5" PointX="32.875" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HastaneModel.Tahliller" Width="1.5" PointX="26.875" PointY="28.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HastaneModel.Teshisler" Width="1.5" PointX="29.875" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HastaneModel.Unvanlar" Width="1.5" PointX="25.375" PointY="12" IsExpanded="true" />
         <AssociationConnector Association="HastaneModel.FK_HastaGecmisi_Hastalar" ManuallyRouted="false" />
         <AssociationConnector Association="HastaneModel.FK_HastaHizmetHareketler_HastaKabul" ManuallyRouted="false" />
         <AssociationConnector Association="HastaneModel.FK_HastaHizmetHareketler_Hizmetler" ManuallyRouted="false" />
@@ -44,7 +44,9 @@
         <AssociationConnector Association="HastaneModel.FK_Randevular_Personeller" ManuallyRouted="false" />
         <AssociationConnector Association="HastaneModel.FK_Receteler_Personeller" ManuallyRouted="false" />
         <AssociationConnector Association="HastaneModel.FK_Teshisler_Personeller" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="HastaneModel.SistemYoneticileri" Width="1.5" PointX="5.625" PointY="7.625" />
+        <EntityTypeShape EntityType="HastaneModel.SistemYoneticileri" Width="1.5" PointX="27.25" PointY="7.5" />
+        <EntityTypeShape EntityType="HastaneModel.ReceteDetay" Width="1.5" PointX="35.125" PointY="11.375" />
+        <AssociationConnector Association="HastaneModel.FK_ReceteDetay_Receteler" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

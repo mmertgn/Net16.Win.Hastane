@@ -87,11 +87,29 @@
     <Compile Include="FormHastaKabul.Designer.cs">
       <DependentUpon>FormHastaKabul.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormOdemeIslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOdemeIslemleri.Designer.cs">
+      <DependentUpon>FormOdemeIslemleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPersonelIslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPersonelIslemleri.Designer.cs">
+      <DependentUpon>FormPersonelIslemleri.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormSistemYönetimi.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormSistemYönetimi.Designer.cs">
       <DependentUpon>FormSistemYönetimi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTahlilIslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTahlilIslemleri.Designer.cs">
+      <DependentUpon>FormTahlilIslemleri.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -116,11 +134,20 @@
     <EmbeddedResource Include="FormHastaKabul.resx">
       <DependentUpon>FormHastaKabul.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormOdemeIslemleri.resx">
+      <DependentUpon>FormOdemeIslemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPersonelIslemleri.resx">
+      <DependentUpon>FormPersonelIslemleri.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormRandevu.resx">
       <DependentUpon>FormRandevu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSistemYönetimi.resx">
       <DependentUpon>FormSistemYönetimi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTahlilIslemleri.resx">
+      <DependentUpon>FormTahlilIslemleri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

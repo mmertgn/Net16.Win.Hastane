@@ -141,6 +141,15 @@
           <Property Name="HastaID" Type="int" Nullable="false" />
           <Property Name="Geldimi" Type="bit" />
         </EntityType>
+        <EntityType Name="ReceteDetay">
+          <Key>
+            <PropertyRef Name="ReceteDetayID" />
+          </Key>
+          <Property Name="ReceteDetayID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ReceteID" Type="int" Nullable="false" />
+          <Property Name="İlacAd" Type="varchar" MaxLength="50" />
+          <Property Name="İlacKullanimSikligi" Type="varchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="Receteler">
           <Key>
             <PropertyRef Name="ReceteID" />
@@ -151,7 +160,6 @@
           <Property Name="KurumID" Type="int" Nullable="false" />
           <Property Name="PersonelID" Type="int" Nullable="false" />
           <Property Name="HastaID" Type="int" Nullable="false" />
-          <Property Name="IlacAd" Type="varchar" MaxLength="50" />
           <Property Name="Silindi" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="SistemYoneticileri">
@@ -396,6 +404,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_ReceteDetay_Receteler">
+          <End Role="Receteler" Type="Self.Receteler" Multiplicity="1" />
+          <End Role="ReceteDetay" Type="Self.ReceteDetay" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Receteler">
+              <PropertyRef Name="ReceteID" />
+            </Principal>
+            <Dependent Role="ReceteDetay">
+              <PropertyRef Name="ReceteID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Receteler_HastaKabul">
           <End Role="HastaKabul" Type="Self.HastaKabul" Multiplicity="1" />
           <End Role="Receteler" Type="Self.Receteler" Multiplicity="*" />
@@ -492,6 +512,7 @@
           <EntitySet Name="Odemeler" EntityType="Self.Odemeler" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Personeller" EntityType="Self.Personeller" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Randevular" EntityType="Self.Randevular" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ReceteDetay" EntityType="Self.ReceteDetay" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Receteler" EntityType="Self.Receteler" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SistemYoneticileri" EntityType="Self.SistemYoneticileri" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tahliller" EntityType="Self.Tahliller" Schema="dbo" store:Type="Tables" />
@@ -564,6 +585,10 @@
           <AssociationSet Name="FK_Randevular_Personeller" Association="Self.FK_Randevular_Personeller">
             <End Role="Personeller" EntitySet="Personeller" />
             <End Role="Randevular" EntitySet="Randevular" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ReceteDetay_Receteler" Association="Self.FK_ReceteDetay_Receteler">
+            <End Role="Receteler" EntitySet="Receteler" />
+            <End Role="ReceteDetay" EntitySet="ReceteDetay" />
           </AssociationSet>
           <AssociationSet Name="FK_Receteler_HastaKabul" Association="Self.FK_Receteler_HastaKabul">
             <End Role="HastaKabul" EntitySet="HastaKabul" />
@@ -783,12 +808,12 @@
           <Property Name="KurumID" Type="Int32" Nullable="false" />
           <Property Name="PersonelID" Type="Int32" Nullable="false" />
           <Property Name="HastaID" Type="Int32" Nullable="false" />
-          <Property Name="IlacAd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Silindi" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="HastaKabul" Relationship="Self.FK_Receteler_HastaKabul" FromRole="Receteler" ToRole="HastaKabul" />
           <NavigationProperty Name="Hastalar" Relationship="Self.FK_Receteler_Hastalar" FromRole="Receteler" ToRole="Hastalar" />
           <NavigationProperty Name="Kurumlar" Relationship="Self.FK_Receteler_Kurumlar" FromRole="Receteler" ToRole="Kurumlar" />
           <NavigationProperty Name="Personeller" Relationship="Self.FK_Receteler_Personeller" FromRole="Receteler" ToRole="Personeller" />
+          <NavigationProperty Name="ReceteDetay" Relationship="HastaneModel.FK_ReceteDetay_Receteler" FromRole="Receteler" ToRole="ReceteDetay" />
         </EntityType>
         <EntityType Name="Tahliller">
           <Key>
@@ -1224,6 +1249,11 @@
             <End Role="Teshisler" EntitySet="Teshisler" />
           </AssociationSet>
           <EntitySet Name="SistemYoneticileri" EntityType="HastaneModel.SistemYoneticileri" />
+          <EntitySet Name="ReceteDetay" EntityType="HastaneModel.ReceteDetay" />
+          <AssociationSet Name="FK_ReceteDetay_Receteler" Association="HastaneModel.FK_ReceteDetay_Receteler">
+            <End Role="Receteler" EntitySet="Receteler" />
+            <End Role="ReceteDetay" EntitySet="ReceteDetay" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="SistemYoneticileri">
           <Key>
@@ -1235,6 +1265,28 @@
           <Property Name="KullaniciAdi" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Sifre" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
+        <EntityType Name="ReceteDetay">
+          <Key>
+            <PropertyRef Name="ReceteDetayID" />
+          </Key>
+          <Property Name="ReceteDetayID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ReceteID" Type="Int32" Nullable="false" />
+          <Property Name="İlacAd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="İlacKullanimSikligi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Receteler" Relationship="HastaneModel.FK_ReceteDetay_Receteler" FromRole="ReceteDetay" ToRole="Receteler" />
+        </EntityType>
+        <Association Name="FK_ReceteDetay_Receteler">
+          <End Type="HastaneModel.Receteler" Role="Receteler" Multiplicity="1" />
+          <End Type="HastaneModel.ReceteDetay" Role="ReceteDetay" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Receteler">
+              <PropertyRef Name="ReceteID" />
+            </Principal>
+            <Dependent Role="ReceteDetay">
+              <PropertyRef Name="ReceteID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1397,7 +1449,6 @@
                 <ScalarProperty Name="KurumID" ColumnName="KurumID" />
                 <ScalarProperty Name="PersonelID" ColumnName="PersonelID" />
                 <ScalarProperty Name="HastaID" ColumnName="HastaID" />
-                <ScalarProperty Name="IlacAd" ColumnName="IlacAd" />
                 <ScalarProperty Name="Silindi" ColumnName="Silindi" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -1441,6 +1492,16 @@
                 <ScalarProperty Name="Soyad" ColumnName="Soyad" />
                 <ScalarProperty Name="Ad" ColumnName="Ad" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ReceteDetay">
+            <EntityTypeMapping TypeName="HastaneModel.ReceteDetay">
+              <MappingFragment StoreEntitySet="ReceteDetay">
+                <ScalarProperty Name="İlacKullanimSikligi" ColumnName="İlacKullanimSikligi" />
+                <ScalarProperty Name="İlacAd" ColumnName="İlacAd" />
+                <ScalarProperty Name="ReceteID" ColumnName="ReceteID" />
+                <ScalarProperty Name="ReceteDetayID" ColumnName="ReceteDetayID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

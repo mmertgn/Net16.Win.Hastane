@@ -41,5 +41,6 @@ namespace Hastane.DAL.DataModel
         public virtual DbSet<Teshisler> Teshisler { get; set; }
         public virtual DbSet<Unvanlar> Unvanlar { get; set; }
         public virtual DbSet<SistemYoneticileri> SistemYoneticileri { get; set; }
+        public virtual DbSet<ReceteDetay> ReceteDetay { get; set; }
     }
 }

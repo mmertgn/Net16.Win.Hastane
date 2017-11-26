@@ -115,6 +115,38 @@ namespace Hastane.PL
             FormDoktorIslemleri frm = new FormDoktorIslemleri();
             FormAcikmi(frm);
         }
-        
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            DateTime datetime = DateTime.Now;
+            this.lblTarih.Text = "Tarih : " + datetime.ToShortDateString() + " \nSaat : "+ datetime.ToShortTimeString();
+        }
+
+        private void btnPersonelIslemleri_Click(object sender, EventArgs e)
+        {
+            this.pbSeciliSayfa.Location = new Point(
+                176,
+                this.btnPersonelIslemleri.Location.Y);
+            FormPersonelIslemleri frm = new FormPersonelIslemleri();
+            FormAcikmi(frm);
+        }
+
+        private void btnOdemeIslemleri_Click(object sender, EventArgs e)
+        {
+            this.pbSeciliSayfa.Location = new Point(
+                176,
+                this.btnOdemeIslemleri.Location.Y);
+            FormOdemeIslemleri frm = new FormOdemeIslemleri();
+            FormAcikmi(frm);
+        }
+
+        private void btnTahlilIslemleri_Click(object sender, EventArgs e)
+        {
+            this.pbSeciliSayfa.Location = new Point(
+                176,
+                this.btnTahlilIslemleri.Location.Y);
+            FormTahlilIslemleri frm = new FormTahlilIslemleri();
+            FormAcikmi(frm);
+        }
     }
 }

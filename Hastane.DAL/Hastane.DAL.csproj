@@ -97,6 +97,9 @@
     <Compile Include="DataModel\Randevular.cs">
       <DependentUpon>Hastane.tt</DependentUpon>
     </Compile>
+    <Compile Include="DataModel\ReceteDetay.cs">
+      <DependentUpon>Hastane.tt</DependentUpon>
+    </Compile>
     <Compile Include="DataModel\Receteler.cs">
       <DependentUpon>Hastane.tt</DependentUpon>
     </Compile>
