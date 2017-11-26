@@ -69,6 +69,12 @@
     <Compile Include="FormAnaSayfaIcerik.Designer.cs">
       <DependentUpon>FormAnaSayfaIcerik.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormDoktorIslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDoktorIslemleri.Designer.cs">
+      <DependentUpon>FormDoktorIslemleri.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormGiris.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormAnaSayfaIcerik.resx">
       <DependentUpon>FormAnaSayfaIcerik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDoktorIslemleri.resx">
+      <DependentUpon>FormDoktorIslemleri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormGiris.resx">
       <DependentUpon>FormGiris.cs</DependentUpon>

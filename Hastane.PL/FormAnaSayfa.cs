@@ -17,52 +17,12 @@ namespace Hastane.PL
         {
             InitializeComponent();
         }
+        
         bool frmLoadFirst = true;
         private void FormAnaSayfa_Load(object sender, EventArgs e)
         {
             btnKullaniciBilgi.LabelText = Genel.KullaniciAdi + " " + Genel.KullaniciSoyadi;
             FormAnaSayfaIcerik frm = new FormAnaSayfaIcerik();
-            FormAcikmi(frm);
-        }
-
-        private void btnAnaSayfa_Click(object sender, EventArgs e)
-        {
-            this.pbSeciliSayfa.Location = new Point(
-                174,
-                this.btnAnaSayfa.Location.Y);
-            FormAnaSayfaIcerik frm = new FormAnaSayfaIcerik();
-            FormAcikmi(frm);
-        }
-
-        private void btnHastaKabul_Click(object sender, EventArgs e)
-        {
-            this.pbSeciliSayfa.Location = new Point(
-                174,
-                this.btnHastaKabul.Location.Y);
-            FormHastaKabul frm = new FormHastaKabul();
-            FormAcikmi(frm);
-        }
-
-        private void btnCikis_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void btnRandevu_Click(object sender, EventArgs e)
-        {
-            this.pbSeciliSayfa.Location = new Point(
-                174,
-                this.btnRandevu.Location.Y);
-            FormRandevu frm = new FormRandevu();
-            FormAcikmi(frm);
-        }
-
-        private void btnSistemYonetimi_Click(object sender, EventArgs e)
-        {
-            this.pbSeciliSayfa.Location = new Point(
-                174,
-                this.btnSistemYonetimi.Location.Y);
-            FormSistemYönetimi frm = new FormSistemYönetimi();
             FormAcikmi(frm);
         }
 
@@ -102,7 +62,59 @@ namespace Hastane.PL
                     AcilacakForm.Show();
                 }
             }
-            
+
         }
+        private void btnAnaSayfa_Click(object sender, EventArgs e)
+        {
+            this.pbSeciliSayfa.Location = new Point(
+                176,
+                this.btnAnaSayfa.Location.Y);
+            FormAnaSayfaIcerik frm = new FormAnaSayfaIcerik();
+            FormAcikmi(frm);
+        }
+
+        private void btnHastaKabul_Click(object sender, EventArgs e)
+        {
+            this.pbSeciliSayfa.Location = new Point(
+                176,
+                this.btnHastaKabul.Location.Y);
+            FormHastaKabul frm = new FormHastaKabul();
+            FormAcikmi(frm);
+        }
+
+        private void btnCikis_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnRandevu_Click(object sender, EventArgs e)
+        {
+            this.pbSeciliSayfa.Location = new Point(
+                176,
+                this.btnRandevu.Location.Y);
+
+            FormRandevu frm = new FormRandevu();
+            FormAcikmi(frm);
+        }
+
+        private void btnSistemYonetimi_Click(object sender, EventArgs e)
+        {
+            this.pbSeciliSayfa.Location = new Point(
+                176,
+                this.btnSistemYonetimi.Location.Y);
+            FormSistemYönetimi frm = new FormSistemYönetimi();
+            FormAcikmi(frm);
+        }
+
+
+        private void btnDoktorIslemleri_Click(object sender, EventArgs e)
+        {
+            this.pbSeciliSayfa.Location = new Point(
+                176,
+                this.btnDoktorIslemleri.Location.Y);
+            FormDoktorIslemleri frm = new FormDoktorIslemleri();
+            FormAcikmi(frm);
+        }
+        
     }
 }

@@ -28,23 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSistemYönetimi));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnKlinikSil = new ns1.BunifuThinButton2();
-            this.btnKlinikEkle = new ns1.BunifuThinButton2();
-            this.btnKlinikGuncelle = new ns1.BunifuThinButton2();
             this.txtKlinikAciklama = new ns1.BunifuMetroTextbox();
             this.txtKlinikAd = new ns1.BunifuMetroTextbox();
             this.bunifuCustomLabel2 = new ns1.BunifuCustomLabel();
@@ -55,13 +52,8 @@
             this.KlinikAciklama = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtKlinikAdAra = new ns1.BunifuMetroTextbox();
             this.bunifuCustomLabel1 = new ns1.BunifuCustomLabel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.bunifuThinButton21 = new ns1.BunifuThinButton2();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnKurumSil = new ns1.BunifuThinButton2();
-            this.btnKurumEkle = new ns1.BunifuThinButton2();
-            this.btnKurumGuncelle = new ns1.BunifuThinButton2();
             this.txtKurumIskonto = new ns1.BunifuMetroTextbox();
             this.txtKurumAdi = new ns1.BunifuMetroTextbox();
             this.bunifuCustomLabel4 = new ns1.BunifuCustomLabel();
@@ -72,15 +64,10 @@
             this.Kurumİskonto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtKurumAdAra = new ns1.BunifuMetroTextbox();
             this.bunifuCustomLabel6 = new ns1.BunifuCustomLabel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.bunifuSeparator2 = new ns1.BunifuSeparator();
             this.bunifuSeparator1 = new ns1.BunifuSeparator();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.bunifuThinButton22 = new ns1.BunifuThinButton2();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnUnvanSil = new ns1.BunifuThinButton2();
-            this.btnUnvanEkle = new ns1.BunifuThinButton2();
-            this.btnUnvanGuncelle = new ns1.BunifuThinButton2();
             this.txtUnvanAdi = new ns1.BunifuMetroTextbox();
             this.bunifuCustomLabel8 = new ns1.BunifuCustomLabel();
             this.dgvUnvanlar = new ns1.BunifuCustomDataGrid();
@@ -88,21 +75,34 @@
             this.UnvanAdi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtUnvanAdAra = new ns1.BunifuMetroTextbox();
             this.bunifuCustomLabel9 = new ns1.BunifuCustomLabel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.btnUnvanSil = new ns1.BunifuThinButton2();
+            this.btnUnvanEkle = new ns1.BunifuThinButton2();
+            this.btnUnvanGuncelle = new ns1.BunifuThinButton2();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.bunifuThinButton23 = new ns1.BunifuThinButton2();
+            this.btnKurumSil = new ns1.BunifuThinButton2();
+            this.btnKurumEkle = new ns1.BunifuThinButton2();
+            this.btnKurumGuncelle = new ns1.BunifuThinButton2();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.bunifuThinButton22 = new ns1.BunifuThinButton2();
+            this.btnKlinikSil = new ns1.BunifuThinButton2();
+            this.btnKlinikEkle = new ns1.BunifuThinButton2();
+            this.btnKlinikGuncelle = new ns1.BunifuThinButton2();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.bunifuThinButton21 = new ns1.BunifuThinButton2();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKlinikler)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUnvanlar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -124,81 +124,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(393, 715);
             this.panel1.TabIndex = 0;
-            // 
-            // btnKlinikSil
-            // 
-            this.btnKlinikSil.ActiveBorderThickness = 1;
-            this.btnKlinikSil.ActiveCornerRadius = 20;
-            this.btnKlinikSil.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.btnKlinikSil.ActiveForecolor = System.Drawing.Color.White;
-            this.btnKlinikSil.ActiveLineColor = System.Drawing.Color.White;
-            this.btnKlinikSil.BackColor = System.Drawing.SystemColors.Control;
-            this.btnKlinikSil.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnKlinikSil.BackgroundImage")));
-            this.btnKlinikSil.ButtonText = "Klinik Sil";
-            this.btnKlinikSil.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnKlinikSil.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKlinikSil.ForeColor = System.Drawing.Color.Transparent;
-            this.btnKlinikSil.IdleBorderThickness = 1;
-            this.btnKlinikSil.IdleCornerRadius = 20;
-            this.btnKlinikSil.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.btnKlinikSil.IdleForecolor = System.Drawing.Color.White;
-            this.btnKlinikSil.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.btnKlinikSil.Location = new System.Drawing.Point(16, 455);
-            this.btnKlinikSil.Margin = new System.Windows.Forms.Padding(5);
-            this.btnKlinikSil.Name = "btnKlinikSil";
-            this.btnKlinikSil.Size = new System.Drawing.Size(189, 41);
-            this.btnKlinikSil.TabIndex = 48;
-            this.btnKlinikSil.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnKlinikEkle
-            // 
-            this.btnKlinikEkle.ActiveBorderThickness = 1;
-            this.btnKlinikEkle.ActiveCornerRadius = 20;
-            this.btnKlinikEkle.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.btnKlinikEkle.ActiveForecolor = System.Drawing.Color.White;
-            this.btnKlinikEkle.ActiveLineColor = System.Drawing.Color.White;
-            this.btnKlinikEkle.BackColor = System.Drawing.SystemColors.Control;
-            this.btnKlinikEkle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnKlinikEkle.BackgroundImage")));
-            this.btnKlinikEkle.ButtonText = "Klinik Ekle";
-            this.btnKlinikEkle.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnKlinikEkle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKlinikEkle.ForeColor = System.Drawing.Color.Transparent;
-            this.btnKlinikEkle.IdleBorderThickness = 1;
-            this.btnKlinikEkle.IdleCornerRadius = 20;
-            this.btnKlinikEkle.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.btnKlinikEkle.IdleForecolor = System.Drawing.Color.White;
-            this.btnKlinikEkle.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.btnKlinikEkle.Location = new System.Drawing.Point(215, 455);
-            this.btnKlinikEkle.Margin = new System.Windows.Forms.Padding(5);
-            this.btnKlinikEkle.Name = "btnKlinikEkle";
-            this.btnKlinikEkle.Size = new System.Drawing.Size(157, 41);
-            this.btnKlinikEkle.TabIndex = 47;
-            this.btnKlinikEkle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnKlinikGuncelle
-            // 
-            this.btnKlinikGuncelle.ActiveBorderThickness = 1;
-            this.btnKlinikGuncelle.ActiveCornerRadius = 20;
-            this.btnKlinikGuncelle.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.btnKlinikGuncelle.ActiveForecolor = System.Drawing.Color.White;
-            this.btnKlinikGuncelle.ActiveLineColor = System.Drawing.Color.White;
-            this.btnKlinikGuncelle.BackColor = System.Drawing.SystemColors.Control;
-            this.btnKlinikGuncelle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnKlinikGuncelle.BackgroundImage")));
-            this.btnKlinikGuncelle.ButtonText = "Klinik Güncelle";
-            this.btnKlinikGuncelle.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnKlinikGuncelle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKlinikGuncelle.ForeColor = System.Drawing.Color.Transparent;
-            this.btnKlinikGuncelle.IdleBorderThickness = 1;
-            this.btnKlinikGuncelle.IdleCornerRadius = 20;
-            this.btnKlinikGuncelle.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.btnKlinikGuncelle.IdleForecolor = System.Drawing.Color.White;
-            this.btnKlinikGuncelle.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.btnKlinikGuncelle.Location = new System.Drawing.Point(16, 503);
-            this.btnKlinikGuncelle.Margin = new System.Windows.Forms.Padding(5);
-            this.btnKlinikGuncelle.Name = "btnKlinikGuncelle";
-            this.btnKlinikGuncelle.Size = new System.Drawing.Size(356, 41);
-            this.btnKlinikGuncelle.TabIndex = 46;
-            this.btnKlinikGuncelle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtKlinikAciklama
             // 
@@ -257,32 +182,32 @@
             // 
             // dgvKlinikler
             // 
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvKlinikler.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvKlinikler.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvKlinikler.BackgroundColor = System.Drawing.Color.White;
             this.dgvKlinikler.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvKlinikler.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvKlinikler.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvKlinikler.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvKlinikler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvKlinikler.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.KlinikID,
             this.KlinikAd,
             this.KlinikAciklama});
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvKlinikler.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvKlinikler.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvKlinikler.DoubleBuffered = true;
             this.dgvKlinikler.EnableHeadersVisualStyles = false;
             this.dgvKlinikler.GridColor = System.Drawing.Color.White;
@@ -291,14 +216,14 @@
             this.dgvKlinikler.Location = new System.Drawing.Point(12, 115);
             this.dgvKlinikler.Name = "dgvKlinikler";
             this.dgvKlinikler.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvKlinikler.RowHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvKlinikler.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvKlinikler.RowHeadersWidth = 10;
             this.dgvKlinikler.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvKlinikler.Size = new System.Drawing.Size(360, 229);
@@ -351,16 +276,6 @@
             this.bunifuCustomLabel1.TabIndex = 17;
             this.bunifuCustomLabel1.Text = "Klinik Ara";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Hastane.PL.Properties.Resources.magnifying_glass;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 64);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(57, 45);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 16;
-            this.pictureBox1.TabStop = false;
-            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
@@ -370,32 +285,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(393, 56);
             this.panel4.TabIndex = 0;
-            // 
-            // bunifuThinButton21
-            // 
-            this.bunifuThinButton21.ActiveBorderThickness = 1;
-            this.bunifuThinButton21.ActiveCornerRadius = 30;
-            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
-            this.bunifuThinButton21.ButtonText = "Klinik İşlemleri";
-            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.bunifuThinButton21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuThinButton21.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton21.ForeColor = System.Drawing.Color.White;
-            this.bunifuThinButton21.IdleBorderThickness = 1;
-            this.bunifuThinButton21.IdleCornerRadius = 20;
-            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton21.Location = new System.Drawing.Point(0, 0);
-            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.bunifuThinButton21.Name = "bunifuThinButton21";
-            this.bunifuThinButton21.Size = new System.Drawing.Size(393, 56);
-            this.bunifuThinButton21.TabIndex = 2;
-            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel2
             // 
@@ -418,81 +307,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(393, 715);
             this.panel2.TabIndex = 1;
-            // 
-            // btnKurumSil
-            // 
-            this.btnKurumSil.ActiveBorderThickness = 1;
-            this.btnKurumSil.ActiveCornerRadius = 20;
-            this.btnKurumSil.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.btnKurumSil.ActiveForecolor = System.Drawing.Color.White;
-            this.btnKurumSil.ActiveLineColor = System.Drawing.Color.White;
-            this.btnKurumSil.BackColor = System.Drawing.SystemColors.Control;
-            this.btnKurumSil.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnKurumSil.BackgroundImage")));
-            this.btnKurumSil.ButtonText = "Kurum Sil";
-            this.btnKurumSil.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnKurumSil.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKurumSil.ForeColor = System.Drawing.Color.Transparent;
-            this.btnKurumSil.IdleBorderThickness = 1;
-            this.btnKurumSil.IdleCornerRadius = 20;
-            this.btnKurumSil.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.btnKurumSil.IdleForecolor = System.Drawing.Color.White;
-            this.btnKurumSil.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.btnKurumSil.Location = new System.Drawing.Point(8, 455);
-            this.btnKurumSil.Margin = new System.Windows.Forms.Padding(5);
-            this.btnKurumSil.Name = "btnKurumSil";
-            this.btnKurumSil.Size = new System.Drawing.Size(190, 41);
-            this.btnKurumSil.TabIndex = 59;
-            this.btnKurumSil.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnKurumEkle
-            // 
-            this.btnKurumEkle.ActiveBorderThickness = 1;
-            this.btnKurumEkle.ActiveCornerRadius = 20;
-            this.btnKurumEkle.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.btnKurumEkle.ActiveForecolor = System.Drawing.Color.White;
-            this.btnKurumEkle.ActiveLineColor = System.Drawing.Color.White;
-            this.btnKurumEkle.BackColor = System.Drawing.SystemColors.Control;
-            this.btnKurumEkle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnKurumEkle.BackgroundImage")));
-            this.btnKurumEkle.ButtonText = "Kurum Ekle";
-            this.btnKurumEkle.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnKurumEkle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKurumEkle.ForeColor = System.Drawing.Color.Transparent;
-            this.btnKurumEkle.IdleBorderThickness = 1;
-            this.btnKurumEkle.IdleCornerRadius = 20;
-            this.btnKurumEkle.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.btnKurumEkle.IdleForecolor = System.Drawing.Color.White;
-            this.btnKurumEkle.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.btnKurumEkle.Location = new System.Drawing.Point(208, 455);
-            this.btnKurumEkle.Margin = new System.Windows.Forms.Padding(5);
-            this.btnKurumEkle.Name = "btnKurumEkle";
-            this.btnKurumEkle.Size = new System.Drawing.Size(157, 41);
-            this.btnKurumEkle.TabIndex = 58;
-            this.btnKurumEkle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnKurumGuncelle
-            // 
-            this.btnKurumGuncelle.ActiveBorderThickness = 1;
-            this.btnKurumGuncelle.ActiveCornerRadius = 20;
-            this.btnKurumGuncelle.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.btnKurumGuncelle.ActiveForecolor = System.Drawing.Color.White;
-            this.btnKurumGuncelle.ActiveLineColor = System.Drawing.Color.White;
-            this.btnKurumGuncelle.BackColor = System.Drawing.SystemColors.Control;
-            this.btnKurumGuncelle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnKurumGuncelle.BackgroundImage")));
-            this.btnKurumGuncelle.ButtonText = "Kurum Güncelle";
-            this.btnKurumGuncelle.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnKurumGuncelle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKurumGuncelle.ForeColor = System.Drawing.Color.Transparent;
-            this.btnKurumGuncelle.IdleBorderThickness = 1;
-            this.btnKurumGuncelle.IdleCornerRadius = 20;
-            this.btnKurumGuncelle.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.btnKurumGuncelle.IdleForecolor = System.Drawing.Color.White;
-            this.btnKurumGuncelle.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.btnKurumGuncelle.Location = new System.Drawing.Point(5, 503);
-            this.btnKurumGuncelle.Margin = new System.Windows.Forms.Padding(5);
-            this.btnKurumGuncelle.Name = "btnKurumGuncelle";
-            this.btnKurumGuncelle.Size = new System.Drawing.Size(360, 41);
-            this.btnKurumGuncelle.TabIndex = 57;
-            this.btnKurumGuncelle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtKurumIskonto
             // 
@@ -551,32 +365,32 @@
             // 
             // bunifuCustomDataGrid1
             // 
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuCustomDataGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.bunifuCustomDataGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.bunifuCustomDataGrid1.BackgroundColor = System.Drawing.Color.White;
             this.bunifuCustomDataGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.bunifuCustomDataGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bunifuCustomDataGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bunifuCustomDataGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.bunifuCustomDataGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.bunifuCustomDataGrid1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.KurumID,
             this.KurumAdi,
             this.Kurumİskonto});
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.bunifuCustomDataGrid1.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.bunifuCustomDataGrid1.DefaultCellStyle = dataGridViewCellStyle7;
             this.bunifuCustomDataGrid1.DoubleBuffered = true;
             this.bunifuCustomDataGrid1.EnableHeadersVisualStyles = false;
             this.bunifuCustomDataGrid1.GridColor = System.Drawing.Color.White;
@@ -585,14 +399,14 @@
             this.bunifuCustomDataGrid1.Location = new System.Drawing.Point(9, 114);
             this.bunifuCustomDataGrid1.Name = "bunifuCustomDataGrid1";
             this.bunifuCustomDataGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bunifuCustomDataGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bunifuCustomDataGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.bunifuCustomDataGrid1.RowHeadersWidth = 10;
             this.bunifuCustomDataGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.bunifuCustomDataGrid1.Size = new System.Drawing.Size(356, 229);
@@ -645,16 +459,6 @@
             this.bunifuCustomLabel6.TabIndex = 51;
             this.bunifuCustomLabel6.Text = "Kurum Ara";
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Hastane.PL.Properties.Resources.magnifying_glass;
-            this.pictureBox2.Location = new System.Drawing.Point(9, 63);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(57, 45);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 50;
-            this.pictureBox2.TabStop = false;
-            // 
             // bunifuSeparator2
             // 
             this.bunifuSeparator2.BackColor = System.Drawing.Color.Transparent;
@@ -691,32 +495,6 @@
             this.panel5.Size = new System.Drawing.Size(393, 56);
             this.panel5.TabIndex = 0;
             // 
-            // bunifuThinButton22
-            // 
-            this.bunifuThinButton22.ActiveBorderThickness = 1;
-            this.bunifuThinButton22.ActiveCornerRadius = 30;
-            this.bunifuThinButton22.ActiveFillColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton22.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton22.ActiveLineColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.bunifuThinButton22.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton22.BackgroundImage")));
-            this.bunifuThinButton22.ButtonText = "Kurum İşlemleri";
-            this.bunifuThinButton22.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.bunifuThinButton22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuThinButton22.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton22.ForeColor = System.Drawing.Color.White;
-            this.bunifuThinButton22.IdleBorderThickness = 1;
-            this.bunifuThinButton22.IdleCornerRadius = 20;
-            this.bunifuThinButton22.IdleFillColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton22.IdleForecolor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton22.IdleLineColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton22.Location = new System.Drawing.Point(0, 0);
-            this.bunifuThinButton22.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.bunifuThinButton22.Name = "bunifuThinButton22";
-            this.bunifuThinButton22.Size = new System.Drawing.Size(393, 56);
-            this.bunifuThinButton22.TabIndex = 2;
-            this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.btnUnvanSil);
@@ -734,81 +512,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(399, 715);
             this.panel3.TabIndex = 2;
-            // 
-            // btnUnvanSil
-            // 
-            this.btnUnvanSil.ActiveBorderThickness = 1;
-            this.btnUnvanSil.ActiveCornerRadius = 20;
-            this.btnUnvanSil.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.btnUnvanSil.ActiveForecolor = System.Drawing.Color.White;
-            this.btnUnvanSil.ActiveLineColor = System.Drawing.Color.White;
-            this.btnUnvanSil.BackColor = System.Drawing.SystemColors.Control;
-            this.btnUnvanSil.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUnvanSil.BackgroundImage")));
-            this.btnUnvanSil.ButtonText = "Ünvan Sil";
-            this.btnUnvanSil.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUnvanSil.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUnvanSil.ForeColor = System.Drawing.Color.Transparent;
-            this.btnUnvanSil.IdleBorderThickness = 1;
-            this.btnUnvanSil.IdleCornerRadius = 20;
-            this.btnUnvanSil.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.btnUnvanSil.IdleForecolor = System.Drawing.Color.White;
-            this.btnUnvanSil.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.btnUnvanSil.Location = new System.Drawing.Point(15, 455);
-            this.btnUnvanSil.Margin = new System.Windows.Forms.Padding(5);
-            this.btnUnvanSil.Name = "btnUnvanSil";
-            this.btnUnvanSil.Size = new System.Drawing.Size(157, 41);
-            this.btnUnvanSil.TabIndex = 59;
-            this.btnUnvanSil.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnUnvanEkle
-            // 
-            this.btnUnvanEkle.ActiveBorderThickness = 1;
-            this.btnUnvanEkle.ActiveCornerRadius = 20;
-            this.btnUnvanEkle.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.btnUnvanEkle.ActiveForecolor = System.Drawing.Color.White;
-            this.btnUnvanEkle.ActiveLineColor = System.Drawing.Color.White;
-            this.btnUnvanEkle.BackColor = System.Drawing.SystemColors.Control;
-            this.btnUnvanEkle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUnvanEkle.BackgroundImage")));
-            this.btnUnvanEkle.ButtonText = "Ünvan Ekle";
-            this.btnUnvanEkle.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUnvanEkle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUnvanEkle.ForeColor = System.Drawing.Color.Transparent;
-            this.btnUnvanEkle.IdleBorderThickness = 1;
-            this.btnUnvanEkle.IdleCornerRadius = 20;
-            this.btnUnvanEkle.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.btnUnvanEkle.IdleForecolor = System.Drawing.Color.White;
-            this.btnUnvanEkle.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.btnUnvanEkle.Location = new System.Drawing.Point(182, 455);
-            this.btnUnvanEkle.Margin = new System.Windows.Forms.Padding(5);
-            this.btnUnvanEkle.Name = "btnUnvanEkle";
-            this.btnUnvanEkle.Size = new System.Drawing.Size(157, 41);
-            this.btnUnvanEkle.TabIndex = 58;
-            this.btnUnvanEkle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnUnvanGuncelle
-            // 
-            this.btnUnvanGuncelle.ActiveBorderThickness = 1;
-            this.btnUnvanGuncelle.ActiveCornerRadius = 20;
-            this.btnUnvanGuncelle.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.btnUnvanGuncelle.ActiveForecolor = System.Drawing.Color.White;
-            this.btnUnvanGuncelle.ActiveLineColor = System.Drawing.Color.White;
-            this.btnUnvanGuncelle.BackColor = System.Drawing.SystemColors.Control;
-            this.btnUnvanGuncelle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUnvanGuncelle.BackgroundImage")));
-            this.btnUnvanGuncelle.ButtonText = "Ünvan Güncelle";
-            this.btnUnvanGuncelle.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUnvanGuncelle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUnvanGuncelle.ForeColor = System.Drawing.Color.Transparent;
-            this.btnUnvanGuncelle.IdleBorderThickness = 1;
-            this.btnUnvanGuncelle.IdleCornerRadius = 20;
-            this.btnUnvanGuncelle.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.btnUnvanGuncelle.IdleForecolor = System.Drawing.Color.White;
-            this.btnUnvanGuncelle.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.btnUnvanGuncelle.Location = new System.Drawing.Point(15, 503);
-            this.btnUnvanGuncelle.Margin = new System.Windows.Forms.Padding(5);
-            this.btnUnvanGuncelle.Name = "btnUnvanGuncelle";
-            this.btnUnvanGuncelle.Size = new System.Drawing.Size(324, 41);
-            this.btnUnvanGuncelle.TabIndex = 57;
-            this.btnUnvanGuncelle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtUnvanAdi
             // 
@@ -839,31 +542,31 @@
             // 
             // dgvUnvanlar
             // 
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvUnvanlar.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvUnvanlar.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvUnvanlar.BackgroundColor = System.Drawing.Color.White;
             this.dgvUnvanlar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvUnvanlar.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvUnvanlar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvUnvanlar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvUnvanlar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUnvanlar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.UnvanID,
             this.UnvanAdi});
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvUnvanlar.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvUnvanlar.DefaultCellStyle = dataGridViewCellStyle11;
             this.dgvUnvanlar.DoubleBuffered = true;
             this.dgvUnvanlar.EnableHeadersVisualStyles = false;
             this.dgvUnvanlar.GridColor = System.Drawing.Color.White;
@@ -872,14 +575,14 @@
             this.dgvUnvanlar.Location = new System.Drawing.Point(15, 114);
             this.dgvUnvanlar.Name = "dgvUnvanlar";
             this.dgvUnvanlar.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvUnvanlar.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvUnvanlar.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dgvUnvanlar.RowHeadersWidth = 10;
             this.dgvUnvanlar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvUnvanlar.Size = new System.Drawing.Size(307, 274);
@@ -925,16 +628,6 @@
             this.bunifuCustomLabel9.TabIndex = 51;
             this.bunifuCustomLabel9.Text = "Unvan Ara";
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Hastane.PL.Properties.Resources.magnifying_glass;
-            this.pictureBox3.Location = new System.Drawing.Point(15, 64);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(57, 45);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 50;
-            this.pictureBox3.TabStop = false;
-            // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
@@ -944,6 +637,91 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(399, 56);
             this.panel6.TabIndex = 0;
+            // 
+            // btnUnvanSil
+            // 
+            this.btnUnvanSil.ActiveBorderThickness = 1;
+            this.btnUnvanSil.ActiveCornerRadius = 20;
+            this.btnUnvanSil.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(62)))));
+            this.btnUnvanSil.ActiveForecolor = System.Drawing.Color.White;
+            this.btnUnvanSil.ActiveLineColor = System.Drawing.Color.White;
+            this.btnUnvanSil.BackColor = System.Drawing.SystemColors.Control;
+            this.btnUnvanSil.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUnvanSil.BackgroundImage")));
+            this.btnUnvanSil.ButtonText = "Ünvan Sil";
+            this.btnUnvanSil.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUnvanSil.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUnvanSil.ForeColor = System.Drawing.Color.Transparent;
+            this.btnUnvanSil.IdleBorderThickness = 1;
+            this.btnUnvanSil.IdleCornerRadius = 20;
+            this.btnUnvanSil.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.btnUnvanSil.IdleForecolor = System.Drawing.Color.White;
+            this.btnUnvanSil.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.btnUnvanSil.Location = new System.Drawing.Point(15, 455);
+            this.btnUnvanSil.Margin = new System.Windows.Forms.Padding(5);
+            this.btnUnvanSil.Name = "btnUnvanSil";
+            this.btnUnvanSil.Size = new System.Drawing.Size(157, 41);
+            this.btnUnvanSil.TabIndex = 59;
+            this.btnUnvanSil.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnUnvanEkle
+            // 
+            this.btnUnvanEkle.ActiveBorderThickness = 1;
+            this.btnUnvanEkle.ActiveCornerRadius = 20;
+            this.btnUnvanEkle.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(62)))));
+            this.btnUnvanEkle.ActiveForecolor = System.Drawing.Color.White;
+            this.btnUnvanEkle.ActiveLineColor = System.Drawing.Color.White;
+            this.btnUnvanEkle.BackColor = System.Drawing.SystemColors.Control;
+            this.btnUnvanEkle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUnvanEkle.BackgroundImage")));
+            this.btnUnvanEkle.ButtonText = "Ünvan Ekle";
+            this.btnUnvanEkle.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUnvanEkle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUnvanEkle.ForeColor = System.Drawing.Color.Transparent;
+            this.btnUnvanEkle.IdleBorderThickness = 1;
+            this.btnUnvanEkle.IdleCornerRadius = 20;
+            this.btnUnvanEkle.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.btnUnvanEkle.IdleForecolor = System.Drawing.Color.White;
+            this.btnUnvanEkle.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.btnUnvanEkle.Location = new System.Drawing.Point(182, 455);
+            this.btnUnvanEkle.Margin = new System.Windows.Forms.Padding(5);
+            this.btnUnvanEkle.Name = "btnUnvanEkle";
+            this.btnUnvanEkle.Size = new System.Drawing.Size(157, 41);
+            this.btnUnvanEkle.TabIndex = 58;
+            this.btnUnvanEkle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnUnvanGuncelle
+            // 
+            this.btnUnvanGuncelle.ActiveBorderThickness = 1;
+            this.btnUnvanGuncelle.ActiveCornerRadius = 20;
+            this.btnUnvanGuncelle.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(62)))));
+            this.btnUnvanGuncelle.ActiveForecolor = System.Drawing.Color.White;
+            this.btnUnvanGuncelle.ActiveLineColor = System.Drawing.Color.White;
+            this.btnUnvanGuncelle.BackColor = System.Drawing.SystemColors.Control;
+            this.btnUnvanGuncelle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUnvanGuncelle.BackgroundImage")));
+            this.btnUnvanGuncelle.ButtonText = "Ünvan Güncelle";
+            this.btnUnvanGuncelle.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUnvanGuncelle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUnvanGuncelle.ForeColor = System.Drawing.Color.Transparent;
+            this.btnUnvanGuncelle.IdleBorderThickness = 1;
+            this.btnUnvanGuncelle.IdleCornerRadius = 20;
+            this.btnUnvanGuncelle.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.btnUnvanGuncelle.IdleForecolor = System.Drawing.Color.White;
+            this.btnUnvanGuncelle.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.btnUnvanGuncelle.Location = new System.Drawing.Point(15, 503);
+            this.btnUnvanGuncelle.Margin = new System.Windows.Forms.Padding(5);
+            this.btnUnvanGuncelle.Name = "btnUnvanGuncelle";
+            this.btnUnvanGuncelle.Size = new System.Drawing.Size(324, 41);
+            this.btnUnvanGuncelle.TabIndex = 57;
+            this.btnUnvanGuncelle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Hastane.PL.Properties.Resources.magnifying_glass;
+            this.pictureBox3.Location = new System.Drawing.Point(15, 64);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(57, 45);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 50;
+            this.pictureBox3.TabStop = false;
             // 
             // bunifuThinButton23
             // 
@@ -971,6 +749,228 @@
             this.bunifuThinButton23.TabIndex = 2;
             this.bunifuThinButton23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnKurumSil
+            // 
+            this.btnKurumSil.ActiveBorderThickness = 1;
+            this.btnKurumSil.ActiveCornerRadius = 20;
+            this.btnKurumSil.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(62)))));
+            this.btnKurumSil.ActiveForecolor = System.Drawing.Color.White;
+            this.btnKurumSil.ActiveLineColor = System.Drawing.Color.White;
+            this.btnKurumSil.BackColor = System.Drawing.SystemColors.Control;
+            this.btnKurumSil.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnKurumSil.BackgroundImage")));
+            this.btnKurumSil.ButtonText = "Kurum Sil";
+            this.btnKurumSil.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnKurumSil.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKurumSil.ForeColor = System.Drawing.Color.Transparent;
+            this.btnKurumSil.IdleBorderThickness = 1;
+            this.btnKurumSil.IdleCornerRadius = 20;
+            this.btnKurumSil.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.btnKurumSil.IdleForecolor = System.Drawing.Color.White;
+            this.btnKurumSil.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.btnKurumSil.Location = new System.Drawing.Point(8, 455);
+            this.btnKurumSil.Margin = new System.Windows.Forms.Padding(5);
+            this.btnKurumSil.Name = "btnKurumSil";
+            this.btnKurumSil.Size = new System.Drawing.Size(190, 41);
+            this.btnKurumSil.TabIndex = 59;
+            this.btnKurumSil.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnKurumEkle
+            // 
+            this.btnKurumEkle.ActiveBorderThickness = 1;
+            this.btnKurumEkle.ActiveCornerRadius = 20;
+            this.btnKurumEkle.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(62)))));
+            this.btnKurumEkle.ActiveForecolor = System.Drawing.Color.White;
+            this.btnKurumEkle.ActiveLineColor = System.Drawing.Color.White;
+            this.btnKurumEkle.BackColor = System.Drawing.SystemColors.Control;
+            this.btnKurumEkle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnKurumEkle.BackgroundImage")));
+            this.btnKurumEkle.ButtonText = "Kurum Ekle";
+            this.btnKurumEkle.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnKurumEkle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKurumEkle.ForeColor = System.Drawing.Color.Transparent;
+            this.btnKurumEkle.IdleBorderThickness = 1;
+            this.btnKurumEkle.IdleCornerRadius = 20;
+            this.btnKurumEkle.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.btnKurumEkle.IdleForecolor = System.Drawing.Color.White;
+            this.btnKurumEkle.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.btnKurumEkle.Location = new System.Drawing.Point(208, 455);
+            this.btnKurumEkle.Margin = new System.Windows.Forms.Padding(5);
+            this.btnKurumEkle.Name = "btnKurumEkle";
+            this.btnKurumEkle.Size = new System.Drawing.Size(157, 41);
+            this.btnKurumEkle.TabIndex = 58;
+            this.btnKurumEkle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnKurumGuncelle
+            // 
+            this.btnKurumGuncelle.ActiveBorderThickness = 1;
+            this.btnKurumGuncelle.ActiveCornerRadius = 20;
+            this.btnKurumGuncelle.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(62)))));
+            this.btnKurumGuncelle.ActiveForecolor = System.Drawing.Color.White;
+            this.btnKurumGuncelle.ActiveLineColor = System.Drawing.Color.White;
+            this.btnKurumGuncelle.BackColor = System.Drawing.SystemColors.Control;
+            this.btnKurumGuncelle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnKurumGuncelle.BackgroundImage")));
+            this.btnKurumGuncelle.ButtonText = "Kurum Güncelle";
+            this.btnKurumGuncelle.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnKurumGuncelle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKurumGuncelle.ForeColor = System.Drawing.Color.Transparent;
+            this.btnKurumGuncelle.IdleBorderThickness = 1;
+            this.btnKurumGuncelle.IdleCornerRadius = 20;
+            this.btnKurumGuncelle.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.btnKurumGuncelle.IdleForecolor = System.Drawing.Color.White;
+            this.btnKurumGuncelle.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.btnKurumGuncelle.Location = new System.Drawing.Point(5, 503);
+            this.btnKurumGuncelle.Margin = new System.Windows.Forms.Padding(5);
+            this.btnKurumGuncelle.Name = "btnKurumGuncelle";
+            this.btnKurumGuncelle.Size = new System.Drawing.Size(360, 41);
+            this.btnKurumGuncelle.TabIndex = 57;
+            this.btnKurumGuncelle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Hastane.PL.Properties.Resources.magnifying_glass;
+            this.pictureBox2.Location = new System.Drawing.Point(9, 63);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(57, 45);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 50;
+            this.pictureBox2.TabStop = false;
+            // 
+            // bunifuThinButton22
+            // 
+            this.bunifuThinButton22.ActiveBorderThickness = 1;
+            this.bunifuThinButton22.ActiveCornerRadius = 30;
+            this.bunifuThinButton22.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(62)))));
+            this.bunifuThinButton22.ActiveForecolor = System.Drawing.Color.White;
+            this.bunifuThinButton22.ActiveLineColor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.bunifuThinButton22.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton22.BackgroundImage")));
+            this.bunifuThinButton22.ButtonText = "Kurum İşlemleri";
+            this.bunifuThinButton22.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.bunifuThinButton22.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bunifuThinButton22.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton22.ForeColor = System.Drawing.Color.White;
+            this.bunifuThinButton22.IdleBorderThickness = 1;
+            this.bunifuThinButton22.IdleCornerRadius = 20;
+            this.bunifuThinButton22.IdleFillColor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton22.IdleForecolor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton22.IdleLineColor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton22.Location = new System.Drawing.Point(0, 0);
+            this.bunifuThinButton22.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.bunifuThinButton22.Name = "bunifuThinButton22";
+            this.bunifuThinButton22.Size = new System.Drawing.Size(393, 56);
+            this.bunifuThinButton22.TabIndex = 2;
+            this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnKlinikSil
+            // 
+            this.btnKlinikSil.ActiveBorderThickness = 1;
+            this.btnKlinikSil.ActiveCornerRadius = 20;
+            this.btnKlinikSil.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(62)))));
+            this.btnKlinikSil.ActiveForecolor = System.Drawing.Color.White;
+            this.btnKlinikSil.ActiveLineColor = System.Drawing.Color.White;
+            this.btnKlinikSil.BackColor = System.Drawing.SystemColors.Control;
+            this.btnKlinikSil.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnKlinikSil.BackgroundImage")));
+            this.btnKlinikSil.ButtonText = "Klinik Sil";
+            this.btnKlinikSil.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnKlinikSil.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKlinikSil.ForeColor = System.Drawing.Color.Transparent;
+            this.btnKlinikSil.IdleBorderThickness = 1;
+            this.btnKlinikSil.IdleCornerRadius = 20;
+            this.btnKlinikSil.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.btnKlinikSil.IdleForecolor = System.Drawing.Color.White;
+            this.btnKlinikSil.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.btnKlinikSil.Location = new System.Drawing.Point(16, 455);
+            this.btnKlinikSil.Margin = new System.Windows.Forms.Padding(5);
+            this.btnKlinikSil.Name = "btnKlinikSil";
+            this.btnKlinikSil.Size = new System.Drawing.Size(189, 41);
+            this.btnKlinikSil.TabIndex = 48;
+            this.btnKlinikSil.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnKlinikEkle
+            // 
+            this.btnKlinikEkle.ActiveBorderThickness = 1;
+            this.btnKlinikEkle.ActiveCornerRadius = 20;
+            this.btnKlinikEkle.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(62)))));
+            this.btnKlinikEkle.ActiveForecolor = System.Drawing.Color.White;
+            this.btnKlinikEkle.ActiveLineColor = System.Drawing.Color.White;
+            this.btnKlinikEkle.BackColor = System.Drawing.SystemColors.Control;
+            this.btnKlinikEkle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnKlinikEkle.BackgroundImage")));
+            this.btnKlinikEkle.ButtonText = "Klinik Ekle";
+            this.btnKlinikEkle.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnKlinikEkle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKlinikEkle.ForeColor = System.Drawing.Color.Transparent;
+            this.btnKlinikEkle.IdleBorderThickness = 1;
+            this.btnKlinikEkle.IdleCornerRadius = 20;
+            this.btnKlinikEkle.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.btnKlinikEkle.IdleForecolor = System.Drawing.Color.White;
+            this.btnKlinikEkle.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.btnKlinikEkle.Location = new System.Drawing.Point(215, 455);
+            this.btnKlinikEkle.Margin = new System.Windows.Forms.Padding(5);
+            this.btnKlinikEkle.Name = "btnKlinikEkle";
+            this.btnKlinikEkle.Size = new System.Drawing.Size(157, 41);
+            this.btnKlinikEkle.TabIndex = 47;
+            this.btnKlinikEkle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnKlinikGuncelle
+            // 
+            this.btnKlinikGuncelle.ActiveBorderThickness = 1;
+            this.btnKlinikGuncelle.ActiveCornerRadius = 20;
+            this.btnKlinikGuncelle.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(62)))));
+            this.btnKlinikGuncelle.ActiveForecolor = System.Drawing.Color.White;
+            this.btnKlinikGuncelle.ActiveLineColor = System.Drawing.Color.White;
+            this.btnKlinikGuncelle.BackColor = System.Drawing.SystemColors.Control;
+            this.btnKlinikGuncelle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnKlinikGuncelle.BackgroundImage")));
+            this.btnKlinikGuncelle.ButtonText = "Klinik Güncelle";
+            this.btnKlinikGuncelle.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnKlinikGuncelle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKlinikGuncelle.ForeColor = System.Drawing.Color.Transparent;
+            this.btnKlinikGuncelle.IdleBorderThickness = 1;
+            this.btnKlinikGuncelle.IdleCornerRadius = 20;
+            this.btnKlinikGuncelle.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.btnKlinikGuncelle.IdleForecolor = System.Drawing.Color.White;
+            this.btnKlinikGuncelle.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.btnKlinikGuncelle.Location = new System.Drawing.Point(16, 503);
+            this.btnKlinikGuncelle.Margin = new System.Windows.Forms.Padding(5);
+            this.btnKlinikGuncelle.Name = "btnKlinikGuncelle";
+            this.btnKlinikGuncelle.Size = new System.Drawing.Size(356, 41);
+            this.btnKlinikGuncelle.TabIndex = 46;
+            this.btnKlinikGuncelle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Hastane.PL.Properties.Resources.magnifying_glass;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 64);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(57, 45);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
+            // 
+            // bunifuThinButton21
+            // 
+            this.bunifuThinButton21.ActiveBorderThickness = 1;
+            this.bunifuThinButton21.ActiveCornerRadius = 30;
+            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.White;
+            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
+            this.bunifuThinButton21.ButtonText = "Klinik İşlemleri";
+            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.bunifuThinButton21.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bunifuThinButton21.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton21.ForeColor = System.Drawing.Color.White;
+            this.bunifuThinButton21.IdleBorderThickness = 1;
+            this.bunifuThinButton21.IdleCornerRadius = 20;
+            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton21.Location = new System.Drawing.Point(0, 0);
+            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.bunifuThinButton21.Name = "bunifuThinButton21";
+            this.bunifuThinButton21.Size = new System.Drawing.Size(393, 56);
+            this.bunifuThinButton21.TabIndex = 2;
+            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // FormSistemYönetimi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -987,18 +987,18 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKlinikler)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUnvanlar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

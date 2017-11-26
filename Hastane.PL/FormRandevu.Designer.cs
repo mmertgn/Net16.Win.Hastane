@@ -28,14 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRandevu));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.dgvHastalar = new ns1.BunifuCustomDataGrid();
+            this.HastaID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AdSoyad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TCNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Telefon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Kurum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel7 = new System.Windows.Forms.Panel();
             this.txtTCKimlikNoAra = new ns1.BunifuMetroTextbox();
             this.txtTelefonAra = new ns1.BunifuMetroTextbox();
@@ -43,11 +48,8 @@
             this.bunifuCustomLabel3 = new ns1.BunifuCustomLabel();
             this.bunifuCustomLabel2 = new ns1.BunifuCustomLabel();
             this.bunifuCustomLabel1 = new ns1.BunifuCustomLabel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.bunifuThinButton21 = new ns1.BunifuThinButton2();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnHastaKayıt = new ns1.BunifuThinButton2();
             this.txtKanGrubu = new ns1.BunifuMetroTextbox();
             this.bunifuCustomLabel18 = new ns1.BunifuCustomLabel();
             this.txtKurum = new ns1.BunifuDropdown();
@@ -75,11 +77,9 @@
             this.bunifuSeparator2 = new ns1.BunifuSeparator();
             this.bunifuSeparator1 = new ns1.BunifuSeparator();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.bunifuThinButton22 = new ns1.BunifuThinButton2();
             this.panel3 = new System.Windows.Forms.Panel();
             this.bunifuMetroTextbox1 = new ns1.BunifuMetroTextbox();
             this.bunifuCustomLabel44 = new ns1.BunifuCustomLabel();
-            this.btnRandevuKaydet = new ns1.BunifuThinButton2();
             this.dtpRandevuTarih = new ns1.BunifuDatepicker();
             this.bunifuCustomLabel43 = new ns1.BunifuCustomLabel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -114,23 +114,23 @@
             this.txtAdSoyadRandevu = new ns1.BunifuMetroTextbox();
             this.bunifuCustomLabel14 = new ns1.BunifuCustomLabel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.btnRandevuKaydet = new ns1.BunifuThinButton2();
             this.bunifuThinButton23 = new ns1.BunifuThinButton2();
-            this.HastaID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AdSoyad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TCNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Telefon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Kurum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnHastaKayıt = new ns1.BunifuThinButton2();
+            this.bunifuThinButton22 = new ns1.BunifuThinButton2();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.bunifuThinButton21 = new ns1.BunifuThinButton2();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHastalar)).BeginInit();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -157,19 +157,19 @@
             // 
             // dgvHastalar
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvHastalar.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvHastalar.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvHastalar.BackgroundColor = System.Drawing.Color.White;
             this.dgvHastalar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvHastalar.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvHastalar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvHastalar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvHastalar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHastalar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.HastaID,
@@ -177,14 +177,14 @@
             this.TCNo,
             this.Telefon,
             this.Kurum});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvHastalar.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvHastalar.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgvHastalar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvHastalar.DoubleBuffered = true;
             this.dgvHastalar.EnableHeadersVisualStyles = false;
@@ -194,18 +194,49 @@
             this.dgvHastalar.Location = new System.Drawing.Point(5, 0);
             this.dgvHastalar.Name = "dgvHastalar";
             this.dgvHastalar.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvHastalar.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvHastalar.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvHastalar.RowHeadersWidth = 10;
             this.dgvHastalar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvHastalar.Size = new System.Drawing.Size(443, 471);
             this.dgvHastalar.TabIndex = 1;
+            // 
+            // HastaID
+            // 
+            this.HastaID.HeaderText = "HastaID";
+            this.HastaID.Name = "HastaID";
+            this.HastaID.Visible = false;
+            this.HastaID.Width = 15;
+            // 
+            // AdSoyad
+            // 
+            this.AdSoyad.HeaderText = "Ad Soyad";
+            this.AdSoyad.Name = "AdSoyad";
+            this.AdSoyad.Width = 120;
+            // 
+            // TCNo
+            // 
+            this.TCNo.HeaderText = "TC Kimlik No";
+            this.TCNo.MaxInputLength = 11;
+            this.TCNo.Name = "TCNo";
+            this.TCNo.Width = 120;
+            // 
+            // Telefon
+            // 
+            this.Telefon.HeaderText = "Cep Telefonu";
+            this.Telefon.Name = "Telefon";
+            // 
+            // Kurum
+            // 
+            this.Kurum.HeaderText = "Sigorta";
+            this.Kurum.Name = "Kurum";
+            this.Kurum.Width = 120;
             // 
             // panel7
             // 
@@ -304,16 +335,6 @@
             this.bunifuCustomLabel1.TabIndex = 10;
             this.bunifuCustomLabel1.Text = "Ad Soyad";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Hastane.PL.Properties.Resources.magnifying_glass;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 8);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(150, 150);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
-            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
@@ -323,32 +344,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(453, 56);
             this.panel4.TabIndex = 0;
-            // 
-            // bunifuThinButton21
-            // 
-            this.bunifuThinButton21.ActiveBorderThickness = 1;
-            this.bunifuThinButton21.ActiveCornerRadius = 30;
-            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
-            this.bunifuThinButton21.ButtonText = "Hasta Bul";
-            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.bunifuThinButton21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuThinButton21.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton21.ForeColor = System.Drawing.Color.White;
-            this.bunifuThinButton21.IdleBorderThickness = 1;
-            this.bunifuThinButton21.IdleCornerRadius = 20;
-            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton21.Location = new System.Drawing.Point(0, 0);
-            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.bunifuThinButton21.Name = "bunifuThinButton21";
-            this.bunifuThinButton21.Size = new System.Drawing.Size(453, 56);
-            this.bunifuThinButton21.TabIndex = 1;
-            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel2
             // 
@@ -385,31 +380,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(296, 715);
             this.panel2.TabIndex = 1;
-            // 
-            // btnHastaKayıt
-            // 
-            this.btnHastaKayıt.ActiveBorderThickness = 1;
-            this.btnHastaKayıt.ActiveCornerRadius = 20;
-            this.btnHastaKayıt.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(62)))));
-            this.btnHastaKayıt.ActiveForecolor = System.Drawing.Color.White;
-            this.btnHastaKayıt.ActiveLineColor = System.Drawing.Color.White;
-            this.btnHastaKayıt.BackColor = System.Drawing.SystemColors.Control;
-            this.btnHastaKayıt.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHastaKayıt.BackgroundImage")));
-            this.btnHastaKayıt.ButtonText = "Hasta Kaydet";
-            this.btnHastaKayıt.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHastaKayıt.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHastaKayıt.ForeColor = System.Drawing.Color.White;
-            this.btnHastaKayıt.IdleBorderThickness = 1;
-            this.btnHastaKayıt.IdleCornerRadius = 20;
-            this.btnHastaKayıt.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.btnHastaKayıt.IdleForecolor = System.Drawing.Color.White;
-            this.btnHastaKayıt.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.btnHastaKayıt.Location = new System.Drawing.Point(107, 619);
-            this.btnHastaKayıt.Margin = new System.Windows.Forms.Padding(5);
-            this.btnHastaKayıt.Name = "btnHastaKayıt";
-            this.btnHastaKayıt.Size = new System.Drawing.Size(181, 41);
-            this.btnHastaKayıt.TabIndex = 44;
-            this.btnHastaKayıt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtKanGrubu
             // 
@@ -736,7 +706,7 @@
             // 
             this.bunifuSeparator2.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.bunifuSeparator2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
+            this.bunifuSeparator2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
             this.bunifuSeparator2.LineThickness = 1;
             this.bunifuSeparator2.Location = new System.Drawing.Point(295, 56);
             this.bunifuSeparator2.Name = "bunifuSeparator2";
@@ -749,7 +719,7 @@
             // 
             this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
+            this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
             this.bunifuSeparator1.LineThickness = 1;
             this.bunifuSeparator1.Location = new System.Drawing.Point(0, 56);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
@@ -767,32 +737,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(296, 56);
             this.panel5.TabIndex = 1;
-            // 
-            // bunifuThinButton22
-            // 
-            this.bunifuThinButton22.ActiveBorderThickness = 1;
-            this.bunifuThinButton22.ActiveCornerRadius = 30;
-            this.bunifuThinButton22.ActiveFillColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton22.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton22.ActiveLineColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.bunifuThinButton22.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton22.BackgroundImage")));
-            this.bunifuThinButton22.ButtonText = "Hasta Kayıt";
-            this.bunifuThinButton22.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.bunifuThinButton22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuThinButton22.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton22.ForeColor = System.Drawing.Color.White;
-            this.bunifuThinButton22.IdleBorderThickness = 1;
-            this.bunifuThinButton22.IdleCornerRadius = 20;
-            this.bunifuThinButton22.IdleFillColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton22.IdleForecolor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton22.IdleLineColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton22.Location = new System.Drawing.Point(0, 0);
-            this.bunifuThinButton22.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.bunifuThinButton22.Name = "bunifuThinButton22";
-            this.bunifuThinButton22.Size = new System.Drawing.Size(296, 56);
-            this.bunifuThinButton22.TabIndex = 2;
-            this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel3
             // 
@@ -842,31 +786,6 @@
             this.bunifuCustomLabel44.Size = new System.Drawing.Size(101, 17);
             this.bunifuCustomLabel44.TabIndex = 47;
             this.bunifuCustomLabel44.Text = "Randevu Saati";
-            // 
-            // btnRandevuKaydet
-            // 
-            this.btnRandevuKaydet.ActiveBorderThickness = 1;
-            this.btnRandevuKaydet.ActiveCornerRadius = 20;
-            this.btnRandevuKaydet.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.btnRandevuKaydet.ActiveForecolor = System.Drawing.Color.White;
-            this.btnRandevuKaydet.ActiveLineColor = System.Drawing.Color.White;
-            this.btnRandevuKaydet.BackColor = System.Drawing.SystemColors.Control;
-            this.btnRandevuKaydet.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRandevuKaydet.BackgroundImage")));
-            this.btnRandevuKaydet.ButtonText = "Randevu Kaydet";
-            this.btnRandevuKaydet.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRandevuKaydet.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRandevuKaydet.ForeColor = System.Drawing.Color.White;
-            this.btnRandevuKaydet.IdleBorderThickness = 1;
-            this.btnRandevuKaydet.IdleCornerRadius = 20;
-            this.btnRandevuKaydet.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.btnRandevuKaydet.IdleForecolor = System.Drawing.Color.White;
-            this.btnRandevuKaydet.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.btnRandevuKaydet.Location = new System.Drawing.Point(126, 544);
-            this.btnRandevuKaydet.Margin = new System.Windows.Forms.Padding(5);
-            this.btnRandevuKaydet.Name = "btnRandevuKaydet";
-            this.btnRandevuKaydet.Size = new System.Drawing.Size(181, 41);
-            this.btnRandevuKaydet.TabIndex = 45;
-            this.btnRandevuKaydet.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dtpRandevuTarih
             // 
@@ -1356,6 +1275,31 @@
             this.panel6.Size = new System.Drawing.Size(436, 56);
             this.panel6.TabIndex = 1;
             // 
+            // btnRandevuKaydet
+            // 
+            this.btnRandevuKaydet.ActiveBorderThickness = 1;
+            this.btnRandevuKaydet.ActiveCornerRadius = 20;
+            this.btnRandevuKaydet.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(62)))));
+            this.btnRandevuKaydet.ActiveForecolor = System.Drawing.Color.White;
+            this.btnRandevuKaydet.ActiveLineColor = System.Drawing.Color.White;
+            this.btnRandevuKaydet.BackColor = System.Drawing.SystemColors.Control;
+            this.btnRandevuKaydet.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRandevuKaydet.BackgroundImage")));
+            this.btnRandevuKaydet.ButtonText = "Randevu Kaydet";
+            this.btnRandevuKaydet.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRandevuKaydet.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRandevuKaydet.ForeColor = System.Drawing.Color.White;
+            this.btnRandevuKaydet.IdleBorderThickness = 1;
+            this.btnRandevuKaydet.IdleCornerRadius = 20;
+            this.btnRandevuKaydet.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.btnRandevuKaydet.IdleForecolor = System.Drawing.Color.White;
+            this.btnRandevuKaydet.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.btnRandevuKaydet.Location = new System.Drawing.Point(126, 544);
+            this.btnRandevuKaydet.Margin = new System.Windows.Forms.Padding(5);
+            this.btnRandevuKaydet.Name = "btnRandevuKaydet";
+            this.btnRandevuKaydet.Size = new System.Drawing.Size(181, 41);
+            this.btnRandevuKaydet.TabIndex = 45;
+            this.btnRandevuKaydet.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // bunifuThinButton23
             // 
             this.bunifuThinButton23.ActiveBorderThickness = 1;
@@ -1382,36 +1326,92 @@
             this.bunifuThinButton23.TabIndex = 2;
             this.bunifuThinButton23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // HastaID
+            // btnHastaKayıt
             // 
-            this.HastaID.HeaderText = "HastaID";
-            this.HastaID.Name = "HastaID";
-            this.HastaID.Visible = false;
-            this.HastaID.Width = 15;
+            this.btnHastaKayıt.ActiveBorderThickness = 1;
+            this.btnHastaKayıt.ActiveCornerRadius = 20;
+            this.btnHastaKayıt.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(62)))));
+            this.btnHastaKayıt.ActiveForecolor = System.Drawing.Color.White;
+            this.btnHastaKayıt.ActiveLineColor = System.Drawing.Color.White;
+            this.btnHastaKayıt.BackColor = System.Drawing.SystemColors.Control;
+            this.btnHastaKayıt.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHastaKayıt.BackgroundImage")));
+            this.btnHastaKayıt.ButtonText = "Hasta Kaydet";
+            this.btnHastaKayıt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHastaKayıt.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHastaKayıt.ForeColor = System.Drawing.Color.White;
+            this.btnHastaKayıt.IdleBorderThickness = 1;
+            this.btnHastaKayıt.IdleCornerRadius = 20;
+            this.btnHastaKayıt.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.btnHastaKayıt.IdleForecolor = System.Drawing.Color.White;
+            this.btnHastaKayıt.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.btnHastaKayıt.Location = new System.Drawing.Point(107, 619);
+            this.btnHastaKayıt.Margin = new System.Windows.Forms.Padding(5);
+            this.btnHastaKayıt.Name = "btnHastaKayıt";
+            this.btnHastaKayıt.Size = new System.Drawing.Size(181, 41);
+            this.btnHastaKayıt.TabIndex = 44;
+            this.btnHastaKayıt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // AdSoyad
+            // bunifuThinButton22
             // 
-            this.AdSoyad.HeaderText = "Ad Soyad";
-            this.AdSoyad.Name = "AdSoyad";
-            this.AdSoyad.Width = 120;
+            this.bunifuThinButton22.ActiveBorderThickness = 1;
+            this.bunifuThinButton22.ActiveCornerRadius = 30;
+            this.bunifuThinButton22.ActiveFillColor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton22.ActiveForecolor = System.Drawing.Color.White;
+            this.bunifuThinButton22.ActiveLineColor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.bunifuThinButton22.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton22.BackgroundImage")));
+            this.bunifuThinButton22.ButtonText = "Hasta Kayıt";
+            this.bunifuThinButton22.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.bunifuThinButton22.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bunifuThinButton22.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton22.ForeColor = System.Drawing.Color.White;
+            this.bunifuThinButton22.IdleBorderThickness = 1;
+            this.bunifuThinButton22.IdleCornerRadius = 20;
+            this.bunifuThinButton22.IdleFillColor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton22.IdleForecolor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton22.IdleLineColor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton22.Location = new System.Drawing.Point(0, 0);
+            this.bunifuThinButton22.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.bunifuThinButton22.Name = "bunifuThinButton22";
+            this.bunifuThinButton22.Size = new System.Drawing.Size(296, 56);
+            this.bunifuThinButton22.TabIndex = 2;
+            this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // TCNo
+            // pictureBox1
             // 
-            this.TCNo.HeaderText = "TC Kimlik No";
-            this.TCNo.MaxInputLength = 11;
-            this.TCNo.Name = "TCNo";
-            this.TCNo.Width = 120;
+            this.pictureBox1.Image = global::Hastane.PL.Properties.Resources.magnifying_glass;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 8);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(150, 150);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
             // 
-            // Telefon
+            // bunifuThinButton21
             // 
-            this.Telefon.HeaderText = "Cep Telefonu";
-            this.Telefon.Name = "Telefon";
-            // 
-            // Kurum
-            // 
-            this.Kurum.HeaderText = "Sigorta";
-            this.Kurum.Name = "Kurum";
-            this.Kurum.Width = 120;
+            this.bunifuThinButton21.ActiveBorderThickness = 1;
+            this.bunifuThinButton21.ActiveCornerRadius = 30;
+            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.White;
+            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
+            this.bunifuThinButton21.ButtonText = "Hasta Bul";
+            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.bunifuThinButton21.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bunifuThinButton21.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton21.ForeColor = System.Drawing.Color.White;
+            this.bunifuThinButton21.IdleBorderThickness = 1;
+            this.bunifuThinButton21.IdleCornerRadius = 20;
+            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton21.Location = new System.Drawing.Point(0, 0);
+            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.bunifuThinButton21.Name = "bunifuThinButton21";
+            this.bunifuThinButton21.Size = new System.Drawing.Size(453, 56);
+            this.bunifuThinButton21.TabIndex = 1;
+            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormRandevu
             // 
@@ -1432,7 +1432,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvHastalar)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -1442,6 +1441,7 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
