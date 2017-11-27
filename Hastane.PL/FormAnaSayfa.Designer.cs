@@ -39,26 +39,26 @@
             this.pnlIcerik = new System.Windows.Forms.Panel();
             this.bunifuElipse1 = new ns1.BunifuElipse(this.components);
             this.bunifuDragControl1 = new ns1.BunifuDragControl(this.components);
-            this.btnDoktorIslemleri = new ns1.BunifuFlatButton();
-            this.btnCikis = new ns1.BunifuFlatButton();
-            this.pbSeciliSayfa = new System.Windows.Forms.PictureBox();
-            this.btnSistemYonetimi = new ns1.BunifuFlatButton();
-            this.btnOdemeIslemleri = new ns1.BunifuFlatButton();
-            this.btnTahlilIslemleri = new ns1.BunifuFlatButton();
-            this.btnRandevu = new ns1.BunifuFlatButton();
-            this.btnPersonelIslemleri = new ns1.BunifuFlatButton();
-            this.btnHastaKabul = new ns1.BunifuFlatButton();
-            this.btnAnaSayfa = new ns1.BunifuFlatButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lblTarih = new ns1.BunifuFlatButton();
+            this.btnSistemYonetimi = new ns1.BunifuFlatButton();
+            this.btnTahlilIslemleri = new ns1.BunifuFlatButton();
+            this.btnOdemeIslemleri = new ns1.BunifuFlatButton();
+            this.btnHastaKabul = new ns1.BunifuFlatButton();
+            this.btnRandevu = new ns1.BunifuFlatButton();
+            this.btnPersonelIslemleri = new ns1.BunifuFlatButton();
+            this.btnDoktorIslemleri = new ns1.BunifuFlatButton();
+            this.btnCikis = new ns1.BunifuFlatButton();
+            this.btnAnaSayfa = new ns1.BunifuFlatButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbSeciliSayfa = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pnlLogo.SuspendLayout();
             this.pnlHeader.SuspendLayout();
             this.pnlKullaniciBilgileri.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbSeciliSayfa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSeciliSayfa)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -74,6 +74,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.pbSeciliSayfa);
             this.panel2.Controls.Add(this.btnSistemYonetimi);
             this.panel2.Controls.Add(this.btnTahlilIslemleri);
             this.panel2.Controls.Add(this.btnOdemeIslemleri);
@@ -81,7 +82,6 @@
             this.panel2.Controls.Add(this.lblTarih);
             this.panel2.Controls.Add(this.btnRandevu);
             this.panel2.Controls.Add(this.btnPersonelIslemleri);
-            this.panel2.Controls.Add(this.pbSeciliSayfa);
             this.panel2.Controls.Add(this.btnDoktorIslemleri);
             this.panel2.Controls.Add(this.btnCikis);
             this.panel2.Controls.Add(this.btnAnaSayfa);
@@ -161,90 +161,48 @@
             this.bunifuDragControl1.TargetControl = this.pnlHeader;
             this.bunifuDragControl1.Vertical = true;
             // 
-            // btnDoktorIslemleri
+            // timer1
             // 
-            this.btnDoktorIslemleri.Activecolor = System.Drawing.Color.Transparent;
-            this.btnDoktorIslemleri.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
-            this.btnDoktorIslemleri.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnDoktorIslemleri.BorderRadius = 0;
-            this.btnDoktorIslemleri.ButtonText = "Doktor İşlemleri";
-            this.btnDoktorIslemleri.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDoktorIslemleri.DisabledColor = System.Drawing.Color.Gray;
-            this.btnDoktorIslemleri.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDoktorIslemleri.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnDoktorIslemleri.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnDoktorIslemleri.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnDoktorIslemleri.Iconimage")));
-            this.btnDoktorIslemleri.Iconimage_right = null;
-            this.btnDoktorIslemleri.Iconimage_right_Selected = null;
-            this.btnDoktorIslemleri.Iconimage_Selected = null;
-            this.btnDoktorIslemleri.IconMarginLeft = 0;
-            this.btnDoktorIslemleri.IconMarginRight = 0;
-            this.btnDoktorIslemleri.IconRightVisible = true;
-            this.btnDoktorIslemleri.IconRightZoom = 0D;
-            this.btnDoktorIslemleri.IconVisible = true;
-            this.btnDoktorIslemleri.IconZoom = 60D;
-            this.btnDoktorIslemleri.IsTab = false;
-            this.btnDoktorIslemleri.Location = new System.Drawing.Point(0, 44);
-            this.btnDoktorIslemleri.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnDoktorIslemleri.Name = "btnDoktorIslemleri";
-            this.btnDoktorIslemleri.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
-            this.btnDoktorIslemleri.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.btnDoktorIslemleri.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnDoktorIslemleri.selected = false;
-            this.btnDoktorIslemleri.Size = new System.Drawing.Size(181, 44);
-            this.btnDoktorIslemleri.TabIndex = 1;
-            this.btnDoktorIslemleri.Text = "Doktor İşlemleri";
-            this.btnDoktorIslemleri.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnDoktorIslemleri.Textcolor = System.Drawing.Color.White;
-            this.btnDoktorIslemleri.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDoktorIslemleri.Click += new System.EventHandler(this.btnDoktorIslemleri_Click);
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // btnCikis
+            // lblTarih
             // 
-            this.btnCikis.Activecolor = System.Drawing.Color.Transparent;
-            this.btnCikis.BackColor = System.Drawing.Color.DarkRed;
-            this.btnCikis.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCikis.BorderRadius = 0;
-            this.btnCikis.ButtonText = "Çıkış";
-            this.btnCikis.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCikis.DisabledColor = System.Drawing.Color.Gray;
-            this.btnCikis.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnCikis.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnCikis.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnCikis.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnCikis.Iconimage")));
-            this.btnCikis.Iconimage_right = null;
-            this.btnCikis.Iconimage_right_Selected = null;
-            this.btnCikis.Iconimage_Selected = null;
-            this.btnCikis.IconMarginLeft = 20;
-            this.btnCikis.IconMarginRight = 0;
-            this.btnCikis.IconRightVisible = true;
-            this.btnCikis.IconRightZoom = 0D;
-            this.btnCikis.IconVisible = true;
-            this.btnCikis.IconZoom = 90D;
-            this.btnCikis.IsTab = false;
-            this.btnCikis.Location = new System.Drawing.Point(0, 671);
-            this.btnCikis.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnCikis.Name = "btnCikis";
-            this.btnCikis.Normalcolor = System.Drawing.Color.DarkRed;
-            this.btnCikis.OnHovercolor = System.Drawing.Color.Firebrick;
-            this.btnCikis.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnCikis.selected = false;
-            this.btnCikis.Size = new System.Drawing.Size(181, 44);
-            this.btnCikis.TabIndex = 8;
-            this.btnCikis.Text = "Çıkış";
-            this.btnCikis.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCikis.Textcolor = System.Drawing.Color.White;
-            this.btnCikis.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnCikis.Click += new System.EventHandler(this.btnCikis_Click);
-            // 
-            // pbSeciliSayfa
-            // 
-            this.pbSeciliSayfa.BackColor = System.Drawing.Color.Orange;
-            this.pbSeciliSayfa.Location = new System.Drawing.Point(176, 0);
-            this.pbSeciliSayfa.Name = "pbSeciliSayfa";
-            this.pbSeciliSayfa.Size = new System.Drawing.Size(6, 43);
-            this.pbSeciliSayfa.TabIndex = 3;
-            this.pbSeciliSayfa.TabStop = false;
+            this.lblTarih.Activecolor = System.Drawing.Color.Transparent;
+            this.lblTarih.BackColor = System.Drawing.Color.Transparent;
+            this.lblTarih.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.lblTarih.BorderRadius = 0;
+            this.lblTarih.ButtonText = "Tarih : ";
+            this.lblTarih.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.lblTarih.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
+            this.lblTarih.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lblTarih.Enabled = false;
+            this.lblTarih.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblTarih.Iconcolor = System.Drawing.Color.Transparent;
+            this.lblTarih.Iconimage = null;
+            this.lblTarih.Iconimage_right = null;
+            this.lblTarih.Iconimage_right_Selected = null;
+            this.lblTarih.Iconimage_Selected = null;
+            this.lblTarih.IconMarginLeft = 20;
+            this.lblTarih.IconMarginRight = 0;
+            this.lblTarih.IconRightVisible = true;
+            this.lblTarih.IconRightZoom = 0D;
+            this.lblTarih.IconVisible = true;
+            this.lblTarih.IconZoom = 90D;
+            this.lblTarih.IsTab = false;
+            this.lblTarih.Location = new System.Drawing.Point(0, 627);
+            this.lblTarih.Margin = new System.Windows.Forms.Padding(4);
+            this.lblTarih.Name = "lblTarih";
+            this.lblTarih.Normalcolor = System.Drawing.Color.DarkRed;
+            this.lblTarih.OnHovercolor = System.Drawing.Color.Firebrick;
+            this.lblTarih.OnHoverTextColor = System.Drawing.Color.White;
+            this.lblTarih.selected = true;
+            this.lblTarih.Size = new System.Drawing.Size(181, 44);
+            this.lblTarih.TabIndex = 9;
+            this.lblTarih.Text = "Tarih : ";
+            this.lblTarih.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTarih.Textcolor = System.Drawing.Color.White;
+            this.lblTarih.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             // 
             // btnSistemYonetimi
             // 
@@ -284,6 +242,44 @@
             this.btnSistemYonetimi.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSistemYonetimi.Click += new System.EventHandler(this.btnSistemYonetimi_Click);
             // 
+            // btnTahlilIslemleri
+            // 
+            this.btnTahlilIslemleri.Activecolor = System.Drawing.Color.Transparent;
+            this.btnTahlilIslemleri.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
+            this.btnTahlilIslemleri.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTahlilIslemleri.BorderRadius = 0;
+            this.btnTahlilIslemleri.ButtonText = "Tahlil İşlemleri";
+            this.btnTahlilIslemleri.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTahlilIslemleri.DisabledColor = System.Drawing.Color.Gray;
+            this.btnTahlilIslemleri.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTahlilIslemleri.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnTahlilIslemleri.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnTahlilIslemleri.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnTahlilIslemleri.Iconimage")));
+            this.btnTahlilIslemleri.Iconimage_right = null;
+            this.btnTahlilIslemleri.Iconimage_right_Selected = null;
+            this.btnTahlilIslemleri.Iconimage_Selected = null;
+            this.btnTahlilIslemleri.IconMarginLeft = 0;
+            this.btnTahlilIslemleri.IconMarginRight = 0;
+            this.btnTahlilIslemleri.IconRightVisible = true;
+            this.btnTahlilIslemleri.IconRightZoom = 0D;
+            this.btnTahlilIslemleri.IconVisible = true;
+            this.btnTahlilIslemleri.IconZoom = 60D;
+            this.btnTahlilIslemleri.IsTab = false;
+            this.btnTahlilIslemleri.Location = new System.Drawing.Point(0, 264);
+            this.btnTahlilIslemleri.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTahlilIslemleri.Name = "btnTahlilIslemleri";
+            this.btnTahlilIslemleri.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
+            this.btnTahlilIslemleri.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.btnTahlilIslemleri.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnTahlilIslemleri.selected = false;
+            this.btnTahlilIslemleri.Size = new System.Drawing.Size(181, 44);
+            this.btnTahlilIslemleri.TabIndex = 6;
+            this.btnTahlilIslemleri.Text = "Tahlil İşlemleri";
+            this.btnTahlilIslemleri.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnTahlilIslemleri.Textcolor = System.Drawing.Color.White;
+            this.btnTahlilIslemleri.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTahlilIslemleri.Click += new System.EventHandler(this.btnTahlilIslemleri_Click);
+            // 
             // btnOdemeIslemleri
             // 
             this.btnOdemeIslemleri.Activecolor = System.Drawing.Color.Transparent;
@@ -322,43 +318,43 @@
             this.btnOdemeIslemleri.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOdemeIslemleri.Click += new System.EventHandler(this.btnOdemeIslemleri_Click);
             // 
-            // btnTahlilIslemleri
+            // btnHastaKabul
             // 
-            this.btnTahlilIslemleri.Activecolor = System.Drawing.Color.Transparent;
-            this.btnTahlilIslemleri.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
-            this.btnTahlilIslemleri.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnTahlilIslemleri.BorderRadius = 0;
-            this.btnTahlilIslemleri.ButtonText = "Tahlil İşlemleri";
-            this.btnTahlilIslemleri.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTahlilIslemleri.DisabledColor = System.Drawing.Color.Gray;
-            this.btnTahlilIslemleri.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTahlilIslemleri.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnTahlilIslemleri.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnTahlilIslemleri.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnTahlilIslemleri.Iconimage")));
-            this.btnTahlilIslemleri.Iconimage_right = null;
-            this.btnTahlilIslemleri.Iconimage_right_Selected = null;
-            this.btnTahlilIslemleri.Iconimage_Selected = null;
-            this.btnTahlilIslemleri.IconMarginLeft = 0;
-            this.btnTahlilIslemleri.IconMarginRight = 0;
-            this.btnTahlilIslemleri.IconRightVisible = true;
-            this.btnTahlilIslemleri.IconRightZoom = 0D;
-            this.btnTahlilIslemleri.IconVisible = true;
-            this.btnTahlilIslemleri.IconZoom = 60D;
-            this.btnTahlilIslemleri.IsTab = false;
-            this.btnTahlilIslemleri.Location = new System.Drawing.Point(0, 264);
-            this.btnTahlilIslemleri.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnTahlilIslemleri.Name = "btnTahlilIslemleri";
-            this.btnTahlilIslemleri.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
-            this.btnTahlilIslemleri.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.btnTahlilIslemleri.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnTahlilIslemleri.selected = false;
-            this.btnTahlilIslemleri.Size = new System.Drawing.Size(181, 44);
-            this.btnTahlilIslemleri.TabIndex = 6;
-            this.btnTahlilIslemleri.Text = "Tahlil İşlemleri";
-            this.btnTahlilIslemleri.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnTahlilIslemleri.Textcolor = System.Drawing.Color.White;
-            this.btnTahlilIslemleri.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTahlilIslemleri.Click += new System.EventHandler(this.btnTahlilIslemleri_Click);
+            this.btnHastaKabul.Activecolor = System.Drawing.Color.Transparent;
+            this.btnHastaKabul.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
+            this.btnHastaKabul.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnHastaKabul.BorderRadius = 0;
+            this.btnHastaKabul.ButtonText = "Hasta Kabul";
+            this.btnHastaKabul.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHastaKabul.DisabledColor = System.Drawing.Color.Gray;
+            this.btnHastaKabul.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHastaKabul.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnHastaKabul.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnHastaKabul.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnHastaKabul.Iconimage")));
+            this.btnHastaKabul.Iconimage_right = null;
+            this.btnHastaKabul.Iconimage_right_Selected = null;
+            this.btnHastaKabul.Iconimage_Selected = null;
+            this.btnHastaKabul.IconMarginLeft = 0;
+            this.btnHastaKabul.IconMarginRight = 0;
+            this.btnHastaKabul.IconRightVisible = true;
+            this.btnHastaKabul.IconRightZoom = 0D;
+            this.btnHastaKabul.IconVisible = true;
+            this.btnHastaKabul.IconZoom = 60D;
+            this.btnHastaKabul.IsTab = false;
+            this.btnHastaKabul.Location = new System.Drawing.Point(0, 176);
+            this.btnHastaKabul.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHastaKabul.Name = "btnHastaKabul";
+            this.btnHastaKabul.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
+            this.btnHastaKabul.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.btnHastaKabul.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnHastaKabul.selected = false;
+            this.btnHastaKabul.Size = new System.Drawing.Size(181, 44);
+            this.btnHastaKabul.TabIndex = 4;
+            this.btnHastaKabul.Text = "Hasta Kabul";
+            this.btnHastaKabul.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnHastaKabul.Textcolor = System.Drawing.Color.White;
+            this.btnHastaKabul.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHastaKabul.Click += new System.EventHandler(this.btnHastaKabul_Click);
             // 
             // btnRandevu
             // 
@@ -436,43 +432,81 @@
             this.btnPersonelIslemleri.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPersonelIslemleri.Click += new System.EventHandler(this.btnPersonelIslemleri_Click);
             // 
-            // btnHastaKabul
+            // btnDoktorIslemleri
             // 
-            this.btnHastaKabul.Activecolor = System.Drawing.Color.Transparent;
-            this.btnHastaKabul.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
-            this.btnHastaKabul.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnHastaKabul.BorderRadius = 0;
-            this.btnHastaKabul.ButtonText = "Hasta Kabul";
-            this.btnHastaKabul.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHastaKabul.DisabledColor = System.Drawing.Color.Gray;
-            this.btnHastaKabul.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnHastaKabul.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnHastaKabul.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnHastaKabul.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnHastaKabul.Iconimage")));
-            this.btnHastaKabul.Iconimage_right = null;
-            this.btnHastaKabul.Iconimage_right_Selected = null;
-            this.btnHastaKabul.Iconimage_Selected = null;
-            this.btnHastaKabul.IconMarginLeft = 0;
-            this.btnHastaKabul.IconMarginRight = 0;
-            this.btnHastaKabul.IconRightVisible = true;
-            this.btnHastaKabul.IconRightZoom = 0D;
-            this.btnHastaKabul.IconVisible = true;
-            this.btnHastaKabul.IconZoom = 60D;
-            this.btnHastaKabul.IsTab = false;
-            this.btnHastaKabul.Location = new System.Drawing.Point(0, 176);
-            this.btnHastaKabul.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnHastaKabul.Name = "btnHastaKabul";
-            this.btnHastaKabul.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
-            this.btnHastaKabul.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.btnHastaKabul.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnHastaKabul.selected = false;
-            this.btnHastaKabul.Size = new System.Drawing.Size(181, 44);
-            this.btnHastaKabul.TabIndex = 4;
-            this.btnHastaKabul.Text = "Hasta Kabul";
-            this.btnHastaKabul.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnHastaKabul.Textcolor = System.Drawing.Color.White;
-            this.btnHastaKabul.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHastaKabul.Click += new System.EventHandler(this.btnHastaKabul_Click);
+            this.btnDoktorIslemleri.Activecolor = System.Drawing.Color.Transparent;
+            this.btnDoktorIslemleri.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
+            this.btnDoktorIslemleri.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDoktorIslemleri.BorderRadius = 0;
+            this.btnDoktorIslemleri.ButtonText = "Doktor İşlemleri";
+            this.btnDoktorIslemleri.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDoktorIslemleri.DisabledColor = System.Drawing.Color.Gray;
+            this.btnDoktorIslemleri.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDoktorIslemleri.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnDoktorIslemleri.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnDoktorIslemleri.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnDoktorIslemleri.Iconimage")));
+            this.btnDoktorIslemleri.Iconimage_right = null;
+            this.btnDoktorIslemleri.Iconimage_right_Selected = null;
+            this.btnDoktorIslemleri.Iconimage_Selected = null;
+            this.btnDoktorIslemleri.IconMarginLeft = 0;
+            this.btnDoktorIslemleri.IconMarginRight = 0;
+            this.btnDoktorIslemleri.IconRightVisible = true;
+            this.btnDoktorIslemleri.IconRightZoom = 0D;
+            this.btnDoktorIslemleri.IconVisible = true;
+            this.btnDoktorIslemleri.IconZoom = 60D;
+            this.btnDoktorIslemleri.IsTab = false;
+            this.btnDoktorIslemleri.Location = new System.Drawing.Point(0, 44);
+            this.btnDoktorIslemleri.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDoktorIslemleri.Name = "btnDoktorIslemleri";
+            this.btnDoktorIslemleri.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
+            this.btnDoktorIslemleri.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.btnDoktorIslemleri.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnDoktorIslemleri.selected = false;
+            this.btnDoktorIslemleri.Size = new System.Drawing.Size(181, 44);
+            this.btnDoktorIslemleri.TabIndex = 1;
+            this.btnDoktorIslemleri.Text = "Doktor İşlemleri";
+            this.btnDoktorIslemleri.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnDoktorIslemleri.Textcolor = System.Drawing.Color.White;
+            this.btnDoktorIslemleri.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDoktorIslemleri.Click += new System.EventHandler(this.btnDoktorIslemleri_Click);
+            // 
+            // btnCikis
+            // 
+            this.btnCikis.Activecolor = System.Drawing.Color.Transparent;
+            this.btnCikis.BackColor = System.Drawing.Color.DarkRed;
+            this.btnCikis.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCikis.BorderRadius = 0;
+            this.btnCikis.ButtonText = "Çıkış";
+            this.btnCikis.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCikis.DisabledColor = System.Drawing.Color.Gray;
+            this.btnCikis.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnCikis.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnCikis.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnCikis.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnCikis.Iconimage")));
+            this.btnCikis.Iconimage_right = null;
+            this.btnCikis.Iconimage_right_Selected = null;
+            this.btnCikis.Iconimage_Selected = null;
+            this.btnCikis.IconMarginLeft = 20;
+            this.btnCikis.IconMarginRight = 0;
+            this.btnCikis.IconRightVisible = true;
+            this.btnCikis.IconRightZoom = 0D;
+            this.btnCikis.IconVisible = true;
+            this.btnCikis.IconZoom = 90D;
+            this.btnCikis.IsTab = false;
+            this.btnCikis.Location = new System.Drawing.Point(0, 671);
+            this.btnCikis.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCikis.Name = "btnCikis";
+            this.btnCikis.Normalcolor = System.Drawing.Color.DarkRed;
+            this.btnCikis.OnHovercolor = System.Drawing.Color.Firebrick;
+            this.btnCikis.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnCikis.selected = false;
+            this.btnCikis.Size = new System.Drawing.Size(181, 44);
+            this.btnCikis.TabIndex = 8;
+            this.btnCikis.Text = "Çıkış";
+            this.btnCikis.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCikis.Textcolor = System.Drawing.Color.White;
+            this.btnCikis.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnCikis.Click += new System.EventHandler(this.btnCikis_Click);
             // 
             // btnAnaSayfa
             // 
@@ -523,48 +557,15 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // timer1
+            // pbSeciliSayfa
             // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // lblTarih
-            // 
-            this.lblTarih.Activecolor = System.Drawing.Color.Transparent;
-            this.lblTarih.BackColor = System.Drawing.Color.Transparent;
-            this.lblTarih.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.lblTarih.BorderRadius = 0;
-            this.lblTarih.ButtonText = "Tarih : ";
-            this.lblTarih.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.lblTarih.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
-            this.lblTarih.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lblTarih.Enabled = false;
-            this.lblTarih.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblTarih.Iconcolor = System.Drawing.Color.Transparent;
-            this.lblTarih.Iconimage = null;
-            this.lblTarih.Iconimage_right = null;
-            this.lblTarih.Iconimage_right_Selected = null;
-            this.lblTarih.Iconimage_Selected = null;
-            this.lblTarih.IconMarginLeft = 20;
-            this.lblTarih.IconMarginRight = 0;
-            this.lblTarih.IconRightVisible = true;
-            this.lblTarih.IconRightZoom = 0D;
-            this.lblTarih.IconVisible = true;
-            this.lblTarih.IconZoom = 90D;
-            this.lblTarih.IsTab = false;
-            this.lblTarih.Location = new System.Drawing.Point(0, 627);
-            this.lblTarih.Margin = new System.Windows.Forms.Padding(4);
-            this.lblTarih.Name = "lblTarih";
-            this.lblTarih.Normalcolor = System.Drawing.Color.DarkRed;
-            this.lblTarih.OnHovercolor = System.Drawing.Color.Firebrick;
-            this.lblTarih.OnHoverTextColor = System.Drawing.Color.White;
-            this.lblTarih.selected = true;
-            this.lblTarih.Size = new System.Drawing.Size(181, 44);
-            this.lblTarih.TabIndex = 9;
-            this.lblTarih.Text = "Tarih : ";
-            this.lblTarih.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblTarih.Textcolor = System.Drawing.Color.White;
-            this.lblTarih.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.pbSeciliSayfa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbSeciliSayfa.BackColor = System.Drawing.Color.Orange;
+            this.pbSeciliSayfa.Location = new System.Drawing.Point(176, 0);
+            this.pbSeciliSayfa.Name = "pbSeciliSayfa";
+            this.pbSeciliSayfa.Size = new System.Drawing.Size(6, 43);
+            this.pbSeciliSayfa.TabIndex = 4;
+            this.pbSeciliSayfa.TabStop = false;
             // 
             // FormAnaSayfa
             // 
@@ -586,8 +587,8 @@
             this.pnlLogo.ResumeLayout(false);
             this.pnlHeader.ResumeLayout(false);
             this.pnlKullaniciBilgileri.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbSeciliSayfa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSeciliSayfa)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -608,7 +609,6 @@
         private ns1.BunifuFlatButton btnHastaKabul;
         private ns1.BunifuFlatButton btnRandevu;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pbSeciliSayfa;
         private ns1.BunifuFlatButton btnCikis;
         private ns1.BunifuTileButton btnKullaniciBilgi;
         private ns1.BunifuFlatButton btnDoktorIslemleri;
@@ -616,5 +616,6 @@
         private ns1.BunifuDragControl bunifuDragControl1;
         private System.Windows.Forms.Timer timer1;
         private ns1.BunifuFlatButton lblTarih;
+        private System.Windows.Forms.PictureBox pbSeciliSayfa;
     }
 }
