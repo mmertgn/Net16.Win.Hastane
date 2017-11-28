@@ -99,11 +99,11 @@
     <Compile Include="FormPersonelIslemleri.Designer.cs">
       <DependentUpon>FormPersonelIslemleri.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormSistemYönetimi.cs">
+    <Compile Include="FormSistemYonetim.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormSistemYönetimi.Designer.cs">
-      <DependentUpon>FormSistemYönetimi.cs</DependentUpon>
+    <Compile Include="FormSistemYonetim.Designer.cs">
+      <DependentUpon>FormSistemYonetim.cs</DependentUpon>
     </Compile>
     <Compile Include="FormTahlilIslemleri.cs">
       <SubType>Form</SubType>
@@ -143,8 +143,8 @@
     <EmbeddedResource Include="FormRandevu.resx">
       <DependentUpon>FormRandevu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormSistemYönetimi.resx">
-      <DependentUpon>FormSistemYönetimi.cs</DependentUpon>
+    <EmbeddedResource Include="FormSistemYonetim.resx">
+      <DependentUpon>FormSistemYonetim.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTahlilIslemleri.resx">
       <DependentUpon>FormTahlilIslemleri.cs</DependentUpon>

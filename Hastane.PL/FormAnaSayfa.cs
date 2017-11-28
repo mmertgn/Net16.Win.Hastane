@@ -102,7 +102,7 @@ namespace Hastane.PL
             this.pbSeciliSayfa.Location = new Point(
                 176,
                 this.btnSistemYonetimi.Location.Y);
-            FormSistemYönetimi frm = new FormSistemYönetimi();
+            FormSistemYonetim frm = new FormSistemYonetim();
             FormAcikmi(frm);
         }
 

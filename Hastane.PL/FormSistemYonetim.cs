@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace Hastane.PL
 {
-    public partial class FormSistemYönetimi : Form
+    public partial class FormSistemYonetim : Form
     {
-        public FormSistemYönetimi()
+        public FormSistemYonetim()
         {
             InitializeComponent();
         }
+        
     }
 }

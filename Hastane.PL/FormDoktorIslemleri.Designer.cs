@@ -28,13 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDoktorIslemleri));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.bunifuCards2 = new ns1.BunifuCards();
+            this.btnIlacSil = new ns1.BunifuThinButton2();
+            this.btnReceteYazdir = new ns1.BunifuThinButton2();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.bunifuCustomLabel20 = new ns1.BunifuCustomLabel();
             this.btnIlacEkle = new ns1.BunifuImageButton();
             this.btnReceteOlustur = new ns1.BunifuThinButton2();
@@ -90,11 +95,6 @@
             this.bunifuCustomLabel2 = new ns1.BunifuCustomLabel();
             this.bunifuCustomLabel1 = new ns1.BunifuCustomLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnReceteYazdir = new ns1.BunifuThinButton2();
-            this.btnIlacSil = new ns1.BunifuThinButton2();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -169,6 +169,79 @@
             this.bunifuCards2.ShadowDepth = 20;
             this.bunifuCards2.Size = new System.Drawing.Size(614, 285);
             this.bunifuCards2.TabIndex = 77;
+            // 
+            // btnIlacSil
+            // 
+            this.btnIlacSil.ActiveBorderThickness = 1;
+            this.btnIlacSil.ActiveCornerRadius = 20;
+            this.btnIlacSil.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(62)))));
+            this.btnIlacSil.ActiveForecolor = System.Drawing.Color.White;
+            this.btnIlacSil.ActiveLineColor = System.Drawing.Color.White;
+            this.btnIlacSil.BackColor = System.Drawing.Color.White;
+            this.btnIlacSil.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnIlacSil.BackgroundImage")));
+            this.btnIlacSil.ButtonText = "İlaç Sil";
+            this.btnIlacSil.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnIlacSil.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIlacSil.ForeColor = System.Drawing.Color.White;
+            this.btnIlacSil.IdleBorderThickness = 1;
+            this.btnIlacSil.IdleCornerRadius = 20;
+            this.btnIlacSil.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.btnIlacSil.IdleForecolor = System.Drawing.Color.White;
+            this.btnIlacSil.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.btnIlacSil.Location = new System.Drawing.Point(446, 185);
+            this.btnIlacSil.Margin = new System.Windows.Forms.Padding(5);
+            this.btnIlacSil.Name = "btnIlacSil";
+            this.btnIlacSil.Size = new System.Drawing.Size(154, 35);
+            this.btnIlacSil.TabIndex = 78;
+            this.btnIlacSil.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnReceteYazdir
+            // 
+            this.btnReceteYazdir.ActiveBorderThickness = 1;
+            this.btnReceteYazdir.ActiveCornerRadius = 20;
+            this.btnReceteYazdir.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(62)))));
+            this.btnReceteYazdir.ActiveForecolor = System.Drawing.Color.White;
+            this.btnReceteYazdir.ActiveLineColor = System.Drawing.Color.White;
+            this.btnReceteYazdir.BackColor = System.Drawing.Color.White;
+            this.btnReceteYazdir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnReceteYazdir.BackgroundImage")));
+            this.btnReceteYazdir.ButtonText = "Reçete Yazdır";
+            this.btnReceteYazdir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReceteYazdir.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReceteYazdir.ForeColor = System.Drawing.Color.White;
+            this.btnReceteYazdir.IdleBorderThickness = 1;
+            this.btnReceteYazdir.IdleCornerRadius = 20;
+            this.btnReceteYazdir.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.btnReceteYazdir.IdleForecolor = System.Drawing.Color.White;
+            this.btnReceteYazdir.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.btnReceteYazdir.Location = new System.Drawing.Point(446, 230);
+            this.btnReceteYazdir.Margin = new System.Windows.Forms.Padding(5);
+            this.btnReceteYazdir.Name = "btnReceteYazdir";
+            this.btnReceteYazdir.Size = new System.Drawing.Size(154, 35);
+            this.btnReceteYazdir.TabIndex = 77;
+            this.btnReceteYazdir.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2});
+            this.listView1.FullRowSelect = true;
+            this.listView1.Location = new System.Drawing.Point(23, 45);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(415, 220);
+            this.listView1.TabIndex = 2;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "İlaç Adı";
+            this.columnHeader1.Width = 120;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Kullanım Sıklığı";
+            this.columnHeader2.Width = 100;
             // 
             // bunifuCustomLabel20
             // 
@@ -925,19 +998,19 @@
             // 
             // dgvRandevular
             // 
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvRandevular.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvRandevular.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvRandevular.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgvRandevular.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvRandevular.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvRandevular.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvRandevular.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvRandevular.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRandevular.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvRandevular.DoubleBuffered = true;
@@ -1041,79 +1114,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
-            // 
-            // listView1
-            // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2});
-            this.listView1.FullRowSelect = true;
-            this.listView1.Location = new System.Drawing.Point(23, 45);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(415, 220);
-            this.listView1.TabIndex = 2;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "İlaç Adı";
-            this.columnHeader1.Width = 120;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Kullanım Sıklığı";
-            this.columnHeader2.Width = 100;
-            // 
-            // btnReceteYazdir
-            // 
-            this.btnReceteYazdir.ActiveBorderThickness = 1;
-            this.btnReceteYazdir.ActiveCornerRadius = 20;
-            this.btnReceteYazdir.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(62)))));
-            this.btnReceteYazdir.ActiveForecolor = System.Drawing.Color.White;
-            this.btnReceteYazdir.ActiveLineColor = System.Drawing.Color.White;
-            this.btnReceteYazdir.BackColor = System.Drawing.Color.White;
-            this.btnReceteYazdir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnReceteYazdir.BackgroundImage")));
-            this.btnReceteYazdir.ButtonText = "Reçete Yazdır";
-            this.btnReceteYazdir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReceteYazdir.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReceteYazdir.ForeColor = System.Drawing.Color.White;
-            this.btnReceteYazdir.IdleBorderThickness = 1;
-            this.btnReceteYazdir.IdleCornerRadius = 20;
-            this.btnReceteYazdir.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.btnReceteYazdir.IdleForecolor = System.Drawing.Color.White;
-            this.btnReceteYazdir.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.btnReceteYazdir.Location = new System.Drawing.Point(446, 230);
-            this.btnReceteYazdir.Margin = new System.Windows.Forms.Padding(5);
-            this.btnReceteYazdir.Name = "btnReceteYazdir";
-            this.btnReceteYazdir.Size = new System.Drawing.Size(154, 35);
-            this.btnReceteYazdir.TabIndex = 77;
-            this.btnReceteYazdir.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnIlacSil
-            // 
-            this.btnIlacSil.ActiveBorderThickness = 1;
-            this.btnIlacSil.ActiveCornerRadius = 20;
-            this.btnIlacSil.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(62)))));
-            this.btnIlacSil.ActiveForecolor = System.Drawing.Color.White;
-            this.btnIlacSil.ActiveLineColor = System.Drawing.Color.White;
-            this.btnIlacSil.BackColor = System.Drawing.Color.White;
-            this.btnIlacSil.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnIlacSil.BackgroundImage")));
-            this.btnIlacSil.ButtonText = "İlaç Sil";
-            this.btnIlacSil.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnIlacSil.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIlacSil.ForeColor = System.Drawing.Color.White;
-            this.btnIlacSil.IdleBorderThickness = 1;
-            this.btnIlacSil.IdleCornerRadius = 20;
-            this.btnIlacSil.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.btnIlacSil.IdleForecolor = System.Drawing.Color.White;
-            this.btnIlacSil.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.btnIlacSil.Location = new System.Drawing.Point(446, 185);
-            this.btnIlacSil.Margin = new System.Windows.Forms.Padding(5);
-            this.btnIlacSil.Name = "btnIlacSil";
-            this.btnIlacSil.Size = new System.Drawing.Size(154, 35);
-            this.btnIlacSil.TabIndex = 78;
-            this.btnIlacSil.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormDoktorIslemleri
             // 
