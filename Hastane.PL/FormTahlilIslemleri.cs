@@ -19,7 +19,7 @@ namespace Hastane.PL
 
         private void btnIlacSil_Click(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

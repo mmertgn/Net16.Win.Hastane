@@ -18,11 +18,11 @@ namespace Hastane.BLL.Validations
             RuleFor(x => x.TCKimlikNo).Must(SameIsNotExist).WithMessage("Aynı TC No ile ekli bir hasta var!");
         }
 
-        public bool SameIsNotExist(string TCKimlikNo)
+        public bool SameIsNotExist(string tcKimlikNo)
         {
-            using (HastaneEntities hstn = new HastaneEntities())
+            using (var hstn = new HastaneEntities())
             {
-                return hstn.Hastalar.Any(x => x.TCKimlikNo != TCKimlikNo);
+                return hstn.Hastalar.Any(x => x.TCKimlikNo != tcKimlikNo);
             }
         }
     }
