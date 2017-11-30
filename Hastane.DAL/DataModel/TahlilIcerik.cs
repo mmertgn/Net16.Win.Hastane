@@ -12,15 +12,15 @@ namespace Hastane.DAL.DataModel
     using System;
     using System.Collections.Generic;
     
-    public partial class HastaGecmisi
+    public partial class TahlilIcerik
     {
-        public int GecmisID { get; set; }
-        public int HastaID { get; set; }
-        public System.DateTime Tarih { get; set; }
-        public string HastaSikayeti { get; set; }
-        public string KonulanTeshis { get; set; }
-        public bool Silindi { get; set; }
+        public int TahlilIcerikId { get; set; }
+        public string TahlilIcerikAdi { get; set; }
+        public string TahlilIcerikReferansDegeri { get; set; }
+        public string TahlilSonucBirimi { get; set; }
+        public int TahlilId { get; set; }
+        public string TahlilIcerikSonuc { get; set; }
     
-        public virtual Hastalar Hastalar { get; set; }
+        public virtual Tahliller Tahliller { get; set; }
     }
 }

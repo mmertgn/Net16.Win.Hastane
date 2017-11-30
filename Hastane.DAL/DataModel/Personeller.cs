@@ -24,11 +24,14 @@ namespace Hastane.DAL.DataModel
         }
     
         public int PersonelID { get; set; }
+        public string PersonelKodu { get; set; }
+        public string TCKimlikNo { get; set; }
         public int SicilNo { get; set; }
         public int UnvanID { get; set; }
         public int KlinikID { get; set; }
         public string Ad { get; set; }
         public string Soyad { get; set; }
+        public string Email { get; set; }
         public string Adres { get; set; }
         public string EvTel { get; set; }
         public string CepTel { get; set; }

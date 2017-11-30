@@ -117,4 +117,66 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="RandevuID.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="HastaID.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="HastaAdSoyad.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="TCKNo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PersonelID.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Doktor.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Poliklinik.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="RandevuTarih.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="bunifuThinButton21.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAp0AAAA4CAYAAAC/m0NKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEhSURBVHhe7dYhAQAgEAAxqqCx37/ak+LcxDrs3DcLAAAl
+        6QQAICedAADkpBMAgJx0AgCQk04AAHLSCQBATjoBAMhJJwAAOekEACAnnQAA5KQTAICcdAIAkJNOAABy
+        0gkAQE46AQDISScAADnpBAAgJ50AAOSkEwCAnHQCAJCTTgAActIJAEBOOgEAyEknAAA56QQAICedAADk
+        pBMAgJx0AgCQk04AAHLSCQBATjoBAMhJJwAAOekEACAnnQAA5KQTAICcdAIAkJNOAABy0gkAQE46AQDI
+        SScAADnpBAAgJ50AAOSkEwCAnHQCAJCTTgAActIJAEBOOgEAyEknAAA56QQAICedAADkpBMAgJx0AgCQ
+        k04AAHLSCQBATjoBAIjNfpUK/m8UaCWlAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnKlinikSil.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAWQAAAApCAYAAAACqlMmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJkSURBVHhe7d1PS1RRGMDhvkqgJIgzKurMaP7JkkKKWogt
+        xBYmQdIiaBeEEIIURARtW9RCJAQhEIKCKKJt1KIIqk1ubDXf4MS5Q+bgSYyc6108i2d1z9zZ/bicc2fe
+        I/V6PQBw+AQZoCAEGaAgBBmgIAQZoCAEGaAg9gzy1tbPsLq2HmbnF8KZCxdDz9DJcLSzD4B9it2M/Zy+
+        NB+erDwNPzY3k72N/hrkjecvQndtPHQNjCS/BIB/09k/EkrVsfDo8Uqyu7uCHOt9eeF69qHUDQH4P6XK
+        WDg/PRu+fvve1N+mIMcY18YnQ3u5mrwJAAcn9vbT5y/pIMcnYzEGyE/cX94V5LhnbJsCIF+dfcNh+d6D
+        P0GOb1PEA7zUYgBaq7t2Irz/8LER5PgqRjz9Sy0EoLXaSpVw6/ZyI8jx/bjUIgDycXzibCPIA6OnkwsA
+        yEdbudIIckfvUHIBAPnJgpy6AEC+BBmgIAQZoCAEGaAgBBmgIAQZoCAEGaAgBBmgILIgx1+IpC4CkJ8s
+        yGblARy+LMhxlEjqIgD5iP8plAX57v2HoaNnMLkIgNa7cu1GI8hxplO5YloIwGEoVUbD+rONRpCjxaU7
+        obN/OLkYgNZo766GmbmrzTP14hiniXNTyQ8A0Bq9Q6eyif9NQY7iTKeeQbP1APIQZ+m9fPV6u8FNQY7e
+        vH0XauOT4ZhDPoCWaC9XsyfjnTGOdgU5itsXNxeXQslBH8CB6hoYCVMzc9vbFDslg/xbrHd8FSPeIHVj
+        APYnjsqbnV8Iq2vryd5GewYZgPwIMkBBCDJAQQgyQEEIMkAh1MMvQGzlZI3fxmEAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="bunifuThinButton22.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAgQAAAA4CAYAAACCJeBpAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADdSURBVHhe7dYhAQAgEAAxqqCx378aXA8m1mFrn7kAwN+E
+        AAAQAgBACACACAEAIAQAgBAAABECAEAIAAAhAAAiBACAEAAAQgAARAgAACEAAIQAAIgQAABCAAAIAQAQ
+        IQAAhAAAEAIAIEIAAAgBACAEAECEAAAQAgBACACACAEAIAQAgBAAABECAEAIAAAhAAAiBACAEAAAQgAA
+        RAgAACEAAIQAAIgQAABCAAAIAQAQIQAAhAAAEAIAIEIAAAgBACAEAECEAAAQAgBACACACAEAIAQAgBAA
+        ABECAPje3Acktej5rFBR+gAAAABJRU5ErkJggg==
+</value>
+  </data>
 </root>

@@ -243,9 +243,21 @@
         6ET9AcY8oFNaqKo/AZoXdLb+CG3e8IPUn0GuqampaQv69PkHHPbgYjMBBsUAAAAASUVORK5CYII=
 </value>
   </data>
-  <metadata name="bunifuCards1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
+  <data name="bunifuThinButton23.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAHgAAAAjCAYAAABfLc7mAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIRSURBVHhe7Zq/S1thFIb7rxQasCTpNRdjbhNjG01bRKlg
+        h0oWrUPQQgkdCo6CEJCAllJoh+4dMggKBaFQQWhBpEhn0aGlQ3XRKZ1Oeb97c6nm6Or9Pt4Xnume3AzP
+        /XGSc24I43Qo2PFQsOOhYMdDwY6Hgh3PlYI7nb+y8WlL5hYaMv6kJv5QVW6mB8g1Aw/wUXs2L+31TTk9
+        O4uM9eZSwds7XyVXHJXs4D31S0gyyOSHxbtbkY/t9cjc+fQIxtUw33glXnBfPSFJJl5QkanarPw5PolM
+        hjknGHJL1QlJeYF6EpJ84O/nr9+R0QuCcedSrv3g/dxNLBjvXD6W3SCdL8va2/fGqxGMbhkNlVZM7CRX
+        HJGDw6NQMFptdGNaIbGTW3cKsryyGgrG7ymtiNjN8MPHoeCgMqYWELtJeYVQ8G2/pBYQ+zGCtQPEDSjY
+        cYxgPKu1g8R+jGBOidzFCMaf1NpBYjf4dWQEv3n3Qfpy7KRd4/nLxVAwpg8YN2lFxE4wV9j6/CUUjDRb
+        ryWTL6vFxC5S/YHM1l8Yr7FgDBweTT5VP0DsYmDoQbzGEwtGMH3wS5wq2QymSN929yKjFwQj3/d/mK2A
+        Pr+onoAkEyxq4M79Xy7SIxjB43qp2WLjZQlYjJyeqavblargbnA1oNXOFrhZmUQwJMJKM1abL8uVghn7
+        Q8GOh4IdDwU7Hgp2OiL/AH7lnDeZ1AjOAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="btnSikayetEkle.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAHgAAAAjCAYAAABfLc7mAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8

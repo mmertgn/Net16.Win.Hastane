@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Hastane.BLL.Models
 {
-    public class Personel : IPersonel
+    public class Personel
     {
         HastaneEntities db = new HastaneEntities(); 
         public List<Personeller> GetAllPersonel()

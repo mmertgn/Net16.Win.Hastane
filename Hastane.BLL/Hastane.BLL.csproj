@@ -37,6 +37,9 @@
     <Reference Include="EntityFramework.SqlServer">
       <HintPath>..\Hastane.DAL\bin\Debug\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="FluentValidation, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentValidation.7.2.1\lib\net45\FluentValidation.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -48,25 +51,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\Genel.cs" />
-    <Compile Include="Models\Hasta.cs" />
-    <Compile Include="Models\Hizmet.cs" />
-    <Compile Include="Models\IHasta.cs" />
-    <Compile Include="Models\IHastaGecmis.cs" />
-    <Compile Include="Models\IHastaHizmetHareket.cs" />
-    <Compile Include="Models\IHastaKabul.cs" />
-    <Compile Include="Models\IHastaSikayet.cs" />
-    <Compile Include="Models\IHizmet.cs" />
-    <Compile Include="Models\IKlinik.cs" />
-    <Compile Include="Models\IKurum.cs" />
-    <Compile Include="Models\IOdeme.cs" />
-    <Compile Include="Models\IPersonel.cs" />
-    <Compile Include="Models\IRandevu.cs" />
-    <Compile Include="Models\IRecete.cs" />
-    <Compile Include="Models\ITahlil.cs" />
-    <Compile Include="Models\ITeshis.cs" />
-    <Compile Include="Models\IUnvan.cs" />
+    <Compile Include="Models\MessageResult.cs" />
     <Compile Include="Models\Personel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Abstracts\IHastaServisi.cs" />
+    <Compile Include="Services\Concretes\HastaServisi.cs" />
+    <Compile Include="Validations\HastaAddValidator.cs" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
@@ -76,6 +66,10 @@
       <Project>{243cd584-158d-4432-9e2d-28866555f1a5}</Project>
       <Name>Hastane.DAL</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

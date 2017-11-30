@@ -30,17 +30,19 @@ namespace Hastane.DAL.DataModel
         public virtual DbSet<HastaKabul> HastaKabul { get; set; }
         public virtual DbSet<Hastalar> Hastalar { get; set; }
         public virtual DbSet<HastaSikayetleri> HastaSikayetleri { get; set; }
+        public virtual DbSet<HastaTahlilSonuclari> HastaTahlilSonuclari { get; set; }
         public virtual DbSet<Hizmetler> Hizmetler { get; set; }
         public virtual DbSet<Klinikler> Klinikler { get; set; }
         public virtual DbSet<Kurumlar> Kurumlar { get; set; }
         public virtual DbSet<Odemeler> Odemeler { get; set; }
         public virtual DbSet<Personeller> Personeller { get; set; }
         public virtual DbSet<Randevular> Randevular { get; set; }
+        public virtual DbSet<ReceteDetay> ReceteDetay { get; set; }
         public virtual DbSet<Receteler> Receteler { get; set; }
+        public virtual DbSet<SistemYoneticileri> SistemYoneticileri { get; set; }
+        public virtual DbSet<TahlilIcerik> TahlilIcerik { get; set; }
         public virtual DbSet<Tahliller> Tahliller { get; set; }
         public virtual DbSet<Teshisler> Teshisler { get; set; }
         public virtual DbSet<Unvanlar> Unvanlar { get; set; }
-        public virtual DbSet<SistemYoneticileri> SistemYoneticileri { get; set; }
-        public virtual DbSet<ReceteDetay> ReceteDetay { get; set; }
     }
 }

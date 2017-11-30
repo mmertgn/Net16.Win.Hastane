@@ -32,7 +32,19 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAnaSayfa));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pbSeciliSayfa = new System.Windows.Forms.PictureBox();
+            this.btnSistemYonetimi = new ns1.BunifuFlatButton();
+            this.btnTahlilIslemleri = new ns1.BunifuFlatButton();
+            this.btnOdemeIslemleri = new ns1.BunifuFlatButton();
+            this.btnHastaKabul = new ns1.BunifuFlatButton();
+            this.lblTarih = new ns1.BunifuFlatButton();
+            this.btnRandevu = new ns1.BunifuFlatButton();
+            this.btnPersonelIslemleri = new ns1.BunifuFlatButton();
+            this.btnDoktorIslemleri = new ns1.BunifuFlatButton();
+            this.btnCikis = new ns1.BunifuFlatButton();
+            this.btnAnaSayfa = new ns1.BunifuFlatButton();
             this.pnlLogo = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.pnlKullaniciBilgileri = new System.Windows.Forms.Panel();
             this.btnKullaniciBilgi = new ns1.BunifuTileButton();
@@ -40,25 +52,13 @@
             this.bunifuElipse1 = new ns1.BunifuElipse(this.components);
             this.bunifuDragControl1 = new ns1.BunifuDragControl(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.lblTarih = new ns1.BunifuFlatButton();
-            this.btnSistemYonetimi = new ns1.BunifuFlatButton();
-            this.btnTahlilIslemleri = new ns1.BunifuFlatButton();
-            this.btnOdemeIslemleri = new ns1.BunifuFlatButton();
-            this.btnHastaKabul = new ns1.BunifuFlatButton();
-            this.btnRandevu = new ns1.BunifuFlatButton();
-            this.btnPersonelIslemleri = new ns1.BunifuFlatButton();
-            this.btnDoktorIslemleri = new ns1.BunifuFlatButton();
-            this.btnCikis = new ns1.BunifuFlatButton();
-            this.btnAnaSayfa = new ns1.BunifuFlatButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pbSeciliSayfa = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSeciliSayfa)).BeginInit();
             this.pnlLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlHeader.SuspendLayout();
             this.pnlKullaniciBilgileri.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbSeciliSayfa)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -91,118 +91,15 @@
             this.panel2.Size = new System.Drawing.Size(181, 715);
             this.panel2.TabIndex = 17;
             // 
-            // pnlLogo
+            // pbSeciliSayfa
             // 
-            this.pnlLogo.Controls.Add(this.pictureBox1);
-            this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlLogo.Location = new System.Drawing.Point(0, 0);
-            this.pnlLogo.Name = "pnlLogo";
-            this.pnlLogo.Size = new System.Drawing.Size(181, 53);
-            this.pnlLogo.TabIndex = 0;
-            // 
-            // pnlHeader
-            // 
-            this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
-            this.pnlHeader.Controls.Add(this.pnlKullaniciBilgileri);
-            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlHeader.Location = new System.Drawing.Point(181, 0);
-            this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(1185, 53);
-            this.pnlHeader.TabIndex = 1;
-            // 
-            // pnlKullaniciBilgileri
-            // 
-            this.pnlKullaniciBilgileri.Controls.Add(this.btnKullaniciBilgi);
-            this.pnlKullaniciBilgileri.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlKullaniciBilgileri.Location = new System.Drawing.Point(985, 0);
-            this.pnlKullaniciBilgileri.Name = "pnlKullaniciBilgileri";
-            this.pnlKullaniciBilgileri.Size = new System.Drawing.Size(200, 53);
-            this.pnlKullaniciBilgileri.TabIndex = 2;
-            // 
-            // btnKullaniciBilgi
-            // 
-            this.btnKullaniciBilgi.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.btnKullaniciBilgi.color = System.Drawing.Color.DarkSlateGray;
-            this.btnKullaniciBilgi.colorActive = System.Drawing.Color.DarkSlateGray;
-            this.btnKullaniciBilgi.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.btnKullaniciBilgi.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnKullaniciBilgi.Font = new System.Drawing.Font("Century Gothic", 15.75F);
-            this.btnKullaniciBilgi.ForeColor = System.Drawing.Color.White;
-            this.btnKullaniciBilgi.Image = null;
-            this.btnKullaniciBilgi.ImagePosition = 20;
-            this.btnKullaniciBilgi.ImageZoom = 50;
-            this.btnKullaniciBilgi.LabelPosition = 41;
-            this.btnKullaniciBilgi.LabelText = "";
-            this.btnKullaniciBilgi.Location = new System.Drawing.Point(0, 0);
-            this.btnKullaniciBilgi.Margin = new System.Windows.Forms.Padding(6);
-            this.btnKullaniciBilgi.Name = "btnKullaniciBilgi";
-            this.btnKullaniciBilgi.Size = new System.Drawing.Size(200, 53);
-            this.btnKullaniciBilgi.TabIndex = 17;
-            // 
-            // pnlIcerik
-            // 
-            this.pnlIcerik.AutoScroll = true;
-            this.pnlIcerik.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.pnlIcerik.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlIcerik.Location = new System.Drawing.Point(181, 53);
-            this.pnlIcerik.Name = "pnlIcerik";
-            this.pnlIcerik.Size = new System.Drawing.Size(1185, 715);
-            this.pnlIcerik.TabIndex = 2;
-            // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 20;
-            this.bunifuElipse1.TargetControl = this;
-            // 
-            // bunifuDragControl1
-            // 
-            this.bunifuDragControl1.Fixed = true;
-            this.bunifuDragControl1.Horizontal = true;
-            this.bunifuDragControl1.TargetControl = this.pnlHeader;
-            this.bunifuDragControl1.Vertical = true;
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // lblTarih
-            // 
-            this.lblTarih.Activecolor = System.Drawing.Color.Transparent;
-            this.lblTarih.BackColor = System.Drawing.Color.Transparent;
-            this.lblTarih.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.lblTarih.BorderRadius = 0;
-            this.lblTarih.ButtonText = "Tarih : ";
-            this.lblTarih.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.lblTarih.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
-            this.lblTarih.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lblTarih.Enabled = false;
-            this.lblTarih.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblTarih.Iconcolor = System.Drawing.Color.Transparent;
-            this.lblTarih.Iconimage = null;
-            this.lblTarih.Iconimage_right = null;
-            this.lblTarih.Iconimage_right_Selected = null;
-            this.lblTarih.Iconimage_Selected = null;
-            this.lblTarih.IconMarginLeft = 20;
-            this.lblTarih.IconMarginRight = 0;
-            this.lblTarih.IconRightVisible = true;
-            this.lblTarih.IconRightZoom = 0D;
-            this.lblTarih.IconVisible = true;
-            this.lblTarih.IconZoom = 90D;
-            this.lblTarih.IsTab = false;
-            this.lblTarih.Location = new System.Drawing.Point(0, 627);
-            this.lblTarih.Margin = new System.Windows.Forms.Padding(4);
-            this.lblTarih.Name = "lblTarih";
-            this.lblTarih.Normalcolor = System.Drawing.Color.DarkRed;
-            this.lblTarih.OnHovercolor = System.Drawing.Color.Firebrick;
-            this.lblTarih.OnHoverTextColor = System.Drawing.Color.White;
-            this.lblTarih.selected = true;
-            this.lblTarih.Size = new System.Drawing.Size(181, 44);
-            this.lblTarih.TabIndex = 9;
-            this.lblTarih.Text = "Tarih : ";
-            this.lblTarih.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblTarih.Textcolor = System.Drawing.Color.White;
-            this.lblTarih.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.pbSeciliSayfa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbSeciliSayfa.BackColor = System.Drawing.Color.Orange;
+            this.pbSeciliSayfa.Location = new System.Drawing.Point(176, 0);
+            this.pbSeciliSayfa.Name = "pbSeciliSayfa";
+            this.pbSeciliSayfa.Size = new System.Drawing.Size(6, 43);
+            this.pbSeciliSayfa.TabIndex = 4;
+            this.pbSeciliSayfa.TabStop = false;
             // 
             // btnSistemYonetimi
             // 
@@ -355,6 +252,44 @@
             this.btnHastaKabul.Textcolor = System.Drawing.Color.White;
             this.btnHastaKabul.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHastaKabul.Click += new System.EventHandler(this.btnHastaKabul_Click);
+            // 
+            // lblTarih
+            // 
+            this.lblTarih.Activecolor = System.Drawing.Color.Transparent;
+            this.lblTarih.BackColor = System.Drawing.Color.Transparent;
+            this.lblTarih.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.lblTarih.BorderRadius = 0;
+            this.lblTarih.ButtonText = "Tarih : ";
+            this.lblTarih.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.lblTarih.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
+            this.lblTarih.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lblTarih.Enabled = false;
+            this.lblTarih.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblTarih.Iconcolor = System.Drawing.Color.Transparent;
+            this.lblTarih.Iconimage = null;
+            this.lblTarih.Iconimage_right = null;
+            this.lblTarih.Iconimage_right_Selected = null;
+            this.lblTarih.Iconimage_Selected = null;
+            this.lblTarih.IconMarginLeft = 20;
+            this.lblTarih.IconMarginRight = 0;
+            this.lblTarih.IconRightVisible = true;
+            this.lblTarih.IconRightZoom = 0D;
+            this.lblTarih.IconVisible = true;
+            this.lblTarih.IconZoom = 90D;
+            this.lblTarih.IsTab = false;
+            this.lblTarih.Location = new System.Drawing.Point(0, 627);
+            this.lblTarih.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblTarih.Name = "lblTarih";
+            this.lblTarih.Normalcolor = System.Drawing.Color.DarkRed;
+            this.lblTarih.OnHovercolor = System.Drawing.Color.Firebrick;
+            this.lblTarih.OnHoverTextColor = System.Drawing.Color.White;
+            this.lblTarih.selected = true;
+            this.lblTarih.Size = new System.Drawing.Size(181, 44);
+            this.lblTarih.TabIndex = 9;
+            this.lblTarih.Text = "Tarih : ";
+            this.lblTarih.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTarih.Textcolor = System.Drawing.Color.White;
+            this.lblTarih.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             // 
             // btnRandevu
             // 
@@ -546,6 +481,15 @@
             this.btnAnaSayfa.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAnaSayfa.Click += new System.EventHandler(this.btnAnaSayfa_Click);
             // 
+            // pnlLogo
+            // 
+            this.pnlLogo.Controls.Add(this.pictureBox1);
+            this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlLogo.Location = new System.Drawing.Point(0, 0);
+            this.pnlLogo.Name = "pnlLogo";
+            this.pnlLogo.Size = new System.Drawing.Size(181, 53);
+            this.pnlLogo.TabIndex = 0;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -557,15 +501,71 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // pbSeciliSayfa
+            // pnlHeader
             // 
-            this.pbSeciliSayfa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbSeciliSayfa.BackColor = System.Drawing.Color.Orange;
-            this.pbSeciliSayfa.Location = new System.Drawing.Point(176, 0);
-            this.pbSeciliSayfa.Name = "pbSeciliSayfa";
-            this.pbSeciliSayfa.Size = new System.Drawing.Size(6, 43);
-            this.pbSeciliSayfa.TabIndex = 4;
-            this.pbSeciliSayfa.TabStop = false;
+            this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
+            this.pnlHeader.Controls.Add(this.pnlKullaniciBilgileri);
+            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlHeader.Location = new System.Drawing.Point(181, 0);
+            this.pnlHeader.Name = "pnlHeader";
+            this.pnlHeader.Size = new System.Drawing.Size(1185, 53);
+            this.pnlHeader.TabIndex = 1;
+            // 
+            // pnlKullaniciBilgileri
+            // 
+            this.pnlKullaniciBilgileri.Controls.Add(this.btnKullaniciBilgi);
+            this.pnlKullaniciBilgileri.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlKullaniciBilgileri.Location = new System.Drawing.Point(985, 0);
+            this.pnlKullaniciBilgileri.Name = "pnlKullaniciBilgileri";
+            this.pnlKullaniciBilgileri.Size = new System.Drawing.Size(200, 53);
+            this.pnlKullaniciBilgileri.TabIndex = 2;
+            // 
+            // btnKullaniciBilgi
+            // 
+            this.btnKullaniciBilgi.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btnKullaniciBilgi.color = System.Drawing.Color.DarkSlateGray;
+            this.btnKullaniciBilgi.colorActive = System.Drawing.Color.DarkSlateGray;
+            this.btnKullaniciBilgi.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.btnKullaniciBilgi.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnKullaniciBilgi.Font = new System.Drawing.Font("Century Gothic", 15.75F);
+            this.btnKullaniciBilgi.ForeColor = System.Drawing.Color.White;
+            this.btnKullaniciBilgi.Image = null;
+            this.btnKullaniciBilgi.ImagePosition = 20;
+            this.btnKullaniciBilgi.ImageZoom = 50;
+            this.btnKullaniciBilgi.LabelPosition = 41;
+            this.btnKullaniciBilgi.LabelText = "";
+            this.btnKullaniciBilgi.Location = new System.Drawing.Point(0, 0);
+            this.btnKullaniciBilgi.Margin = new System.Windows.Forms.Padding(6);
+            this.btnKullaniciBilgi.Name = "btnKullaniciBilgi";
+            this.btnKullaniciBilgi.Size = new System.Drawing.Size(200, 53);
+            this.btnKullaniciBilgi.TabIndex = 17;
+            // 
+            // pnlIcerik
+            // 
+            this.pnlIcerik.AutoScroll = true;
+            this.pnlIcerik.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.pnlIcerik.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlIcerik.Location = new System.Drawing.Point(181, 53);
+            this.pnlIcerik.Name = "pnlIcerik";
+            this.pnlIcerik.Size = new System.Drawing.Size(1185, 715);
+            this.pnlIcerik.TabIndex = 2;
+            // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 20;
+            this.bunifuElipse1.TargetControl = this;
+            // 
+            // bunifuDragControl1
+            // 
+            this.bunifuDragControl1.Fixed = true;
+            this.bunifuDragControl1.Horizontal = true;
+            this.bunifuDragControl1.TargetControl = this.pnlHeader;
+            this.bunifuDragControl1.Vertical = true;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // FormAnaSayfa
             // 
@@ -584,11 +584,11 @@
             this.Load += new System.EventHandler(this.FormAnaSayfa_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbSeciliSayfa)).EndInit();
             this.pnlLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlHeader.ResumeLayout(false);
             this.pnlKullaniciBilgileri.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbSeciliSayfa)).EndInit();
             this.ResumeLayout(false);
 
         }

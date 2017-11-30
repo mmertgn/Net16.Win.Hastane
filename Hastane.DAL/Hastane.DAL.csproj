@@ -79,6 +79,9 @@
     <Compile Include="DataModel\HastaSikayetleri.cs">
       <DependentUpon>Hastane.tt</DependentUpon>
     </Compile>
+    <Compile Include="DataModel\HastaTahlilSonuclari.cs">
+      <DependentUpon>Hastane.tt</DependentUpon>
+    </Compile>
     <Compile Include="DataModel\Hizmetler.cs">
       <DependentUpon>Hastane.tt</DependentUpon>
     </Compile>
@@ -106,6 +109,9 @@
     <Compile Include="DataModel\SistemYoneticileri.cs">
       <DependentUpon>Hastane.tt</DependentUpon>
     </Compile>
+    <Compile Include="DataModel\TahlilIcerik.cs">
+      <DependentUpon>Hastane.tt</DependentUpon>
+    </Compile>
     <Compile Include="DataModel\Tahliller.cs">
       <DependentUpon>Hastane.tt</DependentUpon>
     </Compile>
@@ -121,6 +127,8 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Repositories\Abstracts\IRepository.cs" />
+    <Compile Include="Repositories\Concretes\EFRepositoryBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="DataModel\Hastane.edmx">

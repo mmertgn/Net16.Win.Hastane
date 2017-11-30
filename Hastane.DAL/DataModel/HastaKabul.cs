@@ -21,7 +21,7 @@ namespace Hastane.DAL.DataModel
             this.HastaSikayetleri1 = new HashSet<HastaSikayetleri>();
             this.Odemeler = new HashSet<Odemeler>();
             this.Receteler = new HashSet<Receteler>();
-            this.Tahliller = new HashSet<Tahliller>();
+            this.HastaTahlilSonuclari = new HashSet<HastaTahlilSonuclari>();
             this.Teshisler = new HashSet<Teshisler>();
         }
     
@@ -31,6 +31,7 @@ namespace Hastane.DAL.DataModel
         public int PersonelID { get; set; }
         public int KlinikID { get; set; }
         public int SikayetID { get; set; }
+        public string IstenenTahliller { get; set; }
         public Nullable<System.DateTime> CikisTarihi { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
@@ -46,7 +47,7 @@ namespace Hastane.DAL.DataModel
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Receteler> Receteler { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Tahliller> Tahliller { get; set; }
+        public virtual ICollection<HastaTahlilSonuclari> HastaTahlilSonuclari { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Teshisler> Teshisler { get; set; }
     }

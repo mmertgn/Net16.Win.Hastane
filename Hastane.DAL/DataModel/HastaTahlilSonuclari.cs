@@ -12,18 +12,27 @@ namespace Hastane.DAL.DataModel
     using System;
     using System.Collections.Generic;
     
-    public partial class Tahliller
+    public partial class HastaTahlilSonuclari
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Tahliller()
+        public HastaTahlilSonuclari()
         {
-            this.TahlilIcerik = new HashSet<TahlilIcerik>();
+            this.HastaHizmetHareketler = new HashSet<HastaHizmetHareketler>();
         }
     
-        public int TahlilID { get; set; }
+        public int TahlilSonucID { get; set; }
+        public System.DateTime Tarih { get; set; }
+        public int KabulID { get; set; }
+        public string TahlilAciklama { get; set; }
+        public bool Silindi { get; set; }
         public string TahlilAdi { get; set; }
+        public string TahlilIcerikAdi { get; set; }
+        public string TahlilIcerikReferansDegeri { get; set; }
+        public string TahlilSonucBirimi { get; set; }
+        public string TahlilIcerikSonuc { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TahlilIcerik> TahlilIcerik { get; set; }
+        public virtual ICollection<HastaHizmetHareketler> HastaHizmetHareketler { get; set; }
+        public virtual HastaKabul HastaKabul { get; set; }
     }
 }
