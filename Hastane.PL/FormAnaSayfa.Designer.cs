@@ -539,6 +539,7 @@
             this.btnKullaniciBilgi.Name = "btnKullaniciBilgi";
             this.btnKullaniciBilgi.Size = new System.Drawing.Size(200, 53);
             this.btnKullaniciBilgi.TabIndex = 17;
+            this.btnKullaniciBilgi.Click += new System.EventHandler(this.btnKullaniciBilgi_Click);
             // 
             // pnlIcerik
             // 

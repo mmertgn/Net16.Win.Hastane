@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace Hastane.PL
 {
-    public partial class FormTahlilIslemleri : Form
+    public partial class FormKullaniciBilgileri : Form
     {
-        public FormTahlilIslemleri()
+        public FormKullaniciBilgileri()
         {
             InitializeComponent();
         }
 
-        private void btnIlacSil_Click(object sender, EventArgs e)
+        private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

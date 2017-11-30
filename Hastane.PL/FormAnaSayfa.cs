@@ -148,5 +148,14 @@ namespace Hastane.PL
             FormTahlilIslemleri frm = new FormTahlilIslemleri();
             FormAcikmi(frm);
         }
+
+        private void btnKullaniciBilgi_Click(object sender, EventArgs e)
+        {
+            this.pbSeciliSayfa.Location = new Point(
+                this.pnlKullaniciBilgileri.Location.X,
+                this.pnlKullaniciBilgileri.Location.Y);
+            FormKullaniciBilgileri frm = new FormKullaniciBilgileri();
+            FormAcikmi(frm);
+        }
     }
 }

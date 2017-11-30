@@ -87,6 +87,12 @@
     <Compile Include="FormHastaKabul.Designer.cs">
       <DependentUpon>FormHastaKabul.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormKullaniciBilgileri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKullaniciBilgileri.Designer.cs">
+      <DependentUpon>FormKullaniciBilgileri.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormOdemeIslemleri.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +139,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormHastaKabul.resx">
       <DependentUpon>FormHastaKabul.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKullaniciBilgileri.resx">
+      <DependentUpon>FormKullaniciBilgileri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormOdemeIslemleri.resx">
       <DependentUpon>FormOdemeIslemleri.cs</DependentUpon>

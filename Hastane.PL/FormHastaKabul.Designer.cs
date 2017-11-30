@@ -53,8 +53,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.bunifuSeparator1 = new ns1.BunifuSeparator();
             this.btnKlinikSil = new ns1.BunifuThinButton2();
-            this.bunifuCustomLabel8 = new ns1.BunifuCustomLabel();
-            this.bunifuCheckbox1 = new ns1.BunifuCheckbox();
             this.bunifuMetroTextbox4 = new ns1.BunifuMetroTextbox();
             this.bunifuCustomLabel7 = new ns1.BunifuCustomLabel();
             this.bunifuMetroTextbox2 = new ns1.BunifuMetroTextbox();
@@ -296,8 +294,6 @@
             // 
             this.panel2.Controls.Add(this.bunifuSeparator1);
             this.panel2.Controls.Add(this.btnKlinikSil);
-            this.panel2.Controls.Add(this.bunifuCustomLabel8);
-            this.panel2.Controls.Add(this.bunifuCheckbox1);
             this.panel2.Controls.Add(this.bunifuMetroTextbox4);
             this.panel2.Controls.Add(this.bunifuCustomLabel7);
             this.panel2.Controls.Add(this.bunifuMetroTextbox2);
@@ -346,35 +342,12 @@
             this.btnKlinikSil.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
             this.btnKlinikSil.IdleForecolor = System.Drawing.Color.White;
             this.btnKlinikSil.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.btnKlinikSil.Location = new System.Drawing.Point(83, 336);
+            this.btnKlinikSil.Location = new System.Drawing.Point(83, 291);
             this.btnKlinikSil.Margin = new System.Windows.Forms.Padding(5);
             this.btnKlinikSil.Name = "btnKlinikSil";
             this.btnKlinikSil.Size = new System.Drawing.Size(356, 41);
             this.btnKlinikSil.TabIndex = 49;
             this.btnKlinikSil.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // bunifuCustomLabel8
-            // 
-            this.bunifuCustomLabel8.AutoSize = true;
-            this.bunifuCustomLabel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bunifuCustomLabel8.Location = new System.Drawing.Point(80, 299);
-            this.bunifuCustomLabel8.Name = "bunifuCustomLabel8";
-            this.bunifuCustomLabel8.Size = new System.Drawing.Size(108, 17);
-            this.bunifuCustomLabel8.TabIndex = 34;
-            this.bunifuCustomLabel8.Text = "Hasta Geldi Mi?";
-            this.bunifuCustomLabel8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // bunifuCheckbox1
-            // 
-            this.bunifuCheckbox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.bunifuCheckbox1.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.bunifuCheckbox1.Checked = false;
-            this.bunifuCheckbox1.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.bunifuCheckbox1.ForeColor = System.Drawing.Color.White;
-            this.bunifuCheckbox1.Location = new System.Drawing.Point(198, 298);
-            this.bunifuCheckbox1.Name = "bunifuCheckbox1";
-            this.bunifuCheckbox1.Size = new System.Drawing.Size(20, 20);
-            this.bunifuCheckbox1.TabIndex = 33;
             // 
             // bunifuMetroTextbox4
             // 
@@ -604,8 +577,6 @@
         private ns1.BunifuMetroTextbox txtKlinikAd;
         private ns1.BunifuCustomLabel bunifuCustomLabel3;
         private ns1.BunifuCustomLabel bunifuCustomLabel4;
-        private ns1.BunifuCustomLabel bunifuCustomLabel8;
-        private ns1.BunifuCheckbox bunifuCheckbox1;
         private ns1.BunifuThinButton2 btnKlinikSil;
         private ns1.BunifuSeparator bunifuSeparator1;
     }

@@ -16,5 +16,6 @@ namespace Hastane.PL
         {
             InitializeComponent();
         }
+        
     }
 }
