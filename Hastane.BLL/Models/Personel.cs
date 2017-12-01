@@ -37,26 +37,26 @@ namespace Hastane.BLL.Models
 
         public bool UyeGirisi(string KullaniciAdi, string Sifre)
         {
-            var Yonetici = db.SistemYoneticileri.Where(p => p.KullaniciAdi == KullaniciAdi && p.Sifre==Sifre).FirstOrDefault();
-            if (Yonetici == null)
+            var yonetici = db.SistemYoneticileri.FirstOrDefault(p => p.KullaniciAdi == KullaniciAdi && p.Sifre==Sifre);
+            if (yonetici == null)
             {
-                var Personel = db.Personeller.Where(p => p.KullaniciAdi == KullaniciAdi && p.Sifre == Sifre).FirstOrDefault();
-                if (Personel == null)
+                var personel = db.Personeller.FirstOrDefault(p => p.KullaniciAdi == KullaniciAdi && p.Sifre == Sifre);
+                if (personel == null)
                 {
                     
                     return false;
                 }
                 else
                 {
-                    Genel.KullaniciAdi = Personel.Ad;
-                    Genel.KullaniciSoyadi = Personel.Soyad;
+                    Genel.KullaniciAdi = personel.Ad;
+                    Genel.KullaniciSoyadi = personel.Soyad;
                     return true;
                 }
             }
             else
             {
-                Genel.KullaniciAdi = Yonetici.Ad;
-                Genel.KullaniciSoyadi = Yonetici.Soyad;
+                Genel.KullaniciAdi = yonetici.Ad;
+                Genel.KullaniciSoyadi = yonetici.Soyad;
                 return true;
             }
         }

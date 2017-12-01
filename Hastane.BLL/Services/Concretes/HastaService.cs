@@ -28,9 +28,11 @@ namespace Hastane.BLL.Services.Concretes
             {
                 _repo.Add(model);
             }
-            var m = new MessageResult();
-            m.ErrorMessage = result.Errors.Select(x => x.ErrorMessage).ToList();
-            m.IsSucceed = result.IsValid;
+            var m = new MessageResult
+            {
+                ErrorMessage = result.Errors.Select(x => x.ErrorMessage).ToList(),
+                IsSucceed = result.IsValid
+            };
             m.SuccessMessage = m.IsSucceed == true ? "Kayıt İşlemi Başarılı" : "Hatalı bilgiler mevcut";
             return m;
         }

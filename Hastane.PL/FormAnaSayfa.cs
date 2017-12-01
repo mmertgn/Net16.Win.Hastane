@@ -39,10 +39,13 @@ namespace Hastane.PL
                 }
                 AcilacakForm.TopLevel = false;
                 AcilacakForm.AutoScroll = true;
-                this.pnlIcerik.Controls.Add(AcilacakForm);
-                AcilacakForm.Dock = DockStyle.Fill;
-                AcilacakForm.Show();
-                frmLoadFirst = false;
+                if (pnlIcerik != null)
+                {
+                    pnlIcerik.Controls.Add(AcilacakForm);
+                    AcilacakForm.Dock = DockStyle.Fill;
+                    AcilacakForm.Show();
+                    frmLoadFirst = false;
+                }
             }
             else
             {
