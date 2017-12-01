@@ -54,8 +54,8 @@
     <Compile Include="Models\MessageResult.cs" />
     <Compile Include="Models\Personel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\Abstracts\IHastaServisi.cs" />
-    <Compile Include="Services\Concretes\HastaServisi.cs" />
+    <Compile Include="Services\Abstracts\IHastaService.cs" />
+    <Compile Include="Services\Concretes\HastaService.cs" />
     <Compile Include="Validations\HastaAddValidator.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2009
+VisualStudioVersion = 15.0.27004.2010
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hastane.PL", "Hastane.PL\Hastane.PL.csproj", "{961051C7-E8B7-45B3-8A68-6A923B2FCE62}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hastane.UI", "Hastane.PL\Hastane.UI.csproj", "{961051C7-E8B7-45B3-8A68-6A923B2FCE62}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hastane.BLL", "Hastane.BLL\Hastane.BLL.csproj", "{A28D5B5D-F974-4341-B2D9-C34D632C8CA8}"
 EndProject

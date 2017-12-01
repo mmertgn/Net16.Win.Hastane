@@ -16,5 +16,10 @@ namespace Hastane.PL
         {
             InitializeComponent();
         }
+
+        private void FormAnaSayfaIcerik_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

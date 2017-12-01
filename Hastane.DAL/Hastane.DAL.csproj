@@ -127,8 +127,10 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Repositories\Abstracts\IHastaRepository.cs" />
     <Compile Include="Repositories\Abstracts\IRepository.cs" />
     <Compile Include="Repositories\Concretes\EFRepositoryBase.cs" />
+    <Compile Include="Repositories\Concretes\HastaRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="DataModel\Hastane.edmx">

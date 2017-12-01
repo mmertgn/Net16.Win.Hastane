@@ -576,13 +576,14 @@
             this.dgvTahlilSonuclari.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvTahlilSonuclari.RowHeadersWidth = 10;
             this.dgvTahlilSonuclari.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTahlilSonuclari.Size = new System.Drawing.Size(524, 292);
+            this.dgvTahlilSonuclari.Size = new System.Drawing.Size(541, 292);
             this.dgvTahlilSonuclari.TabIndex = 44;
             // 
             // TahlilAdi
             // 
             this.TahlilAdi.HeaderText = "Tahlil Adı";
             this.TahlilAdi.Name = "TahlilAdi";
+            this.TahlilAdi.Width = 93;
             // 
             // İslemAdi
             // 
@@ -601,8 +602,10 @@
             // 
             // ReferansDegeri
             // 
+            this.ReferansDegeri.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.ReferansDegeri.HeaderText = "Referans Değeri";
             this.ReferansDegeri.Name = "ReferansDegeri";
+            this.ReferansDegeri.Width = 136;
             // 
             // bunifuCustomLabel2
             // 
@@ -716,7 +719,7 @@
             // 
             this.bunifuCustomLabel17.AutoSize = true;
             this.bunifuCustomLabel17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bunifuCustomLabel17.Location = new System.Drawing.Point(47, 341);
+            this.bunifuCustomLabel17.Location = new System.Drawing.Point(35, 341);
             this.bunifuCustomLabel17.Name = "bunifuCustomLabel17";
             this.bunifuCustomLabel17.Size = new System.Drawing.Size(66, 17);
             this.bunifuCustomLabel17.TabIndex = 41;
@@ -817,11 +820,6 @@
         private ns1.BunifuSeparator bunifuSeparator1;
         private ns1.BunifuThinButton2 btnTahlilSonucKaydet;
         private ns1.BunifuCustomDataGrid dgvTahlilSonuclari;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TahlilAdi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn İslemAdi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Sonuc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Birim;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ReferansDegeri;
         private ns1.BunifuCustomLabel bunifuCustomLabel2;
         private ns1.BunifuCustomDataGrid dgvTahlilIstenenHastalar;
         private ns1.BunifuMetroTextbox txtTahlilAdi;
@@ -831,5 +829,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn AdSoyad;
         private System.Windows.Forms.DataGridViewTextBoxColumn TCNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Kurum;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TahlilAdi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn İslemAdi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Sonuc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Birim;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ReferansDegeri;
     }
 }

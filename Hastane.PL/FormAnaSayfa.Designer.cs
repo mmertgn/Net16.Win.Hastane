@@ -280,8 +280,8 @@
             this.lblTarih.Location = new System.Drawing.Point(0, 627);
             this.lblTarih.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lblTarih.Name = "lblTarih";
-            this.lblTarih.Normalcolor = System.Drawing.Color.DarkRed;
-            this.lblTarih.OnHovercolor = System.Drawing.Color.Firebrick;
+            this.lblTarih.Normalcolor = System.Drawing.Color.Transparent;
+            this.lblTarih.OnHovercolor = System.Drawing.Color.Transparent;
             this.lblTarih.OnHoverTextColor = System.Drawing.Color.White;
             this.lblTarih.selected = true;
             this.lblTarih.Size = new System.Drawing.Size(181, 44);

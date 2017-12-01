@@ -13,10 +13,10 @@ using FluentValidation.Results;
 
 namespace Hastane.BLL.Services.Concretes
 {
-    public class HastaServisi : IHastaServisi
+    public class HastaService : IHastaService
     {
-        private readonly IRepository<Hastalar> _repo;
-        public HastaServisi(IRepository<Hastalar> repo)
+        private readonly IHastaRepository _repo;
+        public HastaService(IHastaRepository repo)
         {
             _repo = repo;
         }

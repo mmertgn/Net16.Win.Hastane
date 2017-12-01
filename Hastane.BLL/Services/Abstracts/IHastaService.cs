@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Hastane.BLL.Services.Abstracts
 {
-    public interface IHastaServisi
+    public interface IHastaService
     {
         MessageResult Create(Hastalar model);
         MessageResult Edit(Hastalar model);

@@ -206,6 +206,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormAnaSayfaIcerik";
             this.Text = "FormAnaSayfaIcerik";
+            this.Load += new System.EventHandler(this.FormAnaSayfaIcerik_Load);
             this.ResumeLayout(false);
 
         }
