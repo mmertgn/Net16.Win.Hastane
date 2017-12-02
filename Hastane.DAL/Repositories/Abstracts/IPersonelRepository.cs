@@ -9,6 +9,8 @@ namespace Hastane.DAL.Repositories.Abstracts
 {
     public interface IPersonelRepository : IRepository<Personeller>
     {
+        int GetDoktorCount();
+        int GetSekreterCount();
 
     }
 }

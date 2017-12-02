@@ -60,6 +60,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DependecyResolver\NinjectDependecyContainer.cs" />
     <Compile Include="FormAnaSayfa.cs">
       <SubType>Form</SubType>
     </Compile>
