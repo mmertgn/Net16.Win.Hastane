@@ -19,7 +19,7 @@ namespace Hastane.DAL.DataModel
         public string Saat { get; set; }
         public int PersonelID { get; set; }
         public int HastaID { get; set; }
-        public Nullable<bool> Geldimi { get; set; }
+        public bool Geldimi { get; set; }
     
         public virtual Hastalar Hastalar { get; set; }
         public virtual Personeller Personeller { get; set; }

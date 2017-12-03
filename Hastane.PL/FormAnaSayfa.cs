@@ -96,7 +96,7 @@ namespace Hastane.PL
                 176,
                 this.btnRandevu.Location.Y);
 
-            FormRandevu frm = new FormRandevu();
+            FormRandevuIslemleri frm = new FormRandevuIslemleri();
             FormAcikmi(frm);
         }
 

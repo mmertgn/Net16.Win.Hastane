@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Hastane.PL
 {
-    public partial class FormRandevu : Form
+    public partial class FormRandevuIslemleri : Form
     {
-        public FormRandevu()
+        public FormRandevuIslemleri()
         {
             InitializeComponent();
         }

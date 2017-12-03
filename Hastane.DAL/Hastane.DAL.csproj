@@ -128,11 +128,23 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="Repositories\Abstracts\IHastaRepository.cs" />
+    <Compile Include="Repositories\Abstracts\IHizmetRepository.cs" />
+    <Compile Include="Repositories\Abstracts\IKlinikRepository.cs" />
+    <Compile Include="Repositories\Abstracts\IKurumRepository.cs" />
     <Compile Include="Repositories\Abstracts\IPersonelRepository.cs" />
+    <Compile Include="Repositories\Abstracts\IRandevuRepository.cs" />
     <Compile Include="Repositories\Abstracts\IRepository.cs" />
+    <Compile Include="Repositories\Abstracts\ISistemYoneticisiRepository.cs" />
+    <Compile Include="Repositories\Concretes\HizmetRepository.cs" />
+    <Compile Include="Repositories\Concretes\KlinikRepository.cs" />
+    <Compile Include="Repositories\Concretes\KurumRepository.cs" />
     <Compile Include="Repositories\Concretes\PersonelRepository.cs" />
     <Compile Include="Repositories\Concretes\EFRepositoryBase.cs" />
     <Compile Include="Repositories\Concretes\HastaRepository.cs" />
+    <Compile Include="Repositories\Concretes\RandevuRepository.cs" />
+    <Compile Include="Repositories\Concretes\SistemYoneticisiRepository.cs" />
+    <Compile Include="Repositories\Abstracts\ITahlilRepository.cs" />
+    <Compile Include="Repositories\Concretes\TahlilRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="DataModel\Hastane.edmx">

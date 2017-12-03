@@ -29,6 +29,18 @@ namespace Hastane.PL.DependecyResolver
 
             kernel.Bind<IPersonelRepository>().To<PersonelRepository>();
 
+            kernel.Bind<ISistemYoneticisiRepository>().To<SistemYoneticisiRepository>();
+
+            kernel.Bind<IKlinikRepository>().To<KlinikRepository>();
+
+            kernel.Bind<IHizmetRepository>().To<HizmetRepository>();
+
+            kernel.Bind<ITahlilRepository>().To<TahlilRepository>();
+
+            kernel.Bind<IKurumRepository>().To<KurumRepository>();
+
+            kernel.Bind<IRandevuRepository>().To<RandevuRepository>();
+
             kernel.Bind<IMessaging>().To<SystemNetMailManager>();
 
             return kernel;

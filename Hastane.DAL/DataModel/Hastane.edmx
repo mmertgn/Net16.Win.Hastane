@@ -159,7 +159,7 @@
           <Property Name="Saat" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="PersonelID" Type="int" Nullable="false" />
           <Property Name="HastaID" Type="int" Nullable="false" />
-          <Property Name="Geldimi" Type="bit" />
+          <Property Name="Geldimi" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="ReceteDetay">
           <Key>
@@ -986,7 +986,7 @@
           <Property Name="Saat" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="PersonelID" Type="Int32" Nullable="false" />
           <Property Name="HastaID" Type="Int32" Nullable="false" />
-          <Property Name="Geldimi" Type="Boolean" />
+          <Property Name="Geldimi" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="Hastalar" Relationship="HastaneModel.FK_Randevular_Hastalar" FromRole="Randevular" ToRole="Hastalar" />
           <NavigationProperty Name="Personeller" Relationship="HastaneModel.FK_Randevular_Personeller" FromRole="Randevular" ToRole="Personeller" />
         </EntityType>
