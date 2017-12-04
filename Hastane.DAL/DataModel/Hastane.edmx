@@ -54,10 +54,10 @@
           <Property Name="EvTel" Type="varchar" MaxLength="11" />
           <Property Name="CepTel" Type="varchar" MaxLength="11" />
           <Property Name="KanGrubu" Type="varchar" MaxLength="20" />
-          <Property Name="DogumTarihi" Type="datetime" Nullable="false" />
+          <Property Name="DogumTarihi" Type="datetime2" Precision="7" />
           <Property Name="Cinsiyet" Type="varchar" MaxLength="11" Nullable="false" />
           <Property Name="KurumID" Type="int" />
-          <Property Name="KayitTarihi" Type="datetime" Nullable="false" />
+          <Property Name="KayitTarihi" Type="datetime2" Precision="7" Nullable="false" />
           <Property Name="il" Type="varchar" MaxLength="50" />
           <Property Name="Ilce" Type="varchar" MaxLength="50" />
           <Property Name="Silindi" Type="bit" Nullable="false" />
@@ -97,6 +97,21 @@
           <Property Name="Ucret" Type="money" Nullable="false" />
           <Property Name="Aciklama" Type="varchar(max)" Nullable="false" />
           <Property Name="Silindi" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ilceler">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="ilce" Type="nvarchar" MaxLength="255" />
+          <Property Name="sehir" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="iller">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="sehir" Type="nvarchar" MaxLength="255" />
         </EntityType>
         <EntityType Name="Klinikler">
           <Key>
@@ -371,6 +386,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_ilceler_iller">
+          <End Role="iller" Type="Self.iller" Multiplicity="1" />
+          <End Role="ilceler" Type="Self.ilceler" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="iller">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ilceler">
+              <PropertyRef Name="sehir" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Odemeler_HastaKabul">
           <End Role="HastaKabul" Type="Self.HastaKabul" Multiplicity="1" />
           <End Role="Odemeler" Type="Self.Odemeler" Multiplicity="*" />
@@ -547,6 +574,8 @@
           <EntitySet Name="HastaSikayetleri" EntityType="Self.HastaSikayetleri" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HastaTahlilSonuclari" EntityType="Self.HastaTahlilSonuclari" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Hizmetler" EntityType="Self.Hizmetler" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ilceler" EntityType="Self.ilceler" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="iller" EntityType="Self.iller" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Klinikler" EntityType="Self.Klinikler" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Kurumlar" EntityType="Self.Kurumlar" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Odemeler" EntityType="Self.Odemeler" Schema="dbo" store:Type="Tables" />
@@ -606,6 +635,10 @@
           <AssociationSet Name="FK_Hizmetler_Klinikler" Association="Self.FK_Hizmetler_Klinikler">
             <End Role="Klinikler" EntitySet="Klinikler" />
             <End Role="Hizmetler" EntitySet="Hizmetler" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ilceler_iller" Association="Self.FK_ilceler_iller">
+            <End Role="iller" EntitySet="iller" />
+            <End Role="ilceler" EntitySet="ilceler" />
           </AssociationSet>
           <AssociationSet Name="FK_Odemeler_HastaKabul" Association="Self.FK_Odemeler_HastaKabul">
             <End Role="HastaKabul" EntitySet="HastaKabul" />
@@ -792,6 +825,12 @@
             <End Role="Tahliller" EntitySet="Tahliller" />
             <End Role="TahlilIcerik" EntitySet="TahlilIcerik" />
           </AssociationSet>
+          <EntitySet Name="ilceler" EntityType="HastaneModel.ilceler" />
+          <EntitySet Name="iller" EntityType="HastaneModel.iller" />
+          <AssociationSet Name="FK_ilceler_iller" Association="HastaneModel.FK_ilceler_iller">
+            <End Role="iller" EntitySet="iller" />
+            <End Role="ilceler" EntitySet="ilceler" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="HastaGecmisi">
           <Key>
@@ -856,10 +895,10 @@
           <Property Name="EvTel" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
           <Property Name="CepTel" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
           <Property Name="KanGrubu" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="DogumTarihi" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="DogumTarihi" Type="DateTime" Nullable="true" Precision="7" />
           <Property Name="Cinsiyet" Type="String" Nullable="false" MaxLength="11" FixedLength="false" Unicode="false" />
           <Property Name="KurumID" Type="Int32" />
-          <Property Name="KayitTarihi" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="KayitTarihi" Type="DateTime" Precision="7" Nullable="false" />
           <Property Name="il" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Ilce" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Silindi" Type="Boolean" Nullable="false" />
@@ -1379,6 +1418,35 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="ilceler">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="ilce" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="sehir" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="iller" Relationship="HastaneModel.FK_ilceler_iller" FromRole="ilceler" ToRole="iller" />
+        </EntityType>
+        <EntityType Name="iller">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="sehir" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ilceler" Relationship="HastaneModel.FK_ilceler_iller" FromRole="iller" ToRole="ilceler" />
+        </EntityType>
+        <Association Name="FK_ilceler_iller">
+          <End Type="HastaneModel.iller" Role="iller" Multiplicity="1" />
+          <End Type="HastaneModel.ilceler" Role="ilceler" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="iller">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ilceler">
+              <PropertyRef Name="sehir" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1623,6 +1691,23 @@
               <MappingFragment StoreEntitySet="Unvanlar">
                 <ScalarProperty Name="PersonelUnvan" ColumnName="PersonelUnvan" />
                 <ScalarProperty Name="UnvanID" ColumnName="UnvanID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ilceler">
+            <EntityTypeMapping TypeName="HastaneModel.ilceler">
+              <MappingFragment StoreEntitySet="ilceler">
+                <ScalarProperty Name="sehir" ColumnName="sehir" />
+                <ScalarProperty Name="ilce" ColumnName="ilce" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="iller">
+            <EntityTypeMapping TypeName="HastaneModel.iller">
+              <MappingFragment StoreEntitySet="iller">
+                <ScalarProperty Name="sehir" ColumnName="sehir" />
+                <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -13,7 +13,6 @@ namespace Hastane.DAL.Repositories.Abstracts
         void Add(T entity);
         void Delete(int Id);
         void Update(T entity);
-        int Save();
         List<T> GetList(Expression<Func<T, bool>> predicate = null);
         T FindById(int Id);
     }

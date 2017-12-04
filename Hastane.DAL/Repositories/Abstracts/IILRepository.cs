@@ -7,9 +7,8 @@ using Hastane.DAL.DataModel;
 
 namespace Hastane.DAL.Repositories.Abstracts
 {
-    public interface IKurumRepository : IRepository<Kurumlar>
+    public interface IILRepository : IRepository<iller>
     {
-        int GetKurumCount();
-        List<Kurumlar> KurumGetir(string KurumAdi);
+        List<iller> ilGetir(string ilAdi);
     }
 }

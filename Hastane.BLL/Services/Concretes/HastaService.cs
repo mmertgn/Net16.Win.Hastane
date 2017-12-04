@@ -33,18 +33,36 @@ namespace Hastane.BLL.Services.Concretes
                 ErrorMessage = result.Errors.Select(x => x.ErrorMessage).ToList(),
                 IsSucceed = result.IsValid
             };
-            m.SuccessMessage = m.IsSucceed == true ? "Kayıt İşlemi Başarılı" : "Hatalı bilgiler mevcut";
+            m.SuccessMessage = m.IsSucceed == true ? "Kayıt Ekleme İşlemi Başarılı." : "Hatalı bilgiler mevcut";
             return m;
         }
 
         public MessageResult Delete(int id)
         {
-            throw new NotImplementedException();
+            _repo.Delete(id);
+            var m = new MessageResult
+            {
+                IsSucceed = true
+            };
+            m.SuccessMessage = m.IsSucceed == true ? "Kayıt Silme İşlemi Başarılı." : "Hatalı bilgiler mevcut";
+            return m;
         }
 
         public MessageResult Edit(Hastalar model)
         {
-            throw new NotImplementedException();
+            var _validator = new HastaUpdateValidator();
+            ValidationResult result = _validator.Validate(model);
+            if (result.IsValid)
+            {
+                _repo.Update(model);
+            }
+            var m = new MessageResult
+            {
+                ErrorMessage = result.Errors.Select(x => x.ErrorMessage).ToList(),
+                IsSucceed = result.IsValid
+            };
+            m.SuccessMessage = m.IsSucceed == true ? "Kayıt Güncelleme İşlemi Başarılı." : "Hatalı bilgiler mevcut";
+            return m;
         }
 
         public Hastalar GetHastaById(int id)
@@ -56,15 +74,12 @@ namespace Hastane.BLL.Services.Concretes
         {
             return _repo.GetList(null);
         }
+        
 
-        public int Save()
-        {
-            return _repo.Save();
-        }
-
-        public List<Hastalar> Where(Expression<Func<Hastalar, bool>> predicate)
+        public List<Hastalar> HastaListWithSorgu(Expression<Func<Hastalar, bool>> predicate)
         {
             return _repo.GetList(predicate);
         }
     }
+
 }

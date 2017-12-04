@@ -23,6 +23,8 @@ namespace Hastane.PL.DependecyResolver
         {
             kernel.Bind<DbContext>().To<HastaneEntities>();
 
+            kernel.Bind<IILRepository>().To<IlRepository>();
+            kernel.Bind<IIlceRepository>().To<IlceRepository>();
 
             kernel.Bind<IHastaService>().To<HastaService>();
             kernel.Bind<IHastaRepository>().To<HastaRepository>();

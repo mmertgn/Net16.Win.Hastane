@@ -18,5 +18,9 @@ namespace Hastane.DAL.Repositories.Concretes
         {
             return _dbSet.Count();
         }
+        public List<Kurumlar> KurumGetir(string KurumAdi)
+        {
+            return _dbSet.Where(x => x.KurumAd == KurumAdi).ToList();
+        }
     }
 }

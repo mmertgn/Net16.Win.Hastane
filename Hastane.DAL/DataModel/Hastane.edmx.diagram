@@ -50,6 +50,9 @@
         <AssociationConnector Association="HastaneModel.FK_Teshisler_Personeller" />
         <AssociationConnector Association="HastaneModel.FK_ReceteDetay_Receteler" />
         <AssociationConnector Association="HastaneModel.FK_TahlilIcerik_Tahliller" />
+        <EntityTypeShape EntityType="HastaneModel.ilceler" Width="1.5" PointX="6.625" PointY="4.75" />
+        <EntityTypeShape EntityType="HastaneModel.iller" Width="1.5" PointX="5.375" PointY="2.75" />
+        <AssociationConnector Association="HastaneModel.FK_ilceler_iller" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

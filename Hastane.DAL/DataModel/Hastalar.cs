@@ -32,7 +32,7 @@ namespace Hastane.DAL.DataModel
         public string EvTel { get; set; }
         public string CepTel { get; set; }
         public string KanGrubu { get; set; }
-        public System.DateTime DogumTarihi { get; set; }
+        public Nullable<System.DateTime> DogumTarihi { get; set; }
         public string Cinsiyet { get; set; }
         public Nullable<int> KurumID { get; set; }
         public System.DateTime KayitTarihi { get; set; }

@@ -26,4 +26,21 @@ namespace Hastane.BLL.Validations
             }
         }
     }
+    public class HastaUpdateValidator : AbstractValidator<Hastalar>
+    {
+        public HastaUpdateValidator()
+        {
+            RuleFor(x => x.Ad).NotEmpty().WithMessage("Hastanın Adını girmek zorundasınız!");
+            RuleFor(x => x.Soyad).NotEmpty().WithMessage("Hastanın Soyadını girmek zorundasınız!");
+            RuleFor(x => x.TCKimlikNo).NotEmpty().WithMessage("Hastanın TC Kimlik Numarasını girmek zorundasınız!");
+        }
+        
+    }
+    public class HastaDeleteValidator : AbstractValidator<Hastalar>
+    {
+        public HastaDeleteValidator()
+        {
+        }
+
+    }
 }

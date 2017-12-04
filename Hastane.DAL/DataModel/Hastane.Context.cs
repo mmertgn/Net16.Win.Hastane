@@ -44,5 +44,7 @@ namespace Hastane.DAL.DataModel
         public virtual DbSet<Tahliller> Tahliller { get; set; }
         public virtual DbSet<Teshisler> Teshisler { get; set; }
         public virtual DbSet<Unvanlar> Unvanlar { get; set; }
+        public virtual DbSet<ilceler> ilceler { get; set; }
+        public virtual DbSet<iller> iller { get; set; }
     }
 }
