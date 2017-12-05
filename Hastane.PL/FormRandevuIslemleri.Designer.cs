@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRandevuIslemleri));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -85,36 +85,36 @@
             this.bunifuThinButton22 = new ns1.BunifuThinButton2();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.bunifuMetroTextbox1 = new ns1.BunifuMetroTextbox();
+            this.txtRandevuSaati = new ns1.BunifuMetroTextbox();
             this.bunifuCustomLabel44 = new ns1.BunifuCustomLabel();
             this.btnRandevuKaydet = new ns1.BunifuThinButton2();
             this.dtpRandevuTarih = new ns1.BunifuDatepicker();
             this.bunifuCustomLabel43 = new ns1.BunifuCustomLabel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.lbl16 = new ns1.BunifuCustomLabel();
-            this.lbl1620 = new ns1.BunifuCustomLabel();
-            this.lbl1640 = new ns1.BunifuCustomLabel();
-            this.lbl15 = new ns1.BunifuCustomLabel();
-            this.lbl1520 = new ns1.BunifuCustomLabel();
-            this.lbl1540 = new ns1.BunifuCustomLabel();
-            this.lbl14 = new ns1.BunifuCustomLabel();
-            this.lbl1420 = new ns1.BunifuCustomLabel();
-            this.lbl1440 = new ns1.BunifuCustomLabel();
-            this.lbl13 = new ns1.BunifuCustomLabel();
-            this.lbl1320 = new ns1.BunifuCustomLabel();
-            this.lbl1340 = new ns1.BunifuCustomLabel();
-            this.lbl1240 = new ns1.BunifuCustomLabel();
-            this.lbl1220 = new ns1.BunifuCustomLabel();
-            this.lbl12 = new ns1.BunifuCustomLabel();
-            this.lbl1140 = new ns1.BunifuCustomLabel();
-            this.lbl1120 = new ns1.BunifuCustomLabel();
-            this.lbl11 = new ns1.BunifuCustomLabel();
-            this.lbl1040 = new ns1.BunifuCustomLabel();
-            this.lbl1020 = new ns1.BunifuCustomLabel();
-            this.lbl10 = new ns1.BunifuCustomLabel();
-            this.lbl940 = new ns1.BunifuCustomLabel();
-            this.lbl920 = new ns1.BunifuCustomLabel();
-            this.lbl9 = new ns1.BunifuCustomLabel();
+            this.lbl16 = new System.Windows.Forms.Label();
+            this.lbl1620 = new System.Windows.Forms.Label();
+            this.lbl1640 = new System.Windows.Forms.Label();
+            this.lbl9 = new System.Windows.Forms.Label();
+            this.lbl920 = new System.Windows.Forms.Label();
+            this.lbl940 = new System.Windows.Forms.Label();
+            this.lbl10 = new System.Windows.Forms.Label();
+            this.lbl1020 = new System.Windows.Forms.Label();
+            this.lbl1040 = new System.Windows.Forms.Label();
+            this.lbl11 = new System.Windows.Forms.Label();
+            this.lbl1120 = new System.Windows.Forms.Label();
+            this.lbl1140 = new System.Windows.Forms.Label();
+            this.lbl12 = new System.Windows.Forms.Label();
+            this.lbl1220 = new System.Windows.Forms.Label();
+            this.lbl1240 = new System.Windows.Forms.Label();
+            this.lbl13 = new System.Windows.Forms.Label();
+            this.lbl1320 = new System.Windows.Forms.Label();
+            this.lbl14 = new System.Windows.Forms.Label();
+            this.lbl1340 = new System.Windows.Forms.Label();
+            this.lbl1420 = new System.Windows.Forms.Label();
+            this.lbl1440 = new System.Windows.Forms.Label();
+            this.lbl15 = new System.Windows.Forms.Label();
+            this.lbl1520 = new System.Windows.Forms.Label();
+            this.lbl1540 = new System.Windows.Forms.Label();
             this.cbDoktor = new ns1.BunifuDropdown();
             this.bunifuCustomLabel17 = new ns1.BunifuCustomLabel();
             this.cbKlinik = new ns1.BunifuDropdown();
@@ -161,19 +161,19 @@
             // dgvHastalar
             // 
             this.dgvHastalar.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvHastalar.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvHastalar.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvHastalar.BackgroundColor = System.Drawing.Color.White;
             this.dgvHastalar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvHastalar.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvHastalar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvHastalar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvHastalar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHastalar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.HastaId,
@@ -181,14 +181,14 @@
             this.TCNo,
             this.Telefon,
             this.Kurum});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvHastalar.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvHastalar.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgvHastalar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvHastalar.DoubleBuffered = true;
             this.dgvHastalar.EnableHeadersVisualStyles = false;
@@ -200,14 +200,14 @@
             this.dgvHastalar.Name = "dgvHastalar";
             this.dgvHastalar.ReadOnly = true;
             this.dgvHastalar.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvHastalar.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvHastalar.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvHastalar.RowHeadersWidth = 10;
             this.dgvHastalar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvHastalar.Size = new System.Drawing.Size(443, 471);
@@ -634,7 +634,7 @@
             this.dtpDogumTarihi.Name = "dtpDogumTarihi";
             this.dtpDogumTarihi.Size = new System.Drawing.Size(175, 35);
             this.dtpDogumTarihi.TabIndex = 7;
-            this.dtpDogumTarihi.Value = new System.DateTime(2017, 12, 5, 0, 0, 0, 0);
+            this.dtpDogumTarihi.Value = new System.DateTime(1999, 1, 1, 0, 0, 0, 0);
             // 
             // txtAdres
             // 
@@ -901,7 +901,7 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.label1);
-            this.panel3.Controls.Add(this.bunifuMetroTextbox1);
+            this.panel3.Controls.Add(this.txtRandevuSaati);
             this.panel3.Controls.Add(this.bunifuCustomLabel44);
             this.panel3.Controls.Add(this.btnRandevuKaydet);
             this.panel3.Controls.Add(this.dtpRandevuTarih);
@@ -927,27 +927,27 @@
             this.label1.ForeColor = System.Drawing.Color.DarkRed;
             this.label1.Location = new System.Drawing.Point(14, 590);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(279, 15);
+            this.label1.Size = new System.Drawing.Size(305, 15);
             this.label1.TabIndex = 48;
-            this.label1.Text = "Mavi Renkli Olan Saatler Randevu Dolu Demektir.";
+            this.label1.Text = "*Mavi Renkli Olan Saatler Randevu Alınabilir Demektir.";
             // 
-            // bunifuMetroTextbox1
+            // txtRandevuSaati
             // 
-            this.bunifuMetroTextbox1.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.bunifuMetroTextbox1.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMetroTextbox1.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.bunifuMetroTextbox1.BorderThickness = 3;
-            this.bunifuMetroTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMetroTextbox1.Enabled = false;
-            this.bunifuMetroTextbox1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMetroTextbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.bunifuMetroTextbox1.isPassword = false;
-            this.bunifuMetroTextbox1.Location = new System.Drawing.Point(132, 500);
-            this.bunifuMetroTextbox1.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMetroTextbox1.Name = "bunifuMetroTextbox1";
-            this.bunifuMetroTextbox1.Size = new System.Drawing.Size(175, 35);
-            this.bunifuMetroTextbox1.TabIndex = 4;
-            this.bunifuMetroTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtRandevuSaati.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.txtRandevuSaati.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtRandevuSaati.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.txtRandevuSaati.BorderThickness = 3;
+            this.txtRandevuSaati.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtRandevuSaati.Enabled = false;
+            this.txtRandevuSaati.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.txtRandevuSaati.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.txtRandevuSaati.isPassword = false;
+            this.txtRandevuSaati.Location = new System.Drawing.Point(132, 500);
+            this.txtRandevuSaati.Margin = new System.Windows.Forms.Padding(4);
+            this.txtRandevuSaati.Name = "txtRandevuSaati";
+            this.txtRandevuSaati.Size = new System.Drawing.Size(175, 35);
+            this.txtRandevuSaati.TabIndex = 4;
+            this.txtRandevuSaati.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // bunifuCustomLabel44
             // 
@@ -983,6 +983,7 @@
             this.btnRandevuKaydet.Size = new System.Drawing.Size(181, 41);
             this.btnRandevuKaydet.TabIndex = 5;
             this.btnRandevuKaydet.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnRandevuKaydet.Click += new System.EventHandler(this.btnRandevuKaydet_Click);
             // 
             // dtpRandevuTarih
             // 
@@ -995,7 +996,7 @@
             this.dtpRandevuTarih.Name = "dtpRandevuTarih";
             this.dtpRandevuTarih.Size = new System.Drawing.Size(235, 35);
             this.dtpRandevuTarih.TabIndex = 3;
-            this.dtpRandevuTarih.Value = new System.DateTime(2017, 12, 5, 0, 0, 0, 0);
+            this.dtpRandevuTarih.Value = new System.DateTime(1999, 1, 1, 0, 0, 0, 0);
             this.dtpRandevuTarih.onValueChanged += new System.EventHandler(this.dtpRandevuTarih_onValueChanged);
             // 
             // bunifuCustomLabel43
@@ -1010,6 +1011,7 @@
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
@@ -1017,27 +1019,27 @@
             this.tableLayoutPanel1.Controls.Add(this.lbl16, 0, 7);
             this.tableLayoutPanel1.Controls.Add(this.lbl1620, 0, 7);
             this.tableLayoutPanel1.Controls.Add(this.lbl1640, 0, 7);
-            this.tableLayoutPanel1.Controls.Add(this.lbl15, 0, 6);
-            this.tableLayoutPanel1.Controls.Add(this.lbl1520, 0, 6);
-            this.tableLayoutPanel1.Controls.Add(this.lbl1540, 0, 6);
-            this.tableLayoutPanel1.Controls.Add(this.lbl14, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.lbl1420, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.lbl1440, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.lbl13, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.lbl1320, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.lbl1340, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.lbl1240, 2, 3);
-            this.tableLayoutPanel1.Controls.Add(this.lbl1220, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.lbl12, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.lbl1140, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.lbl1120, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.lbl11, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.lbl1040, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.lbl1020, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.lbl10, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.lbl940, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lbl920, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.lbl9, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lbl920, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lbl940, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lbl10, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.lbl1020, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.lbl1040, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.lbl11, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.lbl1120, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.lbl1140, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.lbl12, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.lbl1220, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.lbl1240, 2, 3);
+            this.tableLayoutPanel1.Controls.Add(this.lbl13, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.lbl1320, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.lbl14, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.lbl1340, 2, 4);
+            this.tableLayoutPanel1.Controls.Add(this.lbl1420, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.lbl1440, 2, 5);
+            this.tableLayoutPanel1.Controls.Add(this.lbl15, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.lbl1520, 1, 6);
+            this.tableLayoutPanel1.Controls.Add(this.lbl1540, 2, 6);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(17, 233);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 8;
@@ -1049,6 +1051,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(383, 260);
             this.tableLayoutPanel1.TabIndex = 41;
             // 
@@ -1062,9 +1065,11 @@
             this.lbl16.Location = new System.Drawing.Point(3, 224);
             this.lbl16.Name = "lbl16";
             this.lbl16.Size = new System.Drawing.Size(121, 36);
-            this.lbl16.TabIndex = 23;
+            this.lbl16.TabIndex = 47;
             this.lbl16.Text = "16:00";
             this.lbl16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl16.Click += new System.EventHandler(this.RandevuSaatSec);
+            this.lbl16.DoubleClick += new System.EventHandler(this.RandevuSaatSec);
             // 
             // lbl1620
             // 
@@ -1076,9 +1081,11 @@
             this.lbl1620.Location = new System.Drawing.Point(130, 224);
             this.lbl1620.Name = "lbl1620";
             this.lbl1620.Size = new System.Drawing.Size(121, 36);
-            this.lbl1620.TabIndex = 22;
+            this.lbl1620.TabIndex = 46;
             this.lbl1620.Text = "16:20";
             this.lbl1620.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl1620.Click += new System.EventHandler(this.RandevuSaatSec);
+            this.lbl1620.DoubleClick += new System.EventHandler(this.RandevuSaatSec);
             // 
             // lbl1640
             // 
@@ -1090,289 +1097,11 @@
             this.lbl1640.Location = new System.Drawing.Point(257, 224);
             this.lbl1640.Name = "lbl1640";
             this.lbl1640.Size = new System.Drawing.Size(123, 36);
-            this.lbl1640.TabIndex = 21;
+            this.lbl1640.TabIndex = 26;
             this.lbl1640.Text = "16:40";
             this.lbl1640.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbl15
-            // 
-            this.lbl15.AutoSize = true;
-            this.lbl15.BackColor = System.Drawing.Color.Transparent;
-            this.lbl15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl15.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbl15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.lbl15.Location = new System.Drawing.Point(3, 192);
-            this.lbl15.Name = "lbl15";
-            this.lbl15.Size = new System.Drawing.Size(121, 32);
-            this.lbl15.TabIndex = 20;
-            this.lbl15.Text = "15:00";
-            this.lbl15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbl1520
-            // 
-            this.lbl1520.AutoSize = true;
-            this.lbl1520.BackColor = System.Drawing.Color.Transparent;
-            this.lbl1520.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl1520.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbl1520.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.lbl1520.Location = new System.Drawing.Point(130, 192);
-            this.lbl1520.Name = "lbl1520";
-            this.lbl1520.Size = new System.Drawing.Size(121, 32);
-            this.lbl1520.TabIndex = 19;
-            this.lbl1520.Text = "15:20";
-            this.lbl1520.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbl1540
-            // 
-            this.lbl1540.AutoSize = true;
-            this.lbl1540.BackColor = System.Drawing.Color.Transparent;
-            this.lbl1540.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl1540.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbl1540.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.lbl1540.Location = new System.Drawing.Point(257, 192);
-            this.lbl1540.Name = "lbl1540";
-            this.lbl1540.Size = new System.Drawing.Size(123, 32);
-            this.lbl1540.TabIndex = 18;
-            this.lbl1540.Text = "15:40";
-            this.lbl1540.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbl14
-            // 
-            this.lbl14.AutoSize = true;
-            this.lbl14.BackColor = System.Drawing.Color.Transparent;
-            this.lbl14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbl14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.lbl14.Location = new System.Drawing.Point(3, 160);
-            this.lbl14.Name = "lbl14";
-            this.lbl14.Size = new System.Drawing.Size(121, 32);
-            this.lbl14.TabIndex = 17;
-            this.lbl14.Text = "14:00";
-            this.lbl14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbl1420
-            // 
-            this.lbl1420.AutoSize = true;
-            this.lbl1420.BackColor = System.Drawing.Color.Transparent;
-            this.lbl1420.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl1420.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbl1420.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.lbl1420.Location = new System.Drawing.Point(130, 160);
-            this.lbl1420.Name = "lbl1420";
-            this.lbl1420.Size = new System.Drawing.Size(121, 32);
-            this.lbl1420.TabIndex = 16;
-            this.lbl1420.Text = "14:20";
-            this.lbl1420.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbl1440
-            // 
-            this.lbl1440.AutoSize = true;
-            this.lbl1440.BackColor = System.Drawing.Color.Transparent;
-            this.lbl1440.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl1440.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbl1440.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.lbl1440.Location = new System.Drawing.Point(257, 160);
-            this.lbl1440.Name = "lbl1440";
-            this.lbl1440.Size = new System.Drawing.Size(123, 32);
-            this.lbl1440.TabIndex = 15;
-            this.lbl1440.Text = "14:40";
-            this.lbl1440.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbl13
-            // 
-            this.lbl13.AutoSize = true;
-            this.lbl13.BackColor = System.Drawing.Color.Transparent;
-            this.lbl13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbl13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.lbl13.Location = new System.Drawing.Point(3, 128);
-            this.lbl13.Name = "lbl13";
-            this.lbl13.Size = new System.Drawing.Size(121, 32);
-            this.lbl13.TabIndex = 14;
-            this.lbl13.Text = "13:00";
-            this.lbl13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbl1320
-            // 
-            this.lbl1320.AutoSize = true;
-            this.lbl1320.BackColor = System.Drawing.Color.Transparent;
-            this.lbl1320.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl1320.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbl1320.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.lbl1320.Location = new System.Drawing.Point(130, 128);
-            this.lbl1320.Name = "lbl1320";
-            this.lbl1320.Size = new System.Drawing.Size(121, 32);
-            this.lbl1320.TabIndex = 13;
-            this.lbl1320.Text = "13:20";
-            this.lbl1320.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbl1340
-            // 
-            this.lbl1340.AutoSize = true;
-            this.lbl1340.BackColor = System.Drawing.Color.Transparent;
-            this.lbl1340.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl1340.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbl1340.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.lbl1340.Location = new System.Drawing.Point(257, 128);
-            this.lbl1340.Name = "lbl1340";
-            this.lbl1340.Size = new System.Drawing.Size(123, 32);
-            this.lbl1340.TabIndex = 12;
-            this.lbl1340.Text = "13:40";
-            this.lbl1340.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbl1240
-            // 
-            this.lbl1240.AutoSize = true;
-            this.lbl1240.BackColor = System.Drawing.Color.Transparent;
-            this.lbl1240.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl1240.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbl1240.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.lbl1240.Location = new System.Drawing.Point(257, 96);
-            this.lbl1240.Name = "lbl1240";
-            this.lbl1240.Size = new System.Drawing.Size(123, 32);
-            this.lbl1240.TabIndex = 11;
-            this.lbl1240.Text = "12:40";
-            this.lbl1240.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbl1220
-            // 
-            this.lbl1220.AutoSize = true;
-            this.lbl1220.BackColor = System.Drawing.Color.Transparent;
-            this.lbl1220.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl1220.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbl1220.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.lbl1220.Location = new System.Drawing.Point(130, 96);
-            this.lbl1220.Name = "lbl1220";
-            this.lbl1220.Size = new System.Drawing.Size(121, 32);
-            this.lbl1220.TabIndex = 10;
-            this.lbl1220.Text = "12:20";
-            this.lbl1220.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbl12
-            // 
-            this.lbl12.AutoSize = true;
-            this.lbl12.BackColor = System.Drawing.Color.Transparent;
-            this.lbl12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbl12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.lbl12.Location = new System.Drawing.Point(3, 96);
-            this.lbl12.Name = "lbl12";
-            this.lbl12.Size = new System.Drawing.Size(121, 32);
-            this.lbl12.TabIndex = 9;
-            this.lbl12.Text = "12:00";
-            this.lbl12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbl1140
-            // 
-            this.lbl1140.AutoSize = true;
-            this.lbl1140.BackColor = System.Drawing.Color.Transparent;
-            this.lbl1140.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl1140.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbl1140.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.lbl1140.Location = new System.Drawing.Point(257, 64);
-            this.lbl1140.Name = "lbl1140";
-            this.lbl1140.Size = new System.Drawing.Size(123, 32);
-            this.lbl1140.TabIndex = 8;
-            this.lbl1140.Text = "11:40";
-            this.lbl1140.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbl1120
-            // 
-            this.lbl1120.AutoSize = true;
-            this.lbl1120.BackColor = System.Drawing.Color.Transparent;
-            this.lbl1120.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl1120.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbl1120.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.lbl1120.Location = new System.Drawing.Point(130, 64);
-            this.lbl1120.Name = "lbl1120";
-            this.lbl1120.Size = new System.Drawing.Size(121, 32);
-            this.lbl1120.TabIndex = 7;
-            this.lbl1120.Text = "11:20";
-            this.lbl1120.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbl11
-            // 
-            this.lbl11.AutoSize = true;
-            this.lbl11.BackColor = System.Drawing.Color.Transparent;
-            this.lbl11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbl11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.lbl11.Location = new System.Drawing.Point(3, 64);
-            this.lbl11.Name = "lbl11";
-            this.lbl11.Size = new System.Drawing.Size(121, 32);
-            this.lbl11.TabIndex = 6;
-            this.lbl11.Text = "11:00";
-            this.lbl11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbl1040
-            // 
-            this.lbl1040.AutoSize = true;
-            this.lbl1040.BackColor = System.Drawing.Color.Transparent;
-            this.lbl1040.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl1040.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbl1040.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.lbl1040.Location = new System.Drawing.Point(257, 32);
-            this.lbl1040.Name = "lbl1040";
-            this.lbl1040.Size = new System.Drawing.Size(123, 32);
-            this.lbl1040.TabIndex = 5;
-            this.lbl1040.Text = "10:40";
-            this.lbl1040.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbl1020
-            // 
-            this.lbl1020.AutoSize = true;
-            this.lbl1020.BackColor = System.Drawing.Color.Transparent;
-            this.lbl1020.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl1020.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbl1020.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.lbl1020.Location = new System.Drawing.Point(130, 32);
-            this.lbl1020.Name = "lbl1020";
-            this.lbl1020.Size = new System.Drawing.Size(121, 32);
-            this.lbl1020.TabIndex = 4;
-            this.lbl1020.Text = "10:20";
-            this.lbl1020.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbl10
-            // 
-            this.lbl10.AutoSize = true;
-            this.lbl10.BackColor = System.Drawing.Color.Transparent;
-            this.lbl10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbl10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.lbl10.Location = new System.Drawing.Point(3, 32);
-            this.lbl10.Name = "lbl10";
-            this.lbl10.Size = new System.Drawing.Size(121, 32);
-            this.lbl10.TabIndex = 3;
-            this.lbl10.Text = "10:00";
-            this.lbl10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbl940
-            // 
-            this.lbl940.AutoSize = true;
-            this.lbl940.BackColor = System.Drawing.Color.Transparent;
-            this.lbl940.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl940.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbl940.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.lbl940.Location = new System.Drawing.Point(257, 0);
-            this.lbl940.Name = "lbl940";
-            this.lbl940.Size = new System.Drawing.Size(123, 32);
-            this.lbl940.TabIndex = 2;
-            this.lbl940.Text = "09:40";
-            this.lbl940.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbl920
-            // 
-            this.lbl920.AutoSize = true;
-            this.lbl920.BackColor = System.Drawing.Color.Transparent;
-            this.lbl920.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl920.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbl920.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.lbl920.Location = new System.Drawing.Point(130, 0);
-            this.lbl920.Name = "lbl920";
-            this.lbl920.Size = new System.Drawing.Size(121, 32);
-            this.lbl920.TabIndex = 1;
-            this.lbl920.Text = "09:20";
-            this.lbl920.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl1640.Click += new System.EventHandler(this.RandevuSaatSec);
+            this.lbl1640.DoubleClick += new System.EventHandler(this.RandevuSaatSec);
             // 
             // lbl9
             // 
@@ -1384,9 +1113,331 @@
             this.lbl9.Location = new System.Drawing.Point(3, 0);
             this.lbl9.Name = "lbl9";
             this.lbl9.Size = new System.Drawing.Size(121, 32);
-            this.lbl9.TabIndex = 0;
+            this.lbl9.TabIndex = 24;
             this.lbl9.Text = "09:00";
             this.lbl9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl9.Click += new System.EventHandler(this.RandevuSaatSec);
+            this.lbl9.DoubleClick += new System.EventHandler(this.RandevuSaatSec);
+            // 
+            // lbl920
+            // 
+            this.lbl920.AutoSize = true;
+            this.lbl920.BackColor = System.Drawing.Color.Transparent;
+            this.lbl920.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl920.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl920.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.lbl920.Location = new System.Drawing.Point(130, 0);
+            this.lbl920.Name = "lbl920";
+            this.lbl920.Size = new System.Drawing.Size(121, 32);
+            this.lbl920.TabIndex = 25;
+            this.lbl920.Text = "09:20";
+            this.lbl920.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl920.Click += new System.EventHandler(this.RandevuSaatSec);
+            this.lbl920.DoubleClick += new System.EventHandler(this.RandevuSaatSec);
+            // 
+            // lbl940
+            // 
+            this.lbl940.AutoSize = true;
+            this.lbl940.BackColor = System.Drawing.Color.Transparent;
+            this.lbl940.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl940.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl940.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.lbl940.Location = new System.Drawing.Point(257, 0);
+            this.lbl940.Name = "lbl940";
+            this.lbl940.Size = new System.Drawing.Size(123, 32);
+            this.lbl940.TabIndex = 27;
+            this.lbl940.Text = "09:40";
+            this.lbl940.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl940.Click += new System.EventHandler(this.RandevuSaatSec);
+            this.lbl940.DoubleClick += new System.EventHandler(this.RandevuSaatSec);
+            // 
+            // lbl10
+            // 
+            this.lbl10.AutoSize = true;
+            this.lbl10.BackColor = System.Drawing.Color.Transparent;
+            this.lbl10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.lbl10.Location = new System.Drawing.Point(3, 32);
+            this.lbl10.Name = "lbl10";
+            this.lbl10.Size = new System.Drawing.Size(121, 32);
+            this.lbl10.TabIndex = 28;
+            this.lbl10.Text = "10:00";
+            this.lbl10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl10.Click += new System.EventHandler(this.RandevuSaatSec);
+            this.lbl10.DoubleClick += new System.EventHandler(this.RandevuSaatSec);
+            // 
+            // lbl1020
+            // 
+            this.lbl1020.AutoSize = true;
+            this.lbl1020.BackColor = System.Drawing.Color.Transparent;
+            this.lbl1020.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl1020.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl1020.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.lbl1020.Location = new System.Drawing.Point(130, 32);
+            this.lbl1020.Name = "lbl1020";
+            this.lbl1020.Size = new System.Drawing.Size(121, 32);
+            this.lbl1020.TabIndex = 30;
+            this.lbl1020.Text = "10:20";
+            this.lbl1020.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl1020.Click += new System.EventHandler(this.RandevuSaatSec);
+            this.lbl1020.DoubleClick += new System.EventHandler(this.RandevuSaatSec);
+            // 
+            // lbl1040
+            // 
+            this.lbl1040.AutoSize = true;
+            this.lbl1040.BackColor = System.Drawing.Color.Transparent;
+            this.lbl1040.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl1040.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl1040.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.lbl1040.Location = new System.Drawing.Point(257, 32);
+            this.lbl1040.Name = "lbl1040";
+            this.lbl1040.Size = new System.Drawing.Size(123, 32);
+            this.lbl1040.TabIndex = 29;
+            this.lbl1040.Text = "10:40";
+            this.lbl1040.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl1040.Click += new System.EventHandler(this.RandevuSaatSec);
+            this.lbl1040.DoubleClick += new System.EventHandler(this.RandevuSaatSec);
+            // 
+            // lbl11
+            // 
+            this.lbl11.AutoSize = true;
+            this.lbl11.BackColor = System.Drawing.Color.Transparent;
+            this.lbl11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.lbl11.Location = new System.Drawing.Point(3, 64);
+            this.lbl11.Name = "lbl11";
+            this.lbl11.Size = new System.Drawing.Size(121, 32);
+            this.lbl11.TabIndex = 31;
+            this.lbl11.Text = "11:00";
+            this.lbl11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl11.Click += new System.EventHandler(this.RandevuSaatSec);
+            this.lbl11.DoubleClick += new System.EventHandler(this.RandevuSaatSec);
+            // 
+            // lbl1120
+            // 
+            this.lbl1120.AutoSize = true;
+            this.lbl1120.BackColor = System.Drawing.Color.Transparent;
+            this.lbl1120.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl1120.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl1120.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.lbl1120.Location = new System.Drawing.Point(130, 64);
+            this.lbl1120.Name = "lbl1120";
+            this.lbl1120.Size = new System.Drawing.Size(121, 32);
+            this.lbl1120.TabIndex = 32;
+            this.lbl1120.Text = "11:20";
+            this.lbl1120.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl1120.Click += new System.EventHandler(this.RandevuSaatSec);
+            this.lbl1120.DoubleClick += new System.EventHandler(this.RandevuSaatSec);
+            // 
+            // lbl1140
+            // 
+            this.lbl1140.AutoSize = true;
+            this.lbl1140.BackColor = System.Drawing.Color.Transparent;
+            this.lbl1140.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl1140.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl1140.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.lbl1140.Location = new System.Drawing.Point(257, 64);
+            this.lbl1140.Name = "lbl1140";
+            this.lbl1140.Size = new System.Drawing.Size(123, 32);
+            this.lbl1140.TabIndex = 33;
+            this.lbl1140.Text = "11:40";
+            this.lbl1140.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl1140.Click += new System.EventHandler(this.RandevuSaatSec);
+            this.lbl1140.DoubleClick += new System.EventHandler(this.RandevuSaatSec);
+            // 
+            // lbl12
+            // 
+            this.lbl12.AutoSize = true;
+            this.lbl12.BackColor = System.Drawing.Color.Transparent;
+            this.lbl12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.lbl12.Location = new System.Drawing.Point(3, 96);
+            this.lbl12.Name = "lbl12";
+            this.lbl12.Size = new System.Drawing.Size(121, 32);
+            this.lbl12.TabIndex = 34;
+            this.lbl12.Text = "12:00";
+            this.lbl12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl12.Click += new System.EventHandler(this.RandevuSaatSec);
+            this.lbl12.DoubleClick += new System.EventHandler(this.RandevuSaatSec);
+            // 
+            // lbl1220
+            // 
+            this.lbl1220.AutoSize = true;
+            this.lbl1220.BackColor = System.Drawing.Color.Transparent;
+            this.lbl1220.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl1220.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl1220.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.lbl1220.Location = new System.Drawing.Point(130, 96);
+            this.lbl1220.Name = "lbl1220";
+            this.lbl1220.Size = new System.Drawing.Size(121, 32);
+            this.lbl1220.TabIndex = 35;
+            this.lbl1220.Text = "12:20";
+            this.lbl1220.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl1220.Click += new System.EventHandler(this.RandevuSaatSec);
+            this.lbl1220.DoubleClick += new System.EventHandler(this.RandevuSaatSec);
+            // 
+            // lbl1240
+            // 
+            this.lbl1240.AutoSize = true;
+            this.lbl1240.BackColor = System.Drawing.Color.Transparent;
+            this.lbl1240.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl1240.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl1240.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.lbl1240.Location = new System.Drawing.Point(257, 96);
+            this.lbl1240.Name = "lbl1240";
+            this.lbl1240.Size = new System.Drawing.Size(123, 32);
+            this.lbl1240.TabIndex = 36;
+            this.lbl1240.Text = "12:40";
+            this.lbl1240.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl1240.Click += new System.EventHandler(this.RandevuSaatSec);
+            this.lbl1240.DoubleClick += new System.EventHandler(this.RandevuSaatSec);
+            // 
+            // lbl13
+            // 
+            this.lbl13.AutoSize = true;
+            this.lbl13.BackColor = System.Drawing.Color.Transparent;
+            this.lbl13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.lbl13.Location = new System.Drawing.Point(3, 128);
+            this.lbl13.Name = "lbl13";
+            this.lbl13.Size = new System.Drawing.Size(121, 32);
+            this.lbl13.TabIndex = 37;
+            this.lbl13.Text = "13:00";
+            this.lbl13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl13.Click += new System.EventHandler(this.RandevuSaatSec);
+            this.lbl13.DoubleClick += new System.EventHandler(this.RandevuSaatSec);
+            // 
+            // lbl1320
+            // 
+            this.lbl1320.AutoSize = true;
+            this.lbl1320.BackColor = System.Drawing.Color.Transparent;
+            this.lbl1320.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl1320.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl1320.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.lbl1320.Location = new System.Drawing.Point(130, 128);
+            this.lbl1320.Name = "lbl1320";
+            this.lbl1320.Size = new System.Drawing.Size(121, 32);
+            this.lbl1320.TabIndex = 38;
+            this.lbl1320.Text = "13:20";
+            this.lbl1320.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl1320.Click += new System.EventHandler(this.RandevuSaatSec);
+            this.lbl1320.DoubleClick += new System.EventHandler(this.RandevuSaatSec);
+            // 
+            // lbl14
+            // 
+            this.lbl14.AutoSize = true;
+            this.lbl14.BackColor = System.Drawing.Color.Transparent;
+            this.lbl14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.lbl14.Location = new System.Drawing.Point(3, 160);
+            this.lbl14.Name = "lbl14";
+            this.lbl14.Size = new System.Drawing.Size(121, 32);
+            this.lbl14.TabIndex = 39;
+            this.lbl14.Text = "14:00";
+            this.lbl14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl14.Click += new System.EventHandler(this.RandevuSaatSec);
+            this.lbl14.DoubleClick += new System.EventHandler(this.RandevuSaatSec);
+            // 
+            // lbl1340
+            // 
+            this.lbl1340.AutoSize = true;
+            this.lbl1340.BackColor = System.Drawing.Color.Transparent;
+            this.lbl1340.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl1340.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl1340.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.lbl1340.Location = new System.Drawing.Point(257, 128);
+            this.lbl1340.Name = "lbl1340";
+            this.lbl1340.Size = new System.Drawing.Size(123, 32);
+            this.lbl1340.TabIndex = 40;
+            this.lbl1340.Text = "13:40";
+            this.lbl1340.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl1340.Click += new System.EventHandler(this.RandevuSaatSec);
+            this.lbl1340.DoubleClick += new System.EventHandler(this.RandevuSaatSec);
+            // 
+            // lbl1420
+            // 
+            this.lbl1420.AutoSize = true;
+            this.lbl1420.BackColor = System.Drawing.Color.Transparent;
+            this.lbl1420.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl1420.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl1420.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.lbl1420.Location = new System.Drawing.Point(130, 160);
+            this.lbl1420.Name = "lbl1420";
+            this.lbl1420.Size = new System.Drawing.Size(121, 32);
+            this.lbl1420.TabIndex = 41;
+            this.lbl1420.Text = "14:20";
+            this.lbl1420.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl1420.Click += new System.EventHandler(this.RandevuSaatSec);
+            this.lbl1420.DoubleClick += new System.EventHandler(this.RandevuSaatSec);
+            // 
+            // lbl1440
+            // 
+            this.lbl1440.AutoSize = true;
+            this.lbl1440.BackColor = System.Drawing.Color.Transparent;
+            this.lbl1440.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl1440.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl1440.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.lbl1440.Location = new System.Drawing.Point(257, 160);
+            this.lbl1440.Name = "lbl1440";
+            this.lbl1440.Size = new System.Drawing.Size(123, 32);
+            this.lbl1440.TabIndex = 42;
+            this.lbl1440.Text = "14:40";
+            this.lbl1440.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl1440.Click += new System.EventHandler(this.RandevuSaatSec);
+            this.lbl1440.DoubleClick += new System.EventHandler(this.RandevuSaatSec);
+            // 
+            // lbl15
+            // 
+            this.lbl15.AutoSize = true;
+            this.lbl15.BackColor = System.Drawing.Color.Transparent;
+            this.lbl15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl15.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.lbl15.Location = new System.Drawing.Point(3, 192);
+            this.lbl15.Name = "lbl15";
+            this.lbl15.Size = new System.Drawing.Size(121, 32);
+            this.lbl15.TabIndex = 43;
+            this.lbl15.Text = "15:00";
+            this.lbl15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl15.Click += new System.EventHandler(this.RandevuSaatSec);
+            this.lbl15.DoubleClick += new System.EventHandler(this.RandevuSaatSec);
+            // 
+            // lbl1520
+            // 
+            this.lbl1520.AutoSize = true;
+            this.lbl1520.BackColor = System.Drawing.Color.Transparent;
+            this.lbl1520.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl1520.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl1520.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.lbl1520.Location = new System.Drawing.Point(130, 192);
+            this.lbl1520.Name = "lbl1520";
+            this.lbl1520.Size = new System.Drawing.Size(121, 32);
+            this.lbl1520.TabIndex = 44;
+            this.lbl1520.Text = "15:20";
+            this.lbl1520.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl1520.Click += new System.EventHandler(this.RandevuSaatSec);
+            this.lbl1520.DoubleClick += new System.EventHandler(this.RandevuSaatSec);
+            // 
+            // lbl1540
+            // 
+            this.lbl1540.AutoSize = true;
+            this.lbl1540.BackColor = System.Drawing.Color.Transparent;
+            this.lbl1540.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl1540.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl1540.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.lbl1540.Location = new System.Drawing.Point(257, 192);
+            this.lbl1540.Name = "lbl1540";
+            this.lbl1540.Size = new System.Drawing.Size(123, 32);
+            this.lbl1540.TabIndex = 45;
+            this.lbl1540.Text = "15:40";
+            this.lbl1540.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl1540.Click += new System.EventHandler(this.RandevuSaatSec);
+            this.lbl1540.DoubleClick += new System.EventHandler(this.RandevuSaatSec);
             // 
             // cbDoktor
             // 
@@ -1589,35 +1640,11 @@
         private ns1.BunifuMetroTextbox txtAdSoyadRandevu;
         private ns1.BunifuCustomLabel bunifuCustomLabel14;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private ns1.BunifuCustomLabel lbl14;
-        private ns1.BunifuCustomLabel lbl1420;
-        private ns1.BunifuCustomLabel lbl1440;
-        private ns1.BunifuCustomLabel lbl13;
-        private ns1.BunifuCustomLabel lbl1320;
-        private ns1.BunifuCustomLabel lbl1340;
-        private ns1.BunifuCustomLabel lbl1240;
-        private ns1.BunifuCustomLabel lbl1220;
-        private ns1.BunifuCustomLabel lbl12;
-        private ns1.BunifuCustomLabel lbl1140;
-        private ns1.BunifuCustomLabel lbl1120;
-        private ns1.BunifuCustomLabel lbl11;
-        private ns1.BunifuCustomLabel lbl1040;
-        private ns1.BunifuCustomLabel lbl1020;
-        private ns1.BunifuCustomLabel lbl10;
-        private ns1.BunifuCustomLabel lbl940;
-        private ns1.BunifuCustomLabel lbl920;
-        private ns1.BunifuCustomLabel lbl9;
-        private ns1.BunifuCustomLabel lbl16;
-        private ns1.BunifuCustomLabel lbl1620;
-        private ns1.BunifuCustomLabel lbl1640;
-        private ns1.BunifuCustomLabel lbl15;
-        private ns1.BunifuCustomLabel lbl1520;
-        private ns1.BunifuCustomLabel lbl1540;
         private ns1.BunifuDatepicker dtpRandevuTarih;
         private ns1.BunifuCustomLabel bunifuCustomLabel43;
         private ns1.BunifuThinButton2 btnHastaKayıt;
         private ns1.BunifuThinButton2 btnRandevuKaydet;
-        private ns1.BunifuMetroTextbox bunifuMetroTextbox1;
+        private ns1.BunifuMetroTextbox txtRandevuSaati;
         private ns1.BunifuCustomLabel bunifuCustomLabel44;
         private System.Windows.Forms.DataGridViewTextBoxColumn HastaId;
         private System.Windows.Forms.DataGridViewTextBoxColumn AdSoyad;
@@ -1627,5 +1654,29 @@
         private ns1.BunifuThinButton2 btnHastaGuncelle;
         private ns1.BunifuThinButton2 btnHastaSil;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl9;
+        private System.Windows.Forms.Label lbl16;
+        private System.Windows.Forms.Label lbl1620;
+        private System.Windows.Forms.Label lbl1640;
+        private System.Windows.Forms.Label lbl920;
+        private System.Windows.Forms.Label lbl940;
+        private System.Windows.Forms.Label lbl10;
+        private System.Windows.Forms.Label lbl1020;
+        private System.Windows.Forms.Label lbl1040;
+        private System.Windows.Forms.Label lbl11;
+        private System.Windows.Forms.Label lbl1120;
+        private System.Windows.Forms.Label lbl1140;
+        private System.Windows.Forms.Label lbl12;
+        private System.Windows.Forms.Label lbl1220;
+        private System.Windows.Forms.Label lbl1240;
+        private System.Windows.Forms.Label lbl13;
+        private System.Windows.Forms.Label lbl1320;
+        private System.Windows.Forms.Label lbl14;
+        private System.Windows.Forms.Label lbl1340;
+        private System.Windows.Forms.Label lbl1420;
+        private System.Windows.Forms.Label lbl1440;
+        private System.Windows.Forms.Label lbl15;
+        private System.Windows.Forms.Label lbl1520;
+        private System.Windows.Forms.Label lbl1540;
     }
 }

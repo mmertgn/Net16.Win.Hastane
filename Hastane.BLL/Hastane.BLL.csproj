@@ -65,6 +65,7 @@
     <Compile Include="Services\Concretes\PersonelService.cs" />
     <Compile Include="Services\Concretes\RandevuService.cs" />
     <Compile Include="Validations\HastaAddValidator.cs" />
+    <Compile Include="Validations\RandevuAddValidator.cs" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
