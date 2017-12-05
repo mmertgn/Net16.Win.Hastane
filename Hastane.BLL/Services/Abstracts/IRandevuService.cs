@@ -7,8 +7,8 @@ using Hastane.DAL.DataModel;
 
 namespace Hastane.BLL.Services.Abstracts
 {
-    public interface IPersonelService
-    {
-       List<Personeller> DoktorDoldurByKlinikFromRandevu(string cbKlinikText);
-    }
+   public interface IRandevuService
+   {
+       List<string> DoktoraAitRandevular(string cbDoktorSelectedValue, DateTime RandevuTarihi);
+   }
 }

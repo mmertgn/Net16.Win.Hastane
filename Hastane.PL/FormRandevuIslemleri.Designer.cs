@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRandevuIslemleri));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -84,36 +84,37 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.bunifuThinButton22 = new ns1.BunifuThinButton2();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.bunifuMetroTextbox1 = new ns1.BunifuMetroTextbox();
             this.bunifuCustomLabel44 = new ns1.BunifuCustomLabel();
             this.btnRandevuKaydet = new ns1.BunifuThinButton2();
             this.dtpRandevuTarih = new ns1.BunifuDatepicker();
             this.bunifuCustomLabel43 = new ns1.BunifuCustomLabel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.bunifuCustomLabel42 = new ns1.BunifuCustomLabel();
-            this.bunifuCustomLabel41 = new ns1.BunifuCustomLabel();
-            this.bunifuCustomLabel40 = new ns1.BunifuCustomLabel();
-            this.bunifuCustomLabel39 = new ns1.BunifuCustomLabel();
-            this.bunifuCustomLabel38 = new ns1.BunifuCustomLabel();
-            this.bunifuCustomLabel37 = new ns1.BunifuCustomLabel();
-            this.bunifuCustomLabel36 = new ns1.BunifuCustomLabel();
-            this.bunifuCustomLabel35 = new ns1.BunifuCustomLabel();
-            this.bunifuCustomLabel34 = new ns1.BunifuCustomLabel();
-            this.bunifuCustomLabel33 = new ns1.BunifuCustomLabel();
-            this.bunifuCustomLabel32 = new ns1.BunifuCustomLabel();
-            this.bunifuCustomLabel31 = new ns1.BunifuCustomLabel();
-            this.bunifuCustomLabel30 = new ns1.BunifuCustomLabel();
-            this.bunifuCustomLabel29 = new ns1.BunifuCustomLabel();
-            this.bunifuCustomLabel28 = new ns1.BunifuCustomLabel();
-            this.bunifuCustomLabel27 = new ns1.BunifuCustomLabel();
-            this.bunifuCustomLabel26 = new ns1.BunifuCustomLabel();
-            this.bunifuCustomLabel25 = new ns1.BunifuCustomLabel();
-            this.bunifuCustomLabel24 = new ns1.BunifuCustomLabel();
-            this.bunifuCustomLabel23 = new ns1.BunifuCustomLabel();
-            this.bunifuCustomLabel22 = new ns1.BunifuCustomLabel();
-            this.bunifuCustomLabel21 = new ns1.BunifuCustomLabel();
-            this.bunifuCustomLabel20 = new ns1.BunifuCustomLabel();
-            this.bunifuCustomLabel19 = new ns1.BunifuCustomLabel();
+            this.lbl16 = new ns1.BunifuCustomLabel();
+            this.lbl1620 = new ns1.BunifuCustomLabel();
+            this.lbl1640 = new ns1.BunifuCustomLabel();
+            this.lbl15 = new ns1.BunifuCustomLabel();
+            this.lbl1520 = new ns1.BunifuCustomLabel();
+            this.lbl1540 = new ns1.BunifuCustomLabel();
+            this.lbl14 = new ns1.BunifuCustomLabel();
+            this.lbl1420 = new ns1.BunifuCustomLabel();
+            this.lbl1440 = new ns1.BunifuCustomLabel();
+            this.lbl13 = new ns1.BunifuCustomLabel();
+            this.lbl1320 = new ns1.BunifuCustomLabel();
+            this.lbl1340 = new ns1.BunifuCustomLabel();
+            this.lbl1240 = new ns1.BunifuCustomLabel();
+            this.lbl1220 = new ns1.BunifuCustomLabel();
+            this.lbl12 = new ns1.BunifuCustomLabel();
+            this.lbl1140 = new ns1.BunifuCustomLabel();
+            this.lbl1120 = new ns1.BunifuCustomLabel();
+            this.lbl11 = new ns1.BunifuCustomLabel();
+            this.lbl1040 = new ns1.BunifuCustomLabel();
+            this.lbl1020 = new ns1.BunifuCustomLabel();
+            this.lbl10 = new ns1.BunifuCustomLabel();
+            this.lbl940 = new ns1.BunifuCustomLabel();
+            this.lbl920 = new ns1.BunifuCustomLabel();
+            this.lbl9 = new ns1.BunifuCustomLabel();
             this.cbDoktor = new ns1.BunifuDropdown();
             this.bunifuCustomLabel17 = new ns1.BunifuCustomLabel();
             this.cbKlinik = new ns1.BunifuDropdown();
@@ -160,19 +161,19 @@
             // dgvHastalar
             // 
             this.dgvHastalar.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvHastalar.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvHastalar.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvHastalar.BackgroundColor = System.Drawing.Color.White;
             this.dgvHastalar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvHastalar.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvHastalar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvHastalar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvHastalar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHastalar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.HastaId,
@@ -180,14 +181,14 @@
             this.TCNo,
             this.Telefon,
             this.Kurum});
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvHastalar.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvHastalar.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvHastalar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvHastalar.DoubleBuffered = true;
             this.dgvHastalar.EnableHeadersVisualStyles = false;
@@ -195,17 +196,18 @@
             this.dgvHastalar.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
             this.dgvHastalar.HeaderForeColor = System.Drawing.Color.White;
             this.dgvHastalar.Location = new System.Drawing.Point(5, 0);
+            this.dgvHastalar.MultiSelect = false;
             this.dgvHastalar.Name = "dgvHastalar";
             this.dgvHastalar.ReadOnly = true;
             this.dgvHastalar.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvHastalar.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvHastalar.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvHastalar.RowHeadersWidth = 10;
             this.dgvHastalar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvHastalar.Size = new System.Drawing.Size(443, 471);
@@ -533,7 +535,7 @@
             // 
             this.bunifuCustomLabel18.AutoSize = true;
             this.bunifuCustomLabel18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bunifuCustomLabel18.Location = new System.Drawing.Point(6, 320);
+            this.bunifuCustomLabel18.Location = new System.Drawing.Point(6, 321);
             this.bunifuCustomLabel18.Name = "bunifuCustomLabel18";
             this.bunifuCustomLabel18.Size = new System.Drawing.Size(77, 17);
             this.bunifuCustomLabel18.TabIndex = 42;
@@ -585,7 +587,7 @@
             // 
             this.bunifuCustomLabel13.AutoSize = true;
             this.bunifuCustomLabel13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bunifuCustomLabel13.Location = new System.Drawing.Point(6, 203);
+            this.bunifuCustomLabel13.Location = new System.Drawing.Point(6, 200);
             this.bunifuCustomLabel13.Name = "bunifuCustomLabel13";
             this.bunifuCustomLabel13.Size = new System.Drawing.Size(57, 17);
             this.bunifuCustomLabel13.TabIndex = 38;
@@ -632,7 +634,7 @@
             this.dtpDogumTarihi.Name = "dtpDogumTarihi";
             this.dtpDogumTarihi.Size = new System.Drawing.Size(175, 35);
             this.dtpDogumTarihi.TabIndex = 7;
-            this.dtpDogumTarihi.Value = new System.DateTime(2017, 11, 24, 19, 24, 18, 0);
+            this.dtpDogumTarihi.Value = new System.DateTime(2017, 12, 5, 0, 0, 0, 0);
             // 
             // txtAdres
             // 
@@ -732,7 +734,7 @@
             // 
             this.bunifuCustomLabel10.AutoSize = true;
             this.bunifuCustomLabel10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bunifuCustomLabel10.Location = new System.Drawing.Point(6, 285);
+            this.bunifuCustomLabel10.Location = new System.Drawing.Point(6, 283);
             this.bunifuCustomLabel10.Name = "bunifuCustomLabel10";
             this.bunifuCustomLabel10.Size = new System.Drawing.Size(84, 17);
             this.bunifuCustomLabel10.TabIndex = 25;
@@ -806,7 +808,7 @@
             // 
             this.bunifuCustomLabel4.AutoSize = true;
             this.bunifuCustomLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bunifuCustomLabel4.Location = new System.Drawing.Point(6, 166);
+            this.bunifuCustomLabel4.Location = new System.Drawing.Point(6, 160);
             this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
             this.bunifuCustomLabel4.Size = new System.Drawing.Size(88, 17);
             this.bunifuCustomLabel4.TabIndex = 18;
@@ -893,11 +895,12 @@
             this.bunifuThinButton22.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bunifuThinButton22.Name = "bunifuThinButton22";
             this.bunifuThinButton22.Size = new System.Drawing.Size(296, 56);
-            this.bunifuThinButton22.TabIndex = 2;
+            this.bunifuThinButton22.TabIndex = 0;
             this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.bunifuMetroTextbox1);
             this.panel3.Controls.Add(this.bunifuCustomLabel44);
             this.panel3.Controls.Add(this.btnRandevuKaydet);
@@ -916,6 +919,17 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(436, 715);
             this.panel3.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.ForeColor = System.Drawing.Color.DarkRed;
+            this.label1.Location = new System.Drawing.Point(14, 590);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(279, 15);
+            this.label1.TabIndex = 48;
+            this.label1.Text = "Mavi Renkli Olan Saatler Randevu Dolu Demektir.";
             // 
             // bunifuMetroTextbox1
             // 
@@ -979,15 +993,16 @@
             this.dtpRandevuTarih.FormatCustom = null;
             this.dtpRandevuTarih.Location = new System.Drawing.Point(90, 189);
             this.dtpRandevuTarih.Name = "dtpRandevuTarih";
-            this.dtpRandevuTarih.Size = new System.Drawing.Size(175, 35);
+            this.dtpRandevuTarih.Size = new System.Drawing.Size(235, 35);
             this.dtpRandevuTarih.TabIndex = 3;
-            this.dtpRandevuTarih.Value = new System.DateTime(2017, 11, 24, 19, 24, 18, 0);
+            this.dtpRandevuTarih.Value = new System.DateTime(2017, 12, 5, 0, 0, 0, 0);
+            this.dtpRandevuTarih.onValueChanged += new System.EventHandler(this.dtpRandevuTarih_onValueChanged);
             // 
             // bunifuCustomLabel43
             // 
             this.bunifuCustomLabel43.AutoSize = true;
             this.bunifuCustomLabel43.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bunifuCustomLabel43.Location = new System.Drawing.Point(14, 189);
+            this.bunifuCustomLabel43.Location = new System.Drawing.Point(14, 196);
             this.bunifuCustomLabel43.Name = "bunifuCustomLabel43";
             this.bunifuCustomLabel43.Size = new System.Drawing.Size(41, 17);
             this.bunifuCustomLabel43.TabIndex = 44;
@@ -999,30 +1014,30 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.Controls.Add(this.bunifuCustomLabel42, 0, 7);
-            this.tableLayoutPanel1.Controls.Add(this.bunifuCustomLabel41, 0, 7);
-            this.tableLayoutPanel1.Controls.Add(this.bunifuCustomLabel40, 0, 7);
-            this.tableLayoutPanel1.Controls.Add(this.bunifuCustomLabel39, 0, 6);
-            this.tableLayoutPanel1.Controls.Add(this.bunifuCustomLabel38, 0, 6);
-            this.tableLayoutPanel1.Controls.Add(this.bunifuCustomLabel37, 0, 6);
-            this.tableLayoutPanel1.Controls.Add(this.bunifuCustomLabel36, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.bunifuCustomLabel35, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.bunifuCustomLabel34, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.bunifuCustomLabel33, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.bunifuCustomLabel32, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.bunifuCustomLabel31, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.bunifuCustomLabel30, 2, 3);
-            this.tableLayoutPanel1.Controls.Add(this.bunifuCustomLabel29, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.bunifuCustomLabel28, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.bunifuCustomLabel27, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.bunifuCustomLabel26, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.bunifuCustomLabel25, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.bunifuCustomLabel24, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.bunifuCustomLabel23, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.bunifuCustomLabel22, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.bunifuCustomLabel21, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.bunifuCustomLabel20, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.bunifuCustomLabel19, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lbl16, 0, 7);
+            this.tableLayoutPanel1.Controls.Add(this.lbl1620, 0, 7);
+            this.tableLayoutPanel1.Controls.Add(this.lbl1640, 0, 7);
+            this.tableLayoutPanel1.Controls.Add(this.lbl15, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.lbl1520, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.lbl1540, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.lbl14, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.lbl1420, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.lbl1440, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.lbl13, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.lbl1320, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.lbl1340, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.lbl1240, 2, 3);
+            this.tableLayoutPanel1.Controls.Add(this.lbl1220, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.lbl12, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.lbl1140, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.lbl1120, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.lbl11, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.lbl1040, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.lbl1020, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.lbl10, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.lbl940, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lbl920, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lbl9, 0, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(17, 233);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 8;
@@ -1037,341 +1052,341 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(383, 260);
             this.tableLayoutPanel1.TabIndex = 41;
             // 
-            // bunifuCustomLabel42
+            // lbl16
             // 
-            this.bunifuCustomLabel42.AutoSize = true;
-            this.bunifuCustomLabel42.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel42.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuCustomLabel42.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bunifuCustomLabel42.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.bunifuCustomLabel42.Location = new System.Drawing.Point(3, 224);
-            this.bunifuCustomLabel42.Name = "bunifuCustomLabel42";
-            this.bunifuCustomLabel42.Size = new System.Drawing.Size(121, 36);
-            this.bunifuCustomLabel42.TabIndex = 23;
-            this.bunifuCustomLabel42.Text = "16:00";
-            this.bunifuCustomLabel42.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl16.AutoSize = true;
+            this.lbl16.BackColor = System.Drawing.Color.Transparent;
+            this.lbl16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl16.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.lbl16.Location = new System.Drawing.Point(3, 224);
+            this.lbl16.Name = "lbl16";
+            this.lbl16.Size = new System.Drawing.Size(121, 36);
+            this.lbl16.TabIndex = 23;
+            this.lbl16.Text = "16:00";
+            this.lbl16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // bunifuCustomLabel41
+            // lbl1620
             // 
-            this.bunifuCustomLabel41.AutoSize = true;
-            this.bunifuCustomLabel41.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel41.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuCustomLabel41.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bunifuCustomLabel41.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.bunifuCustomLabel41.Location = new System.Drawing.Point(130, 224);
-            this.bunifuCustomLabel41.Name = "bunifuCustomLabel41";
-            this.bunifuCustomLabel41.Size = new System.Drawing.Size(121, 36);
-            this.bunifuCustomLabel41.TabIndex = 22;
-            this.bunifuCustomLabel41.Text = "16:20";
-            this.bunifuCustomLabel41.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl1620.AutoSize = true;
+            this.lbl1620.BackColor = System.Drawing.Color.Transparent;
+            this.lbl1620.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl1620.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl1620.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.lbl1620.Location = new System.Drawing.Point(130, 224);
+            this.lbl1620.Name = "lbl1620";
+            this.lbl1620.Size = new System.Drawing.Size(121, 36);
+            this.lbl1620.TabIndex = 22;
+            this.lbl1620.Text = "16:20";
+            this.lbl1620.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // bunifuCustomLabel40
+            // lbl1640
             // 
-            this.bunifuCustomLabel40.AutoSize = true;
-            this.bunifuCustomLabel40.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel40.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuCustomLabel40.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bunifuCustomLabel40.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.bunifuCustomLabel40.Location = new System.Drawing.Point(257, 224);
-            this.bunifuCustomLabel40.Name = "bunifuCustomLabel40";
-            this.bunifuCustomLabel40.Size = new System.Drawing.Size(123, 36);
-            this.bunifuCustomLabel40.TabIndex = 21;
-            this.bunifuCustomLabel40.Text = "16:40";
-            this.bunifuCustomLabel40.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl1640.AutoSize = true;
+            this.lbl1640.BackColor = System.Drawing.Color.Transparent;
+            this.lbl1640.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl1640.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl1640.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.lbl1640.Location = new System.Drawing.Point(257, 224);
+            this.lbl1640.Name = "lbl1640";
+            this.lbl1640.Size = new System.Drawing.Size(123, 36);
+            this.lbl1640.TabIndex = 21;
+            this.lbl1640.Text = "16:40";
+            this.lbl1640.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // bunifuCustomLabel39
+            // lbl15
             // 
-            this.bunifuCustomLabel39.AutoSize = true;
-            this.bunifuCustomLabel39.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel39.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuCustomLabel39.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bunifuCustomLabel39.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.bunifuCustomLabel39.Location = new System.Drawing.Point(3, 192);
-            this.bunifuCustomLabel39.Name = "bunifuCustomLabel39";
-            this.bunifuCustomLabel39.Size = new System.Drawing.Size(121, 32);
-            this.bunifuCustomLabel39.TabIndex = 20;
-            this.bunifuCustomLabel39.Text = "15:00";
-            this.bunifuCustomLabel39.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl15.AutoSize = true;
+            this.lbl15.BackColor = System.Drawing.Color.Transparent;
+            this.lbl15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl15.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.lbl15.Location = new System.Drawing.Point(3, 192);
+            this.lbl15.Name = "lbl15";
+            this.lbl15.Size = new System.Drawing.Size(121, 32);
+            this.lbl15.TabIndex = 20;
+            this.lbl15.Text = "15:00";
+            this.lbl15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // bunifuCustomLabel38
+            // lbl1520
             // 
-            this.bunifuCustomLabel38.AutoSize = true;
-            this.bunifuCustomLabel38.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel38.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuCustomLabel38.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bunifuCustomLabel38.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.bunifuCustomLabel38.Location = new System.Drawing.Point(130, 192);
-            this.bunifuCustomLabel38.Name = "bunifuCustomLabel38";
-            this.bunifuCustomLabel38.Size = new System.Drawing.Size(121, 32);
-            this.bunifuCustomLabel38.TabIndex = 19;
-            this.bunifuCustomLabel38.Text = "15:20";
-            this.bunifuCustomLabel38.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl1520.AutoSize = true;
+            this.lbl1520.BackColor = System.Drawing.Color.Transparent;
+            this.lbl1520.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl1520.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl1520.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.lbl1520.Location = new System.Drawing.Point(130, 192);
+            this.lbl1520.Name = "lbl1520";
+            this.lbl1520.Size = new System.Drawing.Size(121, 32);
+            this.lbl1520.TabIndex = 19;
+            this.lbl1520.Text = "15:20";
+            this.lbl1520.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // bunifuCustomLabel37
+            // lbl1540
             // 
-            this.bunifuCustomLabel37.AutoSize = true;
-            this.bunifuCustomLabel37.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel37.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuCustomLabel37.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bunifuCustomLabel37.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.bunifuCustomLabel37.Location = new System.Drawing.Point(257, 192);
-            this.bunifuCustomLabel37.Name = "bunifuCustomLabel37";
-            this.bunifuCustomLabel37.Size = new System.Drawing.Size(123, 32);
-            this.bunifuCustomLabel37.TabIndex = 18;
-            this.bunifuCustomLabel37.Text = "15:40";
-            this.bunifuCustomLabel37.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl1540.AutoSize = true;
+            this.lbl1540.BackColor = System.Drawing.Color.Transparent;
+            this.lbl1540.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl1540.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl1540.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.lbl1540.Location = new System.Drawing.Point(257, 192);
+            this.lbl1540.Name = "lbl1540";
+            this.lbl1540.Size = new System.Drawing.Size(123, 32);
+            this.lbl1540.TabIndex = 18;
+            this.lbl1540.Text = "15:40";
+            this.lbl1540.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // bunifuCustomLabel36
+            // lbl14
             // 
-            this.bunifuCustomLabel36.AutoSize = true;
-            this.bunifuCustomLabel36.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel36.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuCustomLabel36.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bunifuCustomLabel36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.bunifuCustomLabel36.Location = new System.Drawing.Point(3, 160);
-            this.bunifuCustomLabel36.Name = "bunifuCustomLabel36";
-            this.bunifuCustomLabel36.Size = new System.Drawing.Size(121, 32);
-            this.bunifuCustomLabel36.TabIndex = 17;
-            this.bunifuCustomLabel36.Text = "14:00";
-            this.bunifuCustomLabel36.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl14.AutoSize = true;
+            this.lbl14.BackColor = System.Drawing.Color.Transparent;
+            this.lbl14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.lbl14.Location = new System.Drawing.Point(3, 160);
+            this.lbl14.Name = "lbl14";
+            this.lbl14.Size = new System.Drawing.Size(121, 32);
+            this.lbl14.TabIndex = 17;
+            this.lbl14.Text = "14:00";
+            this.lbl14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // bunifuCustomLabel35
+            // lbl1420
             // 
-            this.bunifuCustomLabel35.AutoSize = true;
-            this.bunifuCustomLabel35.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel35.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuCustomLabel35.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bunifuCustomLabel35.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.bunifuCustomLabel35.Location = new System.Drawing.Point(130, 160);
-            this.bunifuCustomLabel35.Name = "bunifuCustomLabel35";
-            this.bunifuCustomLabel35.Size = new System.Drawing.Size(121, 32);
-            this.bunifuCustomLabel35.TabIndex = 16;
-            this.bunifuCustomLabel35.Text = "14:20";
-            this.bunifuCustomLabel35.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl1420.AutoSize = true;
+            this.lbl1420.BackColor = System.Drawing.Color.Transparent;
+            this.lbl1420.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl1420.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl1420.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.lbl1420.Location = new System.Drawing.Point(130, 160);
+            this.lbl1420.Name = "lbl1420";
+            this.lbl1420.Size = new System.Drawing.Size(121, 32);
+            this.lbl1420.TabIndex = 16;
+            this.lbl1420.Text = "14:20";
+            this.lbl1420.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // bunifuCustomLabel34
+            // lbl1440
             // 
-            this.bunifuCustomLabel34.AutoSize = true;
-            this.bunifuCustomLabel34.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel34.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuCustomLabel34.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bunifuCustomLabel34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.bunifuCustomLabel34.Location = new System.Drawing.Point(257, 160);
-            this.bunifuCustomLabel34.Name = "bunifuCustomLabel34";
-            this.bunifuCustomLabel34.Size = new System.Drawing.Size(123, 32);
-            this.bunifuCustomLabel34.TabIndex = 15;
-            this.bunifuCustomLabel34.Text = "14:40";
-            this.bunifuCustomLabel34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl1440.AutoSize = true;
+            this.lbl1440.BackColor = System.Drawing.Color.Transparent;
+            this.lbl1440.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl1440.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl1440.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.lbl1440.Location = new System.Drawing.Point(257, 160);
+            this.lbl1440.Name = "lbl1440";
+            this.lbl1440.Size = new System.Drawing.Size(123, 32);
+            this.lbl1440.TabIndex = 15;
+            this.lbl1440.Text = "14:40";
+            this.lbl1440.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // bunifuCustomLabel33
+            // lbl13
             // 
-            this.bunifuCustomLabel33.AutoSize = true;
-            this.bunifuCustomLabel33.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel33.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuCustomLabel33.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bunifuCustomLabel33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.bunifuCustomLabel33.Location = new System.Drawing.Point(3, 128);
-            this.bunifuCustomLabel33.Name = "bunifuCustomLabel33";
-            this.bunifuCustomLabel33.Size = new System.Drawing.Size(121, 32);
-            this.bunifuCustomLabel33.TabIndex = 14;
-            this.bunifuCustomLabel33.Text = "13:00";
-            this.bunifuCustomLabel33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl13.AutoSize = true;
+            this.lbl13.BackColor = System.Drawing.Color.Transparent;
+            this.lbl13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.lbl13.Location = new System.Drawing.Point(3, 128);
+            this.lbl13.Name = "lbl13";
+            this.lbl13.Size = new System.Drawing.Size(121, 32);
+            this.lbl13.TabIndex = 14;
+            this.lbl13.Text = "13:00";
+            this.lbl13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // bunifuCustomLabel32
+            // lbl1320
             // 
-            this.bunifuCustomLabel32.AutoSize = true;
-            this.bunifuCustomLabel32.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel32.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuCustomLabel32.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bunifuCustomLabel32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.bunifuCustomLabel32.Location = new System.Drawing.Point(130, 128);
-            this.bunifuCustomLabel32.Name = "bunifuCustomLabel32";
-            this.bunifuCustomLabel32.Size = new System.Drawing.Size(121, 32);
-            this.bunifuCustomLabel32.TabIndex = 13;
-            this.bunifuCustomLabel32.Text = "13:20";
-            this.bunifuCustomLabel32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl1320.AutoSize = true;
+            this.lbl1320.BackColor = System.Drawing.Color.Transparent;
+            this.lbl1320.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl1320.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl1320.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.lbl1320.Location = new System.Drawing.Point(130, 128);
+            this.lbl1320.Name = "lbl1320";
+            this.lbl1320.Size = new System.Drawing.Size(121, 32);
+            this.lbl1320.TabIndex = 13;
+            this.lbl1320.Text = "13:20";
+            this.lbl1320.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // bunifuCustomLabel31
+            // lbl1340
             // 
-            this.bunifuCustomLabel31.AutoSize = true;
-            this.bunifuCustomLabel31.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel31.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuCustomLabel31.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bunifuCustomLabel31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.bunifuCustomLabel31.Location = new System.Drawing.Point(257, 128);
-            this.bunifuCustomLabel31.Name = "bunifuCustomLabel31";
-            this.bunifuCustomLabel31.Size = new System.Drawing.Size(123, 32);
-            this.bunifuCustomLabel31.TabIndex = 12;
-            this.bunifuCustomLabel31.Text = "13:40";
-            this.bunifuCustomLabel31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl1340.AutoSize = true;
+            this.lbl1340.BackColor = System.Drawing.Color.Transparent;
+            this.lbl1340.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl1340.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl1340.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.lbl1340.Location = new System.Drawing.Point(257, 128);
+            this.lbl1340.Name = "lbl1340";
+            this.lbl1340.Size = new System.Drawing.Size(123, 32);
+            this.lbl1340.TabIndex = 12;
+            this.lbl1340.Text = "13:40";
+            this.lbl1340.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // bunifuCustomLabel30
+            // lbl1240
             // 
-            this.bunifuCustomLabel30.AutoSize = true;
-            this.bunifuCustomLabel30.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel30.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuCustomLabel30.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bunifuCustomLabel30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.bunifuCustomLabel30.Location = new System.Drawing.Point(257, 96);
-            this.bunifuCustomLabel30.Name = "bunifuCustomLabel30";
-            this.bunifuCustomLabel30.Size = new System.Drawing.Size(123, 32);
-            this.bunifuCustomLabel30.TabIndex = 11;
-            this.bunifuCustomLabel30.Text = "12:40";
-            this.bunifuCustomLabel30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl1240.AutoSize = true;
+            this.lbl1240.BackColor = System.Drawing.Color.Transparent;
+            this.lbl1240.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl1240.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl1240.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.lbl1240.Location = new System.Drawing.Point(257, 96);
+            this.lbl1240.Name = "lbl1240";
+            this.lbl1240.Size = new System.Drawing.Size(123, 32);
+            this.lbl1240.TabIndex = 11;
+            this.lbl1240.Text = "12:40";
+            this.lbl1240.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // bunifuCustomLabel29
+            // lbl1220
             // 
-            this.bunifuCustomLabel29.AutoSize = true;
-            this.bunifuCustomLabel29.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel29.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuCustomLabel29.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bunifuCustomLabel29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.bunifuCustomLabel29.Location = new System.Drawing.Point(130, 96);
-            this.bunifuCustomLabel29.Name = "bunifuCustomLabel29";
-            this.bunifuCustomLabel29.Size = new System.Drawing.Size(121, 32);
-            this.bunifuCustomLabel29.TabIndex = 10;
-            this.bunifuCustomLabel29.Text = "12:20";
-            this.bunifuCustomLabel29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl1220.AutoSize = true;
+            this.lbl1220.BackColor = System.Drawing.Color.Transparent;
+            this.lbl1220.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl1220.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl1220.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.lbl1220.Location = new System.Drawing.Point(130, 96);
+            this.lbl1220.Name = "lbl1220";
+            this.lbl1220.Size = new System.Drawing.Size(121, 32);
+            this.lbl1220.TabIndex = 10;
+            this.lbl1220.Text = "12:20";
+            this.lbl1220.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // bunifuCustomLabel28
+            // lbl12
             // 
-            this.bunifuCustomLabel28.AutoSize = true;
-            this.bunifuCustomLabel28.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel28.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuCustomLabel28.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bunifuCustomLabel28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.bunifuCustomLabel28.Location = new System.Drawing.Point(3, 96);
-            this.bunifuCustomLabel28.Name = "bunifuCustomLabel28";
-            this.bunifuCustomLabel28.Size = new System.Drawing.Size(121, 32);
-            this.bunifuCustomLabel28.TabIndex = 9;
-            this.bunifuCustomLabel28.Text = "12:00";
-            this.bunifuCustomLabel28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl12.AutoSize = true;
+            this.lbl12.BackColor = System.Drawing.Color.Transparent;
+            this.lbl12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.lbl12.Location = new System.Drawing.Point(3, 96);
+            this.lbl12.Name = "lbl12";
+            this.lbl12.Size = new System.Drawing.Size(121, 32);
+            this.lbl12.TabIndex = 9;
+            this.lbl12.Text = "12:00";
+            this.lbl12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // bunifuCustomLabel27
+            // lbl1140
             // 
-            this.bunifuCustomLabel27.AutoSize = true;
-            this.bunifuCustomLabel27.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel27.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuCustomLabel27.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bunifuCustomLabel27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.bunifuCustomLabel27.Location = new System.Drawing.Point(257, 64);
-            this.bunifuCustomLabel27.Name = "bunifuCustomLabel27";
-            this.bunifuCustomLabel27.Size = new System.Drawing.Size(123, 32);
-            this.bunifuCustomLabel27.TabIndex = 8;
-            this.bunifuCustomLabel27.Text = "11:40";
-            this.bunifuCustomLabel27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl1140.AutoSize = true;
+            this.lbl1140.BackColor = System.Drawing.Color.Transparent;
+            this.lbl1140.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl1140.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl1140.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.lbl1140.Location = new System.Drawing.Point(257, 64);
+            this.lbl1140.Name = "lbl1140";
+            this.lbl1140.Size = new System.Drawing.Size(123, 32);
+            this.lbl1140.TabIndex = 8;
+            this.lbl1140.Text = "11:40";
+            this.lbl1140.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // bunifuCustomLabel26
+            // lbl1120
             // 
-            this.bunifuCustomLabel26.AutoSize = true;
-            this.bunifuCustomLabel26.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel26.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuCustomLabel26.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bunifuCustomLabel26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.bunifuCustomLabel26.Location = new System.Drawing.Point(130, 64);
-            this.bunifuCustomLabel26.Name = "bunifuCustomLabel26";
-            this.bunifuCustomLabel26.Size = new System.Drawing.Size(121, 32);
-            this.bunifuCustomLabel26.TabIndex = 7;
-            this.bunifuCustomLabel26.Text = "11:20";
-            this.bunifuCustomLabel26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl1120.AutoSize = true;
+            this.lbl1120.BackColor = System.Drawing.Color.Transparent;
+            this.lbl1120.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl1120.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl1120.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.lbl1120.Location = new System.Drawing.Point(130, 64);
+            this.lbl1120.Name = "lbl1120";
+            this.lbl1120.Size = new System.Drawing.Size(121, 32);
+            this.lbl1120.TabIndex = 7;
+            this.lbl1120.Text = "11:20";
+            this.lbl1120.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // bunifuCustomLabel25
+            // lbl11
             // 
-            this.bunifuCustomLabel25.AutoSize = true;
-            this.bunifuCustomLabel25.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel25.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuCustomLabel25.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bunifuCustomLabel25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.bunifuCustomLabel25.Location = new System.Drawing.Point(3, 64);
-            this.bunifuCustomLabel25.Name = "bunifuCustomLabel25";
-            this.bunifuCustomLabel25.Size = new System.Drawing.Size(121, 32);
-            this.bunifuCustomLabel25.TabIndex = 6;
-            this.bunifuCustomLabel25.Text = "11:00";
-            this.bunifuCustomLabel25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl11.AutoSize = true;
+            this.lbl11.BackColor = System.Drawing.Color.Transparent;
+            this.lbl11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.lbl11.Location = new System.Drawing.Point(3, 64);
+            this.lbl11.Name = "lbl11";
+            this.lbl11.Size = new System.Drawing.Size(121, 32);
+            this.lbl11.TabIndex = 6;
+            this.lbl11.Text = "11:00";
+            this.lbl11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // bunifuCustomLabel24
+            // lbl1040
             // 
-            this.bunifuCustomLabel24.AutoSize = true;
-            this.bunifuCustomLabel24.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel24.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuCustomLabel24.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bunifuCustomLabel24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.bunifuCustomLabel24.Location = new System.Drawing.Point(257, 32);
-            this.bunifuCustomLabel24.Name = "bunifuCustomLabel24";
-            this.bunifuCustomLabel24.Size = new System.Drawing.Size(123, 32);
-            this.bunifuCustomLabel24.TabIndex = 5;
-            this.bunifuCustomLabel24.Text = "10:40";
-            this.bunifuCustomLabel24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl1040.AutoSize = true;
+            this.lbl1040.BackColor = System.Drawing.Color.Transparent;
+            this.lbl1040.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl1040.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl1040.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.lbl1040.Location = new System.Drawing.Point(257, 32);
+            this.lbl1040.Name = "lbl1040";
+            this.lbl1040.Size = new System.Drawing.Size(123, 32);
+            this.lbl1040.TabIndex = 5;
+            this.lbl1040.Text = "10:40";
+            this.lbl1040.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // bunifuCustomLabel23
+            // lbl1020
             // 
-            this.bunifuCustomLabel23.AutoSize = true;
-            this.bunifuCustomLabel23.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuCustomLabel23.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bunifuCustomLabel23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.bunifuCustomLabel23.Location = new System.Drawing.Point(130, 32);
-            this.bunifuCustomLabel23.Name = "bunifuCustomLabel23";
-            this.bunifuCustomLabel23.Size = new System.Drawing.Size(121, 32);
-            this.bunifuCustomLabel23.TabIndex = 4;
-            this.bunifuCustomLabel23.Text = "10:20";
-            this.bunifuCustomLabel23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl1020.AutoSize = true;
+            this.lbl1020.BackColor = System.Drawing.Color.Transparent;
+            this.lbl1020.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl1020.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl1020.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.lbl1020.Location = new System.Drawing.Point(130, 32);
+            this.lbl1020.Name = "lbl1020";
+            this.lbl1020.Size = new System.Drawing.Size(121, 32);
+            this.lbl1020.TabIndex = 4;
+            this.lbl1020.Text = "10:20";
+            this.lbl1020.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // bunifuCustomLabel22
+            // lbl10
             // 
-            this.bunifuCustomLabel22.AutoSize = true;
-            this.bunifuCustomLabel22.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuCustomLabel22.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bunifuCustomLabel22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.bunifuCustomLabel22.Location = new System.Drawing.Point(3, 32);
-            this.bunifuCustomLabel22.Name = "bunifuCustomLabel22";
-            this.bunifuCustomLabel22.Size = new System.Drawing.Size(121, 32);
-            this.bunifuCustomLabel22.TabIndex = 3;
-            this.bunifuCustomLabel22.Text = "10:00";
-            this.bunifuCustomLabel22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl10.AutoSize = true;
+            this.lbl10.BackColor = System.Drawing.Color.Transparent;
+            this.lbl10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.lbl10.Location = new System.Drawing.Point(3, 32);
+            this.lbl10.Name = "lbl10";
+            this.lbl10.Size = new System.Drawing.Size(121, 32);
+            this.lbl10.TabIndex = 3;
+            this.lbl10.Text = "10:00";
+            this.lbl10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // bunifuCustomLabel21
+            // lbl940
             // 
-            this.bunifuCustomLabel21.AutoSize = true;
-            this.bunifuCustomLabel21.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuCustomLabel21.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bunifuCustomLabel21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.bunifuCustomLabel21.Location = new System.Drawing.Point(257, 0);
-            this.bunifuCustomLabel21.Name = "bunifuCustomLabel21";
-            this.bunifuCustomLabel21.Size = new System.Drawing.Size(123, 32);
-            this.bunifuCustomLabel21.TabIndex = 2;
-            this.bunifuCustomLabel21.Text = "09:40";
-            this.bunifuCustomLabel21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl940.AutoSize = true;
+            this.lbl940.BackColor = System.Drawing.Color.Transparent;
+            this.lbl940.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl940.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl940.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.lbl940.Location = new System.Drawing.Point(257, 0);
+            this.lbl940.Name = "lbl940";
+            this.lbl940.Size = new System.Drawing.Size(123, 32);
+            this.lbl940.TabIndex = 2;
+            this.lbl940.Text = "09:40";
+            this.lbl940.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // bunifuCustomLabel20
+            // lbl920
             // 
-            this.bunifuCustomLabel20.AutoSize = true;
-            this.bunifuCustomLabel20.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuCustomLabel20.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bunifuCustomLabel20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.bunifuCustomLabel20.Location = new System.Drawing.Point(130, 0);
-            this.bunifuCustomLabel20.Name = "bunifuCustomLabel20";
-            this.bunifuCustomLabel20.Size = new System.Drawing.Size(121, 32);
-            this.bunifuCustomLabel20.TabIndex = 1;
-            this.bunifuCustomLabel20.Text = "09:20";
-            this.bunifuCustomLabel20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl920.AutoSize = true;
+            this.lbl920.BackColor = System.Drawing.Color.Transparent;
+            this.lbl920.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl920.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl920.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.lbl920.Location = new System.Drawing.Point(130, 0);
+            this.lbl920.Name = "lbl920";
+            this.lbl920.Size = new System.Drawing.Size(121, 32);
+            this.lbl920.TabIndex = 1;
+            this.lbl920.Text = "09:20";
+            this.lbl920.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // bunifuCustomLabel19
+            // lbl9
             // 
-            this.bunifuCustomLabel19.AutoSize = true;
-            this.bunifuCustomLabel19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.bunifuCustomLabel19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuCustomLabel19.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bunifuCustomLabel19.ForeColor = System.Drawing.Color.White;
-            this.bunifuCustomLabel19.Location = new System.Drawing.Point(3, 0);
-            this.bunifuCustomLabel19.Name = "bunifuCustomLabel19";
-            this.bunifuCustomLabel19.Size = new System.Drawing.Size(121, 32);
-            this.bunifuCustomLabel19.TabIndex = 0;
-            this.bunifuCustomLabel19.Text = "09:00";
-            this.bunifuCustomLabel19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl9.AutoSize = true;
+            this.lbl9.BackColor = System.Drawing.Color.Transparent;
+            this.lbl9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.lbl9.Location = new System.Drawing.Point(3, 0);
+            this.lbl9.Name = "lbl9";
+            this.lbl9.Size = new System.Drawing.Size(121, 32);
+            this.lbl9.TabIndex = 0;
+            this.lbl9.Text = "09:00";
+            this.lbl9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // cbDoktor
             // 
@@ -1384,14 +1399,15 @@
             this.cbDoktor.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
             this.cbDoktor.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(62)))));
             this.cbDoktor.selectedIndex = -1;
-            this.cbDoktor.Size = new System.Drawing.Size(175, 35);
+            this.cbDoktor.Size = new System.Drawing.Size(235, 35);
             this.cbDoktor.TabIndex = 2;
+            this.cbDoktor.onItemSelected += new System.EventHandler(this.cbDoktor_onItemSelected);
             // 
             // bunifuCustomLabel17
             // 
             this.bunifuCustomLabel17.AutoSize = true;
             this.bunifuCustomLabel17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bunifuCustomLabel17.Location = new System.Drawing.Point(14, 149);
+            this.bunifuCustomLabel17.Location = new System.Drawing.Point(14, 154);
             this.bunifuCustomLabel17.Name = "bunifuCustomLabel17";
             this.bunifuCustomLabel17.Size = new System.Drawing.Size(50, 17);
             this.bunifuCustomLabel17.TabIndex = 39;
@@ -1408,14 +1424,15 @@
             this.cbKlinik.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
             this.cbKlinik.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(62)))));
             this.cbKlinik.selectedIndex = -1;
-            this.cbKlinik.Size = new System.Drawing.Size(175, 35);
+            this.cbKlinik.Size = new System.Drawing.Size(235, 35);
             this.cbKlinik.TabIndex = 1;
+            this.cbKlinik.onItemSelected += new System.EventHandler(this.cbKlinik_onItemSelected);
             // 
             // bunifuCustomLabel15
             // 
             this.bunifuCustomLabel15.AutoSize = true;
             this.bunifuCustomLabel15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bunifuCustomLabel15.Location = new System.Drawing.Point(14, 113);
+            this.bunifuCustomLabel15.Location = new System.Drawing.Point(14, 114);
             this.bunifuCustomLabel15.Name = "bunifuCustomLabel15";
             this.bunifuCustomLabel15.Size = new System.Drawing.Size(41, 17);
             this.bunifuCustomLabel15.TabIndex = 37;
@@ -1434,7 +1451,7 @@
             this.txtAdSoyadRandevu.Location = new System.Drawing.Point(90, 65);
             this.txtAdSoyadRandevu.Margin = new System.Windows.Forms.Padding(4);
             this.txtAdSoyadRandevu.Name = "txtAdSoyadRandevu";
-            this.txtAdSoyadRandevu.Size = new System.Drawing.Size(175, 35);
+            this.txtAdSoyadRandevu.Size = new System.Drawing.Size(235, 35);
             this.txtAdSoyadRandevu.TabIndex = 0;
             this.txtAdSoyadRandevu.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -1572,30 +1589,30 @@
         private ns1.BunifuMetroTextbox txtAdSoyadRandevu;
         private ns1.BunifuCustomLabel bunifuCustomLabel14;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private ns1.BunifuCustomLabel bunifuCustomLabel36;
-        private ns1.BunifuCustomLabel bunifuCustomLabel35;
-        private ns1.BunifuCustomLabel bunifuCustomLabel34;
-        private ns1.BunifuCustomLabel bunifuCustomLabel33;
-        private ns1.BunifuCustomLabel bunifuCustomLabel32;
-        private ns1.BunifuCustomLabel bunifuCustomLabel31;
-        private ns1.BunifuCustomLabel bunifuCustomLabel30;
-        private ns1.BunifuCustomLabel bunifuCustomLabel29;
-        private ns1.BunifuCustomLabel bunifuCustomLabel28;
-        private ns1.BunifuCustomLabel bunifuCustomLabel27;
-        private ns1.BunifuCustomLabel bunifuCustomLabel26;
-        private ns1.BunifuCustomLabel bunifuCustomLabel25;
-        private ns1.BunifuCustomLabel bunifuCustomLabel24;
-        private ns1.BunifuCustomLabel bunifuCustomLabel23;
-        private ns1.BunifuCustomLabel bunifuCustomLabel22;
-        private ns1.BunifuCustomLabel bunifuCustomLabel21;
-        private ns1.BunifuCustomLabel bunifuCustomLabel20;
-        private ns1.BunifuCustomLabel bunifuCustomLabel19;
-        private ns1.BunifuCustomLabel bunifuCustomLabel42;
-        private ns1.BunifuCustomLabel bunifuCustomLabel41;
-        private ns1.BunifuCustomLabel bunifuCustomLabel40;
-        private ns1.BunifuCustomLabel bunifuCustomLabel39;
-        private ns1.BunifuCustomLabel bunifuCustomLabel38;
-        private ns1.BunifuCustomLabel bunifuCustomLabel37;
+        private ns1.BunifuCustomLabel lbl14;
+        private ns1.BunifuCustomLabel lbl1420;
+        private ns1.BunifuCustomLabel lbl1440;
+        private ns1.BunifuCustomLabel lbl13;
+        private ns1.BunifuCustomLabel lbl1320;
+        private ns1.BunifuCustomLabel lbl1340;
+        private ns1.BunifuCustomLabel lbl1240;
+        private ns1.BunifuCustomLabel lbl1220;
+        private ns1.BunifuCustomLabel lbl12;
+        private ns1.BunifuCustomLabel lbl1140;
+        private ns1.BunifuCustomLabel lbl1120;
+        private ns1.BunifuCustomLabel lbl11;
+        private ns1.BunifuCustomLabel lbl1040;
+        private ns1.BunifuCustomLabel lbl1020;
+        private ns1.BunifuCustomLabel lbl10;
+        private ns1.BunifuCustomLabel lbl940;
+        private ns1.BunifuCustomLabel lbl920;
+        private ns1.BunifuCustomLabel lbl9;
+        private ns1.BunifuCustomLabel lbl16;
+        private ns1.BunifuCustomLabel lbl1620;
+        private ns1.BunifuCustomLabel lbl1640;
+        private ns1.BunifuCustomLabel lbl15;
+        private ns1.BunifuCustomLabel lbl1520;
+        private ns1.BunifuCustomLabel lbl1540;
         private ns1.BunifuDatepicker dtpRandevuTarih;
         private ns1.BunifuCustomLabel bunifuCustomLabel43;
         private ns1.BunifuThinButton2 btnHastaKayıt;
@@ -1609,5 +1626,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Kurum;
         private ns1.BunifuThinButton2 btnHastaGuncelle;
         private ns1.BunifuThinButton2 btnHastaSil;
+        private System.Windows.Forms.Label label1;
     }
 }

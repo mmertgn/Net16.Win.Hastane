@@ -30,6 +30,7 @@ namespace Hastane.PL.DependecyResolver
             kernel.Bind<IHastaRepository>().To<HastaRepository>();
 
             kernel.Bind<IPersonelRepository>().To<PersonelRepository>();
+            kernel.Bind<IPersonelService>().To<PersonelService>();
 
             kernel.Bind<ISistemYoneticisiRepository>().To<SistemYoneticisiRepository>();
 
@@ -42,6 +43,7 @@ namespace Hastane.PL.DependecyResolver
             kernel.Bind<IKurumRepository>().To<KurumRepository>();
 
             kernel.Bind<IRandevuRepository>().To<RandevuRepository>();
+            kernel.Bind<IRandevuService>().To<RandevuService>();
 
             kernel.Bind<IMessaging>().To<SystemNetMailManager>();
 

@@ -50,19 +50,30 @@ namespace Hastane.BLL.Services.Concretes
 
         public MessageResult Edit(Hastalar model)
         {
-            var _validator = new HastaUpdateValidator();
-            ValidationResult result = _validator.Validate(model);
-            if (result.IsValid)
+            var kontrol = _repo.GetList(x=> x.HastaID != model.HastaID && x.TCKimlikNo==model.TCKimlikNo).Count;
+            if (Convert.ToBoolean(kontrol))
             {
-                _repo.Update(model);
+                var msg = new MessageResult();
+                msg.ErrorMessage = new List<string> {"Bu TC No ile Kayıtlı bir Hasta zaten var."};
+                return msg;
             }
-            var m = new MessageResult
+            else
             {
-                ErrorMessage = result.Errors.Select(x => x.ErrorMessage).ToList(),
-                IsSucceed = result.IsValid
-            };
-            m.SuccessMessage = m.IsSucceed == true ? "Kayıt Güncelleme İşlemi Başarılı." : "Hatalı bilgiler mevcut";
-            return m;
+                var _validator = new HastaUpdateValidator();
+                ValidationResult result = _validator.Validate(model);
+                if (result.IsValid)
+                {
+                    _repo.Update(model);
+                }
+                var m = new MessageResult
+                {
+                    ErrorMessage = result.Errors.Select(x => x.ErrorMessage).ToList(),
+                    IsSucceed = result.IsValid
+                };
+                m.SuccessMessage = m.IsSucceed == true ? "Kayıt Güncelleme İşlemi Başarılı." : "Hatalı bilgiler mevcut";
+                return m;
+            }
+            
         }
 
         public Hastalar GetHastaById(int id)

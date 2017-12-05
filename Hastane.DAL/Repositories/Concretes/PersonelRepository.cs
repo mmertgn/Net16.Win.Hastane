@@ -12,12 +12,12 @@ namespace Hastane.DAL.Repositories.Concretes
 
         public int GetDoktorCount()
         {
-            return _dbSet.Count(x => x.Unvanlar.PersonelUnvan == "Doktor");
+            return _dbSet.Count(x => x.Unvanlar.PersonelUnvan.Contains("Doktor"));
         }
 
         public int GetSekreterCount()
         {
-            return _dbSet.Count(x => x.Unvanlar.PersonelUnvan == "Sekreter");
+            return _dbSet.Count(x => x.Unvanlar.PersonelUnvan.Contains("Sekreter"));
         }
     }
 }
