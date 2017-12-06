@@ -13,7 +13,7 @@ namespace Hastane.BLL.Validations
         public RandevuAddValidator()
         {
             RuleFor(x => x.HastaID).NotEmpty().WithMessage("Hastayı sol taraftaki listeden seçmek zorundasınız!");
-            
+            //asdasd
             //Bunu Ekliyorum
             //RuleFor(x => x.Saat).NotEmpty().WithMessage("Bir Randevu Saati Seçmek Zorundasınız!");
         }
