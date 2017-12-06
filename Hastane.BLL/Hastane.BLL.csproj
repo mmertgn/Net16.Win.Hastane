@@ -57,10 +57,15 @@
     <Compile Include="Models\Personel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\Abstracts\IHastaService.cs" />
+    <Compile Include="Services\Abstracts\IKlinikService.cs" />
     <Compile Include="Services\Abstracts\IPersonelService.cs" />
+    <Compile Include="Services\Abstracts\IRandevuService.cs" />
     <Compile Include="Services\Concretes\HastaService.cs" />
+    <Compile Include="Services\Concretes\KlinikService.cs" />
     <Compile Include="Services\Concretes\PersonelService.cs" />
+    <Compile Include="Services\Concretes\RandevuService.cs" />
     <Compile Include="Validations\HastaAddValidator.cs" />
+    <Compile Include="Validations\RandevuAddValidator.cs" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />

@@ -85,6 +85,12 @@
     <Compile Include="DataModel\Hizmetler.cs">
       <DependentUpon>Hastane.tt</DependentUpon>
     </Compile>
+    <Compile Include="DataModel\ilceler.cs">
+      <DependentUpon>Hastane.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\iller.cs">
+      <DependentUpon>Hastane.tt</DependentUpon>
+    </Compile>
     <Compile Include="DataModel\Klinikler.cs">
       <DependentUpon>Hastane.tt</DependentUpon>
     </Compile>
@@ -129,6 +135,8 @@
     </Compile>
     <Compile Include="Repositories\Abstracts\IHastaRepository.cs" />
     <Compile Include="Repositories\Abstracts\IHizmetRepository.cs" />
+    <Compile Include="Repositories\Abstracts\IIlceRepository.cs" />
+    <Compile Include="Repositories\Abstracts\IILRepository.cs" />
     <Compile Include="Repositories\Abstracts\IKlinikRepository.cs" />
     <Compile Include="Repositories\Abstracts\IKurumRepository.cs" />
     <Compile Include="Repositories\Abstracts\IPersonelRepository.cs" />
@@ -136,6 +144,8 @@
     <Compile Include="Repositories\Abstracts\IRepository.cs" />
     <Compile Include="Repositories\Abstracts\ISistemYoneticisiRepository.cs" />
     <Compile Include="Repositories\Concretes\HizmetRepository.cs" />
+    <Compile Include="Repositories\Concretes\IlceRepository.cs" />
+    <Compile Include="Repositories\Concretes\IlRepository.cs" />
     <Compile Include="Repositories\Concretes\KlinikRepository.cs" />
     <Compile Include="Repositories\Concretes\KurumRepository.cs" />
     <Compile Include="Repositories\Concretes\PersonelRepository.cs" />

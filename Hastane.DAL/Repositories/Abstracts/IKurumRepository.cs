@@ -10,5 +10,6 @@ namespace Hastane.DAL.Repositories.Abstracts
     public interface IKurumRepository : IRepository<Kurumlar>
     {
         int GetKurumCount();
+        List<Kurumlar> KurumGetir(string KurumAdi);
     }
 }

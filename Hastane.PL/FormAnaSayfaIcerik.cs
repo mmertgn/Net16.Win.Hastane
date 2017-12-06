@@ -46,7 +46,7 @@ namespace Hastane.PL
             btnHizmetSayisi.LabelText = "Hizmetler : " + _hizmetRepository.GetHizmetCount();
             btnTahlilSayisi.LabelText = "Tahliller : " + _tahlilRepository.GetTahlilCount();
             btnKurumSayisi.LabelText = "Kurumlar : " + _kurumRepository.GetKurumCount();
-
+            btnRandevuSayisi.LabelText = "Randevular : " + _randevuRepository.GetRandevuCount();
         }
     }
 }

@@ -15,8 +15,7 @@ namespace Hastane.BLL.Services.Abstracts
         MessageResult Edit(Hastalar model);
         MessageResult Delete(int id);
         List<Hastalar> HastaList();
-        List<Hastalar> Where(Expression<Func<Hastalar, bool>> predicate);
+        List<Hastalar> HastaListWithSorgu(Expression<Func<Hastalar, bool>> predicate);
         Hastalar GetHastaById(int id);
-        int Save();
     }
 }

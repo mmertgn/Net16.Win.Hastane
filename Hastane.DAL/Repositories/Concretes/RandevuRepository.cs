@@ -16,7 +16,8 @@ namespace Hastane.DAL.Repositories.Concretes
 
         public int GetRandevuCount()
         {
-            return _dbSet.Count(x => x.Geldimi == false);
+            var tarih = DateTime.Now.Date;
+            return _dbSet.Count(x => x.Geldimi == false && x.Tarih==tarih);
         }
     }
 }

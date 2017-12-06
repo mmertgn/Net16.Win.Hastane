@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Hastane.BLL.Services.Abstracts;
+using Hastane.DAL.DataModel;
 using Hastane.DAL.Repositories.Abstracts;
 
 namespace Hastane.BLL.Services.Concretes
@@ -16,5 +17,12 @@ namespace Hastane.BLL.Services.Concretes
         {
             _personelRepo = personelRepo;
         }
+
+        public List<Personeller> DoktorDoldurByKlinikFromRandevu(string cbKlinikText)
+        {
+            return _personelRepo.GetList(x => x.Klinikler.KlinikAd == cbKlinikText);         
+        }
+
+        
     }
 }

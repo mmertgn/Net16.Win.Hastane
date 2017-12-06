@@ -8,37 +8,50 @@ using System.Threading.Tasks;
 
 namespace Hastane.DAL.Repositories.Concretes
 {
-    public class EFRepositoryBase<T,TContext> : IRepository<T>
+    public class EFRepositoryBase<T, TContext> : IRepository<T>
         where T : class, new()
-        where TContext:DbContext
+        where TContext : DbContext
     {
         protected DbContext _dbContext; //database bağlanmamızı sağlar
         protected IDbSet<T> _dbSet; //tablolara bağlanmamızı sağlar
+        protected bool _disposed = false;
 
-        public EFRepositoryBase(TContext dbContext)
+        public EFRepositoryBase(DbContext dbContext)
         {
             _dbContext = dbContext;
             _dbSet = _dbContext.Set<T>();
-        }   
+        }
         public void Add(T entity)
         {
-            using (var context = _dbContext)
-            {
-                var entry = context.Entry(entity);
-                entry.State = EntityState.Added;
-            }
+            _dbSet.Add(entity);
+            _dbContext.SaveChanges();
         }
 
         public void Delete(int Id)
         {
-            using (var context = _dbContext)
+            var entity = _dbSet.Find(Id);
+            _dbSet.Remove(entity);
+            _dbContext.SaveChanges();
+        }
+        public void Dispose(bool disposing)
+        {
+            if (disposing)
             {
-                var entity = _dbSet.Find(Id);
-                var entry = context.Entry(entity);
-                entry.State = EntityState.Deleted;
+                if (_disposed == false)
+                {
+                    Dispose();
+                    _disposed = true;
+                }
             }
         }
 
+        public void Dispose()
+        {
+            //database bağlantısını kesip kaynakların ram e geri teslimini sağlar.
+            _dbContext.Dispose();
+            //Garbage Collector bu sınıfı ramden kaldırır.
+            GC.SuppressFinalize(this);
+        }
         public T FindById(int Id)
         {
             return _dbSet.Find(Id);
@@ -54,18 +67,11 @@ namespace Hastane.DAL.Repositories.Concretes
             return _dbSet.Where(predicate).ToList();
         }
 
-        public int Save()
-        {
-            return _dbContext.SaveChanges();
-        }
-
         public void Update(T entity)
         {
-            using (var context = _dbContext)
-            {
-                var entry = _dbContext.Entry(entity);
-                entry.State = EntityState.Modified;
-            }
+            var entry = _dbContext.Entry(entity);
+            entry.State = EntityState.Modified;
+            _dbContext.SaveChanges();
         }
     }
 }
