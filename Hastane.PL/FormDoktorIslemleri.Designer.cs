@@ -43,7 +43,7 @@
             this.bunifuCustomLabel20 = new ns1.BunifuCustomLabel();
             this.btnIlacEkle = new ns1.BunifuImageButton();
             this.btnReceteOlustur = new ns1.BunifuThinButton2();
-            this.dtpRandevuTarih = new ns1.BunifuDatepicker();
+            this.dtpReceteTarih = new ns1.BunifuDatepicker();
             this.bunifuCustomLabel17 = new ns1.BunifuCustomLabel();
             this.txtIlacAdi = new ns1.BunifuMetroTextbox();
             this.bunifuCustomLabel14 = new ns1.BunifuCustomLabel();
@@ -71,7 +71,7 @@
             this.txtHastaSikayeti = new ns1.BunifuMetroTextbox();
             this.bunifuCustomLabel10 = new ns1.BunifuCustomLabel();
             this.bunifuCustomLabel8 = new ns1.BunifuCustomLabel();
-            this.bunifuMetroTextbox4 = new ns1.BunifuMetroTextbox();
+            this.txtKanGrubu = new ns1.BunifuMetroTextbox();
             this.bunifuCustomLabel11 = new ns1.BunifuCustomLabel();
             this.txtRandevuSaat = new ns1.BunifuMetroTextbox();
             this.bunifuCustomLabel9 = new ns1.BunifuCustomLabel();
@@ -81,7 +81,7 @@
             this.bunifuCustomLabel5 = new ns1.BunifuCustomLabel();
             this.txtAd = new ns1.BunifuMetroTextbox();
             this.bunifuCustomLabel6 = new ns1.BunifuCustomLabel();
-            this.txtCepTelefonu = new ns1.BunifuMetroTextbox();
+            this.txtKlinikAdi = new ns1.BunifuMetroTextbox();
             this.bunifuCustomLabel12 = new ns1.BunifuCustomLabel();
             this.txtTCKimlikNo = new ns1.BunifuMetroTextbox();
             this.bunifuCustomLabel4 = new ns1.BunifuCustomLabel();
@@ -139,7 +139,7 @@
             this.panel5.Controls.Add(this.bunifuCards2);
             this.panel5.Controls.Add(this.btnIlacEkle);
             this.panel5.Controls.Add(this.btnReceteOlustur);
-            this.panel5.Controls.Add(this.dtpRandevuTarih);
+            this.panel5.Controls.Add(this.dtpReceteTarih);
             this.panel5.Controls.Add(this.bunifuCustomLabel17);
             this.panel5.Controls.Add(this.txtIlacAdi);
             this.panel5.Controls.Add(this.bunifuCustomLabel14);
@@ -300,18 +300,18 @@
             this.btnReceteOlustur.TabIndex = 76;
             this.btnReceteOlustur.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // dtpRandevuTarih
+            // dtpReceteTarih
             // 
-            this.dtpRandevuTarih.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.dtpRandevuTarih.BorderRadius = 0;
-            this.dtpRandevuTarih.ForeColor = System.Drawing.Color.White;
-            this.dtpRandevuTarih.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpRandevuTarih.FormatCustom = null;
-            this.dtpRandevuTarih.Location = new System.Drawing.Point(398, 64);
-            this.dtpRandevuTarih.Name = "dtpRandevuTarih";
-            this.dtpRandevuTarih.Size = new System.Drawing.Size(175, 35);
-            this.dtpRandevuTarih.TabIndex = 62;
-            this.dtpRandevuTarih.Value = new System.DateTime(2017, 11, 24, 19, 24, 18, 0);
+            this.dtpReceteTarih.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.dtpReceteTarih.BorderRadius = 0;
+            this.dtpReceteTarih.ForeColor = System.Drawing.Color.White;
+            this.dtpReceteTarih.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpReceteTarih.FormatCustom = null;
+            this.dtpReceteTarih.Location = new System.Drawing.Point(398, 64);
+            this.dtpReceteTarih.Name = "dtpReceteTarih";
+            this.dtpReceteTarih.Size = new System.Drawing.Size(175, 35);
+            this.dtpReceteTarih.TabIndex = 62;
+            this.dtpReceteTarih.Value = new System.DateTime(2017, 11, 24, 19, 24, 18, 0);
             // 
             // bunifuCustomLabel17
             // 
@@ -464,7 +464,7 @@
             this.panel4.Controls.Add(this.cbTahliller);
             this.panel4.Controls.Add(this.bunifuCustomLabel43);
             this.panel4.Controls.Add(this.bunifuCards1);
-            this.panel4.Controls.Add(this.bunifuMetroTextbox4);
+            this.panel4.Controls.Add(this.txtKanGrubu);
             this.panel4.Controls.Add(this.bunifuCustomLabel11);
             this.panel4.Controls.Add(this.txtRandevuSaat);
             this.panel4.Controls.Add(this.bunifuCustomLabel9);
@@ -474,7 +474,7 @@
             this.panel4.Controls.Add(this.bunifuCustomLabel5);
             this.panel4.Controls.Add(this.txtAd);
             this.panel4.Controls.Add(this.bunifuCustomLabel6);
-            this.panel4.Controls.Add(this.txtCepTelefonu);
+            this.panel4.Controls.Add(this.txtKlinikAdi);
             this.panel4.Controls.Add(this.bunifuCustomLabel12);
             this.panel4.Controls.Add(this.txtTCKimlikNo);
             this.panel4.Controls.Add(this.bunifuCustomLabel4);
@@ -774,23 +774,23 @@
             this.bunifuCustomLabel8.Text = "Detaylı Hasta Bilgileri";
             this.bunifuCustomLabel8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // bunifuMetroTextbox4
+            // txtKanGrubu
             // 
-            this.bunifuMetroTextbox4.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.bunifuMetroTextbox4.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMetroTextbox4.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.bunifuMetroTextbox4.BorderThickness = 3;
-            this.bunifuMetroTextbox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMetroTextbox4.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMetroTextbox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.bunifuMetroTextbox4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.bunifuMetroTextbox4.isPassword = false;
-            this.bunifuMetroTextbox4.Location = new System.Drawing.Point(359, 63);
-            this.bunifuMetroTextbox4.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMetroTextbox4.Name = "bunifuMetroTextbox4";
-            this.bunifuMetroTextbox4.Size = new System.Drawing.Size(175, 35);
-            this.bunifuMetroTextbox4.TabIndex = 67;
-            this.bunifuMetroTextbox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtKanGrubu.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.txtKanGrubu.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtKanGrubu.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.txtKanGrubu.BorderThickness = 3;
+            this.txtKanGrubu.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtKanGrubu.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtKanGrubu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.txtKanGrubu.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.txtKanGrubu.isPassword = false;
+            this.txtKanGrubu.Location = new System.Drawing.Point(359, 63);
+            this.txtKanGrubu.Margin = new System.Windows.Forms.Padding(4);
+            this.txtKanGrubu.Name = "txtKanGrubu";
+            this.txtKanGrubu.Size = new System.Drawing.Size(175, 35);
+            this.txtKanGrubu.TabIndex = 67;
+            this.txtKanGrubu.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel11
             // 
@@ -883,7 +883,7 @@
             // 
             this.bunifuCustomLabel5.AutoSize = true;
             this.bunifuCustomLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bunifuCustomLabel5.Location = new System.Drawing.Point(13, 202);
+            this.bunifuCustomLabel5.Location = new System.Drawing.Point(8, 202);
             this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
             this.bunifuCustomLabel5.Size = new System.Drawing.Size(74, 17);
             this.bunifuCustomLabel5.TabIndex = 60;
@@ -918,23 +918,23 @@
             this.bunifuCustomLabel6.TabIndex = 45;
             this.bunifuCustomLabel6.Text = "Ad Soyad";
             // 
-            // txtCepTelefonu
+            // txtKlinikAdi
             // 
-            this.txtCepTelefonu.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.txtCepTelefonu.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtCepTelefonu.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.txtCepTelefonu.BorderThickness = 3;
-            this.txtCepTelefonu.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCepTelefonu.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtCepTelefonu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.txtCepTelefonu.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtCepTelefonu.isPassword = false;
-            this.txtCepTelefonu.Location = new System.Drawing.Point(104, 150);
-            this.txtCepTelefonu.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCepTelefonu.Name = "txtCepTelefonu";
-            this.txtCepTelefonu.Size = new System.Drawing.Size(149, 35);
-            this.txtCepTelefonu.TabIndex = 54;
-            this.txtCepTelefonu.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtKlinikAdi.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.txtKlinikAdi.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtKlinikAdi.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.txtKlinikAdi.BorderThickness = 3;
+            this.txtKlinikAdi.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtKlinikAdi.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtKlinikAdi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.txtKlinikAdi.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.txtKlinikAdi.isPassword = false;
+            this.txtKlinikAdi.Location = new System.Drawing.Point(104, 150);
+            this.txtKlinikAdi.Margin = new System.Windows.Forms.Padding(4);
+            this.txtKlinikAdi.Name = "txtKlinikAdi";
+            this.txtKlinikAdi.Size = new System.Drawing.Size(149, 35);
+            this.txtKlinikAdi.TabIndex = 54;
+            this.txtKlinikAdi.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel12
             // 
@@ -1057,15 +1057,19 @@
             // 
             // dgvRandevular
             // 
+            this.dgvRandevular.AllowUserToAddRows = false;
+            this.dgvRandevular.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgvRandevular.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvRandevular.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvRandevular.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvRandevular.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgvRandevular.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvRandevular.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
@@ -1074,13 +1078,18 @@
             this.dgvRandevular.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvRandevular.DoubleBuffered = true;
             this.dgvRandevular.EnableHeadersVisualStyles = false;
-            this.dgvRandevular.HeaderBgColor = System.Drawing.Color.SeaGreen;
-            this.dgvRandevular.HeaderForeColor = System.Drawing.Color.SeaGreen;
+            this.dgvRandevular.GridColor = System.Drawing.Color.White;
+            this.dgvRandevular.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.dgvRandevular.HeaderForeColor = System.Drawing.Color.White;
             this.dgvRandevular.Location = new System.Drawing.Point(0, 49);
             this.dgvRandevular.Name = "dgvRandevular";
+            this.dgvRandevular.ReadOnly = true;
             this.dgvRandevular.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvRandevular.RowHeadersWidth = 4;
+            this.dgvRandevular.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvRandevular.Size = new System.Drawing.Size(1185, 137);
             this.dgvRandevular.TabIndex = 22;
+            this.dgvRandevular.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvRandevular_CellMouseClick);
             // 
             // txtTCKimlikNoAra
             // 
@@ -1098,6 +1107,7 @@
             this.txtTCKimlikNoAra.Size = new System.Drawing.Size(175, 35);
             this.txtTCKimlikNoAra.TabIndex = 21;
             this.txtTCKimlikNoAra.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtTCKimlikNoAra.OnValueChanged += new System.EventHandler(this.txtAdSoyadAra_OnValueChanged);
             // 
             // txtTelefonAra
             // 
@@ -1115,6 +1125,7 @@
             this.txtTelefonAra.Size = new System.Drawing.Size(175, 35);
             this.txtTelefonAra.TabIndex = 20;
             this.txtTelefonAra.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtTelefonAra.OnValueChanged += new System.EventHandler(this.txtAdSoyadAra_OnValueChanged);
             // 
             // txtAdSoyadAra
             // 
@@ -1132,6 +1143,7 @@
             this.txtAdSoyadAra.Size = new System.Drawing.Size(175, 35);
             this.txtAdSoyadAra.TabIndex = 15;
             this.txtAdSoyadAra.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtAdSoyadAra.OnValueChanged += new System.EventHandler(this.txtAdSoyadAra_OnValueChanged);
             // 
             // bunifuCustomLabel3
             // 
@@ -1183,6 +1195,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormDoktorIslemleri";
             this.Text = "FormDoktorIslemleri";
+            this.Load += new System.EventHandler(this.FormDoktorIslemleri_Load);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
@@ -1227,7 +1240,7 @@
         private ns1.BunifuSeparator bunifuSeparator1;
         private ns1.BunifuCustomDataGrid dgvRandevular;
         private ns1.BunifuCards bunifuCards1;
-        private ns1.BunifuMetroTextbox bunifuMetroTextbox4;
+        private ns1.BunifuMetroTextbox txtKanGrubu;
         private ns1.BunifuCustomLabel bunifuCustomLabel11;
         private ns1.BunifuMetroTextbox txtRandevuSaat;
         private ns1.BunifuCustomLabel bunifuCustomLabel9;
@@ -1237,7 +1250,7 @@
         private ns1.BunifuCustomLabel bunifuCustomLabel5;
         private ns1.BunifuMetroTextbox txtAd;
         private ns1.BunifuCustomLabel bunifuCustomLabel6;
-        private ns1.BunifuMetroTextbox txtCepTelefonu;
+        private ns1.BunifuMetroTextbox txtKlinikAdi;
         private ns1.BunifuCustomLabel bunifuCustomLabel12;
         private ns1.BunifuMetroTextbox txtTCKimlikNo;
         private ns1.BunifuCustomLabel bunifuCustomLabel43;
@@ -1263,7 +1276,7 @@
         private ns1.BunifuCustomLabel bunifuCustomLabel20;
         private ns1.BunifuImageButton btnIlacEkle;
         private ns1.BunifuThinButton2 btnReceteOlustur;
-        private ns1.BunifuDatepicker dtpRandevuTarih;
+        private ns1.BunifuDatepicker dtpReceteTarih;
         private ns1.BunifuCustomLabel bunifuCustomLabel17;
         private ns1.BunifuThinButton2 btnIlacSil;
         private ns1.BunifuThinButton2 btnReceteYazdir;

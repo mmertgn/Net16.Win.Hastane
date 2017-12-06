@@ -30,7 +30,7 @@ namespace Hastane.DAL.DataModel
         public int HastaID { get; set; }
         public int PersonelID { get; set; }
         public int KlinikID { get; set; }
-        public int SikayetID { get; set; }
+        public Nullable<int> SikayetID { get; set; }
         public string IstenenTahliller { get; set; }
         public Nullable<System.DateTime> CikisTarihi { get; set; }
     

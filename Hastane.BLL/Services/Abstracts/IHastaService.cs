@@ -17,5 +17,16 @@ namespace Hastane.BLL.Services.Abstracts
         List<Hastalar> HastaList();
         List<Hastalar> HastaListWithSorgu(Expression<Func<Hastalar, bool>> predicate);
         Hastalar GetHastaById(int id);
+        List<HastaListesiModelFromRandevuIslemleri> HastaBilgileriDoldur();
+        List<HastaListesiModelFromRandevuIslemleri> HastaBilgileriDoldurAra(string HastaAdSoyad, string CepTel, string TcKimlikNo);
+    }
+
+    public class HastaListesiModelFromRandevuIslemleri
+    {
+        public int HastaId { get; set; }
+        public string AdSoyad { get; set; }
+        public string TCNo { get; set; }
+        public string CepTel { get; set; }
+        public string Kurum { get; set; }
     }
 }

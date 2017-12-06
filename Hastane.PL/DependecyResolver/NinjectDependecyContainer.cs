@@ -45,6 +45,9 @@ namespace Hastane.PL.DependecyResolver
             kernel.Bind<IRandevuRepository>().To<RandevuRepository>();
             kernel.Bind<IRandevuService>().To<RandevuService>();
 
+            kernel.Bind<IHastaKabulRepository>().To<HastaKabulRepository>();
+            kernel.Bind<IHastaKabulService>().To<HastaKabulService>();
+
             kernel.Bind<IMessaging>().To<SystemNetMailManager>();
 
             return kernel;

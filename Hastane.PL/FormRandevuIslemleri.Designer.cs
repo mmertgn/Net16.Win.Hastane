@@ -28,19 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRandevuIslemleri));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.dgvHastalar = new ns1.BunifuCustomDataGrid();
-            this.HastaId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AdSoyad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TCNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Telefon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Kurum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel7 = new System.Windows.Forms.Panel();
             this.txtTCKimlikNoAra = new ns1.BunifuMetroTextbox();
             this.txtTelefonAra = new ns1.BunifuMetroTextbox();
@@ -160,35 +155,30 @@
             // 
             // dgvHastalar
             // 
+            this.dgvHastalar.AllowUserToAddRows = false;
             this.dgvHastalar.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvHastalar.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvHastalar.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvHastalar.BackgroundColor = System.Drawing.Color.White;
             this.dgvHastalar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvHastalar.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvHastalar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvHastalar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvHastalar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHastalar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.HastaId,
-            this.AdSoyad,
-            this.TCNo,
-            this.Telefon,
-            this.Kurum});
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvHastalar.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvHastalar.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvHastalar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvHastalar.DoubleBuffered = true;
             this.dgvHastalar.EnableHeadersVisualStyles = false;
@@ -200,57 +190,19 @@
             this.dgvHastalar.Name = "dgvHastalar";
             this.dgvHastalar.ReadOnly = true;
             this.dgvHastalar.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvHastalar.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvHastalar.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvHastalar.RowHeadersWidth = 10;
             this.dgvHastalar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvHastalar.Size = new System.Drawing.Size(443, 471);
             this.dgvHastalar.TabIndex = 1;
             this.dgvHastalar.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvHastalar_CellMouseClick);
-            // 
-            // HastaId
-            // 
-            this.HastaId.HeaderText = "HastaID";
-            this.HastaId.Name = "HastaId";
-            this.HastaId.ReadOnly = true;
-            this.HastaId.Visible = false;
-            this.HastaId.Width = 15;
-            // 
-            // AdSoyad
-            // 
-            this.AdSoyad.HeaderText = "Ad Soyad";
-            this.AdSoyad.Name = "AdSoyad";
-            this.AdSoyad.ReadOnly = true;
-            this.AdSoyad.Width = 120;
-            // 
-            // TCNo
-            // 
-            this.TCNo.HeaderText = "TC Kimlik No";
-            this.TCNo.MaxInputLength = 11;
-            this.TCNo.Name = "TCNo";
-            this.TCNo.ReadOnly = true;
-            this.TCNo.Width = 120;
-            // 
-            // Telefon
-            // 
-            this.Telefon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Telefon.HeaderText = "Cep Telefonu";
-            this.Telefon.Name = "Telefon";
-            this.Telefon.ReadOnly = true;
-            this.Telefon.Width = 129;
-            // 
-            // Kurum
-            // 
-            this.Kurum.HeaderText = "Sigorta";
-            this.Kurum.Name = "Kurum";
-            this.Kurum.ReadOnly = true;
-            this.Kurum.Width = 120;
             // 
             // panel7
             // 
@@ -1646,11 +1598,6 @@
         private ns1.BunifuThinButton2 btnRandevuKaydet;
         private ns1.BunifuMetroTextbox txtRandevuSaati;
         private ns1.BunifuCustomLabel bunifuCustomLabel44;
-        private System.Windows.Forms.DataGridViewTextBoxColumn HastaId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AdSoyad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TCNo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Telefon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Kurum;
         private ns1.BunifuThinButton2 btnHastaGuncelle;
         private ns1.BunifuThinButton2 btnHastaSil;
         private System.Windows.Forms.Label label1;

@@ -21,7 +21,6 @@ namespace Hastane.PL
         private readonly IPersonelRepository _personelRepository;
         private readonly IKlinikRepository _klinikRepository;
         private readonly IRandevuService _randevuService;
-
         #endregion
 
         private int _secilenHastaId;
@@ -72,49 +71,28 @@ namespace Hastane.PL
 
         private void HastaListesiDoldur()
         {
-            dgvHastalar.Rows.Clear();
-            var sayac = 0;
-            var model = _hastaRepository.GetList().Select(x => new
-            {
-                HastaId = x.HastaID,
-                AdSoyad = x.Ad + " " + x.Soyad,
-                TCNo = x.TCKimlikNo,
-                Telefon = x.CepTel,
-                Kurum = x.Kurumlar.KurumAd
-            });
-            foreach (var item in model)
-            {
-                dgvHastalar.Rows.Add();
-                dgvHastalar.Rows[sayac].Cells[0].Value = item.HastaId;
-                dgvHastalar.Rows[sayac].Cells[1].Value = item.AdSoyad;
-                dgvHastalar.Rows[sayac].Cells[2].Value = item.TCNo;
-                dgvHastalar.Rows[sayac].Cells[3].Value = item.Telefon;
-                dgvHastalar.Rows[sayac].Cells[4].Value = item.Kurum;
-                sayac++;
-            }
+            var model = _hastaService.HastaBilgileriDoldur();
+            dgvHastalar.DataSource = model;
+            HastaListesiDataGridViewDuzenle();
         }
         private void txtAdSoyadAra_OnValueChanged(object sender, EventArgs e)
         {
-            dgvHastalar.Rows.Clear();
-            var sayac = 0;
-            var model2 = _hastaService.HastaListWithSorgu(x => (x.Ad + " " + x.Soyad).Contains(txtAdSoyadAra.Text) && x.CepTel.Contains(txtTelefonAra.Text) && x.TCKimlikNo.Contains(txtTCKimlikNoAra.Text))
-                .Select(x => new
-                {
-                    HastaId = x.HastaID,
-                    AdSoyad = x.Ad + " " + x.Soyad,
-                    TCNo = x.TCKimlikNo,
-                    Telefon = x.CepTel,
-                    Kurum = x.Kurumlar.KurumAd
-                });
-            foreach (var item in model2)
+            var model =
+                _hastaService.HastaBilgileriDoldurAra(txtAdSoyadAra.Text, txtTelefonAra.Text, txtTCKimlikNoAra.Text);
+            dgvHastalar.DataSource = model;
+            HastaListesiDataGridViewDuzenle();
+        }
+
+        private void HastaListesiDataGridViewDuzenle()
+        {
+            dgvHastalar.Columns[0].Visible = false;
+            dgvHastalar.Columns[1].HeaderText = "Ad Soyad";
+            dgvHastalar.Columns[2].HeaderText = "TC Kimlik No";
+            dgvHastalar.Columns[3].HeaderText = "Cep Telefonu";
+            dgvHastalar.Columns[4].HeaderText = "Sigorta Kurumu";
+            for (var i = 0; i < dgvHastalar.Columns.Count; i++)
             {
-                dgvHastalar.Rows.Add();
-                dgvHastalar.Rows[sayac].Cells[0].Value = item.HastaId;
-                dgvHastalar.Rows[sayac].Cells[1].Value = item.AdSoyad;
-                dgvHastalar.Rows[sayac].Cells[2].Value = item.TCNo;
-                dgvHastalar.Rows[sayac].Cells[3].Value = item.Telefon;
-                dgvHastalar.Rows[sayac].Cells[4].Value = item.Kurum;
-                sayac++;
+                dgvHastalar.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             }
         }
 
@@ -149,7 +127,7 @@ namespace Hastane.PL
 
             if (kurum != null)
             {
-                Hastalar model = new Hastalar
+                var model = new Hastalar
                 {
                     Ad = txtAd.Text,
                     Soyad = txtSoyad.Text,

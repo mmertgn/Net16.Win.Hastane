@@ -50,11 +50,11 @@ namespace Hastane.BLL.Services.Concretes
 
         public MessageResult Edit(Hastalar model)
         {
-            var kontrol = _repo.GetList(x=> x.HastaID != model.HastaID && x.TCKimlikNo==model.TCKimlikNo).Count;
+            var kontrol = _repo.GetList(x => x.HastaID != model.HastaID && x.TCKimlikNo == model.TCKimlikNo).Count;
             if (Convert.ToBoolean(kontrol))
             {
                 var msg = new MessageResult();
-                msg.ErrorMessage = new List<string> {"Bu TC No ile Kayıtlı bir Hasta zaten var."};
+                msg.ErrorMessage = new List<string> { "Bu TC No ile Kayıtlı bir Hasta zaten var." };
                 return msg;
             }
             else
@@ -73,7 +73,7 @@ namespace Hastane.BLL.Services.Concretes
                 m.SuccessMessage = m.IsSucceed == true ? "Kayıt Güncelleme İşlemi Başarılı." : "Hatalı bilgiler mevcut";
                 return m;
             }
-            
+
         }
 
         public Hastalar GetHastaById(int id)
@@ -81,11 +81,38 @@ namespace Hastane.BLL.Services.Concretes
             return _repo.FindById(id);
         }
 
+        public List<HastaListesiModelFromRandevuIslemleri> HastaBilgileriDoldur()
+        {
+            var model = _repo.GetList().Select(x => new HastaListesiModelFromRandevuIslemleri
+            {
+                HastaId = x.HastaID,
+                AdSoyad = x.Ad + " " + x.Soyad,
+                TCNo = x.TCKimlikNo,
+                CepTel = x.CepTel,
+                Kurum = x.Kurumlar.KurumAd
+            }).ToList();
+            return model;
+        }
+
+        public List<HastaListesiModelFromRandevuIslemleri> HastaBilgileriDoldurAra(string HastaAdSoyad, string CepTel, string TcKimlikNo)
+        {
+            var model = _repo.GetList(x => (x.Ad + " " + x.Soyad).Contains(HastaAdSoyad) && x.CepTel.Contains(CepTel) && x.TCKimlikNo.Contains(TcKimlikNo))
+                .Select(x => new HastaListesiModelFromRandevuIslemleri
+                {
+                    HastaId = x.HastaID,
+                    AdSoyad = x.Ad + " " + x.Soyad,
+                    TCNo = x.TCKimlikNo,
+                    CepTel = x.CepTel,
+                    Kurum = x.Kurumlar.KurumAd
+                }).ToList();
+            return model;
+        }
+
         public List<Hastalar> HastaList()
         {
             return _repo.GetList(null);
         }
-        
+
 
         public List<Hastalar> HastaListWithSorgu(Expression<Func<Hastalar, bool>> predicate)
         {
