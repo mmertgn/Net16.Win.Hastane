@@ -15,7 +15,7 @@ namespace Hastane.BLL.Validations
             RuleFor(x => x.HastaID).NotEmpty().WithMessage("Hastayı sol taraftaki listeden seçmek zorundasınız!");
 
 
-
+///BurasıFarklı2
             //asdfghjkl
             RuleFor(x => x.Saat).NotEmpty().WithMessage("Bir Randevu Saati Seçmek Zorundasınız!");
         }
