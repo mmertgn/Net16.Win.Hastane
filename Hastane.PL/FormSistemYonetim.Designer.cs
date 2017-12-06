@@ -108,6 +108,7 @@
             this.bunifuThinButton24 = new ns1.BunifuThinButton2();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.bunifuSeparator2 = new ns1.BunifuSeparator();
             this.btnUnvanSil = new ns1.BunifuThinButton2();
             this.btnUnvanEkle = new ns1.BunifuThinButton2();
             this.btnUnvanGuncelle = new ns1.BunifuThinButton2();
@@ -121,7 +122,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.bunifuThinButton23 = new ns1.BunifuThinButton2();
-            this.bunifuSeparator2 = new ns1.BunifuSeparator();
             this.panel1.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel10.SuspendLayout();
@@ -523,6 +523,7 @@
             this.btnKlinikSil.Size = new System.Drawing.Size(189, 41);
             this.btnKlinikSil.TabIndex = 48;
             this.btnKlinikSil.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnKlinikSil.Click += new System.EventHandler(this.btnKlinikSil_Click);
             // 
             // btnKlinikEkle
             // 
@@ -548,6 +549,7 @@
             this.btnKlinikEkle.Size = new System.Drawing.Size(157, 41);
             this.btnKlinikEkle.TabIndex = 47;
             this.btnKlinikEkle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnKlinikEkle.Click += new System.EventHandler(this.btnKlinikEkle_Click);
             // 
             // btnKlinikGuncelle
             // 
@@ -573,6 +575,7 @@
             this.btnKlinikGuncelle.Size = new System.Drawing.Size(356, 41);
             this.btnKlinikGuncelle.TabIndex = 46;
             this.btnKlinikGuncelle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnKlinikGuncelle.Click += new System.EventHandler(this.btnKlinikGuncelle_Click);
             // 
             // txtKlinikAciklama
             // 
@@ -677,6 +680,7 @@
             this.dgvKlinikler.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvKlinikler.Size = new System.Drawing.Size(360, 117);
             this.dgvKlinikler.TabIndex = 18;
+            this.dgvKlinikler.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvKlinikler_CellMouseClick);
             // 
             // KlinikID
             // 
@@ -714,6 +718,7 @@
             this.txtKlinikAdAra.Size = new System.Drawing.Size(228, 35);
             this.txtKlinikAdAra.TabIndex = 15;
             this.txtKlinikAdAra.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtKlinikAdAra.OnValueChanged += new System.EventHandler(this.txtKlinikAdAra_OnValueChanged);
             // 
             // bunifuCustomLabel1
             // 
@@ -1159,6 +1164,19 @@
             this.panel3.Size = new System.Drawing.Size(349, 715);
             this.panel3.TabIndex = 3;
             // 
+            // bunifuSeparator2
+            // 
+            this.bunifuSeparator2.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.bunifuSeparator2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.bunifuSeparator2.LineThickness = 1;
+            this.bunifuSeparator2.Location = new System.Drawing.Point(0, 56);
+            this.bunifuSeparator2.Name = "bunifuSeparator2";
+            this.bunifuSeparator2.Size = new System.Drawing.Size(3, 659);
+            this.bunifuSeparator2.TabIndex = 60;
+            this.bunifuSeparator2.Transparency = 255;
+            this.bunifuSeparator2.Vertical = true;
+            // 
             // btnUnvanSil
             // 
             this.btnUnvanSil.ActiveBorderThickness = 1;
@@ -1394,19 +1412,6 @@
             this.bunifuThinButton23.Size = new System.Drawing.Size(349, 56);
             this.bunifuThinButton23.TabIndex = 2;
             this.bunifuThinButton23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // bunifuSeparator2
-            // 
-            this.bunifuSeparator2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.bunifuSeparator2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.bunifuSeparator2.LineThickness = 1;
-            this.bunifuSeparator2.Location = new System.Drawing.Point(0, 56);
-            this.bunifuSeparator2.Name = "bunifuSeparator2";
-            this.bunifuSeparator2.Size = new System.Drawing.Size(3, 659);
-            this.bunifuSeparator2.TabIndex = 60;
-            this.bunifuSeparator2.Transparency = 255;
-            this.bunifuSeparator2.Vertical = true;
             // 
             // FormSistemYonetim
             // 

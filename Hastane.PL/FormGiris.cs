@@ -16,7 +16,6 @@ namespace Hastane.PL
         public FormGiris()
         {
             InitializeComponent();
-            //asdfgh
         }
 
         private void FormGiris_Load(object sender, EventArgs e)
