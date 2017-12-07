@@ -20,6 +20,7 @@ namespace Hastane.PL
         #region NinjectDeğişkenler
         private readonly IHastaKabulRepository _hastaKabulRepository;
         private readonly IHastaKabulService _hastaKabulService;
+        private readonly IHastaSikayetleriService _hastaSikayetleriService;
 
         private HastaKabul SecilenHasta;
 
@@ -29,6 +30,7 @@ namespace Hastane.PL
             var container = DependecyResolver.NinjectDependecyContainer.RegisterDependency(new StandardKernel());
             _hastaKabulRepository = container.Get<IHastaKabulRepository>();
             _hastaKabulService = container.Get<IHastaKabulService>();
+            _hastaSikayetleriService = container.Get<IHastaSikayetleriService>();
             InitializeComponent();
         }
 
@@ -92,13 +94,57 @@ namespace Hastane.PL
                 txtRandevuTarih.Text = SecilenHasta.GelisTarihi.ToShortDateString();
                 txtRandevuSaat.Text = SecilenHasta.GelisTarihi.ToShortTimeString();
                 txtSigortaKurumu.Text = SecilenHasta.Hastalar.Kurumlar.KurumAd;
-                if (SecilenHasta.HastaSikayetleri.Aciklama != null)
-                    txtHastaSikayeti.Text = SecilenHasta.HastaSikayetleri.Aciklama;
+                try
+                {
+                    var sikayet = _hastaSikayetleriService.GetHastaSikayetleriByKabulId(SecilenHasta.KabulID);
+                    txtHastaSikayeti.Text = sikayet.Aciklama;
+                }
+                catch (Exception)
+                {
+                    txtHastaSikayeti.Text = "";
+                }
+                
                 //TahlilleriDoldur();
             }
             catch (Exception)
             {
                 // ignored
+            }
+        }
+
+        private void btnSikayetEkle_Click(object sender, EventArgs e)
+        {
+            var sikayet = new HastaSikayetleri();
+            if (SecilenHasta == null) return;
+            sikayet.HastaID = SecilenHasta.HastaID;
+            sikayet.KabulID = SecilenHasta.KabulID;
+            sikayet.Aciklama = txtHastaSikayeti.Text;
+            sikayet.Tarih = SecilenHasta.GelisTarihi;
+            
+            var result = _hastaSikayetleriService.Create(sikayet);
+            if (result.IsSucceed)
+            {
+                MessageBox.Show(result.SuccessMessage, "İşlem Gerçekleştirildi!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show(string.Join("\n", result.ErrorMessage), "İşlem Gerçekleştirilemedi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnSikayetGuncelle_Click(object sender, EventArgs e)
+        {
+            if (SecilenHasta == null) return;
+            var sikayet = _hastaSikayetleriService.GetHastaSikayetleriByKabulId(SecilenHasta.KabulID);
+            sikayet.Aciklama = txtHastaSikayeti.Text;
+            var result =  _hastaSikayetleriService.Edit(sikayet);
+            if (result.IsSucceed)
+            {
+                MessageBox.Show(result.SuccessMessage, "İşlem Gerçekleştirildi!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show(string.Join("\n", result.ErrorMessage), "İşlem Gerçekleştirilemedi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

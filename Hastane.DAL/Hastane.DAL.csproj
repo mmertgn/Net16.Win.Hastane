@@ -135,6 +135,7 @@
     </Compile>
     <Compile Include="Repositories\Abstracts\IHastaKabulRepository.cs" />
     <Compile Include="Repositories\Abstracts\IHastaRepository.cs" />
+    <Compile Include="Repositories\Abstracts\IHastaSikayetleriRepository.cs" />
     <Compile Include="Repositories\Abstracts\IHizmetRepository.cs" />
     <Compile Include="Repositories\Abstracts\IIlceRepository.cs" />
     <Compile Include="Repositories\Abstracts\IILRepository.cs" />
@@ -145,6 +146,7 @@
     <Compile Include="Repositories\Abstracts\IRepository.cs" />
     <Compile Include="Repositories\Abstracts\ISistemYoneticisiRepository.cs" />
     <Compile Include="Repositories\Concretes\HastaKabulRepository.cs" />
+    <Compile Include="Repositories\Concretes\HastaSikayetleriRepository.cs" />
     <Compile Include="Repositories\Concretes\HizmetRepository.cs" />
     <Compile Include="Repositories\Concretes\IlceRepository.cs" />
     <Compile Include="Repositories\Concretes\IlRepository.cs" />

@@ -17,10 +17,10 @@ namespace Hastane.DAL.DataModel
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Personeller()
         {
-            this.HastaKabul = new HashSet<HastaKabul>();
             this.Randevular = new HashSet<Randevular>();
             this.Receteler = new HashSet<Receteler>();
             this.Teshisler = new HashSet<Teshisler>();
+            this.HastaKabul = new HashSet<HastaKabul>();
         }
     
         public int PersonelID { get; set; }
@@ -40,8 +40,6 @@ namespace Hastane.DAL.DataModel
         public string Sifre { get; set; }
         public bool Siilindi { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<HastaKabul> HastaKabul { get; set; }
         public virtual Klinikler Klinikler { get; set; }
         public virtual Unvanlar Unvanlar { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
@@ -50,5 +48,7 @@ namespace Hastane.DAL.DataModel
         public virtual ICollection<Receteler> Receteler { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Teshisler> Teshisler { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HastaKabul> HastaKabul { get; set; }
     }
 }

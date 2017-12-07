@@ -5,40 +5,29 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="01961c1df93940239822e2b31633076e" Name="Diagram1" ZoomLevel="100">
-        <EntityTypeShape EntityType="HastaneModel.HastaGecmisi" Width="1.5" PointX="5.25" PointY="10.25" />
-        <EntityTypeShape EntityType="HastaneModel.HastaHizmetHareketler" Width="1.5" PointX="9.75" PointY="23.875" />
-        <EntityTypeShape EntityType="HastaneModel.HastaKabul" Width="1.5" PointX="5.25" PointY="15.375" />
-        <EntityTypeShape EntityType="HastaneModel.Hastalar" Width="1.5" PointX="3" PointY="8.875" />
-        <EntityTypeShape EntityType="HastaneModel.HastaSikayetleri" Width="1.5" PointX="7.5" PointY="12.375" />
-        <EntityTypeShape EntityType="HastaneModel.HastaTahlilSonuclari" Width="1.5" PointX="7.5" PointY="32.125" />
+        <EntityTypeShape EntityType="HastaneModel.HastaGecmisi" Width="1.5" PointX="3" PointY="21.25" />
+        <EntityTypeShape EntityType="HastaneModel.HastaHizmetHareketler" Width="1.5" PointX="7.5" PointY="22.375" />
+        <EntityTypeShape EntityType="HastaneModel.Hastalar" Width="1.5" PointX="0.75" PointY="9.875" />
+        <EntityTypeShape EntityType="HastaneModel.HastaSikayetleri" Width="1.5" PointX="8.25" PointY="16.375" />
+        <EntityTypeShape EntityType="HastaneModel.HastaTahlilSonuclari" Width="1.5" PointX="5.25" PointY="21.5" />
         <EntityTypeShape EntityType="HastaneModel.Hizmetler" Width="1.5" PointX="3" PointY="29.875" />
-        <EntityTypeShape EntityType="HastaneModel.ilceler" Width="1.5" PointX="3" PointY="4.875" />
-        <EntityTypeShape EntityType="HastaneModel.iller" Width="1.5" PointX="0.75" PointY="5" />
+        <EntityTypeShape EntityType="HastaneModel.ilceler" Width="1.5" PointX="6" PointY="4.875" />
+        <EntityTypeShape EntityType="HastaneModel.iller" Width="1.5" PointX="3.75" PointY="5" />
         <EntityTypeShape EntityType="HastaneModel.Klinikler" Width="1.5" PointX="0.75" PointY="16.375" />
-        <EntityTypeShape EntityType="HastaneModel.Kurumlar" Width="1.5" PointX="0.75" PointY="10.375" />
-        <EntityTypeShape EntityType="HastaneModel.Odemeler" Width="1.5" PointX="7.5" PointY="24.75" />
-        <EntityTypeShape EntityType="HastaneModel.Personeller" Width="1.5" PointX="3" PointY="15" />
-        <EntityTypeShape EntityType="HastaneModel.Randevular" Width="1.5" PointX="8.25" PointY="20.375" />
-        <EntityTypeShape EntityType="HastaneModel.ReceteDetay" Width="1.5" PointX="12.75" PointY="16.625" />
-        <EntityTypeShape EntityType="HastaneModel.Receteler" Width="1.5" PointX="10.5" PointY="16" />
+        <EntityTypeShape EntityType="HastaneModel.Kurumlar" Width="1.5" PointX="1.5" PointY="6.375" />
+        <EntityTypeShape EntityType="HastaneModel.Odemeler" Width="1.5" PointX="5.25" PointY="32.625" />
+        <EntityTypeShape EntityType="HastaneModel.Personeller" Width="1.5" PointX="6" PointY="15" />
+        <EntityTypeShape EntityType="HastaneModel.Randevular" Width="1.5" PointX="10.25" PointY="20.375" />
+        <EntityTypeShape EntityType="HastaneModel.ReceteDetay" Width="1.5" PointX="10.5" PointY="12.625" />
+        <EntityTypeShape EntityType="HastaneModel.Receteler" Width="1.5" PointX="8.25" PointY="12" />
         <EntityTypeShape EntityType="HastaneModel.SistemYoneticileri" Width="1.5" PointX="5.75" PointY="0.75" />
         <EntityTypeShape EntityType="HastaneModel.TahlilIcerik" Width="1.5" PointX="3" PointY="1" />
         <EntityTypeShape EntityType="HastaneModel.Tahliller" Width="1.5" PointX="0.75" PointY="1.375" />
-        <EntityTypeShape EntityType="HastaneModel.Teshisler" Width="1.5" PointX="7.5" PointY="16.375" />
-        <EntityTypeShape EntityType="HastaneModel.Unvanlar" Width="1.5" PointX="0.75" PointY="13.75" />
+        <EntityTypeShape EntityType="HastaneModel.Teshisler" Width="1.5" PointX="11.25" PointY="16.375" />
+        <EntityTypeShape EntityType="HastaneModel.Unvanlar" Width="1.5" PointX="3.75" PointY="12.75" />
         <AssociationConnector Association="HastaneModel.FK_HastaGecmisi_Hastalar" />
-        <AssociationConnector Association="HastaneModel.FK_HastaHizmetHareketler_HastaKabul" />
         <AssociationConnector Association="HastaneModel.FK_HastaHizmetHareketler_Hizmetler" />
         <AssociationConnector Association="HastaneModel.FK_HastaHizmetHareketler_Tahliller" />
-        <AssociationConnector Association="HastaneModel.FK_HastaKabul_Hastalar" />
-        <AssociationConnector Association="HastaneModel.FK_HastaKabul_HastaSikayetleri" />
-        <AssociationConnector Association="HastaneModel.FK_HastaKabul_Klinikler" />
-        <AssociationConnector Association="HastaneModel.FK_HastaKabul_Personeller" />
-        <AssociationConnector Association="HastaneModel.FK_HastaSikayetleri_HastaKabul" />
-        <AssociationConnector Association="HastaneModel.FK_Odemeler_HastaKabul" />
-        <AssociationConnector Association="HastaneModel.FK_Receteler_HastaKabul" />
-        <AssociationConnector Association="HastaneModel.FK_Tahliller_HastaKabul" />
-        <AssociationConnector Association="HastaneModel.FK_Teshisler_HastaKabul" />
         <AssociationConnector Association="HastaneModel.FK_Hastalar_Kurumlar" />
         <AssociationConnector Association="HastaneModel.FK_HastaSikayetleri_Hastalar" />
         <AssociationConnector Association="HastaneModel.FK_Randevular_Hastalar" />
@@ -53,6 +42,16 @@
         <AssociationConnector Association="HastaneModel.FK_Teshisler_Personeller" />
         <AssociationConnector Association="HastaneModel.FK_ReceteDetay_Receteler" />
         <AssociationConnector Association="HastaneModel.FK_TahlilIcerik_Tahliller" />
+        <EntityTypeShape EntityType="HastaneModel.HastaKabul" Width="1.5" PointX="3.625" PointY="15.25" />
+        <AssociationConnector Association="HastaneModel.FK_HastaHizmetHareketler_HastaKabul" />
+        <AssociationConnector Association="HastaneModel.FK_HastaKabul_Hastalar" />
+        <AssociationConnector Association="HastaneModel.FK_HastaKabul_Klinikler" />
+        <AssociationConnector Association="HastaneModel.FK_HastaKabul_Personeller" />
+        <AssociationConnector Association="HastaneModel.FK_HastaSikayetleri_HastaKabul" />
+        <AssociationConnector Association="HastaneModel.FK_Odemeler_HastaKabul" />
+        <AssociationConnector Association="HastaneModel.FK_Receteler_HastaKabul" />
+        <AssociationConnector Association="HastaneModel.FK_Tahliller_HastaKabul" />
+        <AssociationConnector Association="HastaneModel.FK_Teshisler_HastaKabul" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

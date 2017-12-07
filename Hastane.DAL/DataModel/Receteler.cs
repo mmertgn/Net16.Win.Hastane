@@ -28,11 +28,11 @@ namespace Hastane.DAL.DataModel
         public int HastaID { get; set; }
         public bool Silindi { get; set; }
     
-        public virtual HastaKabul HastaKabul { get; set; }
         public virtual Hastalar Hastalar { get; set; }
         public virtual Kurumlar Kurumlar { get; set; }
         public virtual Personeller Personeller { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ReceteDetay> ReceteDetay { get; set; }
+        public virtual HastaKabul HastaKabul { get; set; }
     }
 }
