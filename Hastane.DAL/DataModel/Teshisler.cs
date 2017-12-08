@@ -20,7 +20,7 @@ namespace Hastane.DAL.DataModel
         public int KabulID { get; set; }
         public string Teshis { get; set; }
     
-        public virtual HastaKabul HastaKabul { get; set; }
         public virtual Personeller Personeller { get; set; }
+        public virtual HastaKabul HastaKabul { get; set; }
     }
 }

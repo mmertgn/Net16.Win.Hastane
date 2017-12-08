@@ -50,6 +50,7 @@ namespace Hastane.BLL.Models
                 {
                     Genel.KullaniciAdi = personel.Ad;
                     Genel.KullaniciSoyadi = personel.Soyad;
+                    Genel.LoginKullaniciID = personel.PersonelID;
                     return true;
                 }
             }
@@ -57,6 +58,7 @@ namespace Hastane.BLL.Models
             {
                 Genel.KullaniciAdi = yonetici.Ad;
                 Genel.KullaniciSoyadi = yonetici.Soyad;
+                Genel.LoginKullaniciID = yonetici.ID;
                 return true;
             }
         }

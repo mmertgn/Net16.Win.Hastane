@@ -36,11 +36,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.dgvHastalar = new ns1.BunifuCustomDataGrid();
-            this.HastaId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AdSoyad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TCNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Telefon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Kurum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel7 = new System.Windows.Forms.Panel();
             this.txtTCKimlikNoAra = new ns1.BunifuMetroTextbox();
             this.txtTelefonAra = new ns1.BunifuMetroTextbox();
@@ -160,6 +155,7 @@
             // 
             // dgvHastalar
             // 
+            this.dgvHastalar.AllowUserToAddRows = false;
             this.dgvHastalar.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgvHastalar.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
@@ -175,12 +171,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvHastalar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvHastalar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHastalar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.HastaId,
-            this.AdSoyad,
-            this.TCNo,
-            this.Telefon,
-            this.Kurum});
+
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -213,44 +204,6 @@
             this.dgvHastalar.Size = new System.Drawing.Size(443, 471);
             this.dgvHastalar.TabIndex = 1;
             this.dgvHastalar.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvHastalar_CellMouseClick);
-            // 
-            // HastaId
-            // 
-            this.HastaId.HeaderText = "HastaID";
-            this.HastaId.Name = "HastaId";
-            this.HastaId.ReadOnly = true;
-            this.HastaId.Visible = false;
-            this.HastaId.Width = 15;
-            // 
-            // AdSoyad
-            // 
-            this.AdSoyad.HeaderText = "Ad Soyad";
-            this.AdSoyad.Name = "AdSoyad";
-            this.AdSoyad.ReadOnly = true;
-            this.AdSoyad.Width = 120;
-            // 
-            // TCNo
-            // 
-            this.TCNo.HeaderText = "TC Kimlik No";
-            this.TCNo.MaxInputLength = 11;
-            this.TCNo.Name = "TCNo";
-            this.TCNo.ReadOnly = true;
-            this.TCNo.Width = 120;
-            // 
-            // Telefon
-            // 
-            this.Telefon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Telefon.HeaderText = "Cep Telefonu";
-            this.Telefon.Name = "Telefon";
-            this.Telefon.ReadOnly = true;
-            this.Telefon.Width = 129;
-            // 
-            // Kurum
-            // 
-            this.Kurum.HeaderText = "Sigorta";
-            this.Kurum.Name = "Kurum";
-            this.Kurum.ReadOnly = true;
-            this.Kurum.Width = 120;
             // 
             // panel7
             // 
@@ -1619,11 +1572,6 @@
         private ns1.BunifuThinButton2 btnRandevuKaydet;
         private ns1.BunifuMetroTextbox bunifuMetroTextbox1;
         private ns1.BunifuCustomLabel bunifuCustomLabel44;
-        private System.Windows.Forms.DataGridViewTextBoxColumn HastaId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AdSoyad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TCNo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Telefon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Kurum;
         private ns1.BunifuThinButton2 btnHastaGuncelle;
         private ns1.BunifuThinButton2 btnHastaSil;
         private System.Windows.Forms.Label label1;
