@@ -55,7 +55,7 @@
             this.txtKurumAdi = new ns1.BunifuMetroTextbox();
             this.bunifuCustomLabel4 = new ns1.BunifuCustomLabel();
             this.bunifuCustomLabel5 = new ns1.BunifuCustomLabel();
-            this.bunifuCustomDataGrid1 = new ns1.BunifuCustomDataGrid();
+            this.dgvKurumlar = new ns1.BunifuCustomDataGrid();
             this.KurumID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.KurumAdi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Kurumİskonto = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -96,11 +96,11 @@
             this.txtHizmetAdi = new ns1.BunifuMetroTextbox();
             this.bunifuCustomLabel10 = new ns1.BunifuCustomLabel();
             this.dgvHizmetler = new ns1.BunifuCustomDataGrid();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HizmetID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HizmetAdi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Klinik = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ucret = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Aciklama = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtHizmetAdiAra = new ns1.BunifuMetroTextbox();
             this.bunifuCustomLabel7 = new ns1.BunifuCustomLabel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -108,6 +108,7 @@
             this.bunifuThinButton24 = new ns1.BunifuThinButton2();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.bunifuSeparator2 = new ns1.BunifuSeparator();
             this.btnUnvanSil = new ns1.BunifuThinButton2();
             this.btnUnvanEkle = new ns1.BunifuThinButton2();
             this.btnUnvanGuncelle = new ns1.BunifuThinButton2();
@@ -121,11 +122,10 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.bunifuThinButton23 = new ns1.BunifuThinButton2();
-            this.bunifuSeparator2 = new ns1.BunifuSeparator();
             this.panel1.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKurumlar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel11.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -173,7 +173,7 @@
             this.panel10.Controls.Add(this.txtKurumAdi);
             this.panel10.Controls.Add(this.bunifuCustomLabel4);
             this.panel10.Controls.Add(this.bunifuCustomLabel5);
-            this.panel10.Controls.Add(this.bunifuCustomDataGrid1);
+            this.panel10.Controls.Add(this.dgvKurumlar);
             this.panel10.Controls.Add(this.txtKurumAdAra);
             this.panel10.Controls.Add(this.bunifuCustomLabel6);
             this.panel10.Controls.Add(this.pictureBox2);
@@ -209,6 +209,7 @@
             this.btnKurumSil.Size = new System.Drawing.Size(190, 41);
             this.btnKurumSil.TabIndex = 59;
             this.btnKurumSil.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnKurumSil.Click += new System.EventHandler(this.btnKurumSil_Click);
             // 
             // btnKurumEkle
             // 
@@ -234,6 +235,7 @@
             this.btnKurumEkle.Size = new System.Drawing.Size(157, 41);
             this.btnKurumEkle.TabIndex = 58;
             this.btnKurumEkle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnKurumEkle.Click += new System.EventHandler(this.btnKurumEkle_Click);
             // 
             // btnKurumGuncelle
             // 
@@ -259,6 +261,7 @@
             this.btnKurumGuncelle.Size = new System.Drawing.Size(360, 41);
             this.btnKurumGuncelle.TabIndex = 57;
             this.btnKurumGuncelle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnKurumGuncelle.Click += new System.EventHandler(this.btnKurumGuncelle_Click);
             // 
             // txtKurumIskonto
             // 
@@ -315,13 +318,13 @@
             this.bunifuCustomLabel5.TabIndex = 54;
             this.bunifuCustomLabel5.Text = "Kurum Adı";
             // 
-            // bunifuCustomDataGrid1
+            // dgvKurumlar
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuCustomDataGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.bunifuCustomDataGrid1.BackgroundColor = System.Drawing.Color.White;
-            this.bunifuCustomDataGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.bunifuCustomDataGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvKurumlar.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvKurumlar.BackgroundColor = System.Drawing.Color.White;
+            this.dgvKurumlar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvKurumlar.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -329,9 +332,9 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bunifuCustomDataGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.bunifuCustomDataGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.bunifuCustomDataGrid1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvKurumlar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvKurumlar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvKurumlar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.KurumID,
             this.KurumAdi,
             this.Kurumİskonto});
@@ -342,15 +345,15 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.bunifuCustomDataGrid1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.bunifuCustomDataGrid1.DoubleBuffered = true;
-            this.bunifuCustomDataGrid1.EnableHeadersVisualStyles = false;
-            this.bunifuCustomDataGrid1.GridColor = System.Drawing.Color.White;
-            this.bunifuCustomDataGrid1.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.bunifuCustomDataGrid1.HeaderForeColor = System.Drawing.Color.White;
-            this.bunifuCustomDataGrid1.Location = new System.Drawing.Point(34, 115);
-            this.bunifuCustomDataGrid1.Name = "bunifuCustomDataGrid1";
-            this.bunifuCustomDataGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvKurumlar.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvKurumlar.DoubleBuffered = true;
+            this.dgvKurumlar.EnableHeadersVisualStyles = false;
+            this.dgvKurumlar.GridColor = System.Drawing.Color.White;
+            this.dgvKurumlar.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.dgvKurumlar.HeaderForeColor = System.Drawing.Color.White;
+            this.dgvKurumlar.Location = new System.Drawing.Point(34, 115);
+            this.dgvKurumlar.Name = "dgvKurumlar";
+            this.dgvKurumlar.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -358,11 +361,12 @@
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bunifuCustomDataGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.bunifuCustomDataGrid1.RowHeadersWidth = 10;
-            this.bunifuCustomDataGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.bunifuCustomDataGrid1.Size = new System.Drawing.Size(356, 117);
-            this.bunifuCustomDataGrid1.TabIndex = 52;
+            this.dgvKurumlar.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvKurumlar.RowHeadersWidth = 10;
+            this.dgvKurumlar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvKurumlar.Size = new System.Drawing.Size(356, 117);
+            this.dgvKurumlar.TabIndex = 52;
+            this.dgvKurumlar.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvKurumlar_CellMouseClick);
             // 
             // KurumID
             // 
@@ -400,6 +404,7 @@
             this.txtKurumAdAra.Size = new System.Drawing.Size(220, 35);
             this.txtKurumAdAra.TabIndex = 49;
             this.txtKurumAdAra.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtKurumAdAra.OnValueChanged += new System.EventHandler(this.txtKurumAdAra_OnValueChanged);
             // 
             // bunifuCustomLabel6
             // 
@@ -523,6 +528,7 @@
             this.btnKlinikSil.Size = new System.Drawing.Size(189, 41);
             this.btnKlinikSil.TabIndex = 48;
             this.btnKlinikSil.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnKlinikSil.Click += new System.EventHandler(this.btnKlinikSil_Click);
             // 
             // btnKlinikEkle
             // 
@@ -548,6 +554,7 @@
             this.btnKlinikEkle.Size = new System.Drawing.Size(157, 41);
             this.btnKlinikEkle.TabIndex = 47;
             this.btnKlinikEkle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnKlinikEkle.Click += new System.EventHandler(this.btnKlinikEkle_Click);
             // 
             // btnKlinikGuncelle
             // 
@@ -573,6 +580,7 @@
             this.btnKlinikGuncelle.Size = new System.Drawing.Size(356, 41);
             this.btnKlinikGuncelle.TabIndex = 46;
             this.btnKlinikGuncelle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnKlinikGuncelle.Click += new System.EventHandler(this.btnKlinikGuncelle_Click);
             // 
             // txtKlinikAciklama
             // 
@@ -677,6 +685,7 @@
             this.dgvKlinikler.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvKlinikler.Size = new System.Drawing.Size(360, 117);
             this.dgvKlinikler.TabIndex = 18;
+            this.dgvKlinikler.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvKlinikler_CellMouseClick);
             // 
             // KlinikID
             // 
@@ -714,6 +723,7 @@
             this.txtKlinikAdAra.Size = new System.Drawing.Size(228, 35);
             this.txtKlinikAdAra.TabIndex = 15;
             this.txtKlinikAdAra.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtKlinikAdAra.OnValueChanged += new System.EventHandler(this.txtKlinikAdAra_OnValueChanged);
             // 
             // bunifuCustomLabel1
             // 
@@ -898,6 +908,7 @@
             this.btnHizmetSil.Size = new System.Drawing.Size(190, 41);
             this.btnHizmetSil.TabIndex = 62;
             this.btnHizmetSil.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnHizmetSil.Click += new System.EventHandler(this.btnHizmetSil_Click);
             // 
             // btnHizmetEkle
             // 
@@ -923,6 +934,7 @@
             this.btnHizmetEkle.Size = new System.Drawing.Size(154, 41);
             this.btnHizmetEkle.TabIndex = 61;
             this.btnHizmetEkle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnHizmetEkle.Click += new System.EventHandler(this.btnHizmetEkle_Click);
             // 
             // btnHizmetGuncelle
             // 
@@ -948,6 +960,7 @@
             this.btnHizmetGuncelle.Size = new System.Drawing.Size(346, 41);
             this.btnHizmetGuncelle.TabIndex = 60;
             this.btnHizmetGuncelle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnHizmetGuncelle.Click += new System.EventHandler(this.btnHizmetGuncelle_Click);
             // 
             // txtHizmetAdi
             // 
@@ -993,11 +1006,11 @@
             this.dgvHizmetler.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvHizmetler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHizmetler.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
+            this.HizmetID,
+            this.HizmetAdi,
             this.Klinik,
             this.Ucret,
-            this.dataGridViewTextBoxColumn3});
+            this.Aciklama});
             dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -1026,19 +1039,20 @@
             this.dgvHizmetler.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvHizmetler.Size = new System.Drawing.Size(432, 171);
             this.dgvHizmetler.TabIndex = 22;
+            this.dgvHizmetler.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvHizmetler_CellMouseClick);
             // 
-            // dataGridViewTextBoxColumn1
+            // HizmetID
             // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Hizmet No";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Visible = false;
-            this.dataGridViewTextBoxColumn1.Width = 15;
+            this.HizmetID.HeaderText = "Hizmet No";
+            this.HizmetID.Name = "HizmetID";
+            this.HizmetID.Visible = false;
+            this.HizmetID.Width = 15;
             // 
-            // dataGridViewTextBoxColumn2
+            // HizmetAdi
             // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Hizmet Adı";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 120;
+            this.HizmetAdi.HeaderText = "Hizmet Adı";
+            this.HizmetAdi.Name = "HizmetAdi";
+            this.HizmetAdi.Width = 120;
             // 
             // Klinik
             // 
@@ -1051,12 +1065,12 @@
             this.Ucret.Name = "Ucret";
             this.Ucret.Width = 60;
             // 
-            // dataGridViewTextBoxColumn3
+            // Aciklama
             // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Açıklama";
-            this.dataGridViewTextBoxColumn3.MaxInputLength = 11;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 140;
+            this.Aciklama.HeaderText = "Açıklama";
+            this.Aciklama.MaxInputLength = 11;
+            this.Aciklama.Name = "Aciklama";
+            this.Aciklama.Width = 140;
             // 
             // txtHizmetAdiAra
             // 
@@ -1159,6 +1173,19 @@
             this.panel3.Size = new System.Drawing.Size(349, 715);
             this.panel3.TabIndex = 3;
             // 
+            // bunifuSeparator2
+            // 
+            this.bunifuSeparator2.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.bunifuSeparator2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.bunifuSeparator2.LineThickness = 1;
+            this.bunifuSeparator2.Location = new System.Drawing.Point(0, 56);
+            this.bunifuSeparator2.Name = "bunifuSeparator2";
+            this.bunifuSeparator2.Size = new System.Drawing.Size(3, 659);
+            this.bunifuSeparator2.TabIndex = 60;
+            this.bunifuSeparator2.Transparency = 255;
+            this.bunifuSeparator2.Vertical = true;
+            // 
             // btnUnvanSil
             // 
             this.btnUnvanSil.ActiveBorderThickness = 1;
@@ -1183,6 +1210,7 @@
             this.btnUnvanSil.Size = new System.Drawing.Size(157, 41);
             this.btnUnvanSil.TabIndex = 59;
             this.btnUnvanSil.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnUnvanSil.Click += new System.EventHandler(this.btnUnvanSil_Click);
             // 
             // btnUnvanEkle
             // 
@@ -1208,6 +1236,7 @@
             this.btnUnvanEkle.Size = new System.Drawing.Size(157, 41);
             this.btnUnvanEkle.TabIndex = 58;
             this.btnUnvanEkle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnUnvanEkle.Click += new System.EventHandler(this.btnUnvanEkle_Click);
             // 
             // btnUnvanGuncelle
             // 
@@ -1233,6 +1262,7 @@
             this.btnUnvanGuncelle.Size = new System.Drawing.Size(324, 41);
             this.btnUnvanGuncelle.TabIndex = 57;
             this.btnUnvanGuncelle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnUnvanGuncelle.Click += new System.EventHandler(this.btnUnvanGuncelle_Click);
             // 
             // txtUnvanAdi
             // 
@@ -1308,6 +1338,7 @@
             this.dgvUnvanlar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvUnvanlar.Size = new System.Drawing.Size(307, 274);
             this.dgvUnvanlar.TabIndex = 52;
+            this.dgvUnvanlar.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvUnvanlar_CellMouseClick);
             // 
             // UnvanID
             // 
@@ -1338,6 +1369,7 @@
             this.txtUnvanAdAra.Size = new System.Drawing.Size(175, 35);
             this.txtUnvanAdAra.TabIndex = 49;
             this.txtUnvanAdAra.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtUnvanAdAra.OnValueChanged += new System.EventHandler(this.txtUnvanAdAra_OnValueChanged);
             // 
             // bunifuCustomLabel9
             // 
@@ -1395,19 +1427,6 @@
             this.bunifuThinButton23.TabIndex = 2;
             this.bunifuThinButton23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // bunifuSeparator2
-            // 
-            this.bunifuSeparator2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.bunifuSeparator2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.bunifuSeparator2.LineThickness = 1;
-            this.bunifuSeparator2.Location = new System.Drawing.Point(0, 56);
-            this.bunifuSeparator2.Name = "bunifuSeparator2";
-            this.bunifuSeparator2.Size = new System.Drawing.Size(3, 659);
-            this.bunifuSeparator2.TabIndex = 60;
-            this.bunifuSeparator2.Transparency = 255;
-            this.bunifuSeparator2.Vertical = true;
-            // 
             // FormSistemYonetim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1418,11 +1437,12 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormSistemYonetim";
             this.Text = "FormSistemYonetim";
+            this.Load += new System.EventHandler(this.FormSistemYonetim_Load);
             this.panel1.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKurumlar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel11.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
@@ -1492,7 +1512,7 @@
         private ns1.BunifuMetroTextbox txtKurumAdi;
         private ns1.BunifuCustomLabel bunifuCustomLabel4;
         private ns1.BunifuCustomLabel bunifuCustomLabel5;
-        private ns1.BunifuCustomDataGrid bunifuCustomDataGrid1;
+        private ns1.BunifuCustomDataGrid dgvKurumlar;
         private System.Windows.Forms.DataGridViewTextBoxColumn KurumID;
         private System.Windows.Forms.DataGridViewTextBoxColumn KurumAdi;
         private System.Windows.Forms.DataGridViewTextBoxColumn Kurumİskonto;
@@ -1510,11 +1530,6 @@
         private ns1.BunifuMetroTextbox txtHizmetAdi;
         private ns1.BunifuCustomLabel bunifuCustomLabel10;
         private ns1.BunifuCustomDataGrid dgvHizmetler;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Klinik;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Ucret;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private ns1.BunifuMetroTextbox txtHizmetAdiAra;
         private ns1.BunifuCustomLabel bunifuCustomLabel7;
         private System.Windows.Forms.PictureBox pictureBox4;
@@ -1525,5 +1540,10 @@
         private ns1.BunifuDropdown cbKlinik;
         private ns1.BunifuCustomLabel bunifuCustomLabel15;
         private ns1.BunifuSeparator bunifuSeparator2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HizmetID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HizmetAdi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Klinik;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ucret;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Aciklama;
     }
 }

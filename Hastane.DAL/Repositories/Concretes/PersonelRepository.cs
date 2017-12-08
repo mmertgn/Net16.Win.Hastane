@@ -19,6 +19,5 @@ namespace Hastane.DAL.Repositories.Concretes
         {
             return _dbSet.Count(x => x.Unvanlar.PersonelUnvan.Contains("Sekreter"));
         }
-        
     }
 }

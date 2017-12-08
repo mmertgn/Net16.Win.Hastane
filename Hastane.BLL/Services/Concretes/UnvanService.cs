@@ -13,17 +13,18 @@ using FluentValidation.Results;
 
 namespace Hastane.BLL.Services.Concretes
 {
-    public class KlinikService : IKlinikService
+    public class UnvanService : IUnvanService
 
-    { private readonly IKlinikRepository _repo;
+    {
+        private readonly IUnvanRepository _repo;
 
-        public KlinikService(IKlinikRepository repo)
+        public UnvanService(IUnvanRepository repo)
         {
             _repo = repo;
         }
-        public MessageResult Create(Klinikler model)
+        public MessageResult Create(Unvanlar model)
         {
-            var _validator = new KlinikAddValidator();
+            var _validator = new UnvanAddValidator();
             ValidationResult result = _validator.Validate(model);
             if (result.IsValid)
             {
@@ -34,7 +35,7 @@ namespace Hastane.BLL.Services.Concretes
                 ErrorMessage = result.Errors.Select(x => x.ErrorMessage).ToList(),
                 IsSucceed = result.IsValid
             };
-            m.SuccessMessage = m.IsSucceed == true ? "Klinik Ekleme İşlemi Başarılı." : "Hatalı bilgiler mevcut";
+            m.SuccessMessage = m.IsSucceed == true ? "Unvan Ekleme İşlemi Başarılı." : "Hatalı bilgiler mevcut";
             return m;
         }
 
@@ -45,54 +46,51 @@ namespace Hastane.BLL.Services.Concretes
             {
                 IsSucceed = true
             };
-            m.SuccessMessage = m.IsSucceed == true ? "Klinik Silme İşlemi Başarılı." : "Hatalı bilgiler mevcut";
+            m.SuccessMessage = m.IsSucceed == true ? "Unvan Silme İşlemi Başarılı." : "Hatalı bilgiler mevcut";
             return m;
         }
 
-        public MessageResult Edit(Klinikler model)
+        public MessageResult Edit(Unvanlar model)
         {
-            var kontrol = _repo.GetList(x => x.KlinikID != model.KlinikID && x.KlinikAd == model.KlinikAd).Count;
+            var kontrol = _repo.GetList(x => x.UnvanID != model.UnvanID && x.PersonelUnvan == model.PersonelUnvan).Count;
             if (Convert.ToBoolean(kontrol))
             {
                 var msg = new MessageResult();
-                msg.ErrorMessage = new List<string> { "Bu Klinik Adıyla bir klinik zaten var." };
+                msg.ErrorMessage = new List<string> { "Bu Unvan zaten var." };
                 return msg;
             }
-        
+
             else
             {
-                var _validator = new KlinikUpdateValidator();
-        ValidationResult result = _validator.Validate(model);
+                var _validator = new UnvanUpdateValidator();
+                ValidationResult result = _validator.Validate(model);
                 if (result.IsValid)
                 {
                     _repo.Update(model);
                 }
-    var m = new MessageResult
-    {
-        ErrorMessage = result.Errors.Select(x => x.ErrorMessage).ToList(),
-        IsSucceed = result.IsValid
-    };
-    m.SuccessMessage = m.IsSucceed == true ? "Klinik Güncelleme İşlemi Başarılı." : "Hatalı bilgiler mevcut";
+                var m = new MessageResult
+                {
+                    ErrorMessage = result.Errors.Select(x => x.ErrorMessage).ToList(),
+                    IsSucceed = result.IsValid
+                };
+                m.SuccessMessage = m.IsSucceed == true ? "Unvan Güncelleme İşlemi Başarılı." : "Hatalı bilgiler mevcut";
                 return m;
             }
         }
 
-        public Klinikler GetKlinikById(int id)
+        public Unvanlar GetUnvanById(int id)
         {
             return _repo.FindById(id);
         }
 
-        public List<Klinikler> KlinikList()
+        public List<Unvanlar> UnvanList()
         {
             return _repo.GetList(null);
         }
 
-        public List<Klinikler> KlinikListWithSorgu(Expression<Func<Klinikler, bool>> predicate)
+        public List<Unvanlar> UnvanListWithSorgu(Expression<Func<Unvanlar, bool>> predicate)
         {
             return _repo.GetList(predicate);
         }
     }
-
-   
-    }
-
+}

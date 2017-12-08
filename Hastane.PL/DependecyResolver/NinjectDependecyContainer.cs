@@ -35,12 +35,18 @@ namespace Hastane.PL.DependecyResolver
             kernel.Bind<ISistemYoneticisiRepository>().To<SistemYoneticisiRepository>();
 
             kernel.Bind<IKlinikRepository>().To<KlinikRepository>();
+            kernel.Bind<IKlinikService>().To<KlinikService>();
 
             kernel.Bind<IHizmetRepository>().To<HizmetRepository>();
+            kernel.Bind<IHizmetService>().To<HizmetService>();
 
             kernel.Bind<ITahlilRepository>().To<TahlilRepository>();
 
             kernel.Bind<IKurumRepository>().To<KurumRepository>();
+            kernel.Bind<IKurumService>().To<KurumService>();
+
+            kernel.Bind<IUnvanRepository>().To<UnvanRepository>();
+            kernel.Bind<IUnvanService>().To<UnvanService>();
 
             kernel.Bind<IRandevuRepository>().To<RandevuRepository>();
             kernel.Bind<IRandevuService>().To<RandevuService>();

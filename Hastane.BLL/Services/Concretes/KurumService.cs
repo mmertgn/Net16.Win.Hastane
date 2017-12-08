@@ -13,17 +13,16 @@ using FluentValidation.Results;
 
 namespace Hastane.BLL.Services.Concretes
 {
-    public class KlinikService : IKlinikService
-
-    { private readonly IKlinikRepository _repo;
-
-        public KlinikService(IKlinikRepository repo)
+    public class KurumService : IKurumService
+    {
+        private readonly IKurumRepository _repo;
+        public KurumService(IKurumRepository repo)
         {
             _repo = repo;
         }
-        public MessageResult Create(Klinikler model)
+        public MessageResult Create(Kurumlar model)
         {
-            var _validator = new KlinikAddValidator();
+            var _validator = new KurumAddValidator();
             ValidationResult result = _validator.Validate(model);
             if (result.IsValid)
             {
@@ -34,7 +33,7 @@ namespace Hastane.BLL.Services.Concretes
                 ErrorMessage = result.Errors.Select(x => x.ErrorMessage).ToList(),
                 IsSucceed = result.IsValid
             };
-            m.SuccessMessage = m.IsSucceed == true ? "Klinik Ekleme İşlemi Başarılı." : "Hatalı bilgiler mevcut";
+            m.SuccessMessage = m.IsSucceed == true ? "Kurum Ekleme İşlemi Başarılı." : "Hatalı bilgiler mevcut";
             return m;
         }
 
@@ -45,54 +44,51 @@ namespace Hastane.BLL.Services.Concretes
             {
                 IsSucceed = true
             };
-            m.SuccessMessage = m.IsSucceed == true ? "Klinik Silme İşlemi Başarılı." : "Hatalı bilgiler mevcut";
+            m.SuccessMessage = m.IsSucceed == true ? "Kurum Silme İşlemi Başarılı." : "Hatalı bilgiler mevcut";
             return m;
         }
 
-        public MessageResult Edit(Klinikler model)
+        public MessageResult Edit(Kurumlar model)
         {
-            var kontrol = _repo.GetList(x => x.KlinikID != model.KlinikID && x.KlinikAd == model.KlinikAd).Count;
+            var kontrol = _repo.GetList(x => x.KurumID != model.KurumID && x.KurumAd == model.KurumAd).Count;
             if (Convert.ToBoolean(kontrol))
             {
                 var msg = new MessageResult();
-                msg.ErrorMessage = new List<string> { "Bu Klinik Adıyla bir klinik zaten var." };
+                msg.ErrorMessage = new List<string> { "Bu Kurum zaten var." };
                 return msg;
             }
-        
+
             else
             {
-                var _validator = new KlinikUpdateValidator();
-        ValidationResult result = _validator.Validate(model);
+                var _validator = new KurumUpdateValidator();
+                ValidationResult result = _validator.Validate(model);
                 if (result.IsValid)
                 {
                     _repo.Update(model);
                 }
-    var m = new MessageResult
-    {
-        ErrorMessage = result.Errors.Select(x => x.ErrorMessage).ToList(),
-        IsSucceed = result.IsValid
-    };
-    m.SuccessMessage = m.IsSucceed == true ? "Klinik Güncelleme İşlemi Başarılı." : "Hatalı bilgiler mevcut";
+                var m = new MessageResult
+                {
+                    ErrorMessage = result.Errors.Select(x => x.ErrorMessage).ToList(),
+                    IsSucceed = result.IsValid
+                };
+                m.SuccessMessage = m.IsSucceed == true ? "Kurum Güncelleme İşlemi Başarılı." : "Hatalı bilgiler mevcut";
                 return m;
             }
         }
 
-        public Klinikler GetKlinikById(int id)
+        public Kurumlar GetKurumById(int id)
         {
             return _repo.FindById(id);
         }
 
-        public List<Klinikler> KlinikList()
+        public List<Kurumlar> KurumList()
         {
             return _repo.GetList(null);
         }
 
-        public List<Klinikler> KlinikListWithSorgu(Expression<Func<Klinikler, bool>> predicate)
+        public List<Kurumlar> KurumListWithSorgu(Expression<Func<Kurumlar, bool>> predicate)
         {
             return _repo.GetList(predicate);
         }
     }
-
-   
-    }
-
+}
