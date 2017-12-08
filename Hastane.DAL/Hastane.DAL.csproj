@@ -143,6 +143,7 @@
     <Compile Include="Repositories\Abstracts\IRandevuRepository.cs" />
     <Compile Include="Repositories\Abstracts\IRepository.cs" />
     <Compile Include="Repositories\Abstracts\ISistemYoneticisiRepository.cs" />
+    <Compile Include="Repositories\Abstracts\IUnvanRepository.cs" />
     <Compile Include="Repositories\Concretes\HizmetRepository.cs" />
     <Compile Include="Repositories\Concretes\IlceRepository.cs" />
     <Compile Include="Repositories\Concretes\IlRepository.cs" />
@@ -155,6 +156,7 @@
     <Compile Include="Repositories\Concretes\SistemYoneticisiRepository.cs" />
     <Compile Include="Repositories\Abstracts\ITahlilRepository.cs" />
     <Compile Include="Repositories\Concretes\TahlilRepository.cs" />
+    <Compile Include="Repositories\Concretes\UnvanRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="DataModel\Hastane.edmx">
