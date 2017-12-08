@@ -1,14 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Hastane.BLL.Models;
 using Hastane.DAL.DataModel;
+using System;
+using System.Collections.Generic;
 
 namespace Hastane.BLL.Services.Abstracts
 {
-   public interface IRandevuService
-   {
-       List<string> DoktoraAitRandevular(string cbDoktorSelectedValue, DateTime RandevuTarihi);
-   }
+    public interface IRandevuService
+    {
+        MessageResult Create(Randevular model);
+        List<string> DoktoraAitRandevular(string cbDoktorSelectedValue, DateTime RandevuTarihi);
+    }
 }
