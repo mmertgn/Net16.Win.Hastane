@@ -83,6 +83,29 @@ namespace Hastane.BLL.Services.Concretes
             return _repo.FindById(id);
         }
 
+        public List<UnvanListesiModelFromSistemYonetim> UnvanBilgisiDoldur()
+        {
+            var model = _repo.GetList().Select(x => new UnvanListesiModelFromSistemYonetim
+            {
+                UnvanId = x.UnvanID,
+                PersonelUnvan = x.PersonelUnvan
+
+            }).ToList();
+            return model;
+        }
+
+        public List<UnvanListesiModelFromSistemYonetim> UnvanBilgisiDoldurAra(string Unvan)
+        {
+            var model = _repo.GetList(x => (x.PersonelUnvan).Contains(Unvan))
+                .Select(x => new UnvanListesiModelFromSistemYonetim
+                {
+                    UnvanId = x.UnvanID,
+                    PersonelUnvan = x.PersonelUnvan
+
+                }).ToList();
+            return model;
+        }
+
         public List<Unvanlar> UnvanList()
         {
             return _repo.GetList(null);

@@ -50,35 +50,31 @@ namespace Hastane.PL
 
         private void FormSistemYonetim_Load(object sender, EventArgs e)
         {
-            KlinikDoldur();
-            KurumDoldur();
-            UnvanDoldur();
+            KlinikListesiDoldur();
+            KurumListesiDoldur();
+            UnvanListesiDoldur();
             CbKlinikDoldur();
-            HizmetDoldur();
+            HizmetListesiDoldur();
         }
 
-        private void HizmetDoldur()
+        private void HizmetListesiDoldur()
         {
-            dgvHizmetler.Rows.Clear();
-            var sayac = 0;
-            var model = _hizmetRepository.GetList().Select(x => new
-            {
-                 HizmetID= x.HizmetID,
-                HizmetAdi = x.HizmetAdi,
-                KlinikAd=x.Klinikler.KlinikAd,
-                Ucret=x.Ucret,
-                Aciklama=x.Aciklama
+            var model = _hizmetService.HizmetBilgisiDoldur();
+            dgvHizmetler.DataSource = model;
+            HizmetListesiDataGridViewDuzenle();
+        }
 
-            });
-            foreach (var item in model)
+        private void HizmetListesiDataGridViewDuzenle()
+        {
+            dgvHizmetler.Columns[0].Visible = false;
+            dgvHizmetler.Columns[1].HeaderText = "Hizmet Adı";
+            dgvHizmetler.Columns[2].HeaderText = "Klinik ID";
+            dgvHizmetler.Columns[3].HeaderText = "Ucret";
+            dgvHizmetler.Columns[4].HeaderText = "Açıklama";
+
+            for (var i = 0; i < dgvHizmetler.Columns.Count; i++)
             {
-                dgvHizmetler.Rows.Add();
-                dgvHizmetler.Rows[sayac].Cells[0].Value = item.HizmetID;
-                dgvHizmetler.Rows[sayac].Cells[1].Value = item.HizmetAdi;
-                dgvHizmetler.Rows[sayac].Cells[2].Value = item.KlinikAd;
-                dgvHizmetler.Rows[sayac].Cells[3].Value = item.Ucret;
-                dgvHizmetler.Rows[sayac].Cells[4].Value = item.Aciklama;
-                sayac++;
+                dgvHizmetler.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             }
         }
 
@@ -90,22 +86,22 @@ namespace Hastane.PL
             
         }
 
-        private void UnvanDoldur()
+        private void UnvanListesiDoldur()
         {
-            dgvUnvanlar.Rows.Clear();
-            var sayac = 0;
-            var model = _unvanRepository.GetList().Select(x => new
+            var model = _unvanService.UnvanBilgisiDoldur();
+            dgvUnvanlar.DataSource = model;
+            UnvanListesiDataGridViewDuzenle();
+        }
+
+        private void UnvanListesiDataGridViewDuzenle()
+        {
+            dgvUnvanlar.Columns[0].Visible = false;
+            dgvUnvanlar.Columns[1].HeaderText = "Personel Unvanı";
+
+
+            for (var i = 0; i < dgvUnvanlar.Columns.Count; i++)
             {
-                UnvanID = x.UnvanID,
-                UnvanAdi = x.PersonelUnvan,
-                
-            });
-            foreach (var item in model)
-            {
-                dgvUnvanlar.Rows.Add();
-                dgvUnvanlar.Rows[sayac].Cells[0].Value = item.UnvanID;
-                dgvUnvanlar.Rows[sayac].Cells[1].Value = item.UnvanAdi;
-                sayac++;
+                dgvUnvanlar.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             }
         }
 
@@ -114,25 +110,25 @@ namespace Hastane.PL
             txtUnvanAdi.Text = "";
         }
 
-        private void KurumDoldur()
+        private void KurumListesiDoldur()
         {
-            dgvKurumlar.Rows.Clear();
-            var sayac = 0;
-            var model = _kurumRepository.GetList().Select(x => new
+            var model = _kurumService.KurumBilgisiDoldur();
+            dgvKurumlar.DataSource = model;
+            KurumListesiDataGridViewDuzenle();
+        }
+
+        private void KurumListesiDataGridViewDuzenle()
+        {
+            dgvKurumlar.Columns[0].Visible = false;
+            dgvKurumlar.Columns[1].HeaderText = "Kurum Ad";
+            dgvKurumlar.Columns[2].HeaderText = "Kurum Iskontosu";
+
+            for (var i = 0; i < dgvKurumlar.Columns.Count; i++)
             {
-                KurumID = x.KurumID,
-                KurumAdi = x.KurumAd,
-                Kurumİskonto = x.Iskonto
-            });
-            foreach (var item in model)
-            {
-                dgvKurumlar.Rows.Add();
-                dgvKurumlar.Rows[sayac].Cells[0].Value = item.KurumID;
-                dgvKurumlar.Rows[sayac].Cells[1].Value = item.KurumAdi;
-                dgvKurumlar.Rows[sayac].Cells[2].Value = item.Kurumİskonto;
-                sayac++;
+                dgvKurumlar.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             }
         }
+
         private void KurumTemizle()
         {
             txtKurumAdi.Text = "";
@@ -144,25 +140,23 @@ namespace Hastane.PL
             txtKlinikAd.Text = "";
             txtKlinikAciklama.Text = "";
         }
-        private void KlinikDoldur()
+        private void KlinikListesiDoldur()
         {
-            dgvKlinikler.Rows.Clear();
-            var sayac = 0;
-            var model = _klinikRepository.GetList().Select(x => new
-            {
-                KlinikID = x.KlinikID,
-                KlinikAd = x.KlinikAd,
-                KlinikAciklama = x.Aciklama
-            });
-            foreach (var item in model)
-            {
-                dgvKlinikler.Rows.Add();
-                dgvKlinikler.Rows[sayac].Cells[0].Value = item.KlinikID;
-                dgvKlinikler.Rows[sayac].Cells[1].Value = item.KlinikAd;
-                dgvKlinikler.Rows[sayac].Cells[2].Value = item.KlinikAciklama;
-                sayac++;
-            }
+            var model = _klinikService.KlinikBilgisiDoldur();
+            dgvKlinikler.DataSource = model;
+            KlinikListesiDataGridViewDuzenle();
 
+        }
+        private void KlinikListesiDataGridViewDuzenle()
+        {
+            dgvKlinikler.Columns[0].Visible = false;
+            dgvKlinikler.Columns[1].HeaderText = "Klinik Ad";
+            dgvKlinikler.Columns[2].HeaderText = "Klinik Açıklaması";
+          
+            for (var i = 0; i < dgvKlinikler.Columns.Count; i++)
+            {
+                dgvKlinikler.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
         }
 
         private void CbKlinikDoldur()
@@ -174,6 +168,7 @@ namespace Hastane.PL
             }
             );
             cbKlinik.selectedIndex = 0;
+
         }
 
         private void txtKlinikAdAra_OnValueChanged(object sender, EventArgs e)
@@ -216,8 +211,9 @@ namespace Hastane.PL
             {
                 MessageBox.Show(string.Join("\n", result.ErrorMessage), "İşlem Gerçekleştirilemedi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            KlinikDoldur();
+            KlinikListesiDoldur();
             KlinikTemizle();
+            CbKlinikDoldur();
         }
 
         private void btnKlinikGuncelle_Click(object sender, EventArgs e)
@@ -238,8 +234,9 @@ namespace Hastane.PL
                 {
                     MessageBox.Show(string.Join("\n", result.ErrorMessage), "İşlem Gerçekleştirilemedi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                KlinikDoldur();
+                KlinikListesiDoldur();
                 KlinikTemizle();
+                CbKlinikDoldur();
             }
         }
 
@@ -258,8 +255,9 @@ namespace Hastane.PL
                     MessageBox.Show(string.Join("\n", result.ErrorMessage), "İşlem Gerçekleştirilemedi!",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                KlinikDoldur();
+                KlinikListesiDoldur();
                 KlinikTemizle();
+                CbKlinikDoldur();
             }
         }
 
@@ -320,7 +318,7 @@ namespace Hastane.PL
             {
                 MessageBox.Show(string.Join("\n", result.ErrorMessage), "İşlem Gerçekleştirilemedi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            KurumDoldur();
+            KurumListesiDoldur();
             KurumTemizle();
         }
 
@@ -342,7 +340,7 @@ namespace Hastane.PL
                 {
                     MessageBox.Show(string.Join("\n", result.ErrorMessage), "İşlem Gerçekleştirilemedi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                KurumDoldur();
+                KurumListesiDoldur();
                 KurumTemizle();
             }
         }
@@ -362,7 +360,7 @@ namespace Hastane.PL
                     MessageBox.Show(string.Join("\n", result.ErrorMessage), "İşlem Gerçekleştirilemedi!",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                KurumDoldur();
+                KurumListesiDoldur();
                 KurumTemizle();
             }
         }
@@ -403,7 +401,7 @@ namespace Hastane.PL
             {
                 MessageBox.Show(string.Join("\n", result.ErrorMessage), "İşlem Gerçekleştirilemedi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            UnvanDoldur();
+            UnvanListesiDoldur();
             UnvanTemizle();
         }
 
@@ -424,7 +422,7 @@ namespace Hastane.PL
                 {
                     MessageBox.Show(string.Join("\n", result.ErrorMessage), "İşlem Gerçekleştirilemedi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                UnvanDoldur();
+                UnvanListesiDoldur();
                 UnvanTemizle();
             }
         }
@@ -444,7 +442,7 @@ namespace Hastane.PL
                     MessageBox.Show(string.Join("\n", result.ErrorMessage), "İşlem Gerçekleştirilemedi!",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                UnvanDoldur();
+                UnvanListesiDoldur();
                 UnvanTemizle();
             }
         }
@@ -490,6 +488,7 @@ namespace Hastane.PL
             if (_secilenHizmetId == 0) return;
             SecilenHizmet = _hizmetService.GetHizmetById(_secilenHizmetId);
             txtHizmetAdi.Text = SecilenHizmet.HizmetAdi;
+            cbKlinik.Text = SecilenHizmet.Klinikler.KlinikAd;
             txtHizmetUcreti.Text =Convert.ToString(SecilenHizmet.Ucret);
             txtHizmetAciklama.Text = SecilenHizmet.Aciklama;
 
@@ -497,12 +496,16 @@ namespace Hastane.PL
 
         private void btnHizmetEkle_Click(object sender, EventArgs e)
         {
-            Hizmetler model = new Hizmetler
+            var klinik = _klinikRepository.KlinikGetir(cbKlinik.selectedValue).FirstOrDefault();
+            if (klinik != null)
+            {
+                var model = new Hizmetler
             {
                 HizmetAdi = txtHizmetAdi.Text,
                 Ucret=Convert.ToInt32(txtHizmetUcreti.Text),
                 Aciklama=txtHizmetAciklama.Text,
-                KlinikID=cbKlinik.selectedIndex
+                KlinikID=klinik.KlinikID
+                
             };
 
             var result = _hizmetService.Create(model);
@@ -514,18 +517,20 @@ namespace Hastane.PL
             {
                 MessageBox.Show(string.Join("\n", result.ErrorMessage), "İşlem Gerçekleştirilemedi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            HizmetDoldur();
+            }
+            HizmetListesiDoldur();
             HizmetTemizle();
         }
 
         private void btnHizmetGuncelle_Click(object sender, EventArgs e)
         {
+            var klinik = _klinikRepository.KlinikGetir(cbKlinik.selectedValue).FirstOrDefault();
             if (SecilenHizmet != null)
             {
                 SecilenHizmet.HizmetID = _secilenHizmetId;
                 SecilenHizmet.HizmetAdi = txtHizmetAdi.Text;
                 SecilenHizmet.Ucret = Convert.ToDecimal(txtHizmetUcreti.Text);
-                SecilenHizmet.KlinikID = cbKlinik.selectedIndex;
+                SecilenHizmet.KlinikID = klinik.KlinikID;
                 SecilenHizmet.Aciklama = txtHizmetAciklama.Text;
 
 
@@ -538,7 +543,7 @@ namespace Hastane.PL
                 {
                     MessageBox.Show(string.Join("\n", result.ErrorMessage), "İşlem Gerçekleştirilemedi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                HizmetDoldur();
+                HizmetListesiDoldur();
                 HizmetTemizle();
             }
         }
@@ -558,7 +563,7 @@ namespace Hastane.PL
                     MessageBox.Show(string.Join("\n", result.ErrorMessage), "İşlem Gerçekleştirilemedi!",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                HizmetDoldur();
+                HizmetListesiDoldur();
                 HizmetTemizle();
             }
         }

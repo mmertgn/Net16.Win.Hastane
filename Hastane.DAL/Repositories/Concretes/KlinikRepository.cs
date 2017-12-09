@@ -19,5 +19,11 @@ namespace Hastane.DAL.Repositories.Concretes
             return _dbSet.Count();
 
         }
+        public List<Klinikler> KlinikGetir(string KlinikAdi)
+        {
+            return _dbSet.Where(x => x.KlinikAd == KlinikAdi).ToList();
+
+        }
+
     }
 }

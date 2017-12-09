@@ -81,6 +81,31 @@ namespace Hastane.BLL.Services.Concretes
             return _repo.FindById(id);
         }
 
+        public List<KurumListesiModelFromSistemYonetim> KurumBilgisiDoldur()
+        {
+            var model = _repo.GetList().Select(x => new KurumListesiModelFromSistemYonetim
+            {
+                KurumId = x.KurumID,
+                KurumAd = x.KurumAd,
+                KurumIskonto =Convert.ToString( x.Iskonto)
+
+            }).ToList();
+            return model;
+        }
+
+        public List<KurumListesiModelFromSistemYonetim> KurumBilgisiDoldurAra(string KurumAd, string KurumIskonto)
+        {
+            var model = _repo.GetList(x => (x.KurumAd).Contains(KurumAd) &&Convert.ToString(x.Iskonto).Contains(KurumIskonto))
+               .Select(x => new KurumListesiModelFromSistemYonetim
+               {
+                   KurumId = x.KurumID,
+                   KurumAd = x.KurumAd,
+                   KurumIskonto =Convert.ToString(x.Iskonto)
+
+               }).ToList();
+            return model;
+        }
+
         public List<Kurumlar> KurumList()
         {
             return _repo.GetList(null);

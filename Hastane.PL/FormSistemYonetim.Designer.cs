@@ -56,9 +56,6 @@
             this.bunifuCustomLabel4 = new ns1.BunifuCustomLabel();
             this.bunifuCustomLabel5 = new ns1.BunifuCustomLabel();
             this.dgvKurumlar = new ns1.BunifuCustomDataGrid();
-            this.KurumID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.KurumAdi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Kurumİskonto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtKurumAdAra = new ns1.BunifuMetroTextbox();
             this.bunifuCustomLabel6 = new ns1.BunifuCustomLabel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -75,9 +72,6 @@
             this.bunifuCustomLabel2 = new ns1.BunifuCustomLabel();
             this.bunifuCustomLabel3 = new ns1.BunifuCustomLabel();
             this.dgvKlinikler = new ns1.BunifuCustomDataGrid();
-            this.KlinikID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.KlinikAd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.KlinikAciklama = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtKlinikAdAra = new ns1.BunifuMetroTextbox();
             this.bunifuCustomLabel1 = new ns1.BunifuCustomLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -86,7 +80,6 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtHizmetAciklama = new ns1.BunifuMetroTextbox();
             this.bunifuCustomLabel12 = new ns1.BunifuCustomLabel();
-            this.cbKlinik = new ns1.BunifuDropdown();
             this.bunifuCustomLabel15 = new ns1.BunifuCustomLabel();
             this.txtHizmetUcreti = new ns1.BunifuMetroTextbox();
             this.bunifuCustomLabel11 = new ns1.BunifuCustomLabel();
@@ -96,11 +89,6 @@
             this.txtHizmetAdi = new ns1.BunifuMetroTextbox();
             this.bunifuCustomLabel10 = new ns1.BunifuCustomLabel();
             this.dgvHizmetler = new ns1.BunifuCustomDataGrid();
-            this.HizmetID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HizmetAdi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Klinik = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ucret = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Aciklama = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtHizmetAdiAra = new ns1.BunifuMetroTextbox();
             this.bunifuCustomLabel7 = new ns1.BunifuCustomLabel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -115,13 +103,12 @@
             this.txtUnvanAdi = new ns1.BunifuMetroTextbox();
             this.bunifuCustomLabel8 = new ns1.BunifuCustomLabel();
             this.dgvUnvanlar = new ns1.BunifuCustomDataGrid();
-            this.UnvanID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UnvanAdi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtUnvanAdAra = new ns1.BunifuMetroTextbox();
             this.bunifuCustomLabel9 = new ns1.BunifuCustomLabel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.bunifuThinButton23 = new ns1.BunifuThinButton2();
+            this.cbKlinik = new ns1.BunifuDropdown();
             this.panel1.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel10.SuspendLayout();
@@ -336,10 +323,7 @@
             dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvKurumlar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
             this.dgvKurumlar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvKurumlar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.KurumID,
-            this.KurumAdi,
-            this.Kurumİskonto});
+
             dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -371,29 +355,7 @@
             this.dgvKurumlar.TabIndex = 52;
             this.dgvKurumlar.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvKurumlar_CellMouseClick);
             // 
-            // KurumID
-            // 
-            this.KurumID.HeaderText = "Kurum No";
-            this.KurumID.Name = "KurumID";
-            this.KurumID.ReadOnly = true;
-            this.KurumID.Visible = false;
-            this.KurumID.Width = 15;
-            // 
-            // KurumAdi
-            // 
-            this.KurumAdi.HeaderText = "Kurum Adı";
-            this.KurumAdi.Name = "KurumAdi";
-            this.KurumAdi.ReadOnly = true;
-            this.KurumAdi.Width = 150;
-            // 
-            // Kurumİskonto
-            // 
-            this.Kurumİskonto.HeaderText = "Kurum İndirimi";
-            this.Kurumİskonto.MaxInputLength = 99;
-            this.Kurumİskonto.Name = "Kurumİskonto";
-            this.Kurumİskonto.ReadOnly = true;
-            this.Kurumİskonto.Width = 170;
-            // 
+
             // txtKurumAdAra
             // 
             this.txtKurumAdAra.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
@@ -661,10 +623,7 @@
             dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvKlinikler.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle26;
             this.dgvKlinikler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvKlinikler.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.KlinikID,
-            this.KlinikAd,
-            this.KlinikAciklama});
+
             dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle27.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -696,29 +655,7 @@
             this.dgvKlinikler.TabIndex = 18;
             this.dgvKlinikler.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvKlinikler_CellMouseClick);
             // 
-            // KlinikID
-            // 
-            this.KlinikID.HeaderText = "Klinik No";
-            this.KlinikID.Name = "KlinikID";
-            this.KlinikID.ReadOnly = true;
-            this.KlinikID.Visible = false;
-            this.KlinikID.Width = 15;
-            // 
-            // KlinikAd
-            // 
-            this.KlinikAd.HeaderText = "Klinik Adı";
-            this.KlinikAd.Name = "KlinikAd";
-            this.KlinikAd.ReadOnly = true;
-            this.KlinikAd.Width = 150;
-            // 
-            // KlinikAciklama
-            // 
-            this.KlinikAciklama.HeaderText = "Klinik Açıklaması";
-            this.KlinikAciklama.MaxInputLength = 11;
-            this.KlinikAciklama.Name = "KlinikAciklama";
-            this.KlinikAciklama.ReadOnly = true;
-            this.KlinikAciklama.Width = 170;
-            // 
+
             // txtKlinikAdAra
             // 
             this.txtKlinikAdAra.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
@@ -795,9 +732,9 @@
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.cbKlinik);
             this.panel4.Controls.Add(this.txtHizmetAciklama);
             this.panel4.Controls.Add(this.bunifuCustomLabel12);
-            this.panel4.Controls.Add(this.cbKlinik);
             this.panel4.Controls.Add(this.bunifuCustomLabel15);
             this.panel4.Controls.Add(this.txtHizmetUcreti);
             this.panel4.Controls.Add(this.bunifuCustomLabel11);
@@ -845,20 +782,7 @@
             this.bunifuCustomLabel12.Text = "Açıklama";
             this.bunifuCustomLabel12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // cbKlinik
-            // 
-            this.cbKlinik.BackColor = System.Drawing.Color.Transparent;
-            this.cbKlinik.BorderRadius = 3;
-            this.cbKlinik.ForeColor = System.Drawing.Color.White;
-            this.cbKlinik.Items = new string[0];
-            this.cbKlinik.Location = new System.Drawing.Point(686, 106);
-            this.cbKlinik.Name = "cbKlinik";
-            this.cbKlinik.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.cbKlinik.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(62)))));
-            this.cbKlinik.selectedIndex = -1;
-            this.cbKlinik.Size = new System.Drawing.Size(135, 35);
-            this.cbKlinik.TabIndex = 66;
-            // 
+
             // bunifuCustomLabel15
             // 
             this.bunifuCustomLabel15.AutoSize = true;
@@ -1019,12 +943,7 @@
             dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvHizmetler.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
             this.dgvHizmetler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHizmetler.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.HizmetID,
-            this.HizmetAdi,
-            this.Klinik,
-            this.Ucret,
-            this.Aciklama});
+
             dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -1056,42 +975,7 @@
             this.dgvHizmetler.TabIndex = 22;
             this.dgvHizmetler.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvHizmetler_CellMouseClick);
             // 
-            // HizmetID
-            // 
-            this.HizmetID.HeaderText = "Hizmet No";
-            this.HizmetID.Name = "HizmetID";
-            this.HizmetID.ReadOnly = true;
-            this.HizmetID.Visible = false;
-            this.HizmetID.Width = 15;
-            // 
-            // HizmetAdi
-            // 
-            this.HizmetAdi.HeaderText = "Hizmet Adı";
-            this.HizmetAdi.Name = "HizmetAdi";
-            this.HizmetAdi.ReadOnly = true;
-            this.HizmetAdi.Width = 120;
-            // 
-            // Klinik
-            // 
-            this.Klinik.HeaderText = "Klinik";
-            this.Klinik.Name = "Klinik";
-            this.Klinik.ReadOnly = true;
-            // 
-            // Ucret
-            // 
-            this.Ucret.HeaderText = "Ücret";
-            this.Ucret.Name = "Ucret";
-            this.Ucret.ReadOnly = true;
-            this.Ucret.Width = 60;
-            // 
-            // Aciklama
-            // 
-            this.Aciklama.HeaderText = "Açıklama";
-            this.Aciklama.MaxInputLength = 11;
-            this.Aciklama.Name = "Aciklama";
-            this.Aciklama.ReadOnly = true;
-            this.Aciklama.Width = 140;
-            // 
+
             // txtHizmetAdiAra
             // 
             this.txtHizmetAdiAra.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
@@ -1329,9 +1213,7 @@
             dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvUnvanlar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle30;
             this.dgvUnvanlar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUnvanlar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.UnvanID,
-            this.UnvanAdi});
+
             dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle31.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -1363,21 +1245,7 @@
             this.dgvUnvanlar.TabIndex = 52;
             this.dgvUnvanlar.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvUnvanlar_CellMouseClick);
             // 
-            // UnvanID
-            // 
-            this.UnvanID.HeaderText = "Ünvan No";
-            this.UnvanID.Name = "UnvanID";
-            this.UnvanID.ReadOnly = true;
-            this.UnvanID.Visible = false;
-            this.UnvanID.Width = 15;
-            // 
-            // UnvanAdi
-            // 
-            this.UnvanAdi.HeaderText = "Ünvan Adı";
-            this.UnvanAdi.Name = "UnvanAdi";
-            this.UnvanAdi.ReadOnly = true;
-            this.UnvanAdi.Width = 225;
-            // 
+
             // txtUnvanAdAra
             // 
             this.txtUnvanAdAra.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
@@ -1452,6 +1320,20 @@
             this.bunifuThinButton23.TabIndex = 2;
             this.bunifuThinButton23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // cbKlinik
+            // 
+            this.cbKlinik.BackColor = System.Drawing.Color.Transparent;
+            this.cbKlinik.BorderRadius = 3;
+            this.cbKlinik.ForeColor = System.Drawing.Color.White;
+            this.cbKlinik.Items = new string[0];
+            this.cbKlinik.Location = new System.Drawing.Point(686, 105);
+            this.cbKlinik.Name = "cbKlinik";
+            this.cbKlinik.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.cbKlinik.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(62)))));
+            this.cbKlinik.selectedIndex = -1;
+            this.cbKlinik.Size = new System.Drawing.Size(134, 35);
+            this.cbKlinik.TabIndex = 69;
+            // 
             // FormSistemYonetim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1505,8 +1387,6 @@
         private ns1.BunifuMetroTextbox txtUnvanAdi;
         private ns1.BunifuCustomLabel bunifuCustomLabel8;
         private ns1.BunifuCustomDataGrid dgvUnvanlar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn UnvanID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn UnvanAdi;
         private ns1.BunifuMetroTextbox txtUnvanAdAra;
         private ns1.BunifuCustomLabel bunifuCustomLabel9;
         private System.Windows.Forms.PictureBox pictureBox3;
@@ -1521,9 +1401,6 @@
         private ns1.BunifuCustomLabel bunifuCustomLabel2;
         private ns1.BunifuCustomLabel bunifuCustomLabel3;
         private ns1.BunifuCustomDataGrid dgvKlinikler;
-        private System.Windows.Forms.DataGridViewTextBoxColumn KlinikID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn KlinikAd;
-        private System.Windows.Forms.DataGridViewTextBoxColumn KlinikAciklama;
         private ns1.BunifuMetroTextbox txtKlinikAdAra;
         private ns1.BunifuCustomLabel bunifuCustomLabel1;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -1538,9 +1415,6 @@
         private ns1.BunifuCustomLabel bunifuCustomLabel4;
         private ns1.BunifuCustomLabel bunifuCustomLabel5;
         private ns1.BunifuCustomDataGrid dgvKurumlar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn KurumID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn KurumAdi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Kurumİskonto;
         private ns1.BunifuMetroTextbox txtKurumAdAra;
         private ns1.BunifuCustomLabel bunifuCustomLabel6;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -1562,13 +1436,8 @@
         private ns1.BunifuThinButton2 bunifuThinButton24;
         private ns1.BunifuMetroTextbox txtHizmetAciklama;
         private ns1.BunifuCustomLabel bunifuCustomLabel12;
-        private ns1.BunifuDropdown cbKlinik;
         private ns1.BunifuCustomLabel bunifuCustomLabel15;
         private ns1.BunifuSeparator bunifuSeparator2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn HizmetID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn HizmetAdi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Klinik;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Ucret;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Aciklama;
+        private ns1.BunifuDropdown cbKlinik;
     }
 }
