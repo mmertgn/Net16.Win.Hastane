@@ -323,6 +323,7 @@
             dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvKurumlar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
             this.dgvKurumlar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+
             dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -354,6 +355,7 @@
             this.dgvKurumlar.TabIndex = 52;
             this.dgvKurumlar.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvKurumlar_CellMouseClick);
             // 
+
             // txtKurumAdAra
             // 
             this.txtKurumAdAra.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
@@ -621,6 +623,7 @@
             dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvKlinikler.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle26;
             this.dgvKlinikler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+
             dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle27.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -652,6 +655,7 @@
             this.dgvKlinikler.TabIndex = 18;
             this.dgvKlinikler.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvKlinikler_CellMouseClick);
             // 
+
             // txtKlinikAdAra
             // 
             this.txtKlinikAdAra.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
@@ -778,6 +782,7 @@
             this.bunifuCustomLabel12.Text = "Açıklama";
             this.bunifuCustomLabel12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+
             // bunifuCustomLabel15
             // 
             this.bunifuCustomLabel15.AutoSize = true;
@@ -938,6 +943,7 @@
             dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvHizmetler.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
             this.dgvHizmetler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+
             dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -969,6 +975,7 @@
             this.dgvHizmetler.TabIndex = 22;
             this.dgvHizmetler.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvHizmetler_CellMouseClick);
             // 
+
             // txtHizmetAdiAra
             // 
             this.txtHizmetAdiAra.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
@@ -1206,6 +1213,7 @@
             dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvUnvanlar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle30;
             this.dgvUnvanlar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+
             dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle31.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -1237,6 +1245,7 @@
             this.dgvUnvanlar.TabIndex = 52;
             this.dgvUnvanlar.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvUnvanlar_CellMouseClick);
             // 
+
             // txtUnvanAdAra
             // 
             this.txtUnvanAdAra.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
