@@ -10,6 +10,7 @@ using System.Linq.Expressions;
 using Hastane.DAL.Repositories.Abstracts;
 using Hastane.BLL.Validations;
 using FluentValidation.Results;
+using System.Windows.Forms;
 
 namespace Hastane.BLL.Services.Concretes
 {
@@ -83,6 +84,34 @@ namespace Hastane.BLL.Services.Concretes
             return _repo.FindById(id);
         }
 
+
+        public List<KlinikListesiModelFromSistemYonetim> KlinikBilgisiDoldur()
+        {
+            var model = _repo.GetList().Select(x => new KlinikListesiModelFromSistemYonetim
+            {
+                KlinikId = x.KlinikID,
+                KlinikAd = x.KlinikAd ,
+                KlinikAciklama = x.Aciklama
+          
+            }).ToList();
+            return model;
+        }
+
+        public List<KlinikListesiModelFromSistemYonetim> KlinikBilgisiDoldurAra(string KlinikAd, string KlinikAciklama)
+        {
+            var model = _repo.GetList(x => (x.KlinikAd).Contains(KlinikAd) && x.Aciklama.Contains(KlinikAciklama))
+                .Select(x => new KlinikListesiModelFromSistemYonetim
+                {
+                    KlinikId = x.KlinikID,
+                    KlinikAd = x.KlinikAd,
+                    KlinikAciklama = x.Aciklama
+
+                }).ToList();
+            return model;
+        }
+
+       
+
         public List<Klinikler> KlinikList()
         {
             return _repo.GetList(null);
@@ -92,6 +121,8 @@ namespace Hastane.BLL.Services.Concretes
         {
             return _repo.GetList(predicate);
         }
+
+      
     }
 
 

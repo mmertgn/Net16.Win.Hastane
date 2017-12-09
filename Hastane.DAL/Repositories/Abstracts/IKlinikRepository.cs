@@ -10,5 +10,7 @@ namespace Hastane.DAL.Repositories.Abstracts
     public interface IKlinikRepository : IRepository<Klinikler>
     {
         int GetKlinikCount();
+        List<Klinikler> KlinikGetir(string KlinikAdi);
+
     }
 }
