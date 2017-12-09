@@ -17,5 +17,13 @@ namespace Hastane.BLL.Services.Abstracts
         List<Unvanlar> UnvanList();
         List<Unvanlar> UnvanListWithSorgu(Expression<Func<Unvanlar, bool>> predicate);
         Unvanlar GetUnvanById(int id);
+        List<UnvanListesiModelFromSistemYonetim> UnvanBilgisiDoldur();
+        List<UnvanListesiModelFromSistemYonetim> UnvanBilgisiDoldurAra(string Unvan);
+    }
+    public class UnvanListesiModelFromSistemYonetim
+    {
+        public int UnvanId { get; set; }
+        public string PersonelUnvan { get; set; }
+
     }
 }

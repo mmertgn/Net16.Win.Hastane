@@ -42,6 +42,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -58,37 +59,29 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\Abstracts\IHastaKabulService.cs" />
     <Compile Include="Services\Abstracts\IHastaService.cs" />
-
     <Compile Include="Services\Abstracts\IHizmetService.cs" />
-
     <Compile Include="Services\Abstracts\IHastaSikayetleriService.cs" />
-
     <Compile Include="Services\Abstracts\IKlinikService.cs" />
     <Compile Include="Services\Abstracts\IKurumService.cs" />
     <Compile Include="Services\Abstracts\IPersonelService.cs" />
     <Compile Include="Services\Abstracts\IRandevuService.cs" />
-
     <Compile Include="Services\Abstracts\IUnvanService.cs" />
     <Compile Include="Services\Concretes\HizmetService.cs" />
-
     <Compile Include="Services\Concretes\HastaKabulService.cs" />
     <Compile Include="Services\Concretes\HastaService.cs" />
     <Compile Include="Services\Concretes\HastaSikayetleriService.cs" />
-
     <Compile Include="Services\Concretes\KlinikService.cs" />
     <Compile Include="Services\Concretes\KurumService.cs" />
     <Compile Include="Services\Concretes\PersonelService.cs" />
     <Compile Include="Services\Concretes\RandevuService.cs" />
     <Compile Include="Services\Concretes\UnvanService.cs" />
     <Compile Include="Validations\HastaAddValidator.cs" />
-
-     <Compile Include="Validations\HizmetAddValidator.cs" />
+    <Compile Include="Validations\HizmetAddValidator.cs" />
     <Compile Include="Validations\KlinikAddValidator.cs" />
     <Compile Include="Validations\KurumAddValidator.cs" />
-    <Compile Include="Validations\UnvanAddValidator.cs" />        
+    <Compile Include="Validations\UnvanAddValidator.cs" />
     <Compile Include="Validations\HastaSikayetiAddValidator.cs" />
     <Compile Include="Validations\RandevuAddValidator.cs" />
-
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />

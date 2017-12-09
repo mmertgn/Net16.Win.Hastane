@@ -82,6 +82,35 @@ namespace Hastane.BLL.Services.Concretes
             return _repo.FindById(id);
         }
 
+        public List<HizmetListesiModelFromSistemYonetim> HizmetBilgisiDoldur()
+        {
+            var model = _repo.GetList().Select(x => new HizmetListesiModelFromSistemYonetim
+            {
+                HizmetId = x.HizmetID,
+                HizmetAd = x.HizmetAdi,
+                KlinikId = x.KlinikID,
+                Ucret = x.Ucret,
+                HizmetAciklama=x.Aciklama
+
+            }).ToList();
+            return model;
+        }
+
+        public List<HizmetListesiModelFromSistemYonetim> HizmetBilgisiDoldurAra(string HizmetAd,string HizmetAciklama)
+        {
+            var model = _repo.GetList(x => (x.HizmetAdi).Contains(HizmetAd) && x.Aciklama.Contains(HizmetAciklama))
+              .Select(x => new HizmetListesiModelFromSistemYonetim
+              {
+                  HizmetId = x.HizmetID,
+                  HizmetAd = x.HizmetAdi,
+                  KlinikId=x.KlinikID,
+                  Ucret = x.Ucret,
+                  HizmetAciklama=x.Aciklama
+
+              }).ToList();
+            return model;
+        }
+
         public List<Hizmetler> HizmetList()
         {
             return _repo.GetList(null);
