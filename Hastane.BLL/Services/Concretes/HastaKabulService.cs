@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FluentValidation.Results;
+using Hastane.BLL.Models;
 using Hastane.BLL.Services.Abstracts;
+using Hastane.BLL.Validations;
 using Hastane.DAL.DataModel;
 using Hastane.DAL.Repositories.Abstracts;
 
@@ -17,6 +20,24 @@ namespace Hastane.BLL.Services.Concretes
         {
             _hastaKabulRepository = hastaKabulRepository;
         }
+
+        public MessageResult Edit(HastaKabul model)
+        {
+            var _validator = new HastaKabulUpdateValidator();
+            ValidationResult result = _validator.Validate(model);
+            if (result.IsValid)
+            {
+                _hastaKabulRepository.Update(model);
+            }
+            var m = new MessageResult
+            {
+                ErrorMessage = result.Errors.Select(x => x.ErrorMessage).ToList(),
+                IsSucceed = result.IsValid
+            };
+            m.SuccessMessage = m.IsSucceed == true ? "Kayıt Güncelleme İşlemi Başarılı." : "Hatalı bilgiler mevcut";
+            return m;
+        }
+
         public HastaKabul GetHastaKabulById(int id)
         {
             return _hastaKabulRepository.FindById(id);

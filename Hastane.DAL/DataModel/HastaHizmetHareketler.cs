@@ -17,14 +17,14 @@ namespace Hastane.DAL.DataModel
         public int HareketID { get; set; }
         public System.DateTime Tarih { get; set; }
         public int KabulID { get; set; }
-        public int TahlilSonucID { get; set; }
-        public int HizmetID { get; set; }
+        public Nullable<int> TahlilID { get; set; }
+        public Nullable<int> HizmetID { get; set; }
         public decimal Tutar { get; set; }
         public string Aciklama { get; set; }
         public bool Silindi { get; set; }
     
-        public virtual Hizmetler Hizmetler { get; set; }
-        public virtual HastaTahlilSonuclari HastaTahlilSonuclari { get; set; }
         public virtual HastaKabul HastaKabul { get; set; }
+        public virtual Hizmetler Hizmetler { get; set; }
+        public virtual Tahliller Tahliller { get; set; }
     }
 }

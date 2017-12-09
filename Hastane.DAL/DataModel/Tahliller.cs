@@ -17,12 +17,16 @@ namespace Hastane.DAL.DataModel
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Tahliller()
         {
+            this.HastaHizmetHareketler = new HashSet<HastaHizmetHareketler>();
             this.TahlilIcerik = new HashSet<TahlilIcerik>();
         }
     
         public int TahlilID { get; set; }
         public string TahlilAdi { get; set; }
+        public decimal TahlilUcreti { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HastaHizmetHareketler> HastaHizmetHareketler { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TahlilIcerik> TahlilIcerik { get; set; }
     }

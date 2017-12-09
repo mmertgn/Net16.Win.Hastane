@@ -34,12 +34,24 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.bunifuCards3 = new ns1.BunifuCards();
+            this.btnYapilanHizmetSil = new ns1.BunifuImageButton();
+            this.btnYapilanHizmetEkle = new ns1.BunifuImageButton();
+            this.bunifuCustomLabel21 = new ns1.BunifuCustomLabel();
+            this.cbHizmetler = new ns1.BunifuDropdown();
+            this.lvHizmetHareketler = new System.Windows.Forms.ListView();
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.bunifuCustomLabel19 = new ns1.BunifuCustomLabel();
             this.bunifuCards2 = new ns1.BunifuCards();
             this.btnIlacSil = new ns1.BunifuThinButton2();
             this.btnReceteYazdir = new ns1.BunifuThinButton2();
             this.lvRecete = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.bunifuCustomLabel20 = new ns1.BunifuCustomLabel();
             this.btnIlacEkle = new ns1.BunifuImageButton();
             this.btnReceteOlustur = new ns1.BunifuThinButton2();
@@ -101,6 +113,9 @@
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.bunifuCards3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnYapilanHizmetSil)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnYapilanHizmetEkle)).BeginInit();
             this.bunifuCards2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnIlacEkle)).BeginInit();
             this.panel7.SuspendLayout();
@@ -136,6 +151,8 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.Control;
+            this.panel5.Controls.Add(this.label1);
+            this.panel5.Controls.Add(this.bunifuCards3);
             this.panel5.Controls.Add(this.bunifuCards2);
             this.panel5.Controls.Add(this.btnIlacEkle);
             this.panel5.Controls.Add(this.btnReceteOlustur);
@@ -155,6 +172,135 @@
             this.panel5.Size = new System.Drawing.Size(642, 529);
             this.panel5.TabIndex = 2;
             // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.ForeColor = System.Drawing.Color.DarkRed;
+            this.label1.Location = new System.Drawing.Point(17, 107);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(309, 35);
+            this.label1.TabIndex = 79;
+            this.label1.Text = "*Reçete Oluştur Butonuna Tıkladıktan Sonra Aşağıdan İlaçları Ekleyiniz.";
+            // 
+            // bunifuCards3
+            // 
+            this.bunifuCards3.BackColor = System.Drawing.Color.White;
+            this.bunifuCards3.BorderRadius = 5;
+            this.bunifuCards3.BottomSahddow = true;
+            this.bunifuCards3.color = System.Drawing.Color.Tomato;
+            this.bunifuCards3.Controls.Add(this.btnYapilanHizmetSil);
+            this.bunifuCards3.Controls.Add(this.btnYapilanHizmetEkle);
+            this.bunifuCards3.Controls.Add(this.bunifuCustomLabel21);
+            this.bunifuCards3.Controls.Add(this.cbHizmetler);
+            this.bunifuCards3.Controls.Add(this.lvHizmetHareketler);
+            this.bunifuCards3.Controls.Add(this.bunifuCustomLabel19);
+            this.bunifuCards3.LeftSahddow = false;
+            this.bunifuCards3.Location = new System.Drawing.Point(328, 202);
+            this.bunifuCards3.Name = "bunifuCards3";
+            this.bunifuCards3.RightSahddow = true;
+            this.bunifuCards3.ShadowDepth = 20;
+            this.bunifuCards3.Size = new System.Drawing.Size(300, 320);
+            this.bunifuCards3.TabIndex = 78;
+            // 
+            // btnYapilanHizmetSil
+            // 
+            this.btnYapilanHizmetSil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.btnYapilanHizmetSil.Image = ((System.Drawing.Image)(resources.GetObject("btnYapilanHizmetSil.Image")));
+            this.btnYapilanHizmetSil.ImageActive = null;
+            this.btnYapilanHizmetSil.Location = new System.Drawing.Point(209, 280);
+            this.btnYapilanHizmetSil.Name = "btnYapilanHizmetSil";
+            this.btnYapilanHizmetSil.Size = new System.Drawing.Size(33, 33);
+            this.btnYapilanHizmetSil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnYapilanHizmetSil.TabIndex = 74;
+            this.btnYapilanHizmetSil.TabStop = false;
+            this.btnYapilanHizmetSil.Zoom = 10;
+            this.btnYapilanHizmetSil.Click += new System.EventHandler(this.btnYapilanHizmetSil_Click);
+            // 
+            // btnYapilanHizmetEkle
+            // 
+            this.btnYapilanHizmetEkle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.btnYapilanHizmetEkle.Image = ((System.Drawing.Image)(resources.GetObject("btnYapilanHizmetEkle.Image")));
+            this.btnYapilanHizmetEkle.ImageActive = null;
+            this.btnYapilanHizmetEkle.Location = new System.Drawing.Point(254, 280);
+            this.btnYapilanHizmetEkle.Name = "btnYapilanHizmetEkle";
+            this.btnYapilanHizmetEkle.Size = new System.Drawing.Size(33, 33);
+            this.btnYapilanHizmetEkle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnYapilanHizmetEkle.TabIndex = 73;
+            this.btnYapilanHizmetEkle.TabStop = false;
+            this.btnYapilanHizmetEkle.Zoom = 10;
+            this.btnYapilanHizmetEkle.Click += new System.EventHandler(this.btnYapilanHizmetEkle_Click);
+            // 
+            // bunifuCustomLabel21
+            // 
+            this.bunifuCustomLabel21.AutoSize = true;
+            this.bunifuCustomLabel21.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bunifuCustomLabel21.Location = new System.Drawing.Point(13, 250);
+            this.bunifuCustomLabel21.Name = "bunifuCustomLabel21";
+            this.bunifuCustomLabel21.Size = new System.Drawing.Size(67, 17);
+            this.bunifuCustomLabel21.TabIndex = 72;
+            this.bunifuCustomLabel21.Text = "Hizmetler";
+            // 
+            // cbHizmetler
+            // 
+            this.cbHizmetler.BackColor = System.Drawing.Color.Transparent;
+            this.cbHizmetler.BorderRadius = 3;
+            this.cbHizmetler.ForeColor = System.Drawing.Color.White;
+            this.cbHizmetler.Items = new string[0];
+            this.cbHizmetler.Location = new System.Drawing.Point(86, 243);
+            this.cbHizmetler.Name = "cbHizmetler";
+            this.cbHizmetler.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.cbHizmetler.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(62)))));
+            this.cbHizmetler.selectedIndex = -1;
+            this.cbHizmetler.Size = new System.Drawing.Size(201, 35);
+            this.cbHizmetler.TabIndex = 71;
+            // 
+            // lvHizmetHareketler
+            // 
+            this.lvHizmetHareketler.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6});
+            this.lvHizmetHareketler.FullRowSelect = true;
+            this.lvHizmetHareketler.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.lvHizmetHareketler.Location = new System.Drawing.Point(16, 38);
+            this.lvHizmetHareketler.Name = "lvHizmetHareketler";
+            this.lvHizmetHareketler.Size = new System.Drawing.Size(271, 199);
+            this.lvHizmetHareketler.TabIndex = 2;
+            this.lvHizmetHareketler.UseCompatibleStateImageBehavior = false;
+            this.lvHizmetHareketler.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "HizmetHareketID";
+            this.columnHeader4.Width = 0;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Hizmet Adı";
+            this.columnHeader5.Width = 153;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Ücreti";
+            this.columnHeader6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.columnHeader6.Width = 79;
+            // 
+            // bunifuCustomLabel19
+            // 
+            this.bunifuCustomLabel19.AutoSize = true;
+            this.bunifuCustomLabel19.BackColor = System.Drawing.Color.Tomato;
+            this.bunifuCustomLabel19.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bunifuCustomLabel19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bunifuCustomLabel19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bunifuCustomLabel19.ForeColor = System.Drawing.Color.White;
+            this.bunifuCustomLabel19.Location = new System.Drawing.Point(0, 0);
+            this.bunifuCustomLabel19.Name = "bunifuCustomLabel19";
+            this.bunifuCustomLabel19.Padding = new System.Windows.Forms.Padding(15, 5, 536, 0);
+            this.bunifuCustomLabel19.Size = new System.Drawing.Size(735, 25);
+            this.bunifuCustomLabel19.TabIndex = 1;
+            this.bunifuCustomLabel19.Text = "Hastaya Yapılan İşlemler";
+            this.bunifuCustomLabel19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // bunifuCards2
             // 
             this.bunifuCards2.BackColor = System.Drawing.Color.White;
@@ -170,7 +316,7 @@
             this.bunifuCards2.Name = "bunifuCards2";
             this.bunifuCards2.RightSahddow = true;
             this.bunifuCards2.ShadowDepth = 20;
-            this.bunifuCards2.Size = new System.Drawing.Size(614, 285);
+            this.bunifuCards2.Size = new System.Drawing.Size(300, 317);
             this.bunifuCards2.TabIndex = 77;
             // 
             // btnIlacSil
@@ -191,12 +337,13 @@
             this.btnIlacSil.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
             this.btnIlacSil.IdleForecolor = System.Drawing.Color.White;
             this.btnIlacSil.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.btnIlacSil.Location = new System.Drawing.Point(446, 185);
+            this.btnIlacSil.Location = new System.Drawing.Point(20, 245);
             this.btnIlacSil.Margin = new System.Windows.Forms.Padding(5);
             this.btnIlacSil.Name = "btnIlacSil";
-            this.btnIlacSil.Size = new System.Drawing.Size(154, 35);
+            this.btnIlacSil.Size = new System.Drawing.Size(89, 35);
             this.btnIlacSil.TabIndex = 78;
             this.btnIlacSil.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnIlacSil.Click += new System.EventHandler(this.btnIlacSil_Click);
             // 
             // btnReceteYazdir
             // 
@@ -216,10 +363,10 @@
             this.btnReceteYazdir.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
             this.btnReceteYazdir.IdleForecolor = System.Drawing.Color.White;
             this.btnReceteYazdir.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.btnReceteYazdir.Location = new System.Drawing.Point(446, 230);
+            this.btnReceteYazdir.Location = new System.Drawing.Point(119, 243);
             this.btnReceteYazdir.Margin = new System.Windows.Forms.Padding(5);
             this.btnReceteYazdir.Name = "btnReceteYazdir";
-            this.btnReceteYazdir.Size = new System.Drawing.Size(154, 35);
+            this.btnReceteYazdir.Size = new System.Drawing.Size(162, 35);
             this.btnReceteYazdir.TabIndex = 77;
             this.btnReceteYazdir.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -227,11 +374,13 @@
             // 
             this.lvRecete.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
-            this.columnHeader2});
+            this.columnHeader2,
+            this.columnHeader3});
             this.lvRecete.FullRowSelect = true;
-            this.lvRecete.Location = new System.Drawing.Point(23, 45);
+            this.lvRecete.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.lvRecete.Location = new System.Drawing.Point(20, 38);
             this.lvRecete.Name = "lvRecete";
-            this.lvRecete.Size = new System.Drawing.Size(415, 220);
+            this.lvRecete.Size = new System.Drawing.Size(261, 199);
             this.lvRecete.TabIndex = 2;
             this.lvRecete.UseCompatibleStateImageBehavior = false;
             this.lvRecete.View = System.Windows.Forms.View.Details;
@@ -239,12 +388,17 @@
             // columnHeader1
             // 
             this.columnHeader1.Text = "İlaç Adı";
-            this.columnHeader1.Width = 120;
+            this.columnHeader1.Width = 85;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Kullanım Sıklığı";
-            this.columnHeader2.Width = 100;
+            this.columnHeader2.Width = 164;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "ReceteDetayId";
+            this.columnHeader3.Width = 0;
             // 
             // bunifuCustomLabel20
             // 
@@ -274,6 +428,7 @@
             this.btnIlacEkle.TabIndex = 71;
             this.btnIlacEkle.TabStop = false;
             this.btnIlacEkle.Zoom = 10;
+            this.btnIlacEkle.Click += new System.EventHandler(this.btnIlacEkle_Click);
             // 
             // btnReceteOlustur
             // 
@@ -299,6 +454,7 @@
             this.btnReceteOlustur.Size = new System.Drawing.Size(175, 35);
             this.btnReceteOlustur.TabIndex = 76;
             this.btnReceteOlustur.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnReceteOlustur.Click += new System.EventHandler(this.btnReceteOlustur_Click);
             // 
             // dtpReceteTarih
             // 
@@ -566,12 +722,13 @@
             this.btnTahlilIste.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
             this.btnTahlilIste.IdleForecolor = System.Drawing.Color.White;
             this.btnTahlilIste.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.btnTahlilIste.Location = new System.Drawing.Point(387, 239);
+            this.btnTahlilIste.Location = new System.Drawing.Point(387, 240);
             this.btnTahlilIste.Margin = new System.Windows.Forms.Padding(5);
             this.btnTahlilIste.Name = "btnTahlilIste";
             this.btnTahlilIste.Size = new System.Drawing.Size(120, 35);
             this.btnTahlilIste.TabIndex = 80;
             this.btnTahlilIste.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnTahlilIste.Click += new System.EventHandler(this.btnTahlilIste_Click);
             // 
             // txtIstenenTahliller
             // 
@@ -677,6 +834,7 @@
             this.btnTeshisKoy.Size = new System.Drawing.Size(120, 35);
             this.btnTeshisKoy.TabIndex = 74;
             this.btnTeshisKoy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnTeshisKoy.Click += new System.EventHandler(this.btnTeshisKoy_Click);
             // 
             // btnTeshisGuncelle
             // 
@@ -702,6 +860,7 @@
             this.btnTeshisGuncelle.Size = new System.Drawing.Size(120, 35);
             this.btnTeshisGuncelle.TabIndex = 73;
             this.btnTeshisGuncelle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnTeshisGuncelle.Click += new System.EventHandler(this.btnTeshisGuncelle_Click);
             // 
             // txtTeshis
             // 
@@ -1202,6 +1361,10 @@
             this.panel3.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.bunifuCards3.ResumeLayout(false);
+            this.bunifuCards3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnYapilanHizmetSil)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnYapilanHizmetEkle)).EndInit();
             this.bunifuCards2.ResumeLayout(false);
             this.bunifuCards2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnIlacEkle)).EndInit();
@@ -1289,5 +1452,17 @@
         private ns1.BunifuThinButton2 btnTahlilIste;
         private ns1.BunifuMetroTextbox txtIstenenTahliller;
         private ns1.BunifuCustomLabel bunifuCustomLabel18;
+        private ns1.BunifuCards bunifuCards3;
+        private ns1.BunifuImageButton btnYapilanHizmetSil;
+        private ns1.BunifuImageButton btnYapilanHizmetEkle;
+        private ns1.BunifuCustomLabel bunifuCustomLabel21;
+        private ns1.BunifuDropdown cbHizmetler;
+        private System.Windows.Forms.ListView lvHizmetHareketler;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private ns1.BunifuCustomLabel bunifuCustomLabel19;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
     }
 }

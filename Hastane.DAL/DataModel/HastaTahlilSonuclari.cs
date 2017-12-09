@@ -14,12 +14,6 @@ namespace Hastane.DAL.DataModel
     
     public partial class HastaTahlilSonuclari
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public HastaTahlilSonuclari()
-        {
-            this.HastaHizmetHareketler = new HashSet<HastaHizmetHareketler>();
-        }
-    
         public int TahlilSonucID { get; set; }
         public System.DateTime Tarih { get; set; }
         public int KabulID { get; set; }
@@ -31,8 +25,6 @@ namespace Hastane.DAL.DataModel
         public string TahlilSonucBirimi { get; set; }
         public string TahlilIcerikSonuc { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<HastaHizmetHareketler> HastaHizmetHareketler { get; set; }
         public virtual HastaKabul HastaKabul { get; set; }
     }
 }

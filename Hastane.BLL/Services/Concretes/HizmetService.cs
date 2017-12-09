@@ -82,6 +82,11 @@ namespace Hastane.BLL.Services.Concretes
             return _repo.FindById(id);
         }
 
+        public Hizmetler GetHizmetByName(string HizmetAdi)
+        {
+            return _repo.GetList(x => (x.Klinikler.KlinikAd + "-" + x.HizmetAdi==HizmetAdi)).FirstOrDefault();
+        }
+
         public List<Hizmetler> HizmetList()
         {
             return _repo.GetList(null);

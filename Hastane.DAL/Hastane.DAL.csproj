@@ -133,6 +133,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Repositories\Abstracts\IHastaHizmetHareketRepository.cs" />
     <Compile Include="Repositories\Abstracts\IHastaKabulRepository.cs" />
     <Compile Include="Repositories\Abstracts\IHastaRepository.cs" />
     <Compile Include="Repositories\Abstracts\IHastaSikayetleriRepository.cs" />
@@ -143,13 +144,15 @@
     <Compile Include="Repositories\Abstracts\IKurumRepository.cs" />
     <Compile Include="Repositories\Abstracts\IPersonelRepository.cs" />
     <Compile Include="Repositories\Abstracts\IRandevuRepository.cs" />
+    <Compile Include="Repositories\Abstracts\IReceteDetayRepository.cs" />
+    <Compile Include="Repositories\Abstracts\IReceteRepository.cs" />
     <Compile Include="Repositories\Abstracts\IRepository.cs" />
     <Compile Include="Repositories\Abstracts\ISistemYoneticisiRepository.cs" />
-
+    <Compile Include="Repositories\Abstracts\ITeshisRepository.cs" />
     <Compile Include="Repositories\Abstracts\IUnvanRepository.cs" />
+    <Compile Include="Repositories\Concretes\HastaHizmetHareketRepository.cs" />
     <Compile Include="Repositories\Concretes\HastaKabulRepository.cs" />
     <Compile Include="Repositories\Concretes\HastaSikayetleriRepository.cs" />
-
     <Compile Include="Repositories\Concretes\HizmetRepository.cs" />
     <Compile Include="Repositories\Concretes\IlceRepository.cs" />
     <Compile Include="Repositories\Concretes\IlRepository.cs" />
@@ -159,9 +162,12 @@
     <Compile Include="Repositories\Concretes\EFRepositoryBase.cs" />
     <Compile Include="Repositories\Concretes\HastaRepository.cs" />
     <Compile Include="Repositories\Concretes\RandevuRepository.cs" />
+    <Compile Include="Repositories\Concretes\ReceteDetayRepository.cs" />
+    <Compile Include="Repositories\Concretes\ReceteRepository.cs" />
     <Compile Include="Repositories\Concretes\SistemYoneticisiRepository.cs" />
     <Compile Include="Repositories\Abstracts\ITahlilRepository.cs" />
     <Compile Include="Repositories\Concretes\TahlilRepository.cs" />
+    <Compile Include="Repositories\Concretes\TeshisRepository.cs" />
     <Compile Include="Repositories\Concretes\UnvanRepository.cs" />
   </ItemGroup>
   <ItemGroup>

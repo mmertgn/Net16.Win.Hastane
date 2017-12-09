@@ -17,5 +17,6 @@ namespace Hastane.BLL.Services.Abstracts
         List<Hizmetler> HizmetList();
         List<Hizmetler> HizmetListWithSorgu(Expression<Func<Hizmetler, bool>> predicate);
         Hizmetler GetHizmetById(int id);
+        Hizmetler GetHizmetByName(string HizmetAdi);
     }
 }

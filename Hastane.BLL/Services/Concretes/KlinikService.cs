@@ -15,7 +15,8 @@ namespace Hastane.BLL.Services.Concretes
 {
     public class KlinikService : IKlinikService
 
-    { private readonly IKlinikRepository _repo;
+    {
+        private readonly IKlinikRepository _repo;
 
         public KlinikService(IKlinikRepository repo)
         {
@@ -58,21 +59,21 @@ namespace Hastane.BLL.Services.Concretes
                 msg.ErrorMessage = new List<string> { "Bu Klinik Adıyla bir klinik zaten var." };
                 return msg;
             }
-        
+
             else
             {
                 var _validator = new KlinikUpdateValidator();
-        ValidationResult result = _validator.Validate(model);
+                ValidationResult result = _validator.Validate(model);
                 if (result.IsValid)
                 {
                     _repo.Update(model);
                 }
-    var m = new MessageResult
-    {
-        ErrorMessage = result.Errors.Select(x => x.ErrorMessage).ToList(),
-        IsSucceed = result.IsValid
-    };
-    m.SuccessMessage = m.IsSucceed == true ? "Klinik Güncelleme İşlemi Başarılı." : "Hatalı bilgiler mevcut";
+                var m = new MessageResult
+                {
+                    ErrorMessage = result.Errors.Select(x => x.ErrorMessage).ToList(),
+                    IsSucceed = result.IsValid
+                };
+                m.SuccessMessage = m.IsSucceed == true ? "Klinik Güncelleme İşlemi Başarılı." : "Hatalı bilgiler mevcut";
                 return m;
             }
         }
@@ -93,6 +94,6 @@ namespace Hastane.BLL.Services.Concretes
         }
     }
 
-   
-    }
+
+}
 

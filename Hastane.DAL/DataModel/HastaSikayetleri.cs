@@ -20,7 +20,7 @@ namespace Hastane.DAL.DataModel
         public System.DateTime Tarih { get; set; }
         public string Aciklama { get; set; }
     
-        public virtual Hastalar Hastalar { get; set; }
         public virtual HastaKabul HastaKabul { get; set; }
+        public virtual Hastalar Hastalar { get; set; }
     }
 }
