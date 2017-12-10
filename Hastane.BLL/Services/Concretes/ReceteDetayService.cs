@@ -39,7 +39,7 @@ namespace Hastane.BLL.Services.Concretes
 
         public List<ReceteDetayModel> ReceteDetayListesi(int receteId)
         {
-            var model = _receteDetayRepository.GetList().Select(x => new ReceteDetayModel
+            var model = _receteDetayRepository.GetList(x=>x.ReceteID==receteId).Select(x => new ReceteDetayModel
             {
                 ReceteDetayId = x.ReceteDetayID,
                 IlacAd = x.İlacAd,

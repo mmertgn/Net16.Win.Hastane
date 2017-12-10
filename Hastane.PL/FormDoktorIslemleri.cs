@@ -354,5 +354,19 @@ namespace Hastane.PL
 
             HastaHizmetHareketlerDoldur();
         }
+
+        private void btnReceteYazdir_Click(object sender, EventArgs e)
+        {
+            var teshis = _teshisService.GetTeshisByKabulId(_secilenHasta.KabulID);
+            if (_secilenHasta == null || teshis == null)
+            {
+                MessageBox.Show("Lütfen İlk Önce Hasta Seçimi ve Teşhis Koy İşlemlerini Gerçekleştiriniz!", "İşlem Gerçekleştirilemedi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            var receteId = _receteService.GetReceteId(_secilenHasta.KabulID);
+            var frm = new FormReceteYazdir(_secilenHasta, receteId, teshis);
+            frm.Show();
+        }
     }
 }

@@ -363,12 +363,13 @@
             this.btnReceteYazdir.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
             this.btnReceteYazdir.IdleForecolor = System.Drawing.Color.White;
             this.btnReceteYazdir.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.btnReceteYazdir.Location = new System.Drawing.Point(119, 243);
+            this.btnReceteYazdir.Location = new System.Drawing.Point(119, 245);
             this.btnReceteYazdir.Margin = new System.Windows.Forms.Padding(5);
             this.btnReceteYazdir.Name = "btnReceteYazdir";
             this.btnReceteYazdir.Size = new System.Drawing.Size(162, 35);
             this.btnReceteYazdir.TabIndex = 77;
             this.btnReceteYazdir.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnReceteYazdir.Click += new System.EventHandler(this.btnReceteYazdir_Click);
             // 
             // lvRecete
             // 

@@ -97,9 +97,9 @@ namespace Hastane.BLL.Services.Concretes
             return model;
         }
 
-        public List<KlinikListesiModelFromSistemYonetim> KlinikBilgisiDoldurAra(string KlinikAd, string KlinikAciklama)
+        public List<KlinikListesiModelFromSistemYonetim> KlinikBilgisiDoldurAra(string KlinikAd)
         {
-            var model = _repo.GetList(x => (x.KlinikAd).Contains(KlinikAd) && x.Aciklama.Contains(KlinikAciklama))
+            var model = _repo.GetList(x => (x.KlinikAd).Contains(KlinikAd))
                 .Select(x => new KlinikListesiModelFromSistemYonetim
                 {
                     KlinikId = x.KlinikID,

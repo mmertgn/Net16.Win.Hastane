@@ -67,6 +67,7 @@ namespace Hastane.PL
         private void HizmetListesiDataGridViewDuzenle()
         {
             dgvHizmetler.Columns[0].Visible = false;
+            dgvHizmetler.Columns[2].Visible = false;
             dgvHizmetler.Columns[1].HeaderText = "Hizmet Adı";
             dgvHizmetler.Columns[2].HeaderText = "Klinik ID";
             dgvHizmetler.Columns[3].HeaderText = "Ucret";
@@ -83,7 +84,7 @@ namespace Hastane.PL
             txtHizmetAdi.Text = "";
             txtHizmetUcreti.Text = "";
             txtHizmetAciklama.Text = "";
-            
+
         }
 
         private void UnvanListesiDoldur()
@@ -152,7 +153,7 @@ namespace Hastane.PL
             dgvKlinikler.Columns[0].Visible = false;
             dgvKlinikler.Columns[1].HeaderText = "Klinik Ad";
             dgvKlinikler.Columns[2].HeaderText = "Klinik Açıklaması";
-          
+
             for (var i = 0; i < dgvKlinikler.Columns.Count; i++)
             {
                 dgvKlinikler.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
@@ -161,6 +162,7 @@ namespace Hastane.PL
 
         private void CbKlinikDoldur()
         {
+            cbKlinik.Clear();
             var model = _klinikRepository.GetList();
             model.ForEach(item =>
             {
@@ -173,23 +175,10 @@ namespace Hastane.PL
 
         private void txtKlinikAdAra_OnValueChanged(object sender, EventArgs e)
         {
-            dgvKlinikler.Rows.Clear();
-            var sayac = 0;
-            var model2 = _klinikService.KlinikListWithSorgu(x => (x.KlinikAd).Contains(txtKlinikAdAra.Text))
-                .Select(x => new
-                {
-                    KlinikID = x.KlinikID,
-                    KlinikAd = x.KlinikAd,
-                    KlinikAciklama = x.Aciklama
-                });
-            foreach (var item in model2)
-            {
-                dgvKlinikler.Rows.Add();
-                dgvKlinikler.Rows[sayac].Cells[0].Value = item.KlinikID;
-                dgvKlinikler.Rows[sayac].Cells[1].Value = item.KlinikAd;
-                dgvKlinikler.Rows[sayac].Cells[2].Value = item.KlinikAciklama;
-                sayac++;
-            }
+            var model =
+                _klinikService.KlinikBilgisiDoldurAra(txtKlinikAdAra.Text);
+            dgvKlinikler.DataSource = model;
+            KlinikListesiDataGridViewDuzenle();
         }
 
         private void btnKlinikEkle_Click(object sender, EventArgs e)
@@ -199,7 +188,7 @@ namespace Hastane.PL
             {
                 KlinikAd = txtKlinikAd.Text,
                 Aciklama = txtKlinikAciklama.Text,
-               
+
             };
 
             var result = _klinikService.Create(model);
@@ -223,7 +212,7 @@ namespace Hastane.PL
                 SecilenKlinik.KlinikID = _secilenKlinikId;
                 SecilenKlinik.KlinikAd = txtKlinikAd.Text;
                 SecilenKlinik.Aciklama = txtKlinikAciklama.Text;
-             
+
 
                 var result = _klinikService.Edit(SecilenKlinik);
                 if (result.IsSucceed)
@@ -281,23 +270,10 @@ namespace Hastane.PL
 
         private void txtKurumAdAra_OnValueChanged(object sender, EventArgs e)
         {
-            dgvKurumlar.Rows.Clear();
-            var sayac = 0;
-            var model2 = _kurumService.KurumListWithSorgu(x => (x.KurumAd).Contains(txtKurumAdAra.Text))
-                .Select(x => new
-                {
-                    KurumID = x.KurumID,
-                    KurumAdi = x.KurumAd,
-                    Kurumİskonto = x.Iskonto
-                });
-            foreach (var item in model2)
-            {
-                dgvKurumlar.Rows.Add();
-                dgvKurumlar.Rows[sayac].Cells[0].Value = item.KurumID;
-                dgvKurumlar.Rows[sayac].Cells[1].Value = item.KurumAdi;
-                dgvKurumlar.Rows[sayac].Cells[2].Value = item.Kurumİskonto;
-                sayac++;
-            }
+            var model =
+                _kurumService.KurumBilgisiDoldurAra(txtKurumAdAra.Text);
+            dgvKurumlar.DataSource = model;
+            KurumListesiDataGridViewDuzenle();
         }
 
         private void btnKurumEkle_Click(object sender, EventArgs e)
@@ -367,22 +343,10 @@ namespace Hastane.PL
 
         private void txtUnvanAdAra_OnValueChanged(object sender, EventArgs e)
         {
-            dgvUnvanlar.Rows.Clear();
-            var sayac = 0;
-            var model2 = _unvanService.UnvanListWithSorgu(x => (x.PersonelUnvan).Contains(txtUnvanAdAra.Text))
-                .Select(x => new
-                {
-                    UnvanID = x.UnvanID,
-                    UnvanAdi = x.PersonelUnvan,
-         
-                });
-            foreach (var item in model2)
-            {
-                dgvUnvanlar.Rows.Add();
-                dgvUnvanlar.Rows[sayac].Cells[0].Value = item.UnvanID;
-                dgvUnvanlar.Rows[sayac].Cells[1].Value = item.UnvanAdi;
-                sayac++;
-            }
+            var model =
+                _unvanService.UnvanBilgisiDoldurAra(txtUnvanAdAra.Text);
+            dgvUnvanlar.DataSource = model;
+            UnvanListesiDataGridViewDuzenle();
         }
 
         private void btnUnvanEkle_Click(object sender, EventArgs e)
@@ -411,7 +375,7 @@ namespace Hastane.PL
             {
                 SecilenUnvan.UnvanID = _secilenUnvanId;
                 SecilenUnvan.PersonelUnvan = txtUnvanAdi.Text;
-              
+
 
                 var result = _unvanService.Edit(SecilenUnvan);
                 if (result.IsSucceed)
@@ -453,43 +417,28 @@ namespace Hastane.PL
             if (_secilenUnvanId == 0) return;
             SecilenUnvan = _unvanService.GetUnvanById(_secilenUnvanId);
             txtUnvanAdi.Text = SecilenUnvan.PersonelUnvan;
-         
+
         }
 
         private void txtHizmetAdiAra_OnValueChanged(object sender, EventArgs e)
         {
-            dgvHizmetler.Rows.Clear();
-            var sayac = 0;
-            var model2 = _hizmetService.HizmetListWithSorgu(x => (x.HizmetAdi).Contains(txtHizmetAdiAra.Text))
-                .Select(x => new
-                {
-
-                    HizmetID = x.HizmetID,
-                    HizmetAdi = x.HizmetAdi,
-                    KlinikAd = x.Klinikler.KlinikAd,
-                    Ucret = x.Ucret,
-                    Aciklama = x.Aciklama
-                });
-            foreach (var item in model2)
-            {
-                dgvHizmetler.Rows.Add();
-                dgvHizmetler.Rows[sayac].Cells[0].Value = item.HizmetID;
-                dgvHizmetler.Rows[sayac].Cells[1].Value = item.HizmetAdi;
-                dgvHizmetler.Rows[sayac].Cells[2].Value = item.KlinikAd;
-                dgvHizmetler.Rows[sayac].Cells[3].Value = item.Ucret;
-                dgvHizmetler.Rows[sayac].Cells[4].Value = item.Aciklama;
-                sayac++;
-            }
+            var model =
+                _hizmetService.HizmetBilgisiDoldurAra(txtHizmetAdiAra.Text);
+            dgvHizmetler.DataSource = model;
+            HizmetListesiDataGridViewDuzenle();
         }
 
         private void dgvHizmetler_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             _secilenHizmetId = Convert.ToInt32(dgvHizmetler.SelectedRows[0].Cells[0].Value);
+
             if (_secilenHizmetId == 0) return;
             SecilenHizmet = _hizmetService.GetHizmetById(_secilenHizmetId);
+            var klinik = _klinikRepository.GetList();
+            var bulunanindex = klinik.TakeWhile(item => item.KlinikAd != SecilenHizmet.Klinikler.KlinikAd).Count();
             txtHizmetAdi.Text = SecilenHizmet.HizmetAdi;
-            cbKlinik.Text = SecilenHizmet.Klinikler.KlinikAd;
-            txtHizmetUcreti.Text =Convert.ToString(SecilenHizmet.Ucret);
+            cbKlinik.selectedIndex = bulunanindex;
+            txtHizmetUcreti.Text = Convert.ToString(SecilenHizmet.Ucret);
             txtHizmetAciklama.Text = SecilenHizmet.Aciklama;
 
         }
@@ -500,23 +449,22 @@ namespace Hastane.PL
             if (klinik != null)
             {
                 var model = new Hizmetler
-            {
-                HizmetAdi = txtHizmetAdi.Text,
-                Ucret=Convert.ToInt32(txtHizmetUcreti.Text),
-                Aciklama=txtHizmetAciklama.Text,
-                KlinikID=klinik.KlinikID
-                
-            };
+                {
+                    HizmetAdi = txtHizmetAdi.Text,
+                    Ucret = Convert.ToDecimal(txtHizmetUcreti.Text),
+                    Aciklama = txtHizmetAciklama.Text,
+                    KlinikID = klinik.KlinikID
+                };
 
-            var result = _hizmetService.Create(model);
-            if (result.IsSucceed)
-            {
-                MessageBox.Show(result.SuccessMessage, "İşlem Gerçekleştirildi!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show(string.Join("\n", result.ErrorMessage), "İşlem Gerçekleştirilemedi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+                var result = _hizmetService.Create(model);
+                if (result.IsSucceed)
+                {
+                    MessageBox.Show(result.SuccessMessage, "İşlem Gerçekleştirildi!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show(string.Join("\n", result.ErrorMessage), "İşlem Gerçekleştirilemedi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             HizmetListesiDoldur();
             HizmetTemizle();

@@ -18,7 +18,8 @@ namespace Hastane.BLL.Services.Abstracts
         List<Hizmetler> HizmetListWithSorgu(Expression<Func<Hizmetler, bool>> predicate);
         Hizmetler GetHizmetById(int id);
         List<HizmetListesiModelFromSistemYonetim> HizmetBilgisiDoldur();
-        List<HizmetListesiModelFromSistemYonetim> HizmetBilgisiDoldurAra(string HizmetAd,string HizmetAciklama);
+        List<HizmetListesiModelFromSistemYonetim> HizmetBilgisiDoldurAra(string HizmetAd);
+        Hizmetler GetHizmetByName(string HizmetAdi);
     }
     public class HizmetListesiModelFromSistemYonetim
     {
@@ -27,6 +28,5 @@ namespace Hastane.BLL.Services.Abstracts
         public int KlinikId { get; set; }
         public decimal Ucret { get; set; }
         public string HizmetAciklama { get; set; }
-        Hizmetler GetHizmetByName(string HizmetAdi);
     }
 }

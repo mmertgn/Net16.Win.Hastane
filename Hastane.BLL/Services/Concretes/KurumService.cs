@@ -93,9 +93,9 @@ namespace Hastane.BLL.Services.Concretes
             return model;
         }
 
-        public List<KurumListesiModelFromSistemYonetim> KurumBilgisiDoldurAra(string KurumAd, string KurumIskonto)
+        public List<KurumListesiModelFromSistemYonetim> KurumBilgisiDoldurAra(string KurumAd)
         {
-            var model = _repo.GetList(x => (x.KurumAd).Contains(KurumAd) &&Convert.ToString(x.Iskonto).Contains(KurumIskonto))
+            var model = _repo.GetList(x => (x.KurumAd).Contains(KurumAd))
                .Select(x => new KurumListesiModelFromSistemYonetim
                {
                    KurumId = x.KurumID,

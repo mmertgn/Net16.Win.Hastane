@@ -18,7 +18,7 @@ namespace Hastane.BLL.Services.Abstracts
         List<Kurumlar> KurumListWithSorgu(Expression<Func<Kurumlar, bool>> predicate);
         Kurumlar GetKurumById(int id);
         List<KurumListesiModelFromSistemYonetim> KurumBilgisiDoldur();
-        List<KurumListesiModelFromSistemYonetim> KurumBilgisiDoldurAra(string KurumAd, string KurumIskonto);
+        List<KurumListesiModelFromSistemYonetim> KurumBilgisiDoldurAra(string KurumAd);
     }
     public class KurumListesiModelFromSistemYonetim
     {

@@ -11,7 +11,7 @@ namespace Hastane.BLL.Models
         public static string KullaniciAdi;
         public static string KullaniciSoyadi; 
         public static int LoginKullaniciID;
-
+        public static int ReceteId;
 
     }
 }

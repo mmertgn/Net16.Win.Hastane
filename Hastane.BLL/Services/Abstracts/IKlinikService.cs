@@ -21,7 +21,7 @@ namespace Hastane.BLL.Services.Abstracts
      
         List<KlinikListesiModelFromSistemYonetim> KlinikBilgisiDoldur();
 
-        List<KlinikListesiModelFromSistemYonetim> KlinikBilgisiDoldurAra(string KlinikAd, string KlinikAciklama);
+        List<KlinikListesiModelFromSistemYonetim> KlinikBilgisiDoldurAra(string KlinikAd);
 
 
     }

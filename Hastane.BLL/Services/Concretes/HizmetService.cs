@@ -37,6 +37,10 @@ namespace Hastane.BLL.Services.Concretes
             m.SuccessMessage = m.IsSucceed == true ? "Hizmet Ekleme İşlemi Başarılı." : "Hatalı bilgiler mevcut";
             return m;
         }
+        public Hizmetler GetHizmetByName(string HizmetAdi)
+        {
+            return _repo.GetList(x => (x.Klinikler.KlinikAd + "-" + x.HizmetAdi == HizmetAdi)).FirstOrDefault();
+        }
 
         public MessageResult Delete(int id)
         {
@@ -96,9 +100,9 @@ namespace Hastane.BLL.Services.Concretes
             return model;
         }
 
-        public List<HizmetListesiModelFromSistemYonetim> HizmetBilgisiDoldurAra(string HizmetAd,string HizmetAciklama)
+        public List<HizmetListesiModelFromSistemYonetim> HizmetBilgisiDoldurAra(string HizmetAd)
         {
-            var model = _repo.GetList(x => (x.HizmetAdi).Contains(HizmetAd) && x.Aciklama.Contains(HizmetAciklama))
+            var model = _repo.GetList(x => (x.HizmetAdi).Contains(HizmetAd))
               .Select(x => new HizmetListesiModelFromSistemYonetim
               {
                   HizmetId = x.HizmetID,
