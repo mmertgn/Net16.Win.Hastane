@@ -11,5 +11,6 @@ namespace Hastane.DAL.Repositories.Abstracts
    public interface ITahlilRepository : IRepository<Tahliller>
    {
        int GetTahlilCount();
+       List<Tahliller> TahlilGetir(string TahlilAdi);
    }
 }

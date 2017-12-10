@@ -654,6 +654,7 @@
             this.btnTahlilGetir.TabIndex = 2;
             this.btnTahlilGetir.TabStop = false;
             this.btnTahlilGetir.Zoom = 10;
+            this.btnTahlilGetir.Click += new System.EventHandler(this.btnTahlilGetir_Click);
             // 
             // cbTahliller
             // 

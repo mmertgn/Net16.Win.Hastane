@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="HastaneModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="HastaneModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="HastaGecmisi">
           <Key>
             <PropertyRef Name="GecmisID" />
@@ -40,6 +40,7 @@
           <Property Name="KlinikID" Type="int" Nullable="false" />
           <Property Name="IstenenTahliller" Type="varchar" MaxLength="50" />
           <Property Name="CikisTarihi" Type="datetime" />
+          <Property Name="TahlilYapildiMi" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="Hastalar">
           <Key>
@@ -152,7 +153,7 @@
           <Property Name="TCKimlikNo" Type="varchar" MaxLength="11" Nullable="false" />
           <Property Name="SicilNo" Type="int" Nullable="false" />
           <Property Name="UnvanID" Type="int" Nullable="false" />
-          <Property Name="KlinikID" Type="int" Nullable="false" />
+          <Property Name="KlinikID" Type="int" />
           <Property Name="Ad" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Soyad" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
@@ -399,7 +400,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Personeller_Klinikler">
-          <End Role="Klinikler" Type="Self.Klinikler" Multiplicity="1" />
+          <End Role="Klinikler" Type="Self.Klinikler" Multiplicity="0..1" />
           <End Role="Personeller" Type="Self.Personeller" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Klinikler">
@@ -681,137 +682,11 @@
             <End Role="Teshisler" EntitySet="Teshisler" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="HastaneModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityContainer Name="HastaneEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="HastaGecmisi" EntityType="HastaneModel.HastaGecmisi" />
-          <EntitySet Name="HastaHizmetHareketler" EntityType="HastaneModel.HastaHizmetHareketler" />
-          <EntitySet Name="HastaKabul" EntityType="HastaneModel.HastaKabul" />
-          <EntitySet Name="Hastalar" EntityType="HastaneModel.Hastalar" />
-          <EntitySet Name="HastaSikayetleri" EntityType="HastaneModel.HastaSikayetleri" />
-          <EntitySet Name="HastaTahlilSonuclari" EntityType="HastaneModel.HastaTahlilSonuclari" />
-          <EntitySet Name="Hizmetler" EntityType="HastaneModel.Hizmetler" />
-          <EntitySet Name="ilceler" EntityType="HastaneModel.ilceler" />
-          <EntitySet Name="iller" EntityType="HastaneModel.iller" />
-          <EntitySet Name="Klinikler" EntityType="HastaneModel.Klinikler" />
-          <EntitySet Name="Kurumlar" EntityType="HastaneModel.Kurumlar" />
-          <EntitySet Name="Odemeler" EntityType="HastaneModel.Odemeler" />
-          <EntitySet Name="Personeller" EntityType="HastaneModel.Personeller" />
-          <EntitySet Name="Randevular" EntityType="HastaneModel.Randevular" />
-          <EntitySet Name="ReceteDetay" EntityType="HastaneModel.ReceteDetay" />
-          <EntitySet Name="Receteler" EntityType="HastaneModel.Receteler" />
-          <EntitySet Name="SistemYoneticileri" EntityType="HastaneModel.SistemYoneticileri" />
-          <EntitySet Name="TahlilIcerik" EntityType="HastaneModel.TahlilIcerik" />
-          <EntitySet Name="Tahliller" EntityType="HastaneModel.Tahliller" />
-          <EntitySet Name="Teshisler" EntityType="HastaneModel.Teshisler" />
-          <EntitySet Name="Unvanlar" EntityType="HastaneModel.Unvanlar" />
-          <AssociationSet Name="FK_HastaGecmisi_Hastalar" Association="HastaneModel.FK_HastaGecmisi_Hastalar">
-            <End Role="Hastalar" EntitySet="Hastalar" />
-            <End Role="HastaGecmisi" EntitySet="HastaGecmisi" />
-          </AssociationSet>
-          <AssociationSet Name="FK_HastaHizmetHareketler_HastaKabul" Association="HastaneModel.FK_HastaHizmetHareketler_HastaKabul">
-            <End Role="HastaKabul" EntitySet="HastaKabul" />
-            <End Role="HastaHizmetHareketler" EntitySet="HastaHizmetHareketler" />
-          </AssociationSet>
-          <AssociationSet Name="FK_HastaHizmetHareketler_Hizmetler" Association="HastaneModel.FK_HastaHizmetHareketler_Hizmetler">
-            <End Role="Hizmetler" EntitySet="Hizmetler" />
-            <End Role="HastaHizmetHareketler" EntitySet="HastaHizmetHareketler" />
-          </AssociationSet>
-          <AssociationSet Name="FK_HastaHizmetHareketler_Tahliller" Association="HastaneModel.FK_HastaHizmetHareketler_Tahliller">
-            <End Role="Tahliller" EntitySet="Tahliller" />
-            <End Role="HastaHizmetHareketler" EntitySet="HastaHizmetHareketler" />
-          </AssociationSet>
-          <AssociationSet Name="FK_HastaKabul_Hastalar" Association="HastaneModel.FK_HastaKabul_Hastalar">
-            <End Role="Hastalar" EntitySet="Hastalar" />
-            <End Role="HastaKabul" EntitySet="HastaKabul" />
-          </AssociationSet>
-          <AssociationSet Name="FK_HastaKabul_Klinikler" Association="HastaneModel.FK_HastaKabul_Klinikler">
-            <End Role="Klinikler" EntitySet="Klinikler" />
-            <End Role="HastaKabul" EntitySet="HastaKabul" />
-          </AssociationSet>
-          <AssociationSet Name="FK_HastaKabul_Personeller" Association="HastaneModel.FK_HastaKabul_Personeller">
-            <End Role="Personeller" EntitySet="Personeller" />
-            <End Role="HastaKabul" EntitySet="HastaKabul" />
-          </AssociationSet>
-          <AssociationSet Name="FK_HastaSikayetleri_HastaKabul" Association="HastaneModel.FK_HastaSikayetleri_HastaKabul">
-            <End Role="HastaKabul" EntitySet="HastaKabul" />
-            <End Role="HastaSikayetleri" EntitySet="HastaSikayetleri" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Odemeler_HastaKabul" Association="HastaneModel.FK_Odemeler_HastaKabul">
-            <End Role="HastaKabul" EntitySet="HastaKabul" />
-            <End Role="Odemeler" EntitySet="Odemeler" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Receteler_HastaKabul" Association="HastaneModel.FK_Receteler_HastaKabul">
-            <End Role="HastaKabul" EntitySet="HastaKabul" />
-            <End Role="Receteler" EntitySet="Receteler" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Tahliller_HastaKabul" Association="HastaneModel.FK_Tahliller_HastaKabul">
-            <End Role="HastaKabul" EntitySet="HastaKabul" />
-            <End Role="HastaTahlilSonuclari" EntitySet="HastaTahlilSonuclari" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Teshisler_HastaKabul" Association="HastaneModel.FK_Teshisler_HastaKabul">
-            <End Role="HastaKabul" EntitySet="HastaKabul" />
-            <End Role="Teshisler" EntitySet="Teshisler" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Hastalar_Kurumlar" Association="HastaneModel.FK_Hastalar_Kurumlar">
-            <End Role="Kurumlar" EntitySet="Kurumlar" />
-            <End Role="Hastalar" EntitySet="Hastalar" />
-          </AssociationSet>
-          <AssociationSet Name="FK_HastaSikayetleri_Hastalar" Association="HastaneModel.FK_HastaSikayetleri_Hastalar">
-            <End Role="Hastalar" EntitySet="Hastalar" />
-            <End Role="HastaSikayetleri" EntitySet="HastaSikayetleri" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Randevular_Hastalar" Association="HastaneModel.FK_Randevular_Hastalar">
-            <End Role="Hastalar" EntitySet="Hastalar" />
-            <End Role="Randevular" EntitySet="Randevular" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Receteler_Hastalar" Association="HastaneModel.FK_Receteler_Hastalar">
-            <End Role="Hastalar" EntitySet="Hastalar" />
-            <End Role="Receteler" EntitySet="Receteler" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Hizmetler_Klinikler" Association="HastaneModel.FK_Hizmetler_Klinikler">
-            <End Role="Klinikler" EntitySet="Klinikler" />
-            <End Role="Hizmetler" EntitySet="Hizmetler" />
-          </AssociationSet>
-          <AssociationSet Name="FK_ilceler_iller" Association="HastaneModel.FK_ilceler_iller">
-            <End Role="iller" EntitySet="iller" />
-            <End Role="ilceler" EntitySet="ilceler" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Personeller_Klinikler" Association="HastaneModel.FK_Personeller_Klinikler">
-            <End Role="Klinikler" EntitySet="Klinikler" />
-            <End Role="Personeller" EntitySet="Personeller" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Receteler_Kurumlar" Association="HastaneModel.FK_Receteler_Kurumlar">
-            <End Role="Kurumlar" EntitySet="Kurumlar" />
-            <End Role="Receteler" EntitySet="Receteler" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Personeller_Unvanlar" Association="HastaneModel.FK_Personeller_Unvanlar">
-            <End Role="Unvanlar" EntitySet="Unvanlar" />
-            <End Role="Personeller" EntitySet="Personeller" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Randevular_Personeller" Association="HastaneModel.FK_Randevular_Personeller">
-            <End Role="Personeller" EntitySet="Personeller" />
-            <End Role="Randevular" EntitySet="Randevular" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Receteler_Personeller" Association="HastaneModel.FK_Receteler_Personeller">
-            <End Role="Personeller" EntitySet="Personeller" />
-            <End Role="Receteler" EntitySet="Receteler" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Teshisler_Personeller" Association="HastaneModel.FK_Teshisler_Personeller">
-            <End Role="Personeller" EntitySet="Personeller" />
-            <End Role="Teshisler" EntitySet="Teshisler" />
-          </AssociationSet>
-          <AssociationSet Name="FK_ReceteDetay_Receteler" Association="HastaneModel.FK_ReceteDetay_Receteler">
-            <End Role="Receteler" EntitySet="Receteler" />
-            <End Role="ReceteDetay" EntitySet="ReceteDetay" />
-          </AssociationSet>
-          <AssociationSet Name="FK_TahlilIcerik_Tahliller" Association="HastaneModel.FK_TahlilIcerik_Tahliller">
-            <End Role="Tahliller" EntitySet="Tahliller" />
-            <End Role="TahlilIcerik" EntitySet="TahlilIcerik" />
-          </AssociationSet>
-        </EntityContainer>
         <EntityType Name="HastaGecmisi">
           <Key>
             <PropertyRef Name="GecmisID" />
@@ -819,10 +694,10 @@
           <Property Name="GecmisID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="HastaID" Type="Int32" Nullable="false" />
           <Property Name="Tarih" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="HastaSikayeti" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="KonulanTeshis" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="HastaSikayeti" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="KonulanTeshis" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Silindi" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="Hastalar" Relationship="HastaneModel.FK_HastaGecmisi_Hastalar" FromRole="HastaGecmisi" ToRole="Hastalar" />
+          <NavigationProperty Name="Hastalar" Relationship="Self.FK_HastaGecmisi_Hastalar" FromRole="HastaGecmisi" ToRole="Hastalar" />
         </EntityType>
         <EntityType Name="HastaHizmetHareketler">
           <Key>
@@ -833,12 +708,12 @@
           <Property Name="KabulID" Type="Int32" Nullable="false" />
           <Property Name="TahlilID" Type="Int32" />
           <Property Name="HizmetID" Type="Int32" />
-          <Property Name="Tutar" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="Tutar" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
           <Property Name="Aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="Silindi" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="HastaKabul" Relationship="HastaneModel.FK_HastaHizmetHareketler_HastaKabul" FromRole="HastaHizmetHareketler" ToRole="HastaKabul" />
-          <NavigationProperty Name="Hizmetler" Relationship="HastaneModel.FK_HastaHizmetHareketler_Hizmetler" FromRole="HastaHizmetHareketler" ToRole="Hizmetler" />
-          <NavigationProperty Name="Tahliller" Relationship="HastaneModel.FK_HastaHizmetHareketler_Tahliller" FromRole="HastaHizmetHareketler" ToRole="Tahliller" />
+          <NavigationProperty Name="HastaKabul" Relationship="Self.FK_HastaHizmetHareketler_HastaKabul" FromRole="HastaHizmetHareketler" ToRole="HastaKabul" />
+          <NavigationProperty Name="Hizmetler" Relationship="Self.FK_HastaHizmetHareketler_Hizmetler" FromRole="HastaHizmetHareketler" ToRole="Hizmetler" />
+          <NavigationProperty Name="Tahliller" Relationship="Self.FK_HastaHizmetHareketler_Tahliller" FromRole="HastaHizmetHareketler" ToRole="Tahliller" />
         </EntityType>
         <EntityType Name="HastaKabul">
           <Key>
@@ -851,41 +726,42 @@
           <Property Name="KlinikID" Type="Int32" Nullable="false" />
           <Property Name="IstenenTahliller" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="CikisTarihi" Type="DateTime" Precision="3" />
-          <NavigationProperty Name="HastaHizmetHareketler" Relationship="HastaneModel.FK_HastaHizmetHareketler_HastaKabul" FromRole="HastaKabul" ToRole="HastaHizmetHareketler" />
-          <NavigationProperty Name="Hastalar" Relationship="HastaneModel.FK_HastaKabul_Hastalar" FromRole="HastaKabul" ToRole="Hastalar" />
-          <NavigationProperty Name="Klinikler" Relationship="HastaneModel.FK_HastaKabul_Klinikler" FromRole="HastaKabul" ToRole="Klinikler" />
-          <NavigationProperty Name="Personeller" Relationship="HastaneModel.FK_HastaKabul_Personeller" FromRole="HastaKabul" ToRole="Personeller" />
-          <NavigationProperty Name="HastaSikayetleri" Relationship="HastaneModel.FK_HastaSikayetleri_HastaKabul" FromRole="HastaKabul" ToRole="HastaSikayetleri" />
-          <NavigationProperty Name="Odemeler" Relationship="HastaneModel.FK_Odemeler_HastaKabul" FromRole="HastaKabul" ToRole="Odemeler" />
-          <NavigationProperty Name="Receteler" Relationship="HastaneModel.FK_Receteler_HastaKabul" FromRole="HastaKabul" ToRole="Receteler" />
-          <NavigationProperty Name="HastaTahlilSonuclari" Relationship="HastaneModel.FK_Tahliller_HastaKabul" FromRole="HastaKabul" ToRole="HastaTahlilSonuclari" />
-          <NavigationProperty Name="Teshisler" Relationship="HastaneModel.FK_Teshisler_HastaKabul" FromRole="HastaKabul" ToRole="Teshisler" />
+          <Property Name="TahlilYapildiMi" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="HastaHizmetHareketler" Relationship="Self.FK_HastaHizmetHareketler_HastaKabul" FromRole="HastaKabul" ToRole="HastaHizmetHareketler" />
+          <NavigationProperty Name="Hastalar" Relationship="Self.FK_HastaKabul_Hastalar" FromRole="HastaKabul" ToRole="Hastalar" />
+          <NavigationProperty Name="Klinikler" Relationship="Self.FK_HastaKabul_Klinikler" FromRole="HastaKabul" ToRole="Klinikler" />
+          <NavigationProperty Name="Personeller" Relationship="Self.FK_HastaKabul_Personeller" FromRole="HastaKabul" ToRole="Personeller" />
+          <NavigationProperty Name="HastaSikayetleri" Relationship="Self.FK_HastaSikayetleri_HastaKabul" FromRole="HastaKabul" ToRole="HastaSikayetleri" />
+          <NavigationProperty Name="Odemeler" Relationship="Self.FK_Odemeler_HastaKabul" FromRole="HastaKabul" ToRole="Odemeler" />
+          <NavigationProperty Name="Receteler" Relationship="Self.FK_Receteler_HastaKabul" FromRole="HastaKabul" ToRole="Receteler" />
+          <NavigationProperty Name="HastaTahlilSonuclari" Relationship="Self.FK_Tahliller_HastaKabul" FromRole="HastaKabul" ToRole="HastaTahlilSonuclari" />
+          <NavigationProperty Name="Teshisler" Relationship="Self.FK_Teshisler_HastaKabul" FromRole="HastaKabul" ToRole="Teshisler" />
         </EntityType>
         <EntityType Name="Hastalar">
           <Key>
             <PropertyRef Name="HastaID" />
           </Key>
           <Property Name="HastaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Ad" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Soyad" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="TCKimlikNo" Type="String" Nullable="false" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="Ad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Soyad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TCKimlikNo" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Adres" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="EvTel" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
           <Property Name="CepTel" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
           <Property Name="KanGrubu" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="DogumTarihi" Type="DateTime" Precision="7" />
-          <Property Name="Cinsiyet" Type="String" Nullable="false" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="Cinsiyet" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="KurumID" Type="Int32" />
           <Property Name="KayitTarihi" Type="DateTime" Nullable="false" Precision="7" />
           <Property Name="il" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Ilce" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Silindi" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="HastaGecmisi" Relationship="HastaneModel.FK_HastaGecmisi_Hastalar" FromRole="Hastalar" ToRole="HastaGecmisi" />
-          <NavigationProperty Name="HastaKabul" Relationship="HastaneModel.FK_HastaKabul_Hastalar" FromRole="Hastalar" ToRole="HastaKabul" />
-          <NavigationProperty Name="Kurumlar" Relationship="HastaneModel.FK_Hastalar_Kurumlar" FromRole="Hastalar" ToRole="Kurumlar" />
-          <NavigationProperty Name="HastaSikayetleri" Relationship="HastaneModel.FK_HastaSikayetleri_Hastalar" FromRole="Hastalar" ToRole="HastaSikayetleri" />
-          <NavigationProperty Name="Randevular" Relationship="HastaneModel.FK_Randevular_Hastalar" FromRole="Hastalar" ToRole="Randevular" />
-          <NavigationProperty Name="Receteler" Relationship="HastaneModel.FK_Receteler_Hastalar" FromRole="Hastalar" ToRole="Receteler" />
+          <NavigationProperty Name="HastaGecmisi" Relationship="Self.FK_HastaGecmisi_Hastalar" FromRole="Hastalar" ToRole="HastaGecmisi" />
+          <NavigationProperty Name="HastaKabul" Relationship="Self.FK_HastaKabul_Hastalar" FromRole="Hastalar" ToRole="HastaKabul" />
+          <NavigationProperty Name="Kurumlar" Relationship="Self.FK_Hastalar_Kurumlar" FromRole="Hastalar" ToRole="Kurumlar" />
+          <NavigationProperty Name="HastaSikayetleri" Relationship="Self.FK_HastaSikayetleri_Hastalar" FromRole="Hastalar" ToRole="HastaSikayetleri" />
+          <NavigationProperty Name="Randevular" Relationship="Self.FK_Randevular_Hastalar" FromRole="Hastalar" ToRole="Randevular" />
+          <NavigationProperty Name="Receteler" Relationship="Self.FK_Receteler_Hastalar" FromRole="Hastalar" ToRole="Receteler" />
         </EntityType>
         <EntityType Name="HastaSikayetleri">
           <Key>
@@ -895,9 +771,9 @@
           <Property Name="HastaID" Type="Int32" Nullable="false" />
           <Property Name="KabulID" Type="Int32" Nullable="false" />
           <Property Name="Tarih" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="Aciklama" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="HastaKabul" Relationship="HastaneModel.FK_HastaSikayetleri_HastaKabul" FromRole="HastaSikayetleri" ToRole="HastaKabul" />
-          <NavigationProperty Name="Hastalar" Relationship="HastaneModel.FK_HastaSikayetleri_Hastalar" FromRole="HastaSikayetleri" ToRole="Hastalar" />
+          <Property Name="Aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="HastaKabul" Relationship="Self.FK_HastaSikayetleri_HastaKabul" FromRole="HastaSikayetleri" ToRole="HastaKabul" />
+          <NavigationProperty Name="Hastalar" Relationship="Self.FK_HastaSikayetleri_Hastalar" FromRole="HastaSikayetleri" ToRole="Hastalar" />
         </EntityType>
         <EntityType Name="HastaTahlilSonuclari">
           <Key>
@@ -906,27 +782,27 @@
           <Property Name="TahlilSonucID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Tarih" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="KabulID" Type="Int32" Nullable="false" />
-          <Property Name="TahlilAciklama" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="TahlilAciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Silindi" Type="Boolean" Nullable="false" />
-          <Property Name="TahlilAdi" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="TahlilIcerikAdi" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="TahlilIcerikReferansDegeri" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="TahlilSonucBirimi" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="TahlilIcerikSonuc" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="HastaKabul" Relationship="HastaneModel.FK_Tahliller_HastaKabul" FromRole="HastaTahlilSonuclari" ToRole="HastaKabul" />
+          <Property Name="TahlilAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TahlilIcerikAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TahlilIcerikReferansDegeri" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TahlilSonucBirimi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TahlilIcerikSonuc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="HastaKabul" Relationship="Self.FK_Tahliller_HastaKabul" FromRole="HastaTahlilSonuclari" ToRole="HastaKabul" />
         </EntityType>
         <EntityType Name="Hizmetler">
           <Key>
             <PropertyRef Name="HizmetID" />
           </Key>
           <Property Name="HizmetID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="HizmetAdi" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="HizmetAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="KlinikID" Type="Int32" Nullable="false" />
-          <Property Name="Ucret" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
-          <Property Name="Aciklama" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Ucret" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="Aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Silindi" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="HastaHizmetHareketler" Relationship="HastaneModel.FK_HastaHizmetHareketler_Hizmetler" FromRole="Hizmetler" ToRole="HastaHizmetHareketler" />
-          <NavigationProperty Name="Klinikler" Relationship="HastaneModel.FK_Hizmetler_Klinikler" FromRole="Hizmetler" ToRole="Klinikler" />
+          <NavigationProperty Name="HastaHizmetHareketler" Relationship="Self.FK_HastaHizmetHareketler_Hizmetler" FromRole="Hizmetler" ToRole="HastaHizmetHareketler" />
+          <NavigationProperty Name="Klinikler" Relationship="Self.FK_Hizmetler_Klinikler" FromRole="Hizmetler" ToRole="Klinikler" />
         </EntityType>
         <EntityType Name="ilceler">
           <Key>
@@ -935,7 +811,7 @@
           <Property Name="id" Type="Int32" Nullable="false" />
           <Property Name="ilce" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="sehir" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="iller" Relationship="HastaneModel.FK_ilceler_iller" FromRole="ilceler" ToRole="iller" />
+          <NavigationProperty Name="iller" Relationship="Self.FK_ilceler_iller" FromRole="ilceler" ToRole="iller" />
         </EntityType>
         <EntityType Name="iller">
           <Key>
@@ -943,30 +819,30 @@
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="sehir" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="ilceler" Relationship="HastaneModel.FK_ilceler_iller" FromRole="iller" ToRole="ilceler" />
+          <NavigationProperty Name="ilceler" Relationship="Self.FK_ilceler_iller" FromRole="iller" ToRole="ilceler" />
         </EntityType>
         <EntityType Name="Klinikler">
           <Key>
             <PropertyRef Name="KlinikID" />
           </Key>
           <Property Name="KlinikID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="KlinikAd" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="KlinikAd" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="Silindi" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="HastaKabul" Relationship="HastaneModel.FK_HastaKabul_Klinikler" FromRole="Klinikler" ToRole="HastaKabul" />
-          <NavigationProperty Name="Hizmetler" Relationship="HastaneModel.FK_Hizmetler_Klinikler" FromRole="Klinikler" ToRole="Hizmetler" />
-          <NavigationProperty Name="Personeller" Relationship="HastaneModel.FK_Personeller_Klinikler" FromRole="Klinikler" ToRole="Personeller" />
+          <NavigationProperty Name="HastaKabul" Relationship="Self.FK_HastaKabul_Klinikler" FromRole="Klinikler" ToRole="HastaKabul" />
+          <NavigationProperty Name="Hizmetler" Relationship="Self.FK_Hizmetler_Klinikler" FromRole="Klinikler" ToRole="Hizmetler" />
+          <NavigationProperty Name="Personeller" Relationship="Self.FK_Personeller_Klinikler" FromRole="Klinikler" ToRole="Personeller" />
         </EntityType>
         <EntityType Name="Kurumlar">
           <Key>
             <PropertyRef Name="KurumID" />
           </Key>
           <Property Name="KurumID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="KurumAd" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="KurumAd" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Iskonto" Type="Int32" />
           <Property Name="Silindi" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="Hastalar" Relationship="HastaneModel.FK_Hastalar_Kurumlar" FromRole="Kurumlar" ToRole="Hastalar" />
-          <NavigationProperty Name="Receteler" Relationship="HastaneModel.FK_Receteler_Kurumlar" FromRole="Kurumlar" ToRole="Receteler" />
+          <NavigationProperty Name="Hastalar" Relationship="Self.FK_Hastalar_Kurumlar" FromRole="Kurumlar" ToRole="Hastalar" />
+          <NavigationProperty Name="Receteler" Relationship="Self.FK_Receteler_Kurumlar" FromRole="Kurumlar" ToRole="Receteler" />
         </EntityType>
         <EntityType Name="Odemeler">
           <Key>
@@ -976,38 +852,38 @@
           <Property Name="Tarih" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="KabulID" Type="Int32" Nullable="false" />
           <Property Name="OdemeTuru" Type="Int32" Nullable="false" />
-          <Property Name="Toplam" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
-          <Property Name="Indirim" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="Toplam" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="Indirim" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
           <Property Name="Aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="Silindi" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="HastaKabul" Relationship="HastaneModel.FK_Odemeler_HastaKabul" FromRole="Odemeler" ToRole="HastaKabul" />
+          <NavigationProperty Name="HastaKabul" Relationship="Self.FK_Odemeler_HastaKabul" FromRole="Odemeler" ToRole="HastaKabul" />
         </EntityType>
         <EntityType Name="Personeller">
           <Key>
             <PropertyRef Name="PersonelID" />
           </Key>
           <Property Name="PersonelID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="PersonelKodu" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="TCKimlikNo" Type="String" Nullable="false" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="PersonelKodu" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TCKimlikNo" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="SicilNo" Type="Int32" Nullable="false" />
           <Property Name="UnvanID" Type="Int32" Nullable="false" />
-          <Property Name="KlinikID" Type="Int32" Nullable="false" />
-          <Property Name="Ad" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Soyad" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Adres" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="KlinikID" Type="Int32" />
+          <Property Name="Ad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Soyad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Adres" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="EvTel" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
-          <Property Name="CepTel" Type="String" Nullable="false" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="CepTel" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="DogumTarihi" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="KullaniciAdi" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Sifre" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="KullaniciAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Sifre" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Siilindi" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="HastaKabul" Relationship="HastaneModel.FK_HastaKabul_Personeller" FromRole="Personeller" ToRole="HastaKabul" />
-          <NavigationProperty Name="Klinikler" Relationship="HastaneModel.FK_Personeller_Klinikler" FromRole="Personeller" ToRole="Klinikler" />
-          <NavigationProperty Name="Unvanlar" Relationship="HastaneModel.FK_Personeller_Unvanlar" FromRole="Personeller" ToRole="Unvanlar" />
-          <NavigationProperty Name="Randevular" Relationship="HastaneModel.FK_Randevular_Personeller" FromRole="Personeller" ToRole="Randevular" />
-          <NavigationProperty Name="Receteler" Relationship="HastaneModel.FK_Receteler_Personeller" FromRole="Personeller" ToRole="Receteler" />
-          <NavigationProperty Name="Teshisler" Relationship="HastaneModel.FK_Teshisler_Personeller" FromRole="Personeller" ToRole="Teshisler" />
+          <NavigationProperty Name="HastaKabul" Relationship="Self.FK_HastaKabul_Personeller" FromRole="Personeller" ToRole="HastaKabul" />
+          <NavigationProperty Name="Klinikler" Relationship="Self.FK_Personeller_Klinikler" FromRole="Personeller" ToRole="Klinikler" />
+          <NavigationProperty Name="Unvanlar" Relationship="Self.FK_Personeller_Unvanlar" FromRole="Personeller" ToRole="Unvanlar" />
+          <NavigationProperty Name="Randevular" Relationship="Self.FK_Randevular_Personeller" FromRole="Personeller" ToRole="Randevular" />
+          <NavigationProperty Name="Receteler" Relationship="Self.FK_Receteler_Personeller" FromRole="Personeller" ToRole="Receteler" />
+          <NavigationProperty Name="Teshisler" Relationship="Self.FK_Teshisler_Personeller" FromRole="Personeller" ToRole="Teshisler" />
         </EntityType>
         <EntityType Name="Randevular">
           <Key>
@@ -1015,12 +891,12 @@
           </Key>
           <Property Name="RandevuID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Tarih" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="Saat" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Saat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="PersonelID" Type="Int32" Nullable="false" />
           <Property Name="HastaID" Type="Int32" Nullable="false" />
           <Property Name="Geldimi" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="Hastalar" Relationship="HastaneModel.FK_Randevular_Hastalar" FromRole="Randevular" ToRole="Hastalar" />
-          <NavigationProperty Name="Personeller" Relationship="HastaneModel.FK_Randevular_Personeller" FromRole="Randevular" ToRole="Personeller" />
+          <NavigationProperty Name="Hastalar" Relationship="Self.FK_Randevular_Hastalar" FromRole="Randevular" ToRole="Hastalar" />
+          <NavigationProperty Name="Personeller" Relationship="Self.FK_Randevular_Personeller" FromRole="Randevular" ToRole="Personeller" />
         </EntityType>
         <EntityType Name="ReceteDetay">
           <Key>
@@ -1030,7 +906,7 @@
           <Property Name="ReceteID" Type="Int32" Nullable="false" />
           <Property Name="İlacAd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="İlacKullanimSikligi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Receteler" Relationship="HastaneModel.FK_ReceteDetay_Receteler" FromRole="ReceteDetay" ToRole="Receteler" />
+          <NavigationProperty Name="Receteler" Relationship="Self.FK_ReceteDetay_Receteler" FromRole="ReceteDetay" ToRole="Receteler" />
         </EntityType>
         <EntityType Name="Receteler">
           <Key>
@@ -1043,43 +919,43 @@
           <Property Name="PersonelID" Type="Int32" Nullable="false" />
           <Property Name="HastaID" Type="Int32" Nullable="false" />
           <Property Name="Silindi" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="HastaKabul" Relationship="HastaneModel.FK_Receteler_HastaKabul" FromRole="Receteler" ToRole="HastaKabul" />
-          <NavigationProperty Name="Hastalar" Relationship="HastaneModel.FK_Receteler_Hastalar" FromRole="Receteler" ToRole="Hastalar" />
-          <NavigationProperty Name="Kurumlar" Relationship="HastaneModel.FK_Receteler_Kurumlar" FromRole="Receteler" ToRole="Kurumlar" />
-          <NavigationProperty Name="Personeller" Relationship="HastaneModel.FK_Receteler_Personeller" FromRole="Receteler" ToRole="Personeller" />
-          <NavigationProperty Name="ReceteDetay" Relationship="HastaneModel.FK_ReceteDetay_Receteler" FromRole="Receteler" ToRole="ReceteDetay" />
+          <NavigationProperty Name="HastaKabul" Relationship="Self.FK_Receteler_HastaKabul" FromRole="Receteler" ToRole="HastaKabul" />
+          <NavigationProperty Name="Hastalar" Relationship="Self.FK_Receteler_Hastalar" FromRole="Receteler" ToRole="Hastalar" />
+          <NavigationProperty Name="Kurumlar" Relationship="Self.FK_Receteler_Kurumlar" FromRole="Receteler" ToRole="Kurumlar" />
+          <NavigationProperty Name="Personeller" Relationship="Self.FK_Receteler_Personeller" FromRole="Receteler" ToRole="Personeller" />
+          <NavigationProperty Name="ReceteDetay" Relationship="Self.FK_ReceteDetay_Receteler" FromRole="Receteler" ToRole="ReceteDetay" />
         </EntityType>
         <EntityType Name="SistemYoneticileri">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Ad" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Soyad" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="KullaniciAdi" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Sifre" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Ad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Soyad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="KullaniciAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Sifre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
         <EntityType Name="TahlilIcerik">
           <Key>
             <PropertyRef Name="TahlilIcerikId" />
           </Key>
           <Property Name="TahlilIcerikId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="TahlilIcerikAdi" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="TahlilIcerikReferansDegeri" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="TahlilSonucBirimi" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TahlilIcerikAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TahlilIcerikReferansDegeri" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TahlilSonucBirimi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="TahlilId" Type="Int32" Nullable="false" />
           <Property Name="TahlilIcerikSonuc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Tahliller" Relationship="HastaneModel.FK_TahlilIcerik_Tahliller" FromRole="TahlilIcerik" ToRole="Tahliller" />
+          <NavigationProperty Name="Tahliller" Relationship="Self.FK_TahlilIcerik_Tahliller" FromRole="TahlilIcerik" ToRole="Tahliller" />
         </EntityType>
         <EntityType Name="Tahliller">
           <Key>
             <PropertyRef Name="TahlilID" />
           </Key>
           <Property Name="TahlilID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="TahlilAdi" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="TahlilUcreti" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
-          <NavigationProperty Name="HastaHizmetHareketler" Relationship="HastaneModel.FK_HastaHizmetHareketler_Tahliller" FromRole="Tahliller" ToRole="HastaHizmetHareketler" />
-          <NavigationProperty Name="TahlilIcerik" Relationship="HastaneModel.FK_TahlilIcerik_Tahliller" FromRole="Tahliller" ToRole="TahlilIcerik" />
+          <Property Name="TahlilAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TahlilUcreti" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <NavigationProperty Name="HastaHizmetHareketler" Relationship="Self.FK_HastaHizmetHareketler_Tahliller" FromRole="Tahliller" ToRole="HastaHizmetHareketler" />
+          <NavigationProperty Name="TahlilIcerik" Relationship="Self.FK_TahlilIcerik_Tahliller" FromRole="Tahliller" ToRole="TahlilIcerik" />
         </EntityType>
         <EntityType Name="Teshisler">
           <Key>
@@ -1089,21 +965,21 @@
           <Property Name="Tarih" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="PersonelID" Type="Int32" Nullable="false" />
           <Property Name="KabulID" Type="Int32" Nullable="false" />
-          <Property Name="Teshis" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="HastaKabul" Relationship="HastaneModel.FK_Teshisler_HastaKabul" FromRole="Teshisler" ToRole="HastaKabul" />
-          <NavigationProperty Name="Personeller" Relationship="HastaneModel.FK_Teshisler_Personeller" FromRole="Teshisler" ToRole="Personeller" />
+          <Property Name="Teshis" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="HastaKabul" Relationship="Self.FK_Teshisler_HastaKabul" FromRole="Teshisler" ToRole="HastaKabul" />
+          <NavigationProperty Name="Personeller" Relationship="Self.FK_Teshisler_Personeller" FromRole="Teshisler" ToRole="Personeller" />
         </EntityType>
         <EntityType Name="Unvanlar">
           <Key>
             <PropertyRef Name="UnvanID" />
           </Key>
           <Property Name="UnvanID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="PersonelUnvan" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Personeller" Relationship="HastaneModel.FK_Personeller_Unvanlar" FromRole="Unvanlar" ToRole="Personeller" />
+          <Property Name="PersonelUnvan" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Personeller" Relationship="Self.FK_Personeller_Unvanlar" FromRole="Unvanlar" ToRole="Personeller" />
         </EntityType>
         <Association Name="FK_HastaGecmisi_Hastalar">
-          <End Type="HastaneModel.Hastalar" Role="Hastalar" Multiplicity="1" />
-          <End Type="HastaneModel.HastaGecmisi" Role="HastaGecmisi" Multiplicity="*" />
+          <End Role="Hastalar" Type="Self.Hastalar" Multiplicity="1" />
+          <End Role="HastaGecmisi" Type="Self.HastaGecmisi" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Hastalar">
               <PropertyRef Name="HastaID" />
@@ -1114,8 +990,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_HastaHizmetHareketler_HastaKabul">
-          <End Type="HastaneModel.HastaKabul" Role="HastaKabul" Multiplicity="1" />
-          <End Type="HastaneModel.HastaHizmetHareketler" Role="HastaHizmetHareketler" Multiplicity="*" />
+          <End Role="HastaKabul" Type="Self.HastaKabul" Multiplicity="1" />
+          <End Role="HastaHizmetHareketler" Type="Self.HastaHizmetHareketler" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="HastaKabul">
               <PropertyRef Name="KabulID" />
@@ -1126,8 +1002,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_HastaHizmetHareketler_Hizmetler">
-          <End Type="HastaneModel.Hizmetler" Role="Hizmetler" Multiplicity="0..1" />
-          <End Type="HastaneModel.HastaHizmetHareketler" Role="HastaHizmetHareketler" Multiplicity="*" />
+          <End Role="Hizmetler" Type="Self.Hizmetler" Multiplicity="0..1" />
+          <End Role="HastaHizmetHareketler" Type="Self.HastaHizmetHareketler" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Hizmetler">
               <PropertyRef Name="HizmetID" />
@@ -1138,8 +1014,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_HastaHizmetHareketler_Tahliller">
-          <End Type="HastaneModel.Tahliller" Role="Tahliller" Multiplicity="0..1" />
-          <End Type="HastaneModel.HastaHizmetHareketler" Role="HastaHizmetHareketler" Multiplicity="*" />
+          <End Role="Tahliller" Type="Self.Tahliller" Multiplicity="0..1" />
+          <End Role="HastaHizmetHareketler" Type="Self.HastaHizmetHareketler" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Tahliller">
               <PropertyRef Name="TahlilID" />
@@ -1150,8 +1026,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_HastaKabul_Hastalar">
-          <End Type="HastaneModel.Hastalar" Role="Hastalar" Multiplicity="1" />
-          <End Type="HastaneModel.HastaKabul" Role="HastaKabul" Multiplicity="*" />
+          <End Role="Hastalar" Type="Self.Hastalar" Multiplicity="1" />
+          <End Role="HastaKabul" Type="Self.HastaKabul" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Hastalar">
               <PropertyRef Name="HastaID" />
@@ -1162,8 +1038,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_HastaKabul_Klinikler">
-          <End Type="HastaneModel.Klinikler" Role="Klinikler" Multiplicity="1" />
-          <End Type="HastaneModel.HastaKabul" Role="HastaKabul" Multiplicity="*" />
+          <End Role="Klinikler" Type="Self.Klinikler" Multiplicity="1" />
+          <End Role="HastaKabul" Type="Self.HastaKabul" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Klinikler">
               <PropertyRef Name="KlinikID" />
@@ -1174,8 +1050,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_HastaKabul_Personeller">
-          <End Type="HastaneModel.Personeller" Role="Personeller" Multiplicity="1" />
-          <End Type="HastaneModel.HastaKabul" Role="HastaKabul" Multiplicity="*" />
+          <End Role="Personeller" Type="Self.Personeller" Multiplicity="1" />
+          <End Role="HastaKabul" Type="Self.HastaKabul" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Personeller">
               <PropertyRef Name="PersonelID" />
@@ -1186,8 +1062,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_HastaSikayetleri_HastaKabul">
-          <End Type="HastaneModel.HastaKabul" Role="HastaKabul" Multiplicity="1" />
-          <End Type="HastaneModel.HastaSikayetleri" Role="HastaSikayetleri" Multiplicity="*" />
+          <End Role="HastaKabul" Type="Self.HastaKabul" Multiplicity="1" />
+          <End Role="HastaSikayetleri" Type="Self.HastaSikayetleri" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="HastaKabul">
               <PropertyRef Name="KabulID" />
@@ -1198,8 +1074,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Odemeler_HastaKabul">
-          <End Type="HastaneModel.HastaKabul" Role="HastaKabul" Multiplicity="1" />
-          <End Type="HastaneModel.Odemeler" Role="Odemeler" Multiplicity="*" />
+          <End Role="HastaKabul" Type="Self.HastaKabul" Multiplicity="1" />
+          <End Role="Odemeler" Type="Self.Odemeler" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="HastaKabul">
               <PropertyRef Name="KabulID" />
@@ -1210,8 +1086,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Receteler_HastaKabul">
-          <End Type="HastaneModel.HastaKabul" Role="HastaKabul" Multiplicity="1" />
-          <End Type="HastaneModel.Receteler" Role="Receteler" Multiplicity="*" />
+          <End Role="HastaKabul" Type="Self.HastaKabul" Multiplicity="1" />
+          <End Role="Receteler" Type="Self.Receteler" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="HastaKabul">
               <PropertyRef Name="KabulID" />
@@ -1222,8 +1098,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Tahliller_HastaKabul">
-          <End Type="HastaneModel.HastaKabul" Role="HastaKabul" Multiplicity="1" />
-          <End Type="HastaneModel.HastaTahlilSonuclari" Role="HastaTahlilSonuclari" Multiplicity="*" />
+          <End Role="HastaKabul" Type="Self.HastaKabul" Multiplicity="1" />
+          <End Role="HastaTahlilSonuclari" Type="Self.HastaTahlilSonuclari" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="HastaKabul">
               <PropertyRef Name="KabulID" />
@@ -1234,8 +1110,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Teshisler_HastaKabul">
-          <End Type="HastaneModel.HastaKabul" Role="HastaKabul" Multiplicity="1" />
-          <End Type="HastaneModel.Teshisler" Role="Teshisler" Multiplicity="*" />
+          <End Role="HastaKabul" Type="Self.HastaKabul" Multiplicity="1" />
+          <End Role="Teshisler" Type="Self.Teshisler" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="HastaKabul">
               <PropertyRef Name="KabulID" />
@@ -1246,8 +1122,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Hastalar_Kurumlar">
-          <End Type="HastaneModel.Kurumlar" Role="Kurumlar" Multiplicity="0..1" />
-          <End Type="HastaneModel.Hastalar" Role="Hastalar" Multiplicity="*" />
+          <End Role="Kurumlar" Type="Self.Kurumlar" Multiplicity="0..1" />
+          <End Role="Hastalar" Type="Self.Hastalar" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Kurumlar">
               <PropertyRef Name="KurumID" />
@@ -1258,8 +1134,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_HastaSikayetleri_Hastalar">
-          <End Type="HastaneModel.Hastalar" Role="Hastalar" Multiplicity="1" />
-          <End Type="HastaneModel.HastaSikayetleri" Role="HastaSikayetleri" Multiplicity="*" />
+          <End Role="Hastalar" Type="Self.Hastalar" Multiplicity="1" />
+          <End Role="HastaSikayetleri" Type="Self.HastaSikayetleri" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Hastalar">
               <PropertyRef Name="HastaID" />
@@ -1270,8 +1146,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Randevular_Hastalar">
-          <End Type="HastaneModel.Hastalar" Role="Hastalar" Multiplicity="1" />
-          <End Type="HastaneModel.Randevular" Role="Randevular" Multiplicity="*" />
+          <End Role="Hastalar" Type="Self.Hastalar" Multiplicity="1" />
+          <End Role="Randevular" Type="Self.Randevular" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Hastalar">
               <PropertyRef Name="HastaID" />
@@ -1282,8 +1158,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Receteler_Hastalar">
-          <End Type="HastaneModel.Hastalar" Role="Hastalar" Multiplicity="1" />
-          <End Type="HastaneModel.Receteler" Role="Receteler" Multiplicity="*" />
+          <End Role="Hastalar" Type="Self.Hastalar" Multiplicity="1" />
+          <End Role="Receteler" Type="Self.Receteler" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Hastalar">
               <PropertyRef Name="HastaID" />
@@ -1294,8 +1170,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Hizmetler_Klinikler">
-          <End Type="HastaneModel.Klinikler" Role="Klinikler" Multiplicity="1" />
-          <End Type="HastaneModel.Hizmetler" Role="Hizmetler" Multiplicity="*" />
+          <End Role="Klinikler" Type="Self.Klinikler" Multiplicity="1" />
+          <End Role="Hizmetler" Type="Self.Hizmetler" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Klinikler">
               <PropertyRef Name="KlinikID" />
@@ -1306,8 +1182,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_ilceler_iller">
-          <End Type="HastaneModel.iller" Role="iller" Multiplicity="1" />
-          <End Type="HastaneModel.ilceler" Role="ilceler" Multiplicity="*" />
+          <End Role="iller" Type="Self.iller" Multiplicity="1" />
+          <End Role="ilceler" Type="Self.ilceler" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="iller">
               <PropertyRef Name="id" />
@@ -1318,8 +1194,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Personeller_Klinikler">
-          <End Type="HastaneModel.Klinikler" Role="Klinikler" Multiplicity="1" />
-          <End Type="HastaneModel.Personeller" Role="Personeller" Multiplicity="*" />
+          <End Role="Klinikler" Type="Self.Klinikler" Multiplicity="0..1" />
+          <End Role="Personeller" Type="Self.Personeller" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Klinikler">
               <PropertyRef Name="KlinikID" />
@@ -1330,8 +1206,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Receteler_Kurumlar">
-          <End Type="HastaneModel.Kurumlar" Role="Kurumlar" Multiplicity="1" />
-          <End Type="HastaneModel.Receteler" Role="Receteler" Multiplicity="*" />
+          <End Role="Kurumlar" Type="Self.Kurumlar" Multiplicity="1" />
+          <End Role="Receteler" Type="Self.Receteler" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Kurumlar">
               <PropertyRef Name="KurumID" />
@@ -1342,8 +1218,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Personeller_Unvanlar">
-          <End Type="HastaneModel.Unvanlar" Role="Unvanlar" Multiplicity="1" />
-          <End Type="HastaneModel.Personeller" Role="Personeller" Multiplicity="*" />
+          <End Role="Unvanlar" Type="Self.Unvanlar" Multiplicity="1" />
+          <End Role="Personeller" Type="Self.Personeller" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Unvanlar">
               <PropertyRef Name="UnvanID" />
@@ -1354,8 +1230,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Randevular_Personeller">
-          <End Type="HastaneModel.Personeller" Role="Personeller" Multiplicity="1" />
-          <End Type="HastaneModel.Randevular" Role="Randevular" Multiplicity="*" />
+          <End Role="Personeller" Type="Self.Personeller" Multiplicity="1" />
+          <End Role="Randevular" Type="Self.Randevular" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Personeller">
               <PropertyRef Name="PersonelID" />
@@ -1366,8 +1242,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Receteler_Personeller">
-          <End Type="HastaneModel.Personeller" Role="Personeller" Multiplicity="1" />
-          <End Type="HastaneModel.Receteler" Role="Receteler" Multiplicity="*" />
+          <End Role="Personeller" Type="Self.Personeller" Multiplicity="1" />
+          <End Role="Receteler" Type="Self.Receteler" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Personeller">
               <PropertyRef Name="PersonelID" />
@@ -1378,8 +1254,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Teshisler_Personeller">
-          <End Type="HastaneModel.Personeller" Role="Personeller" Multiplicity="1" />
-          <End Type="HastaneModel.Teshisler" Role="Teshisler" Multiplicity="*" />
+          <End Role="Personeller" Type="Self.Personeller" Multiplicity="1" />
+          <End Role="Teshisler" Type="Self.Teshisler" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Personeller">
               <PropertyRef Name="PersonelID" />
@@ -1390,8 +1266,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_ReceteDetay_Receteler">
-          <End Type="HastaneModel.Receteler" Role="Receteler" Multiplicity="1" />
-          <End Type="HastaneModel.ReceteDetay" Role="ReceteDetay" Multiplicity="*" />
+          <End Role="Receteler" Type="Self.Receteler" Multiplicity="1" />
+          <End Role="ReceteDetay" Type="Self.ReceteDetay" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Receteler">
               <PropertyRef Name="ReceteID" />
@@ -1402,8 +1278,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_TahlilIcerik_Tahliller">
-          <End Type="HastaneModel.Tahliller" Role="Tahliller" Multiplicity="1" />
-          <End Type="HastaneModel.TahlilIcerik" Role="TahlilIcerik" Multiplicity="*" />
+          <End Role="Tahliller" Type="Self.Tahliller" Multiplicity="1" />
+          <End Role="TahlilIcerik" Type="Self.TahlilIcerik" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Tahliller">
               <PropertyRef Name="TahlilID" />
@@ -1413,7 +1289,134 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        </Schema>
+        <EntityContainer Name="HastaneEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="HastaGecmisi" EntityType="Self.HastaGecmisi" />
+          <EntitySet Name="HastaHizmetHareketler" EntityType="Self.HastaHizmetHareketler" />
+          <EntitySet Name="HastaKabul" EntityType="Self.HastaKabul" />
+          <EntitySet Name="Hastalar" EntityType="Self.Hastalar" />
+          <EntitySet Name="HastaSikayetleri" EntityType="Self.HastaSikayetleri" />
+          <EntitySet Name="HastaTahlilSonuclari" EntityType="Self.HastaTahlilSonuclari" />
+          <EntitySet Name="Hizmetler" EntityType="Self.Hizmetler" />
+          <EntitySet Name="ilceler" EntityType="Self.ilceler" />
+          <EntitySet Name="iller" EntityType="Self.iller" />
+          <EntitySet Name="Klinikler" EntityType="Self.Klinikler" />
+          <EntitySet Name="Kurumlar" EntityType="Self.Kurumlar" />
+          <EntitySet Name="Odemeler" EntityType="Self.Odemeler" />
+          <EntitySet Name="Personeller" EntityType="Self.Personeller" />
+          <EntitySet Name="Randevular" EntityType="Self.Randevular" />
+          <EntitySet Name="ReceteDetay" EntityType="Self.ReceteDetay" />
+          <EntitySet Name="Receteler" EntityType="Self.Receteler" />
+          <EntitySet Name="SistemYoneticileri" EntityType="Self.SistemYoneticileri" />
+          <EntitySet Name="TahlilIcerik" EntityType="Self.TahlilIcerik" />
+          <EntitySet Name="Tahliller" EntityType="Self.Tahliller" />
+          <EntitySet Name="Teshisler" EntityType="Self.Teshisler" />
+          <EntitySet Name="Unvanlar" EntityType="Self.Unvanlar" />
+          <AssociationSet Name="FK_HastaGecmisi_Hastalar" Association="Self.FK_HastaGecmisi_Hastalar">
+            <End Role="Hastalar" EntitySet="Hastalar" />
+            <End Role="HastaGecmisi" EntitySet="HastaGecmisi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HastaHizmetHareketler_HastaKabul" Association="Self.FK_HastaHizmetHareketler_HastaKabul">
+            <End Role="HastaKabul" EntitySet="HastaKabul" />
+            <End Role="HastaHizmetHareketler" EntitySet="HastaHizmetHareketler" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HastaHizmetHareketler_Hizmetler" Association="Self.FK_HastaHizmetHareketler_Hizmetler">
+            <End Role="Hizmetler" EntitySet="Hizmetler" />
+            <End Role="HastaHizmetHareketler" EntitySet="HastaHizmetHareketler" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HastaHizmetHareketler_Tahliller" Association="Self.FK_HastaHizmetHareketler_Tahliller">
+            <End Role="Tahliller" EntitySet="Tahliller" />
+            <End Role="HastaHizmetHareketler" EntitySet="HastaHizmetHareketler" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HastaKabul_Hastalar" Association="Self.FK_HastaKabul_Hastalar">
+            <End Role="Hastalar" EntitySet="Hastalar" />
+            <End Role="HastaKabul" EntitySet="HastaKabul" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HastaKabul_Klinikler" Association="Self.FK_HastaKabul_Klinikler">
+            <End Role="Klinikler" EntitySet="Klinikler" />
+            <End Role="HastaKabul" EntitySet="HastaKabul" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HastaKabul_Personeller" Association="Self.FK_HastaKabul_Personeller">
+            <End Role="Personeller" EntitySet="Personeller" />
+            <End Role="HastaKabul" EntitySet="HastaKabul" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HastaSikayetleri_HastaKabul" Association="Self.FK_HastaSikayetleri_HastaKabul">
+            <End Role="HastaKabul" EntitySet="HastaKabul" />
+            <End Role="HastaSikayetleri" EntitySet="HastaSikayetleri" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Odemeler_HastaKabul" Association="Self.FK_Odemeler_HastaKabul">
+            <End Role="HastaKabul" EntitySet="HastaKabul" />
+            <End Role="Odemeler" EntitySet="Odemeler" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Receteler_HastaKabul" Association="Self.FK_Receteler_HastaKabul">
+            <End Role="HastaKabul" EntitySet="HastaKabul" />
+            <End Role="Receteler" EntitySet="Receteler" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tahliller_HastaKabul" Association="Self.FK_Tahliller_HastaKabul">
+            <End Role="HastaKabul" EntitySet="HastaKabul" />
+            <End Role="HastaTahlilSonuclari" EntitySet="HastaTahlilSonuclari" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Teshisler_HastaKabul" Association="Self.FK_Teshisler_HastaKabul">
+            <End Role="HastaKabul" EntitySet="HastaKabul" />
+            <End Role="Teshisler" EntitySet="Teshisler" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Hastalar_Kurumlar" Association="Self.FK_Hastalar_Kurumlar">
+            <End Role="Kurumlar" EntitySet="Kurumlar" />
+            <End Role="Hastalar" EntitySet="Hastalar" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HastaSikayetleri_Hastalar" Association="Self.FK_HastaSikayetleri_Hastalar">
+            <End Role="Hastalar" EntitySet="Hastalar" />
+            <End Role="HastaSikayetleri" EntitySet="HastaSikayetleri" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Randevular_Hastalar" Association="Self.FK_Randevular_Hastalar">
+            <End Role="Hastalar" EntitySet="Hastalar" />
+            <End Role="Randevular" EntitySet="Randevular" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Receteler_Hastalar" Association="Self.FK_Receteler_Hastalar">
+            <End Role="Hastalar" EntitySet="Hastalar" />
+            <End Role="Receteler" EntitySet="Receteler" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Hizmetler_Klinikler" Association="Self.FK_Hizmetler_Klinikler">
+            <End Role="Klinikler" EntitySet="Klinikler" />
+            <End Role="Hizmetler" EntitySet="Hizmetler" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ilceler_iller" Association="Self.FK_ilceler_iller">
+            <End Role="iller" EntitySet="iller" />
+            <End Role="ilceler" EntitySet="ilceler" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Personeller_Klinikler" Association="Self.FK_Personeller_Klinikler">
+            <End Role="Klinikler" EntitySet="Klinikler" />
+            <End Role="Personeller" EntitySet="Personeller" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Receteler_Kurumlar" Association="Self.FK_Receteler_Kurumlar">
+            <End Role="Kurumlar" EntitySet="Kurumlar" />
+            <End Role="Receteler" EntitySet="Receteler" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Personeller_Unvanlar" Association="Self.FK_Personeller_Unvanlar">
+            <End Role="Unvanlar" EntitySet="Unvanlar" />
+            <End Role="Personeller" EntitySet="Personeller" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Randevular_Personeller" Association="Self.FK_Randevular_Personeller">
+            <End Role="Personeller" EntitySet="Personeller" />
+            <End Role="Randevular" EntitySet="Randevular" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Receteler_Personeller" Association="Self.FK_Receteler_Personeller">
+            <End Role="Personeller" EntitySet="Personeller" />
+            <End Role="Receteler" EntitySet="Receteler" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Teshisler_Personeller" Association="Self.FK_Teshisler_Personeller">
+            <End Role="Personeller" EntitySet="Personeller" />
+            <End Role="Teshisler" EntitySet="Teshisler" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ReceteDetay_Receteler" Association="Self.FK_ReceteDetay_Receteler">
+            <End Role="Receteler" EntitySet="Receteler" />
+            <End Role="ReceteDetay" EntitySet="ReceteDetay" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TahlilIcerik_Tahliller" Association="Self.FK_TahlilIcerik_Tahliller">
+            <End Role="Tahliller" EntitySet="Tahliller" />
+            <End Role="TahlilIcerik" EntitySet="TahlilIcerik" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -1422,258 +1425,259 @@
           <EntitySetMapping Name="HastaGecmisi">
             <EntityTypeMapping TypeName="HastaneModel.HastaGecmisi">
               <MappingFragment StoreEntitySet="HastaGecmisi">
-                <ScalarProperty Name="Silindi" ColumnName="Silindi" />
-                <ScalarProperty Name="KonulanTeshis" ColumnName="KonulanTeshis" />
-                <ScalarProperty Name="HastaSikayeti" ColumnName="HastaSikayeti" />
-                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
-                <ScalarProperty Name="HastaID" ColumnName="HastaID" />
                 <ScalarProperty Name="GecmisID" ColumnName="GecmisID" />
+                <ScalarProperty Name="HastaID" ColumnName="HastaID" />
+                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+                <ScalarProperty Name="HastaSikayeti" ColumnName="HastaSikayeti" />
+                <ScalarProperty Name="KonulanTeshis" ColumnName="KonulanTeshis" />
+                <ScalarProperty Name="Silindi" ColumnName="Silindi" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="HastaHizmetHareketler">
             <EntityTypeMapping TypeName="HastaneModel.HastaHizmetHareketler">
               <MappingFragment StoreEntitySet="HastaHizmetHareketler">
-                <ScalarProperty Name="Silindi" ColumnName="Silindi" />
-                <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
-                <ScalarProperty Name="Tutar" ColumnName="Tutar" />
-                <ScalarProperty Name="HizmetID" ColumnName="HizmetID" />
-                <ScalarProperty Name="TahlilID" ColumnName="TahlilID" />
-                <ScalarProperty Name="KabulID" ColumnName="KabulID" />
-                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
                 <ScalarProperty Name="HareketID" ColumnName="HareketID" />
+                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+                <ScalarProperty Name="KabulID" ColumnName="KabulID" />
+                <ScalarProperty Name="TahlilID" ColumnName="TahlilID" />
+                <ScalarProperty Name="HizmetID" ColumnName="HizmetID" />
+                <ScalarProperty Name="Tutar" ColumnName="Tutar" />
+                <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+                <ScalarProperty Name="Silindi" ColumnName="Silindi" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="HastaKabul">
             <EntityTypeMapping TypeName="HastaneModel.HastaKabul">
               <MappingFragment StoreEntitySet="HastaKabul">
-                <ScalarProperty Name="CikisTarihi" ColumnName="CikisTarihi" />
-                <ScalarProperty Name="IstenenTahliller" ColumnName="IstenenTahliller" />
-                <ScalarProperty Name="KlinikID" ColumnName="KlinikID" />
-                <ScalarProperty Name="PersonelID" ColumnName="PersonelID" />
-                <ScalarProperty Name="HastaID" ColumnName="HastaID" />
-                <ScalarProperty Name="GelisTarihi" ColumnName="GelisTarihi" />
                 <ScalarProperty Name="KabulID" ColumnName="KabulID" />
+                <ScalarProperty Name="GelisTarihi" ColumnName="GelisTarihi" />
+                <ScalarProperty Name="HastaID" ColumnName="HastaID" />
+                <ScalarProperty Name="PersonelID" ColumnName="PersonelID" />
+                <ScalarProperty Name="KlinikID" ColumnName="KlinikID" />
+                <ScalarProperty Name="IstenenTahliller" ColumnName="IstenenTahliller" />
+                <ScalarProperty Name="CikisTarihi" ColumnName="CikisTarihi" />
+                <ScalarProperty Name="TahlilYapildiMi" ColumnName="TahlilYapildiMi" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Hastalar">
             <EntityTypeMapping TypeName="HastaneModel.Hastalar">
               <MappingFragment StoreEntitySet="Hastalar">
-                <ScalarProperty Name="Silindi" ColumnName="Silindi" />
-                <ScalarProperty Name="Ilce" ColumnName="Ilce" />
-                <ScalarProperty Name="il" ColumnName="il" />
-                <ScalarProperty Name="KayitTarihi" ColumnName="KayitTarihi" />
-                <ScalarProperty Name="KurumID" ColumnName="KurumID" />
-                <ScalarProperty Name="Cinsiyet" ColumnName="Cinsiyet" />
-                <ScalarProperty Name="DogumTarihi" ColumnName="DogumTarihi" />
-                <ScalarProperty Name="KanGrubu" ColumnName="KanGrubu" />
-                <ScalarProperty Name="CepTel" ColumnName="CepTel" />
-                <ScalarProperty Name="EvTel" ColumnName="EvTel" />
-                <ScalarProperty Name="Adres" ColumnName="Adres" />
-                <ScalarProperty Name="TCKimlikNo" ColumnName="TCKimlikNo" />
-                <ScalarProperty Name="Soyad" ColumnName="Soyad" />
-                <ScalarProperty Name="Ad" ColumnName="Ad" />
                 <ScalarProperty Name="HastaID" ColumnName="HastaID" />
+                <ScalarProperty Name="Ad" ColumnName="Ad" />
+                <ScalarProperty Name="Soyad" ColumnName="Soyad" />
+                <ScalarProperty Name="TCKimlikNo" ColumnName="TCKimlikNo" />
+                <ScalarProperty Name="Adres" ColumnName="Adres" />
+                <ScalarProperty Name="EvTel" ColumnName="EvTel" />
+                <ScalarProperty Name="CepTel" ColumnName="CepTel" />
+                <ScalarProperty Name="KanGrubu" ColumnName="KanGrubu" />
+                <ScalarProperty Name="DogumTarihi" ColumnName="DogumTarihi" />
+                <ScalarProperty Name="Cinsiyet" ColumnName="Cinsiyet" />
+                <ScalarProperty Name="KurumID" ColumnName="KurumID" />
+                <ScalarProperty Name="KayitTarihi" ColumnName="KayitTarihi" />
+                <ScalarProperty Name="il" ColumnName="il" />
+                <ScalarProperty Name="Ilce" ColumnName="Ilce" />
+                <ScalarProperty Name="Silindi" ColumnName="Silindi" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="HastaSikayetleri">
             <EntityTypeMapping TypeName="HastaneModel.HastaSikayetleri">
               <MappingFragment StoreEntitySet="HastaSikayetleri">
-                <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
-                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
-                <ScalarProperty Name="KabulID" ColumnName="KabulID" />
-                <ScalarProperty Name="HastaID" ColumnName="HastaID" />
                 <ScalarProperty Name="SikayetID" ColumnName="SikayetID" />
+                <ScalarProperty Name="HastaID" ColumnName="HastaID" />
+                <ScalarProperty Name="KabulID" ColumnName="KabulID" />
+                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+                <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="HastaTahlilSonuclari">
             <EntityTypeMapping TypeName="HastaneModel.HastaTahlilSonuclari">
               <MappingFragment StoreEntitySet="HastaTahlilSonuclari">
-                <ScalarProperty Name="TahlilIcerikSonuc" ColumnName="TahlilIcerikSonuc" />
-                <ScalarProperty Name="TahlilSonucBirimi" ColumnName="TahlilSonucBirimi" />
-                <ScalarProperty Name="TahlilIcerikReferansDegeri" ColumnName="TahlilIcerikReferansDegeri" />
-                <ScalarProperty Name="TahlilIcerikAdi" ColumnName="TahlilIcerikAdi" />
-                <ScalarProperty Name="TahlilAdi" ColumnName="TahlilAdi" />
-                <ScalarProperty Name="Silindi" ColumnName="Silindi" />
-                <ScalarProperty Name="TahlilAciklama" ColumnName="TahlilAciklama" />
-                <ScalarProperty Name="KabulID" ColumnName="KabulID" />
-                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
                 <ScalarProperty Name="TahlilSonucID" ColumnName="TahlilSonucID" />
+                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+                <ScalarProperty Name="KabulID" ColumnName="KabulID" />
+                <ScalarProperty Name="TahlilAciklama" ColumnName="TahlilAciklama" />
+                <ScalarProperty Name="Silindi" ColumnName="Silindi" />
+                <ScalarProperty Name="TahlilAdi" ColumnName="TahlilAdi" />
+                <ScalarProperty Name="TahlilIcerikAdi" ColumnName="TahlilIcerikAdi" />
+                <ScalarProperty Name="TahlilIcerikReferansDegeri" ColumnName="TahlilIcerikReferansDegeri" />
+                <ScalarProperty Name="TahlilSonucBirimi" ColumnName="TahlilSonucBirimi" />
+                <ScalarProperty Name="TahlilIcerikSonuc" ColumnName="TahlilIcerikSonuc" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Hizmetler">
             <EntityTypeMapping TypeName="HastaneModel.Hizmetler">
               <MappingFragment StoreEntitySet="Hizmetler">
-                <ScalarProperty Name="Silindi" ColumnName="Silindi" />
-                <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
-                <ScalarProperty Name="Ucret" ColumnName="Ucret" />
-                <ScalarProperty Name="KlinikID" ColumnName="KlinikID" />
-                <ScalarProperty Name="HizmetAdi" ColumnName="HizmetAdi" />
                 <ScalarProperty Name="HizmetID" ColumnName="HizmetID" />
+                <ScalarProperty Name="HizmetAdi" ColumnName="HizmetAdi" />
+                <ScalarProperty Name="KlinikID" ColumnName="KlinikID" />
+                <ScalarProperty Name="Ucret" ColumnName="Ucret" />
+                <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+                <ScalarProperty Name="Silindi" ColumnName="Silindi" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="ilceler">
             <EntityTypeMapping TypeName="HastaneModel.ilceler">
               <MappingFragment StoreEntitySet="ilceler">
-                <ScalarProperty Name="sehir" ColumnName="sehir" />
-                <ScalarProperty Name="ilce" ColumnName="ilce" />
                 <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="ilce" ColumnName="ilce" />
+                <ScalarProperty Name="sehir" ColumnName="sehir" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="iller">
             <EntityTypeMapping TypeName="HastaneModel.iller">
               <MappingFragment StoreEntitySet="iller">
-                <ScalarProperty Name="sehir" ColumnName="sehir" />
                 <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="sehir" ColumnName="sehir" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Klinikler">
             <EntityTypeMapping TypeName="HastaneModel.Klinikler">
               <MappingFragment StoreEntitySet="Klinikler">
-                <ScalarProperty Name="Silindi" ColumnName="Silindi" />
-                <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
-                <ScalarProperty Name="KlinikAd" ColumnName="KlinikAd" />
                 <ScalarProperty Name="KlinikID" ColumnName="KlinikID" />
+                <ScalarProperty Name="KlinikAd" ColumnName="KlinikAd" />
+                <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+                <ScalarProperty Name="Silindi" ColumnName="Silindi" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Kurumlar">
             <EntityTypeMapping TypeName="HastaneModel.Kurumlar">
               <MappingFragment StoreEntitySet="Kurumlar">
-                <ScalarProperty Name="Silindi" ColumnName="Silindi" />
-                <ScalarProperty Name="Iskonto" ColumnName="Iskonto" />
-                <ScalarProperty Name="KurumAd" ColumnName="KurumAd" />
                 <ScalarProperty Name="KurumID" ColumnName="KurumID" />
+                <ScalarProperty Name="KurumAd" ColumnName="KurumAd" />
+                <ScalarProperty Name="Iskonto" ColumnName="Iskonto" />
+                <ScalarProperty Name="Silindi" ColumnName="Silindi" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Odemeler">
             <EntityTypeMapping TypeName="HastaneModel.Odemeler">
               <MappingFragment StoreEntitySet="Odemeler">
-                <ScalarProperty Name="Silindi" ColumnName="Silindi" />
-                <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
-                <ScalarProperty Name="Indirim" ColumnName="Indirim" />
-                <ScalarProperty Name="Toplam" ColumnName="Toplam" />
-                <ScalarProperty Name="OdemeTuru" ColumnName="OdemeTuru" />
-                <ScalarProperty Name="KabulID" ColumnName="KabulID" />
-                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
                 <ScalarProperty Name="OdemeID" ColumnName="OdemeID" />
+                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+                <ScalarProperty Name="KabulID" ColumnName="KabulID" />
+                <ScalarProperty Name="OdemeTuru" ColumnName="OdemeTuru" />
+                <ScalarProperty Name="Toplam" ColumnName="Toplam" />
+                <ScalarProperty Name="Indirim" ColumnName="Indirim" />
+                <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+                <ScalarProperty Name="Silindi" ColumnName="Silindi" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Personeller">
             <EntityTypeMapping TypeName="HastaneModel.Personeller">
               <MappingFragment StoreEntitySet="Personeller">
-                <ScalarProperty Name="Siilindi" ColumnName="Siilindi" />
-                <ScalarProperty Name="Sifre" ColumnName="Sifre" />
-                <ScalarProperty Name="KullaniciAdi" ColumnName="KullaniciAdi" />
-                <ScalarProperty Name="DogumTarihi" ColumnName="DogumTarihi" />
-                <ScalarProperty Name="CepTel" ColumnName="CepTel" />
-                <ScalarProperty Name="EvTel" ColumnName="EvTel" />
-                <ScalarProperty Name="Adres" ColumnName="Adres" />
-                <ScalarProperty Name="Email" ColumnName="Email" />
-                <ScalarProperty Name="Soyad" ColumnName="Soyad" />
-                <ScalarProperty Name="Ad" ColumnName="Ad" />
-                <ScalarProperty Name="KlinikID" ColumnName="KlinikID" />
-                <ScalarProperty Name="UnvanID" ColumnName="UnvanID" />
-                <ScalarProperty Name="SicilNo" ColumnName="SicilNo" />
-                <ScalarProperty Name="TCKimlikNo" ColumnName="TCKimlikNo" />
-                <ScalarProperty Name="PersonelKodu" ColumnName="PersonelKodu" />
                 <ScalarProperty Name="PersonelID" ColumnName="PersonelID" />
+                <ScalarProperty Name="PersonelKodu" ColumnName="PersonelKodu" />
+                <ScalarProperty Name="TCKimlikNo" ColumnName="TCKimlikNo" />
+                <ScalarProperty Name="SicilNo" ColumnName="SicilNo" />
+                <ScalarProperty Name="UnvanID" ColumnName="UnvanID" />
+                <ScalarProperty Name="KlinikID" ColumnName="KlinikID" />
+                <ScalarProperty Name="Ad" ColumnName="Ad" />
+                <ScalarProperty Name="Soyad" ColumnName="Soyad" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Adres" ColumnName="Adres" />
+                <ScalarProperty Name="EvTel" ColumnName="EvTel" />
+                <ScalarProperty Name="CepTel" ColumnName="CepTel" />
+                <ScalarProperty Name="DogumTarihi" ColumnName="DogumTarihi" />
+                <ScalarProperty Name="KullaniciAdi" ColumnName="KullaniciAdi" />
+                <ScalarProperty Name="Sifre" ColumnName="Sifre" />
+                <ScalarProperty Name="Siilindi" ColumnName="Siilindi" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Randevular">
             <EntityTypeMapping TypeName="HastaneModel.Randevular">
               <MappingFragment StoreEntitySet="Randevular">
-                <ScalarProperty Name="Geldimi" ColumnName="Geldimi" />
-                <ScalarProperty Name="HastaID" ColumnName="HastaID" />
-                <ScalarProperty Name="PersonelID" ColumnName="PersonelID" />
-                <ScalarProperty Name="Saat" ColumnName="Saat" />
-                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
                 <ScalarProperty Name="RandevuID" ColumnName="RandevuID" />
+                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+                <ScalarProperty Name="Saat" ColumnName="Saat" />
+                <ScalarProperty Name="PersonelID" ColumnName="PersonelID" />
+                <ScalarProperty Name="HastaID" ColumnName="HastaID" />
+                <ScalarProperty Name="Geldimi" ColumnName="Geldimi" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="ReceteDetay">
             <EntityTypeMapping TypeName="HastaneModel.ReceteDetay">
               <MappingFragment StoreEntitySet="ReceteDetay">
-                <ScalarProperty Name="İlacKullanimSikligi" ColumnName="İlacKullanimSikligi" />
-                <ScalarProperty Name="İlacAd" ColumnName="İlacAd" />
-                <ScalarProperty Name="ReceteID" ColumnName="ReceteID" />
                 <ScalarProperty Name="ReceteDetayID" ColumnName="ReceteDetayID" />
+                <ScalarProperty Name="ReceteID" ColumnName="ReceteID" />
+                <ScalarProperty Name="İlacAd" ColumnName="İlacAd" />
+                <ScalarProperty Name="İlacKullanimSikligi" ColumnName="İlacKullanimSikligi" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Receteler">
             <EntityTypeMapping TypeName="HastaneModel.Receteler">
               <MappingFragment StoreEntitySet="Receteler">
-                <ScalarProperty Name="Silindi" ColumnName="Silindi" />
-                <ScalarProperty Name="HastaID" ColumnName="HastaID" />
-                <ScalarProperty Name="PersonelID" ColumnName="PersonelID" />
-                <ScalarProperty Name="KurumID" ColumnName="KurumID" />
-                <ScalarProperty Name="KabulID" ColumnName="KabulID" />
-                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
                 <ScalarProperty Name="ReceteID" ColumnName="ReceteID" />
+                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+                <ScalarProperty Name="KabulID" ColumnName="KabulID" />
+                <ScalarProperty Name="KurumID" ColumnName="KurumID" />
+                <ScalarProperty Name="PersonelID" ColumnName="PersonelID" />
+                <ScalarProperty Name="HastaID" ColumnName="HastaID" />
+                <ScalarProperty Name="Silindi" ColumnName="Silindi" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="SistemYoneticileri">
             <EntityTypeMapping TypeName="HastaneModel.SistemYoneticileri">
               <MappingFragment StoreEntitySet="SistemYoneticileri">
-                <ScalarProperty Name="Sifre" ColumnName="Sifre" />
-                <ScalarProperty Name="KullaniciAdi" ColumnName="KullaniciAdi" />
-                <ScalarProperty Name="Soyad" ColumnName="Soyad" />
-                <ScalarProperty Name="Ad" ColumnName="Ad" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Ad" ColumnName="Ad" />
+                <ScalarProperty Name="Soyad" ColumnName="Soyad" />
+                <ScalarProperty Name="KullaniciAdi" ColumnName="KullaniciAdi" />
+                <ScalarProperty Name="Sifre" ColumnName="Sifre" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="TahlilIcerik">
             <EntityTypeMapping TypeName="HastaneModel.TahlilIcerik">
               <MappingFragment StoreEntitySet="TahlilIcerik">
-                <ScalarProperty Name="TahlilIcerikSonuc" ColumnName="TahlilIcerikSonuc" />
-                <ScalarProperty Name="TahlilId" ColumnName="TahlilId" />
-                <ScalarProperty Name="TahlilSonucBirimi" ColumnName="TahlilSonucBirimi" />
-                <ScalarProperty Name="TahlilIcerikReferansDegeri" ColumnName="TahlilIcerikReferansDegeri" />
-                <ScalarProperty Name="TahlilIcerikAdi" ColumnName="TahlilIcerikAdi" />
                 <ScalarProperty Name="TahlilIcerikId" ColumnName="TahlilIcerikId" />
+                <ScalarProperty Name="TahlilIcerikAdi" ColumnName="TahlilIcerikAdi" />
+                <ScalarProperty Name="TahlilIcerikReferansDegeri" ColumnName="TahlilIcerikReferansDegeri" />
+                <ScalarProperty Name="TahlilSonucBirimi" ColumnName="TahlilSonucBirimi" />
+                <ScalarProperty Name="TahlilId" ColumnName="TahlilId" />
+                <ScalarProperty Name="TahlilIcerikSonuc" ColumnName="TahlilIcerikSonuc" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Tahliller">
             <EntityTypeMapping TypeName="HastaneModel.Tahliller">
               <MappingFragment StoreEntitySet="Tahliller">
-                <ScalarProperty Name="TahlilUcreti" ColumnName="TahlilUcreti" />
-                <ScalarProperty Name="TahlilAdi" ColumnName="TahlilAdi" />
                 <ScalarProperty Name="TahlilID" ColumnName="TahlilID" />
+                <ScalarProperty Name="TahlilAdi" ColumnName="TahlilAdi" />
+                <ScalarProperty Name="TahlilUcreti" ColumnName="TahlilUcreti" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Teshisler">
             <EntityTypeMapping TypeName="HastaneModel.Teshisler">
               <MappingFragment StoreEntitySet="Teshisler">
-                <ScalarProperty Name="Teshis" ColumnName="Teshis" />
-                <ScalarProperty Name="KabulID" ColumnName="KabulID" />
-                <ScalarProperty Name="PersonelID" ColumnName="PersonelID" />
-                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
                 <ScalarProperty Name="TeshisID" ColumnName="TeshisID" />
+                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+                <ScalarProperty Name="PersonelID" ColumnName="PersonelID" />
+                <ScalarProperty Name="KabulID" ColumnName="KabulID" />
+                <ScalarProperty Name="Teshis" ColumnName="Teshis" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Unvanlar">
             <EntityTypeMapping TypeName="HastaneModel.Unvanlar">
               <MappingFragment StoreEntitySet="Unvanlar">
-                <ScalarProperty Name="PersonelUnvan" ColumnName="PersonelUnvan" />
                 <ScalarProperty Name="UnvanID" ColumnName="UnvanID" />
+                <ScalarProperty Name="PersonelUnvan" ColumnName="PersonelUnvan" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

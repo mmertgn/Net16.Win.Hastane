@@ -38,6 +38,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbTahlillerAna = new ns1.BunifuDropdown();
+            this.bunifuCustomLabel6 = new ns1.BunifuCustomLabel();
+            this.txtTahlilUcreti = new ns1.BunifuMetroTextbox();
+            this.bunifuCustomLabel5 = new ns1.BunifuCustomLabel();
             this.bunifuCustomLabel4 = new ns1.BunifuCustomLabel();
             this.txtTahlilAdi = new ns1.BunifuMetroTextbox();
             this.txtTahlilReferansDegeri = new ns1.BunifuMetroTextbox();
@@ -49,11 +53,11 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.bunifuCustomLabel20 = new ns1.BunifuCustomLabel();
-            this.btnTahlilKaydet = new ns1.BunifuThinButton2();
             this.btnTahlilIcerikSil = new ns1.BunifuThinButton2();
             this.btnTahlilIcerikEkle = new ns1.BunifuImageButton();
-            this.btnReceteOlustur = new ns1.BunifuThinButton2();
+            this.btnTahlilOlustur = new ns1.BunifuThinButton2();
             this.txtTahlilIslemAdi = new ns1.BunifuMetroTextbox();
             this.bunifuCustomLabel14 = new ns1.BunifuCustomLabel();
             this.bunifuCustomLabel15 = new ns1.BunifuCustomLabel();
@@ -61,24 +65,15 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.bunifuThinButton21 = new ns1.BunifuThinButton2();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnTahlilYapildiIsaretle = new ns1.BunifuThinButton2();
             this.txtSeciliHasta = new ns1.BunifuMetroTextbox();
             this.bunifuCustomLabel3 = new ns1.BunifuCustomLabel();
             this.bunifuSeparator2 = new ns1.BunifuSeparator();
             this.bunifuSeparator1 = new ns1.BunifuSeparator();
             this.btnTahlilSonucKaydet = new ns1.BunifuThinButton2();
             this.dgvTahlilSonuclari = new ns1.BunifuCustomDataGrid();
-            this.TahlilAdi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.İslemAdi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sonuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Birim = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ReferansDegeri = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bunifuCustomLabel2 = new ns1.BunifuCustomLabel();
             this.dgvTahlilIstenenHastalar = new ns1.BunifuCustomDataGrid();
-            this.HastaID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.KabulID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AdSoyad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TCNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Kurum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cbTahliller = new ns1.BunifuDropdown();
             this.bunifuCustomLabel17 = new ns1.BunifuCustomLabel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -95,16 +90,19 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.cbTahlillerAna);
+            this.panel1.Controls.Add(this.bunifuCustomLabel6);
+            this.panel1.Controls.Add(this.txtTahlilUcreti);
+            this.panel1.Controls.Add(this.bunifuCustomLabel5);
             this.panel1.Controls.Add(this.bunifuCustomLabel4);
             this.panel1.Controls.Add(this.txtTahlilAdi);
             this.panel1.Controls.Add(this.txtTahlilReferansDegeri);
             this.panel1.Controls.Add(this.bunifuCustomLabel1);
             this.panel1.Controls.Add(this.txtTahlilBirim);
             this.panel1.Controls.Add(this.bunifuCards2);
-            this.panel1.Controls.Add(this.btnTahlilKaydet);
             this.panel1.Controls.Add(this.btnTahlilIcerikSil);
             this.panel1.Controls.Add(this.btnTahlilIcerikEkle);
-            this.panel1.Controls.Add(this.btnReceteOlustur);
+            this.panel1.Controls.Add(this.btnTahlilOlustur);
             this.panel1.Controls.Add(this.txtTahlilIslemAdi);
             this.panel1.Controls.Add(this.bunifuCustomLabel14);
             this.panel1.Controls.Add(this.bunifuCustomLabel15);
@@ -116,17 +114,70 @@
             this.panel1.Size = new System.Drawing.Size(490, 676);
             this.panel1.TabIndex = 0;
             // 
+            // cbTahlillerAna
+            // 
+            this.cbTahlillerAna.BackColor = System.Drawing.Color.Transparent;
+            this.cbTahlillerAna.BorderRadius = 3;
+            this.cbTahlillerAna.ForeColor = System.Drawing.Color.White;
+            this.cbTahlillerAna.Items = new string[0];
+            this.cbTahlillerAna.Location = new System.Drawing.Point(121, 162);
+            this.cbTahlillerAna.Name = "cbTahlillerAna";
+            this.cbTahlillerAna.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.cbTahlillerAna.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(62)))));
+            this.cbTahlillerAna.selectedIndex = -1;
+            this.cbTahlillerAna.Size = new System.Drawing.Size(149, 35);
+            this.cbTahlillerAna.TabIndex = 97;
+            this.cbTahlillerAna.onItemSelected += new System.EventHandler(this.cbTahlillerAna_onItemSelected);
+            // 
+            // bunifuCustomLabel6
+            // 
+            this.bunifuCustomLabel6.AutoSize = true;
+            this.bunifuCustomLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bunifuCustomLabel6.Location = new System.Drawing.Point(27, 172);
+            this.bunifuCustomLabel6.Name = "bunifuCustomLabel6";
+            this.bunifuCustomLabel6.Size = new System.Drawing.Size(66, 17);
+            this.bunifuCustomLabel6.TabIndex = 96;
+            this.bunifuCustomLabel6.Text = "Tahlil Adı";
+            // 
+            // txtTahlilUcreti
+            // 
+            this.txtTahlilUcreti.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.txtTahlilUcreti.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtTahlilUcreti.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.txtTahlilUcreti.BorderThickness = 3;
+            this.txtTahlilUcreti.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTahlilUcreti.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtTahlilUcreti.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.txtTahlilUcreti.isPassword = false;
+            this.txtTahlilUcreti.Location = new System.Drawing.Point(315, 64);
+            this.txtTahlilUcreti.Margin = new System.Windows.Forms.Padding(4, 20, 4, 4);
+            this.txtTahlilUcreti.Name = "txtTahlilUcreti";
+            this.txtTahlilUcreti.Size = new System.Drawing.Size(128, 35);
+            this.txtTahlilUcreti.TabIndex = 95;
+            this.txtTahlilUcreti.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // bunifuCustomLabel5
+            // 
+            this.bunifuCustomLabel5.AutoSize = true;
+            this.bunifuCustomLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bunifuCustomLabel5.Location = new System.Drawing.Point(225, 75);
+            this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
+            this.bunifuCustomLabel5.Size = new System.Drawing.Size(83, 17);
+            this.bunifuCustomLabel5.TabIndex = 94;
+            this.bunifuCustomLabel5.Text = "Tahlil Ücreti";
+            // 
             // bunifuCustomLabel4
             // 
             this.bunifuCustomLabel4.AutoSize = true;
-            this.bunifuCustomLabel4.Font = new System.Drawing.Font("Calibri", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bunifuCustomLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.bunifuCustomLabel4.Location = new System.Drawing.Point(3, 61);
+            this.bunifuCustomLabel4.Font = new System.Drawing.Font("Calibri", 8.25F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bunifuCustomLabel4.ForeColor = System.Drawing.Color.DarkRed;
+            this.bunifuCustomLabel4.Location = new System.Drawing.Point(13, 137);
             this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
-            this.bunifuCustomLabel4.Size = new System.Drawing.Size(450, 13);
+            this.bunifuCustomLabel4.Size = new System.Drawing.Size(464, 13);
             this.bunifuCustomLabel4.TabIndex = 93;
-            this.bunifuCustomLabel4.Text = "Tahlil Oluştur Butonuna Bastıktan Sonra Tahlil Oluşacaktır. Aşağıdan Tahlil İşlem" +
-    "lerini Girebilirsiniz.";
+            this.bunifuCustomLabel4.Text = "*Tahlil Oluştur Butonuna Bastıktan Sonra Tahlil Oluşacaktır. Aşağıdan Tahlil İşle" +
+    "mlerini Girebilirsiniz.";
             // 
             // txtTahlilAdi
             // 
@@ -138,10 +189,10 @@
             this.txtTahlilAdi.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txtTahlilAdi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
             this.txtTahlilAdi.isPassword = false;
-            this.txtTahlilAdi.Location = new System.Drawing.Point(109, 79);
+            this.txtTahlilAdi.Location = new System.Drawing.Point(88, 64);
             this.txtTahlilAdi.Margin = new System.Windows.Forms.Padding(4, 20, 4, 4);
             this.txtTahlilAdi.Name = "txtTahlilAdi";
-            this.txtTahlilAdi.Size = new System.Drawing.Size(149, 35);
+            this.txtTahlilAdi.Size = new System.Drawing.Size(128, 35);
             this.txtTahlilAdi.TabIndex = 92;
             this.txtTahlilAdi.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -155,7 +206,7 @@
             this.txtTahlilReferansDegeri.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txtTahlilReferansDegeri.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
             this.txtTahlilReferansDegeri.isPassword = false;
-            this.txtTahlilReferansDegeri.Location = new System.Drawing.Point(109, 222);
+            this.txtTahlilReferansDegeri.Location = new System.Drawing.Point(121, 246);
             this.txtTahlilReferansDegeri.Margin = new System.Windows.Forms.Padding(4, 20, 4, 4);
             this.txtTahlilReferansDegeri.Name = "txtTahlilReferansDegeri";
             this.txtTahlilReferansDegeri.Size = new System.Drawing.Size(149, 35);
@@ -166,7 +217,7 @@
             // 
             this.bunifuCustomLabel1.AutoSize = true;
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(13, 232);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(25, 256);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
             this.bunifuCustomLabel1.Size = new System.Drawing.Size(84, 17);
             this.bunifuCustomLabel1.TabIndex = 90;
@@ -183,10 +234,10 @@
             this.txtTahlilBirim.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txtTahlilBirim.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
             this.txtTahlilBirim.isPassword = false;
-            this.txtTahlilBirim.Location = new System.Drawing.Point(109, 180);
+            this.txtTahlilBirim.Location = new System.Drawing.Point(323, 246);
             this.txtTahlilBirim.Margin = new System.Windows.Forms.Padding(4, 20, 4, 4);
             this.txtTahlilBirim.Name = "txtTahlilBirim";
-            this.txtTahlilBirim.Size = new System.Drawing.Size(149, 35);
+            this.txtTahlilBirim.Size = new System.Drawing.Size(107, 35);
             this.txtTahlilBirim.TabIndex = 89;
             this.txtTahlilBirim.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -199,7 +250,7 @@
             this.bunifuCards2.Controls.Add(this.lvlTahlilIcerikleri);
             this.bunifuCards2.Controls.Add(this.bunifuCustomLabel20);
             this.bunifuCards2.LeftSahddow = false;
-            this.bunifuCards2.Location = new System.Drawing.Point(12, 278);
+            this.bunifuCards2.Location = new System.Drawing.Point(20, 287);
             this.bunifuCards2.Name = "bunifuCards2";
             this.bunifuCards2.RightSahddow = true;
             this.bunifuCards2.ShadowDepth = 20;
@@ -212,7 +263,8 @@
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader4,
-            this.columnHeader3});
+            this.columnHeader3,
+            this.columnHeader5});
             this.lvlTahlilIcerikleri.FullRowSelect = true;
             this.lvlTahlilIcerikleri.Location = new System.Drawing.Point(23, 45);
             this.lvlTahlilIcerikleri.Name = "lvlTahlilIcerikleri";
@@ -240,6 +292,11 @@
             this.columnHeader3.Text = "Referans Değeri";
             this.columnHeader3.Width = 92;
             // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "TahlilIcerikId";
+            this.columnHeader5.Width = 0;
+            // 
             // bunifuCustomLabel20
             // 
             this.bunifuCustomLabel20.AutoSize = true;
@@ -255,31 +312,6 @@
             this.bunifuCustomLabel20.TabIndex = 1;
             this.bunifuCustomLabel20.Text = "Tahlil İçerik";
             this.bunifuCustomLabel20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnTahlilKaydet
-            // 
-            this.btnTahlilKaydet.ActiveBorderThickness = 1;
-            this.btnTahlilKaydet.ActiveCornerRadius = 20;
-            this.btnTahlilKaydet.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(62)))));
-            this.btnTahlilKaydet.ActiveForecolor = System.Drawing.Color.White;
-            this.btnTahlilKaydet.ActiveLineColor = System.Drawing.Color.White;
-            this.btnTahlilKaydet.BackColor = System.Drawing.SystemColors.Control;
-            this.btnTahlilKaydet.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTahlilKaydet.BackgroundImage")));
-            this.btnTahlilKaydet.ButtonText = "Kaydet";
-            this.btnTahlilKaydet.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTahlilKaydet.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTahlilKaydet.ForeColor = System.Drawing.Color.White;
-            this.btnTahlilKaydet.IdleBorderThickness = 1;
-            this.btnTahlilKaydet.IdleCornerRadius = 20;
-            this.btnTahlilKaydet.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.btnTahlilKaydet.IdleForecolor = System.Drawing.Color.White;
-            this.btnTahlilKaydet.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.btnTahlilKaydet.Location = new System.Drawing.Point(315, 571);
-            this.btnTahlilKaydet.Margin = new System.Windows.Forms.Padding(5);
-            this.btnTahlilKaydet.Name = "btnTahlilKaydet";
-            this.btnTahlilKaydet.Size = new System.Drawing.Size(154, 35);
-            this.btnTahlilKaydet.TabIndex = 77;
-            this.btnTahlilKaydet.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnTahlilIcerikSil
             // 
@@ -299,51 +331,53 @@
             this.btnTahlilIcerikSil.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
             this.btnTahlilIcerikSil.IdleForecolor = System.Drawing.Color.White;
             this.btnTahlilIcerikSil.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.btnTahlilIcerikSil.Location = new System.Drawing.Point(141, 571);
+            this.btnTahlilIcerikSil.Location = new System.Drawing.Point(323, 580);
             this.btnTahlilIcerikSil.Margin = new System.Windows.Forms.Padding(5);
             this.btnTahlilIcerikSil.Name = "btnTahlilIcerikSil";
             this.btnTahlilIcerikSil.Size = new System.Drawing.Size(154, 35);
             this.btnTahlilIcerikSil.TabIndex = 78;
             this.btnTahlilIcerikSil.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnTahlilIcerikSil.Click += new System.EventHandler(this.btnIlacSil_Click);
+            this.btnTahlilIcerikSil.Click += new System.EventHandler(this.btnTahlilIcerikSil_Click);
             // 
             // btnTahlilIcerikEkle
             // 
             this.btnTahlilIcerikEkle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
             this.btnTahlilIcerikEkle.Image = ((System.Drawing.Image)(resources.GetObject("btnTahlilIcerikEkle.Image")));
             this.btnTahlilIcerikEkle.ImageActive = null;
-            this.btnTahlilIcerikEkle.Location = new System.Drawing.Point(270, 222);
+            this.btnTahlilIcerikEkle.Location = new System.Drawing.Point(323, 203);
             this.btnTahlilIcerikEkle.Name = "btnTahlilIcerikEkle";
             this.btnTahlilIcerikEkle.Size = new System.Drawing.Size(38, 35);
             this.btnTahlilIcerikEkle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnTahlilIcerikEkle.TabIndex = 86;
             this.btnTahlilIcerikEkle.TabStop = false;
             this.btnTahlilIcerikEkle.Zoom = 10;
+            this.btnTahlilIcerikEkle.Click += new System.EventHandler(this.btnTahlilIcerikEkle_Click);
             // 
-            // btnReceteOlustur
+            // btnTahlilOlustur
             // 
-            this.btnReceteOlustur.ActiveBorderThickness = 1;
-            this.btnReceteOlustur.ActiveCornerRadius = 20;
-            this.btnReceteOlustur.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(62)))));
-            this.btnReceteOlustur.ActiveForecolor = System.Drawing.Color.White;
-            this.btnReceteOlustur.ActiveLineColor = System.Drawing.Color.White;
-            this.btnReceteOlustur.BackColor = System.Drawing.SystemColors.Control;
-            this.btnReceteOlustur.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnReceteOlustur.BackgroundImage")));
-            this.btnReceteOlustur.ButtonText = "Tahlil Oluştur";
-            this.btnReceteOlustur.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReceteOlustur.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReceteOlustur.ForeColor = System.Drawing.Color.White;
-            this.btnReceteOlustur.IdleBorderThickness = 1;
-            this.btnReceteOlustur.IdleCornerRadius = 20;
-            this.btnReceteOlustur.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.btnReceteOlustur.IdleForecolor = System.Drawing.Color.White;
-            this.btnReceteOlustur.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.btnReceteOlustur.Location = new System.Drawing.Point(270, 82);
-            this.btnReceteOlustur.Margin = new System.Windows.Forms.Padding(5);
-            this.btnReceteOlustur.Name = "btnReceteOlustur";
-            this.btnReceteOlustur.Size = new System.Drawing.Size(175, 35);
-            this.btnReceteOlustur.TabIndex = 87;
-            this.btnReceteOlustur.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnTahlilOlustur.ActiveBorderThickness = 1;
+            this.btnTahlilOlustur.ActiveCornerRadius = 20;
+            this.btnTahlilOlustur.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(62)))));
+            this.btnTahlilOlustur.ActiveForecolor = System.Drawing.Color.White;
+            this.btnTahlilOlustur.ActiveLineColor = System.Drawing.Color.White;
+            this.btnTahlilOlustur.BackColor = System.Drawing.SystemColors.Control;
+            this.btnTahlilOlustur.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTahlilOlustur.BackgroundImage")));
+            this.btnTahlilOlustur.ButtonText = "Tahlil Oluştur";
+            this.btnTahlilOlustur.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTahlilOlustur.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTahlilOlustur.ForeColor = System.Drawing.Color.White;
+            this.btnTahlilOlustur.IdleBorderThickness = 1;
+            this.btnTahlilOlustur.IdleCornerRadius = 20;
+            this.btnTahlilOlustur.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.btnTahlilOlustur.IdleForecolor = System.Drawing.Color.White;
+            this.btnTahlilOlustur.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.btnTahlilOlustur.Location = new System.Drawing.Point(315, 97);
+            this.btnTahlilOlustur.Margin = new System.Windows.Forms.Padding(5);
+            this.btnTahlilOlustur.Name = "btnTahlilOlustur";
+            this.btnTahlilOlustur.Size = new System.Drawing.Size(128, 35);
+            this.btnTahlilOlustur.TabIndex = 87;
+            this.btnTahlilOlustur.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnTahlilOlustur.Click += new System.EventHandler(this.btnTahlilOlustur_Click);
             // 
             // txtTahlilIslemAdi
             // 
@@ -355,7 +389,7 @@
             this.txtTahlilIslemAdi.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txtTahlilIslemAdi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
             this.txtTahlilIslemAdi.isPassword = false;
-            this.txtTahlilIslemAdi.Location = new System.Drawing.Point(109, 138);
+            this.txtTahlilIslemAdi.Location = new System.Drawing.Point(121, 203);
             this.txtTahlilIslemAdi.Margin = new System.Windows.Forms.Padding(4, 20, 4, 4);
             this.txtTahlilIslemAdi.Name = "txtTahlilIslemAdi";
             this.txtTahlilIslemAdi.Size = new System.Drawing.Size(149, 35);
@@ -366,7 +400,7 @@
             // 
             this.bunifuCustomLabel14.AutoSize = true;
             this.bunifuCustomLabel14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bunifuCustomLabel14.Location = new System.Drawing.Point(11, 145);
+            this.bunifuCustomLabel14.Location = new System.Drawing.Point(25, 212);
             this.bunifuCustomLabel14.Margin = new System.Windows.Forms.Padding(20);
             this.bunifuCustomLabel14.Name = "bunifuCustomLabel14";
             this.bunifuCustomLabel14.Size = new System.Drawing.Size(64, 17);
@@ -377,7 +411,7 @@
             // 
             this.bunifuCustomLabel15.AutoSize = true;
             this.bunifuCustomLabel15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bunifuCustomLabel15.Location = new System.Drawing.Point(13, 188);
+            this.bunifuCustomLabel15.Location = new System.Drawing.Point(277, 256);
             this.bunifuCustomLabel15.Name = "bunifuCustomLabel15";
             this.bunifuCustomLabel15.Size = new System.Drawing.Size(39, 17);
             this.bunifuCustomLabel15.TabIndex = 82;
@@ -388,7 +422,7 @@
             // 
             this.bunifuCustomLabel16.AutoSize = true;
             this.bunifuCustomLabel16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bunifuCustomLabel16.Location = new System.Drawing.Point(11, 90);
+            this.bunifuCustomLabel16.Location = new System.Drawing.Point(15, 75);
             this.bunifuCustomLabel16.Name = "bunifuCustomLabel16";
             this.bunifuCustomLabel16.Size = new System.Drawing.Size(66, 17);
             this.bunifuCustomLabel16.TabIndex = 80;
@@ -432,6 +466,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnTahlilYapildiIsaretle);
             this.panel2.Controls.Add(this.txtSeciliHasta);
             this.panel2.Controls.Add(this.bunifuCustomLabel3);
             this.panel2.Controls.Add(this.bunifuSeparator2);
@@ -448,6 +483,32 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(679, 676);
             this.panel2.TabIndex = 1;
+            // 
+            // btnTahlilYapildiIsaretle
+            // 
+            this.btnTahlilYapildiIsaretle.ActiveBorderThickness = 1;
+            this.btnTahlilYapildiIsaretle.ActiveCornerRadius = 20;
+            this.btnTahlilYapildiIsaretle.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(62)))));
+            this.btnTahlilYapildiIsaretle.ActiveForecolor = System.Drawing.Color.White;
+            this.btnTahlilYapildiIsaretle.ActiveLineColor = System.Drawing.Color.White;
+            this.btnTahlilYapildiIsaretle.BackColor = System.Drawing.SystemColors.Control;
+            this.btnTahlilYapildiIsaretle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTahlilYapildiIsaretle.BackgroundImage")));
+            this.btnTahlilYapildiIsaretle.ButtonText = "Hastanın Tüm Tahlilleri Yapıldı İşaretle";
+            this.btnTahlilYapildiIsaretle.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTahlilYapildiIsaretle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTahlilYapildiIsaretle.ForeColor = System.Drawing.Color.White;
+            this.btnTahlilYapildiIsaretle.IdleBorderThickness = 1;
+            this.btnTahlilYapildiIsaretle.IdleCornerRadius = 20;
+            this.btnTahlilYapildiIsaretle.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.btnTahlilYapildiIsaretle.IdleForecolor = System.Drawing.Color.White;
+            this.btnTahlilYapildiIsaretle.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.btnTahlilYapildiIsaretle.Location = new System.Drawing.Point(313, 287);
+            this.btnTahlilYapildiIsaretle.Margin = new System.Windows.Forms.Padding(5);
+            this.btnTahlilYapildiIsaretle.Name = "btnTahlilYapildiIsaretle";
+            this.btnTahlilYapildiIsaretle.Size = new System.Drawing.Size(317, 37);
+            this.btnTahlilYapildiIsaretle.TabIndex = 83;
+            this.btnTahlilYapildiIsaretle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnTahlilYapildiIsaretle.Click += new System.EventHandler(this.btnTahlilYapildiIsaretle_Click);
             // 
             // txtSeciliHasta
             // 
@@ -512,7 +573,7 @@
             this.btnTahlilSonucKaydet.ActiveLineColor = System.Drawing.Color.White;
             this.btnTahlilSonucKaydet.BackColor = System.Drawing.SystemColors.Control;
             this.btnTahlilSonucKaydet.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTahlilSonucKaydet.BackgroundImage")));
-            this.btnTahlilSonucKaydet.ButtonText = "Kaydet";
+            this.btnTahlilSonucKaydet.ButtonText = "Sonuçları Kaydet";
             this.btnTahlilSonucKaydet.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTahlilSonucKaydet.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTahlilSonucKaydet.ForeColor = System.Drawing.Color.White;
@@ -521,15 +582,18 @@
             this.btnTahlilSonucKaydet.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
             this.btnTahlilSonucKaydet.IdleForecolor = System.Drawing.Color.White;
             this.btnTahlilSonucKaydet.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.btnTahlilSonucKaydet.Location = new System.Drawing.Point(407, 329);
+            this.btnTahlilSonucKaydet.Location = new System.Drawing.Point(312, 329);
             this.btnTahlilSonucKaydet.Margin = new System.Windows.Forms.Padding(5);
             this.btnTahlilSonucKaydet.Name = "btnTahlilSonucKaydet";
             this.btnTahlilSonucKaydet.Size = new System.Drawing.Size(154, 35);
             this.btnTahlilSonucKaydet.TabIndex = 78;
             this.btnTahlilSonucKaydet.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnTahlilSonucKaydet.Click += new System.EventHandler(this.btnTahlilSonucKaydet_Click);
             // 
             // dgvTahlilSonuclari
             // 
+            this.dgvTahlilSonuclari.AllowUserToAddRows = false;
+            this.dgvTahlilSonuclari.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgvTahlilSonuclari.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvTahlilSonuclari.BackgroundColor = System.Drawing.Color.White;
@@ -544,12 +608,6 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvTahlilSonuclari.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvTahlilSonuclari.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTahlilSonuclari.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.TahlilAdi,
-            this.İslemAdi,
-            this.Sonuc,
-            this.Birim,
-            this.ReferansDegeri});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -579,34 +637,6 @@
             this.dgvTahlilSonuclari.Size = new System.Drawing.Size(541, 292);
             this.dgvTahlilSonuclari.TabIndex = 44;
             // 
-            // TahlilAdi
-            // 
-            this.TahlilAdi.HeaderText = "Tahlil Adı";
-            this.TahlilAdi.Name = "TahlilAdi";
-            this.TahlilAdi.Width = 93;
-            // 
-            // İslemAdi
-            // 
-            this.İslemAdi.HeaderText = "İşlem Adı";
-            this.İslemAdi.Name = "İslemAdi";
-            // 
-            // Sonuc
-            // 
-            this.Sonuc.HeaderText = "Sonuç";
-            this.Sonuc.Name = "Sonuc";
-            // 
-            // Birim
-            // 
-            this.Birim.HeaderText = "Birim";
-            this.Birim.Name = "Birim";
-            // 
-            // ReferansDegeri
-            // 
-            this.ReferansDegeri.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.ReferansDegeri.HeaderText = "Referans Değeri";
-            this.ReferansDegeri.Name = "ReferansDegeri";
-            this.ReferansDegeri.Width = 136;
-            // 
             // bunifuCustomLabel2
             // 
             this.bunifuCustomLabel2.AutoSize = true;
@@ -620,6 +650,8 @@
             // 
             // dgvTahlilIstenenHastalar
             // 
+            this.dgvTahlilIstenenHastalar.AllowUserToAddRows = false;
+            this.dgvTahlilIstenenHastalar.AllowUserToDeleteRows = false;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgvTahlilIstenenHastalar.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvTahlilIstenenHastalar.BackgroundColor = System.Drawing.Color.White;
@@ -634,12 +666,6 @@
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvTahlilIstenenHastalar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvTahlilIstenenHastalar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTahlilIstenenHastalar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.HastaID,
-            this.KabulID,
-            this.AdSoyad,
-            this.TCNo,
-            this.Kurum});
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -655,6 +681,7 @@
             this.dgvTahlilIstenenHastalar.HeaderForeColor = System.Drawing.Color.White;
             this.dgvTahlilIstenenHastalar.Location = new System.Drawing.Point(37, 92);
             this.dgvTahlilIstenenHastalar.Name = "dgvTahlilIstenenHastalar";
+            this.dgvTahlilIstenenHastalar.ReadOnly = true;
             this.dgvTahlilIstenenHastalar.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
@@ -668,38 +695,7 @@
             this.dgvTahlilIstenenHastalar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTahlilIstenenHastalar.Size = new System.Drawing.Size(524, 179);
             this.dgvTahlilIstenenHastalar.TabIndex = 2;
-            // 
-            // HastaID
-            // 
-            this.HastaID.HeaderText = "HastaID";
-            this.HastaID.Name = "HastaID";
-            this.HastaID.Visible = false;
-            this.HastaID.Width = 15;
-            // 
-            // KabulID
-            // 
-            this.KabulID.HeaderText = "KabulID";
-            this.KabulID.Name = "KabulID";
-            this.KabulID.Visible = false;
-            // 
-            // AdSoyad
-            // 
-            this.AdSoyad.HeaderText = "Ad Soyad";
-            this.AdSoyad.Name = "AdSoyad";
-            this.AdSoyad.Width = 120;
-            // 
-            // TCNo
-            // 
-            this.TCNo.HeaderText = "TC Kimlik No";
-            this.TCNo.MaxInputLength = 11;
-            this.TCNo.Name = "TCNo";
-            this.TCNo.Width = 120;
-            // 
-            // Kurum
-            // 
-            this.Kurum.HeaderText = "İstenen Tahliller";
-            this.Kurum.Name = "Kurum";
-            this.Kurum.Width = 250;
+            this.dgvTahlilIstenenHastalar.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvTahlilIstenenHastalar_CellMouseClick);
             // 
             // cbTahliller
             // 
@@ -714,6 +710,7 @@
             this.cbTahliller.selectedIndex = -1;
             this.cbTahliller.Size = new System.Drawing.Size(175, 35);
             this.cbTahliller.TabIndex = 42;
+            this.cbTahliller.onItemSelected += new System.EventHandler(this.cbTahliller_onItemSelected);
             // 
             // bunifuCustomLabel17
             // 
@@ -771,6 +768,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormTahlilIslemleri";
             this.Text = "FormTahlilIslemleri";
+            this.Load += new System.EventHandler(this.FormTahlilIslemleri_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.bunifuCards2.ResumeLayout(false);
@@ -795,12 +793,11 @@
         private System.Windows.Forms.Panel panel3;
         private ns1.BunifuThinButton2 bunifuThinButton22;
         private ns1.BunifuCards bunifuCards2;
-        private ns1.BunifuThinButton2 btnTahlilKaydet;
         private System.Windows.Forms.ListView lvlTahlilIcerikleri;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private ns1.BunifuCustomLabel bunifuCustomLabel20;
-        private ns1.BunifuThinButton2 btnReceteOlustur;
+        private ns1.BunifuThinButton2 btnTahlilOlustur;
         private ns1.BunifuMetroTextbox txtTahlilIslemAdi;
         private ns1.BunifuCustomLabel bunifuCustomLabel14;
         private ns1.BunifuCustomLabel bunifuCustomLabel15;
@@ -824,15 +821,11 @@
         private ns1.BunifuCustomDataGrid dgvTahlilIstenenHastalar;
         private ns1.BunifuMetroTextbox txtTahlilAdi;
         private ns1.BunifuCustomLabel bunifuCustomLabel4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn HastaID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn KabulID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AdSoyad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TCNo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Kurum;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TahlilAdi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn İslemAdi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Sonuc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Birim;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ReferansDegeri;
+        private ns1.BunifuMetroTextbox txtTahlilUcreti;
+        private ns1.BunifuCustomLabel bunifuCustomLabel5;
+        private ns1.BunifuDropdown cbTahlillerAna;
+        private ns1.BunifuCustomLabel bunifuCustomLabel6;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private ns1.BunifuThinButton2 btnTahlilYapildiIsaretle;
     }
 }

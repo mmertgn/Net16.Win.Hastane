@@ -14,6 +14,7 @@ namespace Hastane.BLL.Services.Abstracts
         HastaKabul GetHastaKabulById(int id);
         List<HastaKabulModelFromDoktorIslemleri> DoktorRandevularıDoldur();
         List<HastaKabulModelFromDoktorIslemleri> DoktorRandevularıDoldurAra(string HastaAdSoyad, string CepTel, string TcKimlikNo);
+        List<HastaKabulModelFromTahlilIslemleri> IstenenTahlilleriDoldur();
     }
     public class HastaKabulModelFromDoktorIslemleri //DoktorİşlemleriSayfasındakiDataGridViewBuModeleGöre doldurulacak
     {
@@ -29,6 +30,16 @@ namespace Hastane.BLL.Services.Abstracts
         public string SigortaKurumu { get; set; }
         public string KlinikAdi { get; set; }
         public string DoktorAdi { get; set; }
+
+    }
+
+    public class HastaKabulModelFromTahlilIslemleri //TahlilİşlemleriSayfasındakiDataGridViewBuModeleGöre doldurulacak
+    {
+        public int KabulId { get; set; }
+        public int HastaId { get; set; }
+        public string AdSoyad { get; set; }
+        public string TCKimlikNo { get; set; }
+        public string IstenenTahliller { get; set; }
 
     }
 }

@@ -82,6 +82,7 @@
     <Compile Include="Services\Abstracts\IHastaHizmetHareketService.cs" />
     <Compile Include="Services\Abstracts\IHastaKabulService.cs" />
     <Compile Include="Services\Abstracts\IHastaService.cs" />
+    <Compile Include="Services\Abstracts\IHastaTahlilSonuclariService.cs" />
     <Compile Include="Services\Abstracts\IHizmetService.cs" />
     <Compile Include="Services\Abstracts\IHastaSikayetleriService.cs" />
     <Compile Include="Services\Abstracts\IKlinikService.cs" />
@@ -90,9 +91,12 @@
     <Compile Include="Services\Abstracts\IRandevuService.cs" />
     <Compile Include="Services\Abstracts\IReceteDetayService.cs" />
     <Compile Include="Services\Abstracts\IReceteService.cs" />
+    <Compile Include="Services\Abstracts\ITahlilIcerikService.cs" />
+    <Compile Include="Services\Abstracts\ITahlilService.cs" />
     <Compile Include="Services\Abstracts\ITeshisService.cs" />
     <Compile Include="Services\Abstracts\IUnvanService.cs" />
     <Compile Include="Services\Concretes\HastaHizmetHareketService.cs" />
+    <Compile Include="Services\Concretes\HastaTahlilSonuclariService.cs" />
     <Compile Include="Services\Concretes\HizmetService.cs" />
     <Compile Include="Services\Concretes\HastaKabulService.cs" />
     <Compile Include="Services\Concretes\HastaService.cs" />
@@ -103,6 +107,8 @@
     <Compile Include="Services\Concretes\RandevuService.cs" />
     <Compile Include="Services\Concretes\ReceteDetayService.cs" />
     <Compile Include="Services\Concretes\ReceteService.cs" />
+    <Compile Include="Services\Concretes\TahlilIcerikService.cs" />
+    <Compile Include="Services\Concretes\TahlilService.cs" />
     <Compile Include="Services\Concretes\TeshisService.cs" />
     <Compile Include="Services\Concretes\UnvanService.cs" />
     <Compile Include="Validations\HastaAddValidator.cs" />
@@ -112,6 +118,8 @@
     <Compile Include="Validations\KurumAddValidator.cs" />
     <Compile Include="Validations\ReceteAddValidator.cs" />
     <Compile Include="Validations\ReceteDetayAddValidator.cs" />
+    <Compile Include="Validations\TahlilAddValidator.cs" />
+    <Compile Include="Validations\TahlilIcerikAddValidator.cs" />
     <Compile Include="Validations\TeshisAddValidator.cs" />
     <Compile Include="Validations\UnvanAddValidator.cs" />
     <Compile Include="Validations\HastaSikayetiAddValidator.cs" />

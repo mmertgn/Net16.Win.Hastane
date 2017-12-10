@@ -159,6 +159,7 @@
     <Compile Include="Repositories\Abstracts\IHastaKabulRepository.cs" />
     <Compile Include="Repositories\Abstracts\IHastaRepository.cs" />
     <Compile Include="Repositories\Abstracts\IHastaSikayetleriRepository.cs" />
+    <Compile Include="Repositories\Abstracts\IHastaTahlilSonuclariRepository.cs" />
     <Compile Include="Repositories\Abstracts\IHizmetRepository.cs" />
     <Compile Include="Repositories\Abstracts\IIlceRepository.cs" />
     <Compile Include="Repositories\Abstracts\IILRepository.cs" />
@@ -172,9 +173,11 @@
     <Compile Include="Repositories\Abstracts\ISistemYoneticisiRepository.cs" />
     <Compile Include="Repositories\Abstracts\ITeshisRepository.cs" />
     <Compile Include="Repositories\Abstracts\IUnvanRepository.cs" />
+    <Compile Include="Repositories\Abstracts\ITahlilIcerikRepository.cs" />
     <Compile Include="Repositories\Concretes\HastaHizmetHareketRepository.cs" />
     <Compile Include="Repositories\Concretes\HastaKabulRepository.cs" />
     <Compile Include="Repositories\Concretes\HastaSikayetleriRepository.cs" />
+    <Compile Include="Repositories\Concretes\HastaTahlilSonuclariRepository.cs" />
     <Compile Include="Repositories\Concretes\HizmetRepository.cs" />
     <Compile Include="Repositories\Concretes\IlceRepository.cs" />
     <Compile Include="Repositories\Concretes\IlRepository.cs" />
@@ -188,18 +191,17 @@
     <Compile Include="Repositories\Concretes\ReceteRepository.cs" />
     <Compile Include="Repositories\Concretes\SistemYoneticisiRepository.cs" />
     <Compile Include="Repositories\Abstracts\ITahlilRepository.cs" />
+    <Compile Include="Repositories\Concretes\TahlilIcerikRepository.cs" />
     <Compile Include="Repositories\Concretes\TahlilRepository.cs" />
     <Compile Include="Repositories\Concretes\TeshisRepository.cs" />
     <Compile Include="Repositories\Concretes\UnvanRepository.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.Config" />
     <EntityDeploy Include="DataModel\Hastane.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Hastane.Designer.cs</LastGenOutput>
     </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.Config" />
     <None Include="DataModel\Hastane.edmx.diagram">
       <DependentUpon>Hastane.edmx</DependentUpon>
     </None>
@@ -210,19 +212,20 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
     <Content Include="DataModel\Hastane.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Hastane.Context.cs</LastGenOutput>
       <DependentUpon>Hastane.edmx</DependentUpon>
+      <LastGenOutput>Hastane.Context.cs</LastGenOutput>
     </Content>
     <Content Include="DataModel\Hastane.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Hastane.edmx</DependentUpon>
       <LastGenOutput>Hastane.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

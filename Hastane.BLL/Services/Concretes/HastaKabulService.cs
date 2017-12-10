@@ -84,6 +84,21 @@ namespace Hastane.BLL.Services.Concretes
                 }).ToList();
             return model;
         }
+
+        public List<HastaKabulModelFromTahlilIslemleri> IstenenTahlilleriDoldur()
+        {
+            //hastakabule tahlili yapıldı mı koy default true olsun false olanları listele
+            var model = _hastaKabulRepository.GetList(x => x.TahlilYapildiMi == false)
+                .Select(x => new HastaKabulModelFromTahlilIslemleri()
+                {
+                    KabulId = x.KabulID,
+                    HastaId = x.HastaID,
+                    AdSoyad = x.Hastalar.Ad + " " + x.Hastalar.Soyad,
+                    TCKimlikNo = x.Hastalar.TCKimlikNo,
+                    IstenenTahliller = x.IstenenTahliller
+                }).ToList();
+            return model;
+        }
     }
 
     

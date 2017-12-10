@@ -18,5 +18,10 @@ namespace Hastane.DAL.Repositories.Concretes
         {
             return _dbSet.Count();
         }
+
+        public List<Tahliller> TahlilGetir(string TahlilAdi)
+        {
+            return _dbSet.Where(x => x.TahlilAdi == TahlilAdi).ToList();
+        }
     }
 }

@@ -1,16 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Hastane.DAL.DataModel;
+﻿using Hastane.DAL.DataModel;
 using Hastane.DAL.Repositories.Abstracts;
 using Microsoft.Reporting.WinForms;
 using Ninject;
+using System;
+using System.Windows.Forms;
 
 namespace Hastane.PL
 {

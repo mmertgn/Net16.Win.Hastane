@@ -28,7 +28,7 @@ namespace Hastane.DAL.DataModel
         public string TCKimlikNo { get; set; }
         public int SicilNo { get; set; }
         public int UnvanID { get; set; }
-        public int KlinikID { get; set; }
+        public Nullable<int> KlinikID { get; set; }
         public string Ad { get; set; }
         public string Soyad { get; set; }
         public string Email { get; set; }

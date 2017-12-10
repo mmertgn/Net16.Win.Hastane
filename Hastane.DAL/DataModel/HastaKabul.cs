@@ -32,6 +32,7 @@ namespace Hastane.DAL.DataModel
         public int KlinikID { get; set; }
         public string IstenenTahliller { get; set; }
         public Nullable<System.DateTime> CikisTarihi { get; set; }
+        public bool TahlilYapildiMi { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HastaHizmetHareketler> HastaHizmetHareketler { get; set; }

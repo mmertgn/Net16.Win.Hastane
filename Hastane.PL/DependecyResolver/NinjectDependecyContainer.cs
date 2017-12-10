@@ -41,6 +41,13 @@ namespace Hastane.PL.DependecyResolver
             kernel.Bind<IHizmetService>().To<HizmetService>();
 
             kernel.Bind<ITahlilRepository>().To<TahlilRepository>();
+            kernel.Bind<ITahlilService>().To<TahlilService>();
+
+            kernel.Bind<ITahlilIcerikRepository>().To<TahlilIcerikRepository>();
+            kernel.Bind<ITahlilIcerikService>().To<TahlilIcerikService>();
+
+            kernel.Bind<IHastaTahlilSonuclariRepository>().To<HastaTahlilSonuclariRepository>();
+            kernel.Bind<IHastaTahlilSonuclariService>().To<HastaTahlilSonuclariService>();
 
             kernel.Bind<IKurumRepository>().To<KurumRepository>();
             kernel.Bind<IKurumService>().To<KurumService>();

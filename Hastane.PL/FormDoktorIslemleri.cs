@@ -1,16 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Hastane.BLL.Models;
 using Hastane.BLL.Services.Abstracts;
 using Hastane.DAL.DataModel;
 using Hastane.DAL.Repositories.Abstracts;
+using Hastane.PL.DependecyResolver;
 using Ninject;
 
 namespace Hastane.PL
@@ -28,13 +22,14 @@ namespace Hastane.PL
         private readonly IHizmetService _hizmetService;
         private readonly IHastaHizmetHareketService _hastaHizmetHareketService;
         private readonly IHastaHizmetHareketRepository _hastaHizmetHareketRepository;
+        private readonly IHastaTahlilSonuclariService _hastaTahlilSonuclariService;
 
         private HastaKabul _secilenHasta;
 
         #endregion
         public FormDoktorIslemleri()
         {
-            var container = DependecyResolver.NinjectDependecyContainer.RegisterDependency(new StandardKernel());
+            var container = NinjectDependecyContainer.RegisterDependency(new StandardKernel());
             _hastaKabulRepository = container.Get<IHastaKabulRepository>();
             _hastaKabulService = container.Get<IHastaKabulService>();
             _hastaSikayetleriService = container.Get<IHastaSikayetleriService>();
@@ -45,6 +40,7 @@ namespace Hastane.PL
             _hizmetService = container.Get<IHizmetService>();
             _hastaHizmetHareketService = container.Get<IHastaHizmetHareketService>();
             _hastaHizmetHareketRepository = container.Get<IHastaHizmetHareketRepository>();
+            _hastaTahlilSonuclariService = container.Get<IHastaTahlilSonuclariService>();
 
             InitializeComponent();
         }
@@ -133,12 +129,25 @@ namespace Hastane.PL
                 ReceteListesiDoldur();
                 HizmetleriDoldur();
                 HastaHizmetHareketlerDoldur();
-                //TahlilleriDoldur();
+                TahlilleriDoldur();
             }
             catch (Exception)
             {
                 // ignored
             }
+        }
+
+        private void TahlilleriDoldur()
+        {
+            cbTahliller.Clear();
+            if (_secilenHasta == null) return;
+            var model = _hastaTahlilSonuclariService.HizmetList().Select(x => x.TahlilAdi).Distinct().ToList();
+            model.ForEach(item =>
+                {
+                    cbTahliller.AddItem(item);
+                }
+            );
+            cbTahliller.selectedIndex = 0;
         }
 
         private void btnSikayetEkle_Click(object sender, EventArgs e)
@@ -221,6 +230,7 @@ namespace Hastane.PL
         {
             if (_secilenHasta == null) return;
             _secilenHasta.IstenenTahliller = txtIstenenTahliller.Text;
+            _secilenHasta.TahlilYapildiMi = false;
             var result = _hastaKabulService.Edit(_secilenHasta);
             MessageBox.Show("Hastadan İstenen Tahliller Başarıyla Düzenlendi.", "İşlem Gerçekleştirildi!", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
@@ -366,6 +376,17 @@ namespace Hastane.PL
 
             var receteId = _receteService.GetReceteId(_secilenHasta.KabulID);
             var frm = new FormReceteYazdir(_secilenHasta, receteId, teshis);
+            frm.Show();
+        }
+
+        private void btnTahlilGetir_Click(object sender, EventArgs e)
+        {
+            if (_secilenHasta == null)
+            {
+                MessageBox.Show("Lütfen İlk Önce Hasta Seçimi İşlemlerini Gerçekleştiriniz!", "İşlem Gerçekleştirilemedi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            var frm = new FormTahlilYazdir(_secilenHasta,cbTahliller.selectedValue);
             frm.Show();
         }
     }
