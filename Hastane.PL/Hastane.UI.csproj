@@ -229,7 +229,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Report1.rdlc" />
-    <EmbeddedResource Include="TahlilReport.rdlc" />
+    <EmbeddedResource Include="Report2.rdlc" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Hastane.DAL.DataModel.HastaTahlilSonuclari.datasource" />
     <None Include="Properties\DataSources\Hastane.DAL.DataModel.ReceteDetay.datasource" />

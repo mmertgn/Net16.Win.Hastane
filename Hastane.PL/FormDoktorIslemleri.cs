@@ -376,7 +376,7 @@ namespace Hastane.PL
 
             var receteId = _receteService.GetReceteId(_secilenHasta.KabulID);
             var frm = new FormReceteYazdir(_secilenHasta, receteId, teshis);
-            frm.Show();
+            frm.ShowDialog();
         }
 
         private void btnTahlilGetir_Click(object sender, EventArgs e)
@@ -387,7 +387,7 @@ namespace Hastane.PL
                 return;
             }
             var frm = new FormTahlilYazdir(_secilenHasta,cbTahliller.selectedValue);
-            frm.Show();
+            frm.ShowDialog();
         }
     }
 }

@@ -48,17 +48,15 @@ namespace Hastane.PL
                 new ReportParameter("Cinsiyet",_secilenHasta.Hastalar.Cinsiyet),
                 new ReportParameter("DogumTarihi",_secilenHasta.Hastalar.DogumTarihi.Value.ToShortDateString()),
                 new ReportParameter("Klinik",_secilenHasta.Klinikler.KlinikAd),
-                
+
             };
             reportViewer1.LocalReport.SetParameters(p);
             this.reportViewer1.RefreshReport();
-            this.reportViewer1.RefreshReport();
-            this.reportViewer1.RefreshReport();
         }
 
-        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        private void bunifuImageButton1_Click_1(object sender, EventArgs e)
         {
-            this.Dispose();
+            Dispose();
         }
     }
 }
