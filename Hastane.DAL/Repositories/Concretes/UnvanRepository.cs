@@ -24,10 +24,5 @@ namespace Hastane.DAL.Repositories.Concretes
         {
             return _dbSet.Where(x => x.PersonelUnvan == PersonelUnvan).ToList();
         }
-
-        public List<Unvanlar> UnvanIDGetir(int PersonelUnvan)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

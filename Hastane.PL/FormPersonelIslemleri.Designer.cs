@@ -71,6 +71,19 @@
             this.bunifuCustomLabel4 = new ns1.BunifuCustomLabel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.bunifuThinButton22 = new ns1.BunifuThinButton2();
+            this.PersonelID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PersonelKodu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SicilNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UnvanID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Unvan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.KlinikId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.KlinikAdi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PersonelAdi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PersonelSoyadi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PersonelAdres = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PersonelCepTel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PersonelEvTel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DogumTarih = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersoneller)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -110,6 +123,20 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvPersoneller.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPersoneller.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPersoneller.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.PersonelID,
+            this.PersonelKodu,
+            this.SicilNo,
+            this.UnvanID,
+            this.Unvan,
+            this.KlinikId,
+            this.KlinikAdi,
+            this.PersonelAdi,
+            this.PersonelSoyadi,
+            this.PersonelAdres,
+            this.PersonelCepTel,
+            this.PersonelEvTel,
+            this.DogumTarih});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -138,7 +165,6 @@
             this.dgvPersoneller.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPersoneller.Size = new System.Drawing.Size(744, 534);
             this.dgvPersoneller.TabIndex = 30;
-            this.dgvPersoneller.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvPersoneller_CellMouseClick);
             // 
             // txtPersonelKoduAra
             // 
@@ -156,7 +182,6 @@
             this.txtPersonelKoduAra.Size = new System.Drawing.Size(173, 35);
             this.txtPersonelKoduAra.TabIndex = 28;
             this.txtPersonelKoduAra.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtPersonelKoduAra.OnValueChanged += new System.EventHandler(this.txtPersonelKoduAra_OnValueChanged);
             // 
             // bunifuCustomLabel2
             // 
@@ -184,7 +209,6 @@
             this.txtPersonelAdSoyadAra.Size = new System.Drawing.Size(173, 35);
             this.txtPersonelAdSoyadAra.TabIndex = 25;
             this.txtPersonelAdSoyadAra.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtPersonelAdSoyadAra.OnValueChanged += new System.EventHandler(this.txtPersonelAdSoyadAra_OnValueChanged);
             // 
             // bunifuCustomLabel1
             // 
@@ -342,7 +366,6 @@
             this.btnPersonelSil.Size = new System.Drawing.Size(190, 41);
             this.btnPersonelSil.TabIndex = 81;
             this.btnPersonelSil.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnPersonelSil.Click += new System.EventHandler(this.btnPersonelSil_Click);
             // 
             // btnPersonelEkle
             // 
@@ -368,7 +391,6 @@
             this.btnPersonelEkle.Size = new System.Drawing.Size(157, 41);
             this.btnPersonelEkle.TabIndex = 80;
             this.btnPersonelEkle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnPersonelEkle.Click += new System.EventHandler(this.btnPersonelEkle_Click);
             // 
             // btnPersonelGuncelle
             // 
@@ -394,7 +416,6 @@
             this.btnPersonelGuncelle.Size = new System.Drawing.Size(360, 41);
             this.btnPersonelGuncelle.TabIndex = 79;
             this.btnPersonelGuncelle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnPersonelGuncelle.Click += new System.EventHandler(this.btnPersonelGuncelle_Click);
             // 
             // dtpPersonelDogumTarihi
             // 
@@ -698,6 +719,81 @@
             this.bunifuThinButton22.TabIndex = 2;
             this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // PersonelID
+            // 
+            this.PersonelID.HeaderText = "PersonelID";
+            this.PersonelID.Name = "PersonelID";
+            this.PersonelID.Visible = false;
+            // 
+            // PersonelKodu
+            // 
+            this.PersonelKodu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.PersonelKodu.HeaderText = "Pers. Kodu";
+            this.PersonelKodu.Name = "PersonelKodu";
+            this.PersonelKodu.Width = 108;
+            // 
+            // SicilNo
+            // 
+            this.SicilNo.HeaderText = "SicilNo";
+            this.SicilNo.Name = "SicilNo";
+            this.SicilNo.Visible = false;
+            // 
+            // UnvanID
+            // 
+            this.UnvanID.HeaderText = "UnvanID";
+            this.UnvanID.Name = "UnvanID";
+            this.UnvanID.Visible = false;
+            // 
+            // Unvan
+            // 
+            this.Unvan.HeaderText = "Unvan";
+            this.Unvan.Name = "Unvan";
+            // 
+            // KlinikId
+            // 
+            this.KlinikId.HeaderText = "KlinikId";
+            this.KlinikId.Name = "KlinikId";
+            this.KlinikId.Visible = false;
+            // 
+            // KlinikAdi
+            // 
+            this.KlinikAdi.HeaderText = "Klinik Adı";
+            this.KlinikAdi.Name = "KlinikAdi";
+            // 
+            // PersonelAdi
+            // 
+            this.PersonelAdi.HeaderText = "Ad";
+            this.PersonelAdi.Name = "PersonelAdi";
+            // 
+            // PersonelSoyadi
+            // 
+            this.PersonelSoyadi.HeaderText = "Soyad";
+            this.PersonelSoyadi.Name = "PersonelSoyadi";
+            // 
+            // PersonelAdres
+            // 
+            this.PersonelAdres.HeaderText = "Adres";
+            this.PersonelAdres.Name = "PersonelAdres";
+            this.PersonelAdres.Visible = false;
+            // 
+            // PersonelCepTel
+            // 
+            this.PersonelCepTel.HeaderText = "Cep-Tel";
+            this.PersonelCepTel.Name = "PersonelCepTel";
+            // 
+            // PersonelEvTel
+            // 
+            this.PersonelEvTel.HeaderText = "Ev-Tel";
+            this.PersonelEvTel.Name = "PersonelEvTel";
+            this.PersonelEvTel.Visible = false;
+            // 
+            // DogumTarih
+            // 
+            this.DogumTarih.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.DogumTarih.HeaderText = "Doğum Tarihi";
+            this.DogumTarih.Name = "DogumTarih";
+            this.DogumTarih.Width = 124;
+            // 
             // FormPersonelIslemleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -708,7 +804,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormPersonelIslemleri";
             this.Text = "FormPersonelIslemleri";
-            this.Load += new System.EventHandler(this.FormPersonelIslemleri_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersoneller)).EndInit();
@@ -761,5 +856,18 @@
         private ns1.BunifuThinButton2 btnPersonelGuncelle;
         private ns1.BunifuMetroTextbox txtPersonelEmail;
         private ns1.BunifuCustomLabel bunifuCustomLabel12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PersonelID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PersonelKodu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SicilNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UnvanID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Unvan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn KlinikId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn KlinikAdi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PersonelAdi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PersonelSoyadi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PersonelAdres;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PersonelCepTel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PersonelEvTel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DogumTarih;
     }
 }

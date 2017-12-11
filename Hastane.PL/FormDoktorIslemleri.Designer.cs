@@ -702,7 +702,6 @@
             this.btnTeshisGuncelle.Size = new System.Drawing.Size(120, 35);
             this.btnTeshisGuncelle.TabIndex = 73;
             this.btnTeshisGuncelle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnTeshisGuncelle.Click += new System.EventHandler(this.btnTeshisGuncelle_Click);
             // 
             // txtTeshis
             // 
