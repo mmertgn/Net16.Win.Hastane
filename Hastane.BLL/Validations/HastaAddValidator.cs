@@ -36,6 +36,16 @@ namespace Hastane.BLL.Validations
         }
         
     }
+    public class HastaKabulUpdateValidator : AbstractValidator<HastaKabul>
+    {
+        public HastaKabulUpdateValidator()
+        {
+            RuleFor(x => x.Hastalar.Ad).NotEmpty().WithMessage("Hastanın Adını girmek zorundasınız!");
+            RuleFor(x => x.Hastalar.Soyad).NotEmpty().WithMessage("Hastanın Soyadını girmek zorundasınız!");
+            RuleFor(x => x.Hastalar.TCKimlikNo).NotEmpty().WithMessage("Hastanın TC Kimlik Numarasını girmek zorundasınız!");
+        }
+
+    }
     public class HastaDeleteValidator : AbstractValidator<Hastalar>
     {
         public HastaDeleteValidator()
@@ -43,4 +53,12 @@ namespace Hastane.BLL.Validations
         }
 
     }
+    public class HastaKabulAddValidator : AbstractValidator<HastaKabul>
+    {
+        public HastaKabulAddValidator()
+        {
+        }
+
+    }
+
 }

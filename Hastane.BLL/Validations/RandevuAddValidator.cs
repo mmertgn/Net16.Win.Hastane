@@ -12,9 +12,18 @@ namespace Hastane.BLL.Validations
     {
         public RandevuAddValidator()
         {
-        //Randevu kotnrolleri
+            //Randevu kotnrolleri
             RuleFor(x => x.HastaID).NotEmpty().WithMessage("Hastayı sol taraftaki listeden seçmek zorundasınız!");
             RuleFor(x => x.Saat).NotEmpty().WithMessage("Bir Randevu Saati Seçmek Zorundasınız!");
+        }
+    }
+    public class RandevuUpdateValidator : AbstractValidator<Randevular>
+    {
+        public RandevuUpdateValidator(int HastaId)
+        {
+            //Randevu kotnrolleri
+            RuleFor(x => x.HastaID).NotEmpty().WithMessage("Hastayı sol taraftaki listeden seçmek zorundasınız!");
+           
         }
     }
 }

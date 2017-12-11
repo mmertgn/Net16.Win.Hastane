@@ -4,15 +4,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Hastane.DAL.DataModel;
+using Hastane.BLL.Models;
 
 namespace Hastane.BLL.Services.Abstracts
 {
     public interface IHastaKabulService
     {
+        MessageResult Create(HastaKabul model);
+
         HastaKabul GetHastaKabulById(int id);
+
         List<HastaKabulModelFromDoktorIslemleri> DoktorRandevularıDoldur();
         List<HastaKabulModelFromDoktorIslemleri> DoktorRandevularıDoldurAra(string HastaAdSoyad, string CepTel, string TcKimlikNo);
+
+
     }
+
+
     public class HastaKabulModelFromDoktorIslemleri //DoktorİşlemleriSayfasındakiDataGridViewBuModeleGöre doldurulacak
     {
         public int KabulId { get; set; }

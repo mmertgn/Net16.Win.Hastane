@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 using Hastane.BLL.Services.Abstracts;
 using Hastane.DAL.DataModel;
 using Hastane.DAL.Repositories.Abstracts;
+using Hastane.BLL.Models;
+using Hastane.BLL.Validations;
+using FluentValidation.Results;
+using FluentValidation;
 
 namespace Hastane.BLL.Services.Concretes
 {
@@ -63,7 +67,24 @@ namespace Hastane.BLL.Services.Concretes
                 }).ToList();
             return model;
         }
+
+        public MessageResult Create(HastaKabul model)
+        {
+            var _validator = new HastaKabulAddValidator();
+            ValidationResult result = _validator.Validate(model);
+            if (result.IsValid)
+            {
+                _hastaKabulRepository.Add(model);
+            }
+            var m = new MessageResult
+            {
+                ErrorMessage = result.Errors.Select(x => x.ErrorMessage).ToList(),
+                IsSucceed = result.IsValid
+            };
+            m.SuccessMessage = m.IsSucceed == true ? "Hastamızın Kabul İşlemi Başarıyla Sonuçlandırılmıştır." : "Hatalı bilgiler mevcut";
+            return m;
+        }
     }
 
-    
+
 }

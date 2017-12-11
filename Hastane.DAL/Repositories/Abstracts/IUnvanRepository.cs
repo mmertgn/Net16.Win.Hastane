@@ -11,5 +11,6 @@ namespace Hastane.DAL.Repositories.Abstracts
     {
         int GetUnvanCount();
         List<Unvanlar> UnvanGetir(string PersonelUnvan);
+        List<Unvanlar> UnvanIDGetir(int PersonelUnvan);
     }
 }

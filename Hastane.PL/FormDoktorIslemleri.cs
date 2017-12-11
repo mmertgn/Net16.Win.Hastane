@@ -147,5 +147,15 @@ namespace Hastane.PL
                 MessageBox.Show(string.Join("\n", result.ErrorMessage), "İşlem Gerçekleştirilemedi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnTeshisGuncelle_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

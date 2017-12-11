@@ -205,5 +205,8 @@
   <ItemGroup>
     <None Include="Resources\hospital-2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Bunifu_UI_v1.52.dll" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

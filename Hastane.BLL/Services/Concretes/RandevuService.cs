@@ -20,7 +20,10 @@ namespace Hastane.BLL.Services.Concretes
         {
             _randevuRepository = randevuRepository;
         }
-
+        public Randevular GetRandevuById(int id)
+        {
+            return _randevuRepository.FindById(id);
+        }
         public MessageResult Create(Randevular model)
         {
             var _validator = new RandevuAddValidator();
@@ -47,6 +50,63 @@ namespace Hastane.BLL.Services.Concretes
                 randevuSaatleri.Add(item.Saat);
             });
             return randevuSaatleri;
+        }
+
+
+        public List<RandevuListeleFromHastaKabul> RandevuListele()
+        {
+            var model = _randevuRepository.GetList(x=>x.Geldimi==false).Select(x => new RandevuListeleFromHastaKabul
+            {
+                RandevuId = x.RandevuID,
+                HastaId = x.HastaID,
+                PersonelId = x.PersonelID,
+                AdSoyad = x.Hastalar.Ad + " " + x.Hastalar.Soyad,
+                TCKimlikNo = x.Hastalar.TCKimlikNo,
+                DoktorAdi = (x.Personeller.Unvanlar.PersonelUnvan + " " + x.Personeller.Ad + " " + x.Personeller.Soyad),
+                RandevuTarihi = x.Tarih,
+                Saat=x.Saat,
+                GeldiMi=x.Geldimi,
+                KlinikAdi = x.Personeller.Klinikler.KlinikAd
+
+            }).ToList();
+            return model;
+        }
+
+        public List<RandevuListeleFromHastaKabul> RandevuListesiAra(string AdSoyad, string TcKimlikNo)
+        {
+             
+            var model = _randevuRepository.GetList(x => (x.Hastalar.Ad + " " + x.Hastalar.Soyad).Contains(AdSoyad) &&x.Hastalar.TCKimlikNo.Contains(TcKimlikNo)&&x.Geldimi==false)
+                .Select(x => new RandevuListeleFromHastaKabul
+                {
+                    RandevuId = x.RandevuID,
+                    HastaId = x.HastaID,
+                    PersonelId = x.PersonelID,
+                    AdSoyad = x.Hastalar.Ad + " " + x.Hastalar.Soyad,
+                    TCKimlikNo = x.Hastalar.TCKimlikNo,
+                    
+                    RandevuTarihi = x.Tarih,
+                  
+                    DoktorAdi = (x.Personeller.Unvanlar.PersonelUnvan + " " + x.Personeller.Ad + " " + x.Personeller.Soyad)
+                }).ToList();
+            return model;
+        }
+    
+        public MessageResult Edit(Randevular model)
+        {
+
+            var _validator = new RandevuAddValidator();
+            ValidationResult result = _validator.Validate(model);
+            if (result.IsValid)
+            {
+                _randevuRepository.Update(model);
+            }
+            var m = new MessageResult
+            {
+                ErrorMessage = result.Errors.Select(x => x.ErrorMessage).ToList(),
+                IsSucceed = result.IsValid
+            };
+            m.SuccessMessage = m.IsSucceed == true ? "Hasta Kabul Güncelleme İşlemi Başarılı." : "Hatalı bilgiler mevcut";
+            return m;
         }
     }
 }

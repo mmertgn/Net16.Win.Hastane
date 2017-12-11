@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using Hastane.DAL.DataModel;
 using Hastane.DAL.Repositories.Abstracts;
 
@@ -19,5 +21,12 @@ namespace Hastane.DAL.Repositories.Concretes
         {
             return _dbSet.Count(x => x.Unvanlar.PersonelUnvan.Contains("Sekreter"));
         }
+
+        public List<Personeller> PersonelGetir(int PersonelID)
+        {
+            return _dbSet.Where(x => x.PersonelID == PersonelID).ToList();
+        }
+
+    
     }
 }

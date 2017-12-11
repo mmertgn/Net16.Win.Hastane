@@ -562,5 +562,10 @@ namespace Hastane.PL
                 HizmetTemizle();
             }
         }
+
+        private void dgvKlinikler_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
