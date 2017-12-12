@@ -1,15 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Hastane.BLL.Services.Abstracts;
-using Hastane.DAL.Repositories.Abstracts;
+﻿using Hastane.DAL.Repositories.Abstracts;
 using Ninject;
+using System;
+using System.Windows.Forms;
 
 namespace Hastane.PL
 {
@@ -46,7 +38,7 @@ namespace Hastane.PL
             btnHizmetSayisi.LabelText = "Hizmetler : " + _hizmetRepository.GetHizmetCount();
             btnTahlilSayisi.LabelText = "Tahliller : " + _tahlilRepository.GetTahlilCount();
             btnKurumSayisi.LabelText = "Kurumlar : " + _kurumRepository.GetKurumCount();
-
+            btnRandevuSayisi.LabelText = "Randevular : " + _randevuRepository.GetRandevuCount();
         }
     }
 }

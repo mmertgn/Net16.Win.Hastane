@@ -19,7 +19,7 @@ namespace Hastane.BLL.Validations
         {
             using (var hstn = new HastaneEntities())
             {
-                return !hstn.Teshisler.Any(x => x.KabulID != kabulId);
+                return !hstn.Teshisler.Any(x => x.KabulID == kabulId);
             }
         }
     }
@@ -27,7 +27,7 @@ namespace Hastane.BLL.Validations
     {
         public TeshisUpdateValidator()
         {
-            RuleFor(x => x.Teshis).NotEmpty().WithMessage("Hastanın şikayetini girmek zorundasınız!");
+            RuleFor(x => x.Teshis).NotEmpty().WithMessage("Hastanın teşhisini girmek zorundasınız!");
         }
     }
 }

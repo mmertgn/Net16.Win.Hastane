@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Hastane.DAL.DataModel;
+﻿using Hastane.DAL.DataModel;
 using Hastane.DAL.Repositories.Abstracts;
+using System;
+using System.Linq;
 
 namespace Hastane.DAL.Repositories.Concretes
 {
@@ -16,7 +13,8 @@ namespace Hastane.DAL.Repositories.Concretes
 
         public int GetRandevuCount()
         {
-            return _dbSet.Count(x => x.Geldimi == false);
+            DateTime date = DateTime.Now.Date;
+            return _dbSet.Count(x => x.Geldimi == false && x.Tarih==date);
         }
     }
 }

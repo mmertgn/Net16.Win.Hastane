@@ -3,8 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Hastane.DAL.Repositories.Concretes
 {
@@ -35,14 +33,10 @@ namespace Hastane.DAL.Repositories.Concretes
         }
         public void Dispose(bool disposing)
         {
-            if (disposing)
-            {
-                if (_disposed == false)
-                {
-                    Dispose();
-                    _disposed = true;
-                }
-            }
+            if (!disposing) return;
+            if (_disposed) return;
+            Dispose();
+            _disposed = true;
         }
 
         public void Dispose()
@@ -59,12 +53,7 @@ namespace Hastane.DAL.Repositories.Concretes
 
         public List<T> GetList(System.Linq.Expressions.Expression<Func<T, bool>> predicate = null)
         {
-            if (predicate == null)
-            {
-                return _dbSet.ToList();
-            }
-
-            return _dbSet.Where(predicate).ToList();
+            return predicate == null ? _dbSet.ToList() : _dbSet.Where(predicate).ToList();
         }
 
         public void Update(T entity)

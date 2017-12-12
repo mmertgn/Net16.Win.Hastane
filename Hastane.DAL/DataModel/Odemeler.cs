@@ -17,7 +17,7 @@ namespace Hastane.DAL.DataModel
         public int OdemeID { get; set; }
         public System.DateTime Tarih { get; set; }
         public int KabulID { get; set; }
-        public int OdemeTuru { get; set; }
+        public string OdemeTuru { get; set; }
         public decimal Toplam { get; set; }
         public decimal Indirim { get; set; }
         public string Aciklama { get; set; }

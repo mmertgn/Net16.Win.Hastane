@@ -1,11 +1,8 @@
-﻿using Hastane.DAL.Repositories.Abstracts;
-using System;
+﻿using Hastane.DAL.DataModel;
+using Hastane.DAL.Repositories.Abstracts;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data.Entity;
-using Hastane.DAL.DataModel;
+using System.Linq;
 
 namespace Hastane.DAL.Repositories.Concretes
 {

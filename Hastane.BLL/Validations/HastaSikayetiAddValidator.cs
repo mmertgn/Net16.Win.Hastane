@@ -20,7 +20,7 @@ namespace Hastane.BLL.Validations
         {
             using (var hstn = new HastaneEntities())
             {
-                return !hstn.HastaSikayetleri.Any(x => x.KabulID != kabulId);
+                return !hstn.HastaSikayetleri.Any(x => x.KabulID == kabulId);
             }
         }
     }

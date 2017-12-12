@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="HastaneModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="HastaneModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="HastaGecmisi">
           <Key>
             <PropertyRef Name="GecmisID" />
@@ -138,7 +138,7 @@
           <Property Name="OdemeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Tarih" Type="datetime" Nullable="false" />
           <Property Name="KabulID" Type="int" Nullable="false" />
-          <Property Name="OdemeTuru" Type="int" Nullable="false" />
+          <Property Name="OdemeTuru" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Toplam" Type="money" Nullable="false" />
           <Property Name="Indirim" Type="money" Nullable="false" />
           <Property Name="Aciklama" Type="varchar(max)" />
@@ -682,8 +682,7 @@
             <End Role="Teshisler" EntitySet="Teshisler" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="HastaneModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -851,7 +850,7 @@
           <Property Name="OdemeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Tarih" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="KabulID" Type="Int32" Nullable="false" />
-          <Property Name="OdemeTuru" Type="Int32" Nullable="false" />
+          <Property Name="OdemeTuru" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
           <Property Name="Toplam" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
           <Property Name="Indirim" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
           <Property Name="Aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />

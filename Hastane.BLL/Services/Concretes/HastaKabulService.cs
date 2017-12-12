@@ -45,7 +45,7 @@ namespace Hastane.BLL.Services.Concretes
         public List<HastaKabulModelFromDoktorIslemleri> DoktorRandevularıDoldur()
         {
             
-            var model = _hastaKabulRepository.GetList(/*x=>x.PersonelID == Genel.LoginKullaniciID*/).Select(x => new HastaKabulModelFromDoktorIslemleri
+            var model = _hastaKabulRepository.GetList(x=> x.CikisTarihi==null).Select(x => new HastaKabulModelFromDoktorIslemleri
             {
                 KabulId = x.KabulID,
                 HastaId = x.HastaID,
@@ -66,7 +66,7 @@ namespace Hastane.BLL.Services.Concretes
 
         public List<HastaKabulModelFromDoktorIslemleri> DoktorRandevularıDoldurAra(string HastaAdSoyad,string CepTel,string TcKimlikNo)
         {
-            var model = _hastaKabulRepository.GetList(x => (x.Hastalar.Ad + " " + x.Hastalar.Soyad).Contains(HastaAdSoyad) && x.Hastalar.CepTel.Contains(CepTel) && x.Hastalar.TCKimlikNo.Contains(TcKimlikNo))
+            var model = _hastaKabulRepository.GetList(x => (x.Hastalar.Ad + " " + x.Hastalar.Soyad).Contains(HastaAdSoyad) && x.Hastalar.CepTel.Contains(CepTel) && x.Hastalar.TCKimlikNo.Contains(TcKimlikNo) && x.CikisTarihi == null)
                 .Select(x => new HastaKabulModelFromDoktorIslemleri()
                 {
                     KabulId = x.KabulID,

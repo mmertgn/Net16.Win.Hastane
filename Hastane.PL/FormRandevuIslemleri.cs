@@ -1,11 +1,11 @@
-﻿using System;
-using System.Drawing;
-using System.Linq;
-using System.Windows.Forms;
-using Hastane.BLL.Services.Abstracts;
+﻿using Hastane.BLL.Services.Abstracts;
 using Hastane.DAL.DataModel;
 using Hastane.DAL.Repositories.Abstracts;
 using Ninject;
+using System;
+using System.Drawing;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace Hastane.PL
 {

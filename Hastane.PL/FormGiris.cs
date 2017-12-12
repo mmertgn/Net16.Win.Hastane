@@ -1,12 +1,5 @@
 ﻿using Hastane.BLL.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Hastane.PL
@@ -31,10 +24,10 @@ namespace Hastane.PL
         private void btnGiris_Click(object sender, EventArgs e)
         {
             Personel personel = new Personel();
-            bool Sonuc = personel.UyeGirisi(txtKullaniciAdi.Text,txtSifre.Text);
-            if (Sonuc)
+            var sonuc = personel.UyeGirisi(txtKullaniciAdi.Text,txtSifre.Text);
+            if (sonuc)
             {
-                FormAnaSayfa frm = new FormAnaSayfa();
+                var frm = new FormAnaSayfa();
                 frm.Show();
 
                 this.Hide();

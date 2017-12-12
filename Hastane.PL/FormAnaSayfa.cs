@@ -11,18 +11,18 @@ namespace Hastane.PL
         {
             InitializeComponent();
         }
-        
-        bool frmLoadFirst = true;
+
+        private bool _frmLoadFirst = true;
         private void FormAnaSayfa_Load(object sender, EventArgs e)
         {
             btnKullaniciBilgi.LabelText = Genel.KullaniciAdi + " " + Genel.KullaniciSoyadi;
-            FormAnaSayfaIcerik frm = new FormAnaSayfaIcerik();
+            var frm = new FormAnaSayfaIcerik();
             FormAcikmi(frm);
         }
 
-        private void FormAcikmi(Form AcilacakForm)
+        private void FormAcikmi(Form acilacakForm)
         {
-            if (frmLoadFirst)
+            if (_frmLoadFirst)
             {
                 if (pnlIcerik != null)
                 {
@@ -31,33 +31,29 @@ namespace Hastane.PL
                         pnlIcerik.Controls[0].Dispose();
                     }
                 }
-                AcilacakForm.TopLevel = false;
-                AcilacakForm.AutoScroll = true;
-                if (pnlIcerik != null)
-                {
-                    pnlIcerik.Controls.Add(AcilacakForm);
-                    AcilacakForm.Dock = DockStyle.Fill;
-                    AcilacakForm.Show();
-                    frmLoadFirst = false;
-                }
+                acilacakForm.TopLevel = false;
+                acilacakForm.AutoScroll = true;
+                if (pnlIcerik == null) return;
+                pnlIcerik.Controls.Add(acilacakForm);
+                acilacakForm.Dock = DockStyle.Fill;
+                acilacakForm.Show();
+                _frmLoadFirst = false;
             }
             else
             {
-                if (pnlIcerik.Controls[0].Name != AcilacakForm.Name)
+                if (pnlIcerik.Controls[0].Name == acilacakForm.Name) return;
+                if (pnlIcerik != null)
                 {
-                    if (pnlIcerik != null)
+                    while (pnlIcerik.Controls.Count > 0)
                     {
-                        while (pnlIcerik.Controls.Count > 0)
-                        {
-                            pnlIcerik.Controls[0].Dispose();
-                        }
+                        pnlIcerik.Controls[0].Dispose();
                     }
-                    AcilacakForm.TopLevel = false;
-                    AcilacakForm.AutoScroll = true;
-                    this.pnlIcerik.Controls.Add(AcilacakForm);
-                    AcilacakForm.Dock = DockStyle.Fill;
-                    AcilacakForm.Show();
                 }
+                acilacakForm.TopLevel = false;
+                acilacakForm.AutoScroll = true;
+                this.pnlIcerik.Controls.Add(acilacakForm);
+                acilacakForm.Dock = DockStyle.Fill;
+                acilacakForm.Show();
             }
 
         }
@@ -66,7 +62,7 @@ namespace Hastane.PL
             this.pbSeciliSayfa.Location = new Point(
                 176,
                 this.btnAnaSayfa.Location.Y);
-            FormAnaSayfaIcerik frm = new FormAnaSayfaIcerik();
+            var frm = new FormAnaSayfaIcerik();
             FormAcikmi(frm);
         }
 
@@ -75,7 +71,7 @@ namespace Hastane.PL
             this.pbSeciliSayfa.Location = new Point(
                 176,
                 this.btnHastaKabul.Location.Y);
-            FormHastaKabul frm = new FormHastaKabul();
+            var frm = new FormHastaKabul();
             FormAcikmi(frm);
         }
 
@@ -90,7 +86,7 @@ namespace Hastane.PL
                 176,
                 this.btnRandevu.Location.Y);
 
-            FormRandevuIslemleri frm = new FormRandevuIslemleri();
+            var frm = new FormRandevuIslemleri();
             FormAcikmi(frm);
         }
 
@@ -99,7 +95,7 @@ namespace Hastane.PL
             this.pbSeciliSayfa.Location = new Point(
                 176,
                 this.btnSistemYonetimi.Location.Y);
-            FormSistemYonetim frm = new FormSistemYonetim();
+            var frm = new FormSistemYonetim();
             FormAcikmi(frm);
         }
 
@@ -109,13 +105,13 @@ namespace Hastane.PL
             this.pbSeciliSayfa.Location = new Point(
                 176,
                 this.btnDoktorIslemleri.Location.Y);
-            FormDoktorIslemleri frm = new FormDoktorIslemleri();
+            var frm = new FormDoktorIslemleri();
             FormAcikmi(frm);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            DateTime datetime = DateTime.Now;
+            var datetime = DateTime.Now;
             this.lblTarih.Text = "Tarih : " + datetime.ToShortDateString() + " \nSaat : "+ datetime.ToShortTimeString();
         }
 
@@ -124,7 +120,7 @@ namespace Hastane.PL
             this.pbSeciliSayfa.Location = new Point(
                 176,
                 this.btnPersonelIslemleri.Location.Y);
-            FormPersonelIslemleri frm = new FormPersonelIslemleri();
+            var frm = new FormPersonelIslemleri();
             FormAcikmi(frm);
         }
 
@@ -133,7 +129,7 @@ namespace Hastane.PL
             this.pbSeciliSayfa.Location = new Point(
                 176,
                 this.btnOdemeIslemleri.Location.Y);
-            FormOdemeIslemleri frm = new FormOdemeIslemleri();
+            var frm = new FormOdemeIslemleri();
             FormAcikmi(frm);
         }
 
@@ -142,7 +138,7 @@ namespace Hastane.PL
             this.pbSeciliSayfa.Location = new Point(
                 176,
                 this.btnTahlilIslemleri.Location.Y);
-            FormTahlilIslemleri frm = new FormTahlilIslemleri();
+            var frm = new FormTahlilIslemleri();
             FormAcikmi(frm);
         }
 
@@ -151,7 +147,7 @@ namespace Hastane.PL
             this.pbSeciliSayfa.Location = new Point(
                 this.pnlKullaniciBilgileri.Location.X,
                 this.pnlKullaniciBilgileri.Location.Y);
-            FormKullaniciBilgileri frm = new FormKullaniciBilgileri();
+            var frm = new FormKullaniciBilgileri();
             FormAcikmi(frm);
         }
     }

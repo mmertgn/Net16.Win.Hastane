@@ -76,6 +76,8 @@ namespace Hastane.PL.DependecyResolver
             kernel.Bind<IHastaHizmetHareketRepository>().To<HastaHizmetHareketRepository>();
             kernel.Bind<IHastaHizmetHareketService>().To<HastaHizmetHareketService>();
 
+            kernel.Bind<IOdemeRepository>().To<OdemeRepository>();
+
             kernel.Bind<IMessaging>().To<SystemNetMailManager>();
 
             return kernel;

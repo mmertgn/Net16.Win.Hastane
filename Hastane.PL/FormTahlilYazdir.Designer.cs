@@ -29,21 +29,25 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTahlilYazdir));
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.HastaTahlilSonuclariBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panelbaslik = new System.Windows.Forms.Panel();
+            this.bunifuImageButton1 = new ns1.BunifuImageButton();
+            this.bunifuThinButton23 = new ns1.BunifuThinButton2();
             this.bunifuDragControl3 = new ns1.BunifuDragControl(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.bunifuThinButton23 = new ns1.BunifuThinButton2();
-            this.HastaTahlilSonuclariBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bunifuElipse2 = new ns1.BunifuElipse(this.components);
-            this.bunifuImageButton1 = new ns1.BunifuImageButton();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.panelbaslik.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.bunifuElipse2 = new ns1.BunifuElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.HastaTahlilSonuclariBindingSource)).BeginInit();
+            this.panelbaslik.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // HastaTahlilSonuclariBindingSource
+            // 
+            this.HastaTahlilSonuclariBindingSource.DataSource = typeof(Hastane.DAL.DataModel.HastaTahlilSonuclari);
             // 
             // panelbaslik
             // 
@@ -56,21 +60,20 @@
             this.panelbaslik.Size = new System.Drawing.Size(819, 41);
             this.panelbaslik.TabIndex = 0;
             // 
-            // bunifuDragControl3
+            // bunifuImageButton1
             // 
-            this.bunifuDragControl3.Fixed = true;
-            this.bunifuDragControl3.Horizontal = true;
-            this.bunifuDragControl3.TargetControl = this.panelbaslik;
-            this.bunifuDragControl3.Vertical = true;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.reportViewer1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 41);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(819, 480);
-            this.panel1.TabIndex = 1;
+            this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
+            this.bunifuImageButton1.ImageActive = null;
+            this.bunifuImageButton1.Location = new System.Drawing.Point(768, 0);
+            this.bunifuImageButton1.Name = "bunifuImageButton1";
+            this.bunifuImageButton1.Size = new System.Drawing.Size(48, 44);
+            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton1.TabIndex = 4;
+            this.bunifuImageButton1.TabStop = false;
+            this.bunifuImageButton1.Zoom = 10;
+            this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click_1);
             // 
             // bunifuThinButton23
             // 
@@ -98,29 +101,21 @@
             this.bunifuThinButton23.TabIndex = 3;
             this.bunifuThinButton23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // HastaTahlilSonuclariBindingSource
+            // bunifuDragControl3
             // 
-            this.HastaTahlilSonuclariBindingSource.DataSource = typeof(Hastane.DAL.DataModel.HastaTahlilSonuclari);
+            this.bunifuDragControl3.Fixed = true;
+            this.bunifuDragControl3.Horizontal = true;
+            this.bunifuDragControl3.TargetControl = this.bunifuThinButton23;
+            this.bunifuDragControl3.Vertical = true;
             // 
-            // bunifuElipse2
+            // panel1
             // 
-            this.bunifuElipse2.ElipseRadius = 60;
-            this.bunifuElipse2.TargetControl = this;
-            // 
-            // bunifuImageButton1
-            // 
-            this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
-            this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(768, 0);
-            this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(48, 44);
-            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton1.TabIndex = 4;
-            this.bunifuImageButton1.TabStop = false;
-            this.bunifuImageButton1.Zoom = 10;
-            this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click_1);
+            this.panel1.Controls.Add(this.reportViewer1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 41);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(819, 480);
+            this.panel1.TabIndex = 1;
             // 
             // reportViewer1
             // 
@@ -134,6 +129,11 @@
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(819, 480);
             this.reportViewer1.TabIndex = 0;
+            // 
+            // bunifuElipse2
+            // 
+            this.bunifuElipse2.ElipseRadius = 60;
+            this.bunifuElipse2.TargetControl = this;
             // 
             // FormTahlilYazdir
             // 
@@ -150,11 +150,11 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormTahlilYazdir";
             this.Load += new System.EventHandler(this.FormTahlilYazdir_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.HastaTahlilSonuclariBindingSource)).EndInit();
             this.panelbaslik.ResumeLayout(false);
             this.panelbaslik.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.HastaTahlilSonuclariBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

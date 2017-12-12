@@ -117,6 +117,12 @@
     <Compile Include="FormDoktorIslemleri.Designer.cs">
       <DependentUpon>FormDoktorIslemleri.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormFatura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFatura.Designer.cs">
+      <DependentUpon>FormFatura.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormGiris.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +185,7 @@
     <Compile Include="FormRandevuIslemleri.Designer.cs">
       <DependentUpon>FormRandevuIslemleri.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FaturaReport.rdlc" />
     <EmbeddedResource Include="FormAnaSayfa.resx">
       <DependentUpon>FormAnaSayfa.cs</DependentUpon>
     </EmbeddedResource>
@@ -187,6 +194,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormDoktorIslemleri.resx">
       <DependentUpon>FormDoktorIslemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFatura.resx">
+      <DependentUpon>FormFatura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormGiris.resx">
       <DependentUpon>FormGiris.cs</DependentUpon>
@@ -233,6 +243,7 @@
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Hastane.DAL.DataModel.HastaTahlilSonuclari.datasource" />
     <None Include="Properties\DataSources\Hastane.DAL.DataModel.ReceteDetay.datasource" />
+    <None Include="Properties\DataSources\Hastane.DAL.Repositories.Abstracts.FaturaModel.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

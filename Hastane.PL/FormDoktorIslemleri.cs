@@ -1,11 +1,11 @@
-﻿using System;
-using System.Linq;
-using System.Windows.Forms;
-using Hastane.BLL.Services.Abstracts;
+﻿using Hastane.BLL.Services.Abstracts;
 using Hastane.DAL.DataModel;
 using Hastane.DAL.Repositories.Abstracts;
 using Hastane.PL.DependecyResolver;
 using Ninject;
+using System;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace Hastane.PL
 {
@@ -126,6 +126,7 @@ namespace Hastane.PL
                 txtHastaSikayeti.Text = sikayet != null ? sikayet.Aciklama : "";
                 var teshis = _teshisService.GetTeshisByKabulId(_secilenHasta.KabulID);
                 txtTeshis.Text = teshis != null ? teshis.Teshis : "";
+
                 ReceteListesiDoldur();
                 HizmetleriDoldur();
                 HastaHizmetHareketlerDoldur();
@@ -141,7 +142,7 @@ namespace Hastane.PL
         {
             cbTahliller.Clear();
             if (_secilenHasta == null) return;
-            var model = _hastaTahlilSonuclariService.HizmetList().Select(x => x.TahlilAdi).Distinct().ToList();
+            var model = _hastaTahlilSonuclariService.HizmetList().Where(x => x.KabulID == _secilenHasta.KabulID).Select(x => x.TahlilAdi).Distinct().ToList();
             model.ForEach(item =>
                 {
                     cbTahliller.AddItem(item);
@@ -253,16 +254,17 @@ namespace Hastane.PL
             }
             else
             {
-                MessageBox.Show(string.Join("\n", result.ErrorMessage), "İşlem Gerçekleştirilemedi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
         }
 
         private void btnIlacEkle_Click(object sender, EventArgs e)
         {
             if (_secilenHasta == null) return;
-            var receteId = _receteService.GetReceteId(_secilenHasta.KabulID);
+
             try
             {
+                var receteId = _receteService.GetReceteId(_secilenHasta.KabulID);
                 var receteDetay = new ReceteDetay
                 {
                     ReceteID = receteId,
@@ -281,7 +283,7 @@ namespace Hastane.PL
             }
             catch (Exception)
             {
-                // ignored
+                MessageBox.Show("Hasta için henüz bir reçete oluşturmadınız. Lütfen yukarıdan bir reçete oluşturunuz!", "İşlem Gerçekleştirilemedi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             ReceteListesiDoldur();
         }
@@ -290,16 +292,23 @@ namespace Hastane.PL
         {
             lvRecete.Items.Clear();
             if (_secilenHasta == null) return;
-            var receteId = _receteService.GetReceteId(_secilenHasta.KabulID);
-            var model = _receteDetayService.ReceteDetayListesi(receteId);
-
-            foreach (var item in model)
+            try
             {
-                var lvi = new ListViewItem();
-                lvi.Text = item.IlacAd;
-                lvi.SubItems.Add(item.IlacKullanimSikligi);
-                lvi.SubItems.Add(item.ReceteDetayId.ToString());
-                lvRecete.Items.Add(lvi);
+                var receteId = _receteService.GetReceteId(_secilenHasta.KabulID);
+                var model = _receteDetayService.ReceteDetayListesi(receteId);
+
+                foreach (var item in model)
+                {
+                    var lvi = new ListViewItem();
+                    lvi.Text = item.IlacAd;
+                    lvi.SubItems.Add(item.IlacKullanimSikligi);
+                    lvi.SubItems.Add(item.ReceteDetayId.ToString());
+                    lvRecete.Items.Add(lvi);
+                }
+            }
+            catch (Exception)
+            {
+                // ignored
             }
         }
 
@@ -344,16 +353,22 @@ namespace Hastane.PL
         private void HastaHizmetHareketlerDoldur()
         {
             lvHizmetHareketler.Items.Clear();
-            if (_secilenHasta == null) return;
-            var model = _hastaHizmetHareketService.HizmetHareketListWithSorgu(x => x.KabulID == _secilenHasta.KabulID);
-
-            foreach (var item in model)
+            try
             {
-                var lvi = new ListViewItem();
-                lvi.Text = item.HareketID.ToString();
-                lvi.SubItems.Add(item.Hizmetler.HizmetAdi);
-                lvi.SubItems.Add(item.Tutar.ToString());
-                lvHizmetHareketler.Items.Add(lvi);
+                if (_secilenHasta == null) return;
+                var model = _hastaHizmetHareketService.HizmetHareketListWithSorgu(x => x.KabulID == _secilenHasta.KabulID);
+
+                foreach (var item in model)
+                {
+                    var lvi = new ListViewItem { Text = item.HareketID.ToString() };
+                    lvi.SubItems.Add(item.Hizmetler.HizmetAdi);
+                    lvi.SubItems.Add($"{item.Tutar:c}");
+                    lvHizmetHareketler.Items.Add(lvi);
+                }
+            }
+            catch (Exception)
+            {
+                // ignored
             }
         }
 
@@ -370,24 +385,32 @@ namespace Hastane.PL
             var teshis = _teshisService.GetTeshisByKabulId(_secilenHasta.KabulID);
             if (_secilenHasta == null || teshis == null)
             {
-                MessageBox.Show("Lütfen İlk Önce Hasta Seçimi ve Teşhis Koy İşlemlerini Gerçekleştiriniz!", "İşlem Gerçekleştirilemedi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                MessageBox.Show("Lütfen İlk Önce Hasta Seçimi ve Teşhis Koy İşlemlerini Gerçekleştiriniz!",
+                    "İşlem Gerçekleştirilemedi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            var receteId = _receteService.GetReceteId(_secilenHasta.KabulID);
-            var frm = new FormReceteYazdir(_secilenHasta, receteId, teshis);
-            frm.ShowDialog();
+            else
+            {
+                var receteId = _receteService.GetReceteId(_secilenHasta.KabulID);
+                var frm = new FormReceteYazdir(_secilenHasta, receteId, teshis);
+                frm.ShowDialog();
+            }
         }
 
         private void btnTahlilGetir_Click(object sender, EventArgs e)
         {
             if (_secilenHasta == null)
             {
-                MessageBox.Show("Lütfen İlk Önce Hasta Seçimi İşlemlerini Gerçekleştiriniz!", "İşlem Gerçekleştirilemedi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                MessageBox.Show("Seçili bir hasta bulunamamıştır. Lütfen aşağıdan bir hasta seçiniz!", "İşlem Gerçekleştirilemedi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            var frm = new FormTahlilYazdir(_secilenHasta,cbTahliller.selectedValue);
-            frm.ShowDialog();
+            else if (cbTahliller.selectedIndex == -1)
+            {
+                MessageBox.Show("Seçili Hasta için yapılmış herhangi bir tahlil bulunmamaktadır!", "İşlem Gerçekleştirilemedi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                var frm = new FormTahlilYazdir(_secilenHasta, cbTahliller.selectedValue);
+                frm.ShowDialog();
+            }
         }
     }
 }
