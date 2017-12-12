@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using FluentValidation.Results;
+using Hastane.BLL.Infrastructure.Messaging.Abstracts;
 using Hastane.BLL.Models;
 using Hastane.BLL.Services.Abstracts;
 using Hastane.BLL.Validations;
@@ -15,7 +16,7 @@ namespace Hastane.BLL.Services.Concretes
     public class HastaKabulService : IHastaKabulService
     {
         private readonly IHastaKabulRepository _hastaKabulRepository;
-
+        
         public HastaKabulService(IHastaKabulRepository hastaKabulRepository)
         {
             _hastaKabulRepository = hastaKabulRepository;
@@ -37,7 +38,23 @@ namespace Hastane.BLL.Services.Concretes
             m.SuccessMessage = m.IsSucceed == true ? "Kayıt Güncelleme İşlemi Başarılı." : "Hatalı bilgiler mevcut";
             return m;
         }
-
+        public MessageResult Create(HastaKabul model)
+        {
+            var _validator = new HastaKabulAddValidator();
+            ValidationResult result = _validator.Validate(model);
+            if (result.IsValid)
+            {
+                _hastaKabulRepository.Add(model);
+                
+            }
+            var m = new MessageResult
+            {
+                ErrorMessage = result.Errors.Select(x => x.ErrorMessage).ToList(),
+                IsSucceed = result.IsValid
+            };
+            m.SuccessMessage = m.IsSucceed == true ? "Hastamızın Kabul İşlemi Başarıyla Sonuçlandırılmıştır." : "Hatalı bilgiler mevcut";
+            return m;
+        }
         public HastaKabul GetHastaKabulById(int id)
         {
             return _hastaKabulRepository.FindById(id);

@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPersonelIslemleri));
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvPersoneller = new ns1.BunifuCustomDataGrid();
@@ -71,19 +71,6 @@
             this.bunifuCustomLabel4 = new ns1.BunifuCustomLabel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.bunifuThinButton22 = new ns1.BunifuThinButton2();
-            this.PersonelID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PersonelKodu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SicilNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UnvanID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Unvan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.KlinikId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.KlinikAdi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PersonelAdi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PersonelSoyadi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PersonelAdres = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PersonelCepTel = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PersonelEvTel = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DogumTarih = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersoneller)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -109,42 +96,30 @@
             // 
             // dgvPersoneller
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvPersoneller.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvPersoneller.AllowUserToAddRows = false;
+            this.dgvPersoneller.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvPersoneller.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle25;
             this.dgvPersoneller.BackgroundColor = System.Drawing.Color.White;
             this.dgvPersoneller.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvPersoneller.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPersoneller.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPersoneller.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle26;
             this.dgvPersoneller.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPersoneller.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.PersonelID,
-            this.PersonelKodu,
-            this.SicilNo,
-            this.UnvanID,
-            this.Unvan,
-            this.KlinikId,
-            this.KlinikAdi,
-            this.PersonelAdi,
-            this.PersonelSoyadi,
-            this.PersonelAdres,
-            this.PersonelCepTel,
-            this.PersonelEvTel,
-            this.DogumTarih});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPersoneller.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle27.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle27.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPersoneller.DefaultCellStyle = dataGridViewCellStyle27;
             this.dgvPersoneller.DoubleBuffered = true;
             this.dgvPersoneller.EnableHeadersVisualStyles = false;
             this.dgvPersoneller.GridColor = System.Drawing.Color.White;
@@ -152,19 +127,21 @@
             this.dgvPersoneller.HeaderForeColor = System.Drawing.Color.White;
             this.dgvPersoneller.Location = new System.Drawing.Point(12, 130);
             this.dgvPersoneller.Name = "dgvPersoneller";
+            this.dgvPersoneller.ReadOnly = true;
             this.dgvPersoneller.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPersoneller.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle28.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPersoneller.RowHeadersDefaultCellStyle = dataGridViewCellStyle28;
             this.dgvPersoneller.RowHeadersWidth = 10;
             this.dgvPersoneller.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPersoneller.Size = new System.Drawing.Size(744, 534);
             this.dgvPersoneller.TabIndex = 30;
+            this.dgvPersoneller.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvPersoneller_CellMouseClick);
             // 
             // txtPersonelKoduAra
             // 
@@ -182,6 +159,7 @@
             this.txtPersonelKoduAra.Size = new System.Drawing.Size(173, 35);
             this.txtPersonelKoduAra.TabIndex = 28;
             this.txtPersonelKoduAra.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtPersonelKoduAra.OnValueChanged += new System.EventHandler(this.txtPersonelAdSoyadAra_OnValueChanged);
             // 
             // bunifuCustomLabel2
             // 
@@ -209,6 +187,7 @@
             this.txtPersonelAdSoyadAra.Size = new System.Drawing.Size(173, 35);
             this.txtPersonelAdSoyadAra.TabIndex = 25;
             this.txtPersonelAdSoyadAra.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtPersonelAdSoyadAra.OnValueChanged += new System.EventHandler(this.txtPersonelAdSoyadAra_OnValueChanged);
             // 
             // bunifuCustomLabel1
             // 
@@ -366,6 +345,7 @@
             this.btnPersonelSil.Size = new System.Drawing.Size(190, 41);
             this.btnPersonelSil.TabIndex = 81;
             this.btnPersonelSil.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnPersonelSil.Click += new System.EventHandler(this.btnPersonelSil_Click);
             // 
             // btnPersonelEkle
             // 
@@ -391,6 +371,7 @@
             this.btnPersonelEkle.Size = new System.Drawing.Size(157, 41);
             this.btnPersonelEkle.TabIndex = 80;
             this.btnPersonelEkle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnPersonelEkle.Click += new System.EventHandler(this.btnPersonelEkle_Click);
             // 
             // btnPersonelGuncelle
             // 
@@ -416,6 +397,7 @@
             this.btnPersonelGuncelle.Size = new System.Drawing.Size(360, 41);
             this.btnPersonelGuncelle.TabIndex = 79;
             this.btnPersonelGuncelle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnPersonelGuncelle.Click += new System.EventHandler(this.btnPersonelGuncelle_Click);
             // 
             // dtpPersonelDogumTarihi
             // 
@@ -719,81 +701,6 @@
             this.bunifuThinButton22.TabIndex = 2;
             this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // PersonelID
-            // 
-            this.PersonelID.HeaderText = "PersonelID";
-            this.PersonelID.Name = "PersonelID";
-            this.PersonelID.Visible = false;
-            // 
-            // PersonelKodu
-            // 
-            this.PersonelKodu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.PersonelKodu.HeaderText = "Pers. Kodu";
-            this.PersonelKodu.Name = "PersonelKodu";
-            this.PersonelKodu.Width = 108;
-            // 
-            // SicilNo
-            // 
-            this.SicilNo.HeaderText = "SicilNo";
-            this.SicilNo.Name = "SicilNo";
-            this.SicilNo.Visible = false;
-            // 
-            // UnvanID
-            // 
-            this.UnvanID.HeaderText = "UnvanID";
-            this.UnvanID.Name = "UnvanID";
-            this.UnvanID.Visible = false;
-            // 
-            // Unvan
-            // 
-            this.Unvan.HeaderText = "Unvan";
-            this.Unvan.Name = "Unvan";
-            // 
-            // KlinikId
-            // 
-            this.KlinikId.HeaderText = "KlinikId";
-            this.KlinikId.Name = "KlinikId";
-            this.KlinikId.Visible = false;
-            // 
-            // KlinikAdi
-            // 
-            this.KlinikAdi.HeaderText = "Klinik Adı";
-            this.KlinikAdi.Name = "KlinikAdi";
-            // 
-            // PersonelAdi
-            // 
-            this.PersonelAdi.HeaderText = "Ad";
-            this.PersonelAdi.Name = "PersonelAdi";
-            // 
-            // PersonelSoyadi
-            // 
-            this.PersonelSoyadi.HeaderText = "Soyad";
-            this.PersonelSoyadi.Name = "PersonelSoyadi";
-            // 
-            // PersonelAdres
-            // 
-            this.PersonelAdres.HeaderText = "Adres";
-            this.PersonelAdres.Name = "PersonelAdres";
-            this.PersonelAdres.Visible = false;
-            // 
-            // PersonelCepTel
-            // 
-            this.PersonelCepTel.HeaderText = "Cep-Tel";
-            this.PersonelCepTel.Name = "PersonelCepTel";
-            // 
-            // PersonelEvTel
-            // 
-            this.PersonelEvTel.HeaderText = "Ev-Tel";
-            this.PersonelEvTel.Name = "PersonelEvTel";
-            this.PersonelEvTel.Visible = false;
-            // 
-            // DogumTarih
-            // 
-            this.DogumTarih.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.DogumTarih.HeaderText = "Doğum Tarihi";
-            this.DogumTarih.Name = "DogumTarih";
-            this.DogumTarih.Width = 124;
-            // 
             // FormPersonelIslemleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -804,6 +711,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormPersonelIslemleri";
             this.Text = "FormPersonelIslemleri";
+            this.Load += new System.EventHandler(this.FormPersonelIslemleri_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersoneller)).EndInit();
@@ -856,18 +764,5 @@
         private ns1.BunifuThinButton2 btnPersonelGuncelle;
         private ns1.BunifuMetroTextbox txtPersonelEmail;
         private ns1.BunifuCustomLabel bunifuCustomLabel12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PersonelID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PersonelKodu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SicilNo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn UnvanID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Unvan;
-        private System.Windows.Forms.DataGridViewTextBoxColumn KlinikId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn KlinikAdi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PersonelAdi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PersonelSoyadi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PersonelAdres;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PersonelCepTel;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PersonelEvTel;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DogumTarih;
     }
 }

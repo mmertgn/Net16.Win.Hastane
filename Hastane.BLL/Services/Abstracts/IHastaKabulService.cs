@@ -12,6 +12,7 @@ namespace Hastane.BLL.Services.Abstracts
     {
         MessageResult Edit(HastaKabul model);
         HastaKabul GetHastaKabulById(int id);
+        MessageResult Create(HastaKabul model);
         List<HastaKabulModelFromDoktorIslemleri> DoktorRandevularıDoldur();
         List<HastaKabulModelFromDoktorIslemleri> DoktorRandevularıDoldurAra(string HastaAdSoyad, string CepTel, string TcKimlikNo);
         List<HastaKabulModelFromTahlilIslemleri> IstenenTahlilleriDoldur();

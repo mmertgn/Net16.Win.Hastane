@@ -116,6 +116,7 @@
     <Compile Include="Validations\HizmetAddValidator.cs" />
     <Compile Include="Validations\KlinikAddValidator.cs" />
     <Compile Include="Validations\KurumAddValidator.cs" />
+    <Compile Include="Validations\PersonelAddValidator.cs" />
     <Compile Include="Validations\ReceteAddValidator.cs" />
     <Compile Include="Validations\ReceteDetayAddValidator.cs" />
     <Compile Include="Validations\TahlilAddValidator.cs" />

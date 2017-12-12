@@ -230,6 +230,7 @@ namespace Hastane.PL
         private void btnTahlilIste_Click(object sender, EventArgs e)
         {
             if (_secilenHasta == null) return;
+            if (txtIstenenTahliller.Text == null) return;
             _secilenHasta.IstenenTahliller = txtIstenenTahliller.Text;
             _secilenHasta.TahlilYapildiMi = false;
             var result = _hastaKabulService.Edit(_secilenHasta);

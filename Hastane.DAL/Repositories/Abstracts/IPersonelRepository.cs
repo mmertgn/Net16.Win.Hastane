@@ -11,6 +11,6 @@ namespace Hastane.DAL.Repositories.Abstracts
     {
         int GetDoktorCount();
         int GetSekreterCount();
-
+        List<Personeller> PersonelGetir(int PersonelID);
     }
 }

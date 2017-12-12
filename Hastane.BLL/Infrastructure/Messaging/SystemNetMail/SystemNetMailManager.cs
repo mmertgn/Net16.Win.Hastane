@@ -15,12 +15,16 @@ namespace Hastane.BLL.Infrastructure.Messaging.SystemNetMail
 
         public bool IsSucceed
         {
-            get { return _isSucceed; }
+            get
+            {
+                return _isSucceed;
+            }
         }
 
         public void SendMessage(MessageTemplate msj)
         {
-            var message = new MailMessage {From = new MailAddress(msj.From)};
+            MailMessage message = new MailMessage();
+            message.From = new MailAddress(msj.From);
 
             foreach (var item in msj.To)
             {
@@ -30,22 +34,23 @@ namespace Hastane.BLL.Infrastructure.Messaging.SystemNetMail
             message.Body = msj.MessageBody;
             message.Subject = msj.MessageSubject;
 
-            var client = new SmtpClient
-            {
-                Host = "smtp.gmail.com",
-                Port = 587,
-                Credentials = new NetworkCredential("mailadresi@mailadrei.com", "MailAdresiSifresi"),
-                EnableSsl = true
-            };
+            SmtpClient client = new SmtpClient();
+            client.Host = "smtp.gmail.com";
+            client.Port = 587;
+
+            client.Credentials = new NetworkCredential("yazilim16.net@gmail.com", "WissenYazilim16");
+
+            client.EnableSsl = true;
 
             try
             {
                 client.Send(message);
                 _isSucceed = true;
+
             }
             catch (Exception)
             {
-                _isSucceed = true;
+                _isSucceed = false;
             }
         }
     }
