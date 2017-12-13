@@ -1,13 +1,18 @@
 ﻿using Hastane.BLL.Models;
 using System;
 using System.Windows.Forms;
+using Hastane.BLL.Services.Abstracts;
+using Ninject;
 
 namespace Hastane.PL
 {
     public partial class FormGiris : Form
     {
+        private readonly IPersonelService _personelService;
         public FormGiris()
         {
+            var container = DependecyResolver.NinjectDependecyContainer.RegisterDependency(new StandardKernel());
+            _personelService = container.Get<IPersonelService>();
             InitializeComponent();
         }
 
@@ -18,19 +23,17 @@ namespace Hastane.PL
 
         private void btnCikis_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void btnGiris_Click(object sender, EventArgs e)
         {
-            Personel personel = new Personel();
-            var sonuc = personel.UyeGirisi(txtKullaniciAdi.Text,txtSifre.Text);
+            var sonuc = _personelService.UyeGirisi(txtKullaniciAdi.Text,txtSifre.Text);
             if (sonuc)
             {
                 var frm = new FormAnaSayfa();
                 frm.Show();
-
-                this.Hide();
+                Hide();
             }
             else
             {

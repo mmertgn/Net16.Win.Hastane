@@ -17,9 +17,11 @@ namespace Hastane.BLL.Services.Abstracts
         List<PersonelListeleFromPersonel> PersonelleriOzelListele(string AdSoyad, string PersonelKod);
         Personeller GetPersonelFindById(int id);
         MessageResult Edit(Personeller model);
+        MessageResult EditKullanici(Personeller model);
         MessageResult Delete(int id);
+        bool UyeGirisi(string KullaniciAdi, string Sifre);
     }
-    
+
     public class PersonelListeleFromPersonel
     {
         public int PersonelID { get; set; }

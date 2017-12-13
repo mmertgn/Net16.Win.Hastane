@@ -80,6 +80,7 @@ namespace Hastane.PL
 
         private void TahlilDoldur()
         {
+            txtTahlilUcreti.Text = "0";
             cbTahliller.Clear();
             cbTahlillerAna.Clear();
             var model = _tahlilRepository.GetList();

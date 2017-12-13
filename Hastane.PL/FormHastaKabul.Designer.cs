@@ -94,7 +94,7 @@
             this.txtTCKNOAra.Margin = new System.Windows.Forms.Padding(4);
             this.txtTCKNOAra.Name = "txtTCKNOAra";
             this.txtTCKNOAra.Size = new System.Drawing.Size(173, 35);
-            this.txtTCKNOAra.TabIndex = 23;
+            this.txtTCKNOAra.TabIndex = 1;
             this.txtTCKNOAra.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtTCKNOAra.OnValueChanged += new System.EventHandler(this.txtAdSoyadAra_OnValueChanged);
             // 
@@ -151,7 +151,7 @@
             this.dgvRandevuListesi.RowHeadersWidth = 10;
             this.dgvRandevuListesi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvRandevuListesi.Size = new System.Drawing.Size(636, 573);
-            this.dgvRandevuListesi.TabIndex = 22;
+            this.dgvRandevuListesi.TabIndex = 2;
             this.dgvRandevuListesi.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvRandevuListesi_CellMouseClick);
             // 
             // txtAdSoyadAra
@@ -168,7 +168,7 @@
             this.txtAdSoyadAra.Margin = new System.Windows.Forms.Padding(4);
             this.txtAdSoyadAra.Name = "txtAdSoyadAra";
             this.txtAdSoyadAra.Size = new System.Drawing.Size(173, 35);
-            this.txtAdSoyadAra.TabIndex = 19;
+            this.txtAdSoyadAra.TabIndex = 0;
             this.txtAdSoyadAra.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtAdSoyadAra.OnValueChanged += new System.EventHandler(this.txtAdSoyadAra_OnValueChanged);
             // 
@@ -284,7 +284,7 @@
             this.btnHastaKabulKaydet.Margin = new System.Windows.Forms.Padding(5);
             this.btnHastaKabulKaydet.Name = "btnHastaKabulKaydet";
             this.btnHastaKabulKaydet.Size = new System.Drawing.Size(356, 41);
-            this.btnHastaKabulKaydet.TabIndex = 49;
+            this.btnHastaKabulKaydet.TabIndex = 5;
             this.btnHastaKabulKaydet.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnHastaKabulKaydet.Click += new System.EventHandler(this.btnHastaKabulKaydet_Click);
             // 
@@ -302,7 +302,7 @@
             this.txtRandevuTarihi.Margin = new System.Windows.Forms.Padding(4);
             this.txtRandevuTarihi.Name = "txtRandevuTarihi";
             this.txtRandevuTarihi.Size = new System.Drawing.Size(241, 35);
-            this.txtRandevuTarihi.TabIndex = 32;
+            this.txtRandevuTarihi.TabIndex = 4;
             this.txtRandevuTarihi.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel7
@@ -330,7 +330,7 @@
             this.txtKlinik.Margin = new System.Windows.Forms.Padding(4);
             this.txtKlinik.Name = "txtKlinik";
             this.txtKlinik.Size = new System.Drawing.Size(241, 35);
-            this.txtKlinik.TabIndex = 30;
+            this.txtKlinik.TabIndex = 3;
             this.txtKlinik.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // txtDoktor
@@ -347,7 +347,7 @@
             this.txtDoktor.Margin = new System.Windows.Forms.Padding(4);
             this.txtDoktor.Name = "txtDoktor";
             this.txtDoktor.Size = new System.Drawing.Size(241, 35);
-            this.txtDoktor.TabIndex = 27;
+            this.txtDoktor.TabIndex = 2;
             this.txtDoktor.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel5
@@ -385,7 +385,7 @@
             this.txtTCKNO.Margin = new System.Windows.Forms.Padding(4);
             this.txtTCKNO.Name = "txtTCKNO";
             this.txtTCKNO.Size = new System.Drawing.Size(241, 35);
-            this.txtTCKNO.TabIndex = 26;
+            this.txtTCKNO.TabIndex = 1;
             this.txtTCKNO.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // txtHastaAdSoyad
@@ -402,7 +402,7 @@
             this.txtHastaAdSoyad.Margin = new System.Windows.Forms.Padding(4);
             this.txtHastaAdSoyad.Name = "txtHastaAdSoyad";
             this.txtHastaAdSoyad.Size = new System.Drawing.Size(241, 35);
-            this.txtHastaAdSoyad.TabIndex = 23;
+            this.txtHastaAdSoyad.TabIndex = 0;
             this.txtHastaAdSoyad.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel3

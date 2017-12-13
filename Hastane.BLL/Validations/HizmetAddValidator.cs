@@ -15,7 +15,6 @@ namespace Hastane.BLL.Validations
             RuleFor(x => x.HizmetAdi).NotEmpty().WithMessage("Hizmet adını girmek zorundasınız!");
             RuleFor(x => x.Ucret).NotEmpty().WithMessage("Ücreti girmek zorundasınız!");
             RuleFor(x => x.KlinikID).NotEmpty().WithMessage("Klinik seçmek zorundasınız!");
-           
         }
     }
     public class HizmetUpdateValidator : AbstractValidator<Hizmetler>
@@ -25,6 +24,14 @@ namespace Hastane.BLL.Validations
             RuleFor(x => x.HizmetAdi).NotEmpty().WithMessage("Hizmet adını girmek zorundasınız!");
             RuleFor(x => x.Ucret).NotEmpty().WithMessage("Ücreti girmek zorundasınız!");
             RuleFor(x => x.KlinikID).NotEmpty().WithMessage("Klinik seçmek zorundasınız!");
+            RuleFor(x => x.HizmetAdi).Must(SameIsNotExist).WithMessage("Aynı Hizmet Var!");
+        }
+        private bool SameIsNotExist(string hizmetAdi)
+        {
+            using (var hstn = new HastaneEntities())
+            {
+                return hstn.Hizmetler.Any(x => x.HizmetAdi != hizmetAdi);
+            }
         }
 
     }

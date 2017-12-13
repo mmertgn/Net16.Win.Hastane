@@ -126,7 +126,7 @@
             this.cbTahlillerAna.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(62)))));
             this.cbTahlillerAna.selectedIndex = -1;
             this.cbTahlillerAna.Size = new System.Drawing.Size(149, 35);
-            this.cbTahlillerAna.TabIndex = 97;
+            this.cbTahlillerAna.TabIndex = 3;
             this.cbTahlillerAna.onItemSelected += new System.EventHandler(this.cbTahlillerAna_onItemSelected);
             // 
             // bunifuCustomLabel6
@@ -153,7 +153,7 @@
             this.txtTahlilUcreti.Margin = new System.Windows.Forms.Padding(4, 20, 4, 4);
             this.txtTahlilUcreti.Name = "txtTahlilUcreti";
             this.txtTahlilUcreti.Size = new System.Drawing.Size(128, 35);
-            this.txtTahlilUcreti.TabIndex = 95;
+            this.txtTahlilUcreti.TabIndex = 1;
             this.txtTahlilUcreti.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel5
@@ -193,7 +193,7 @@
             this.txtTahlilAdi.Margin = new System.Windows.Forms.Padding(4, 20, 4, 4);
             this.txtTahlilAdi.Name = "txtTahlilAdi";
             this.txtTahlilAdi.Size = new System.Drawing.Size(128, 35);
-            this.txtTahlilAdi.TabIndex = 92;
+            this.txtTahlilAdi.TabIndex = 0;
             this.txtTahlilAdi.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // txtTahlilReferansDegeri
@@ -210,7 +210,7 @@
             this.txtTahlilReferansDegeri.Margin = new System.Windows.Forms.Padding(4, 20, 4, 4);
             this.txtTahlilReferansDegeri.Name = "txtTahlilReferansDegeri";
             this.txtTahlilReferansDegeri.Size = new System.Drawing.Size(149, 35);
-            this.txtTahlilReferansDegeri.TabIndex = 91;
+            this.txtTahlilReferansDegeri.TabIndex = 5;
             this.txtTahlilReferansDegeri.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel1
@@ -238,7 +238,7 @@
             this.txtTahlilBirim.Margin = new System.Windows.Forms.Padding(4, 20, 4, 4);
             this.txtTahlilBirim.Name = "txtTahlilBirim";
             this.txtTahlilBirim.Size = new System.Drawing.Size(107, 35);
-            this.txtTahlilBirim.TabIndex = 89;
+            this.txtTahlilBirim.TabIndex = 6;
             this.txtTahlilBirim.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCards2
@@ -335,7 +335,7 @@
             this.btnTahlilIcerikSil.Margin = new System.Windows.Forms.Padding(5);
             this.btnTahlilIcerikSil.Name = "btnTahlilIcerikSil";
             this.btnTahlilIcerikSil.Size = new System.Drawing.Size(154, 35);
-            this.btnTahlilIcerikSil.TabIndex = 78;
+            this.btnTahlilIcerikSil.TabIndex = 7;
             this.btnTahlilIcerikSil.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnTahlilIcerikSil.Click += new System.EventHandler(this.btnTahlilIcerikSil_Click);
             // 
@@ -375,7 +375,7 @@
             this.btnTahlilOlustur.Margin = new System.Windows.Forms.Padding(5);
             this.btnTahlilOlustur.Name = "btnTahlilOlustur";
             this.btnTahlilOlustur.Size = new System.Drawing.Size(128, 35);
-            this.btnTahlilOlustur.TabIndex = 87;
+            this.btnTahlilOlustur.TabIndex = 2;
             this.btnTahlilOlustur.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnTahlilOlustur.Click += new System.EventHandler(this.btnTahlilOlustur_Click);
             // 
@@ -393,7 +393,7 @@
             this.txtTahlilIslemAdi.Margin = new System.Windows.Forms.Padding(4, 20, 4, 4);
             this.txtTahlilIslemAdi.Name = "txtTahlilIslemAdi";
             this.txtTahlilIslemAdi.Size = new System.Drawing.Size(149, 35);
-            this.txtTahlilIslemAdi.TabIndex = 78;
+            this.txtTahlilIslemAdi.TabIndex = 4;
             this.txtTahlilIslemAdi.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel14
@@ -506,7 +506,7 @@
             this.btnTahlilYapildiIsaretle.Margin = new System.Windows.Forms.Padding(5);
             this.btnTahlilYapildiIsaretle.Name = "btnTahlilYapildiIsaretle";
             this.btnTahlilYapildiIsaretle.Size = new System.Drawing.Size(317, 37);
-            this.btnTahlilYapildiIsaretle.TabIndex = 83;
+            this.btnTahlilYapildiIsaretle.TabIndex = 2;
             this.btnTahlilYapildiIsaretle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnTahlilYapildiIsaretle.Click += new System.EventHandler(this.btnTahlilYapildiIsaretle_Click);
             // 
@@ -525,7 +525,7 @@
             this.txtSeciliHasta.Margin = new System.Windows.Forms.Padding(4, 20, 4, 4);
             this.txtSeciliHasta.Name = "txtSeciliHasta";
             this.txtSeciliHasta.Size = new System.Drawing.Size(175, 35);
-            this.txtSeciliHasta.TabIndex = 81;
+            this.txtSeciliHasta.TabIndex = 0;
             this.txtSeciliHasta.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel3
@@ -586,7 +586,7 @@
             this.btnTahlilSonucKaydet.Margin = new System.Windows.Forms.Padding(5);
             this.btnTahlilSonucKaydet.Name = "btnTahlilSonucKaydet";
             this.btnTahlilSonucKaydet.Size = new System.Drawing.Size(154, 35);
-            this.btnTahlilSonucKaydet.TabIndex = 78;
+            this.btnTahlilSonucKaydet.TabIndex = 3;
             this.btnTahlilSonucKaydet.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnTahlilSonucKaydet.Click += new System.EventHandler(this.btnTahlilSonucKaydet_Click);
             // 
@@ -709,7 +709,7 @@
             this.cbTahliller.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(62)))));
             this.cbTahliller.selectedIndex = -1;
             this.cbTahliller.Size = new System.Drawing.Size(175, 35);
-            this.cbTahliller.TabIndex = 42;
+            this.cbTahliller.TabIndex = 1;
             this.cbTahliller.onItemSelected += new System.EventHandler(this.cbTahliller_onItemSelected);
             // 
             // bunifuCustomLabel17

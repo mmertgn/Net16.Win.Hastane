@@ -12,12 +12,19 @@ namespace Hastane.BLL.Services.Concretes
     public class PersonelService : IPersonelService
     {
         private readonly IPersonelRepository _personelRepo;
+        private readonly ISistemYoneticisiRepository _sistemYoneticisiRepository;
 
         private readonly IMessaging _messageService;
-        public PersonelService(IPersonelRepository personelRepo, IMessaging messageService)
+        public PersonelService(IPersonelRepository personelRepo, IMessaging messageService, ISistemYoneticisiRepository sistemYoneticisiRepository)
         {
             _personelRepo = personelRepo;
             _messageService = messageService;
+            _sistemYoneticisiRepository = sistemYoneticisiRepository;
+        }
+        public PersonelService(IPersonelRepository personelRepo, ISistemYoneticisiRepository sistemYoneticisiRepository)
+        {
+            _personelRepo = personelRepo;
+            _sistemYoneticisiRepository = sistemYoneticisiRepository;
         }
         public PersonelService(IPersonelRepository personelRepo)
         {
@@ -27,6 +34,31 @@ namespace Hastane.BLL.Services.Concretes
         {
             return _personelRepo.GetList(x => x.Klinikler.KlinikAd == cbKlinikText);
         }
+
+        public bool UyeGirisi(string KullaniciAdi, string Sifre)
+        {
+            var yonetici = _sistemYoneticisiRepository.GetList().FirstOrDefault(p => p.KullaniciAdi == KullaniciAdi && p.Sifre == Sifre);
+            if (yonetici == null)
+            {
+                var personel = _personelRepo.GetList().FirstOrDefault(p => p.KullaniciAdi == KullaniciAdi && p.Sifre == Sifre);
+                if (personel == null)
+                {
+                    return false;
+                }
+                Genel.KullaniciAdi = personel.Ad;
+                Genel.KullaniciSoyadi = personel.Soyad;
+                Genel.LoginKullaniciID = personel.PersonelID;
+                Genel.PersonelUnvan = personel.Unvanlar.PersonelUnvan;
+                return true;
+            }
+            Genel.KullaniciAdi = yonetici.Ad;
+            Genel.KullaniciSoyadi = yonetici.Soyad;
+            Genel.LoginKullaniciID = yonetici.ID;
+            Genel.PersonelUnvan = "Yönetici";
+            Genel.YoneticiMi = true;
+            return true;
+        }
+
         public MessageResult Create(Personeller model)
         {
             var _validator = new PersonelAddValidator();
@@ -133,6 +165,22 @@ namespace Hastane.BLL.Services.Concretes
                 SilindiMi = x.Siilindi
             }).ToList();
             return model;
+        }
+		public MessageResult EditKullanici(Personeller model)
+        {
+            var _validator = new KullaniciBilgiUpdateValidator();
+            var result = _validator.Validate(model);
+            if (result.IsValid)
+            {
+                _personelRepo.Update(model);
+            }
+            var m = new MessageResult
+            {
+                ErrorMessage = result.Errors.Select(x => x.ErrorMessage).ToList(),
+                IsSucceed = result.IsValid
+            };
+            m.SuccessMessage = m.IsSucceed == true ? "Bilgi Güncelleme İşlemi Başarılı." : "Hatalı bilgiler mevcut";
+            return m;
         }
     }
 }

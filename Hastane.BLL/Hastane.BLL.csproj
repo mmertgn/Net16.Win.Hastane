@@ -77,7 +77,6 @@
     <Compile Include="Infrastructure\Messaging\SystemNetMail\SystemNetMailManager.cs" />
     <Compile Include="Models\Genel.cs" />
     <Compile Include="Models\MessageResult.cs" />
-    <Compile Include="Models\Personel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\Abstracts\IHastaHizmetHareketService.cs" />
     <Compile Include="Services\Abstracts\IHastaKabulService.cs" />
@@ -115,6 +114,7 @@
     <Compile Include="Validations\HastaKabulValidator.cs" />
     <Compile Include="Validations\HizmetAddValidator.cs" />
     <Compile Include="Validations\KlinikAddValidator.cs" />
+    <Compile Include="Validations\KullaniciBilgiUpdateValidator.cs" />
     <Compile Include="Validations\KurumAddValidator.cs" />
     <Compile Include="Validations\PersonelAddValidator.cs" />
     <Compile Include="Validations\ReceteAddValidator.cs" />

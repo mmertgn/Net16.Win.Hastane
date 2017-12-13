@@ -170,7 +170,7 @@
             this.panel5.Location = new System.Drawing.Point(543, 0);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(642, 529);
-            this.panel5.TabIndex = 2;
+            this.panel5.TabIndex = 1;
             // 
             // label1
             // 
@@ -200,7 +200,7 @@
             this.bunifuCards3.RightSahddow = true;
             this.bunifuCards3.ShadowDepth = 20;
             this.bunifuCards3.Size = new System.Drawing.Size(300, 320);
-            this.bunifuCards3.TabIndex = 78;
+            this.bunifuCards3.TabIndex = 9;
             // 
             // btnYapilanHizmetSil
             // 
@@ -252,7 +252,7 @@
             this.cbHizmetler.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(62)))));
             this.cbHizmetler.selectedIndex = -1;
             this.cbHizmetler.Size = new System.Drawing.Size(201, 35);
-            this.cbHizmetler.TabIndex = 71;
+            this.cbHizmetler.TabIndex = 3;
             // 
             // lvHizmetHareketler
             // 
@@ -341,7 +341,7 @@
             this.btnIlacSil.Margin = new System.Windows.Forms.Padding(5);
             this.btnIlacSil.Name = "btnIlacSil";
             this.btnIlacSil.Size = new System.Drawing.Size(89, 35);
-            this.btnIlacSil.TabIndex = 78;
+            this.btnIlacSil.TabIndex = 0;
             this.btnIlacSil.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnIlacSil.Click += new System.EventHandler(this.btnIlacSil_Click);
             // 
@@ -367,7 +367,7 @@
             this.btnReceteYazdir.Margin = new System.Windows.Forms.Padding(5);
             this.btnReceteYazdir.Name = "btnReceteYazdir";
             this.btnReceteYazdir.Size = new System.Drawing.Size(162, 35);
-            this.btnReceteYazdir.TabIndex = 77;
+            this.btnReceteYazdir.TabIndex = 1;
             this.btnReceteYazdir.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnReceteYazdir.Click += new System.EventHandler(this.btnReceteYazdir_Click);
             // 
@@ -453,7 +453,7 @@
             this.btnReceteOlustur.Margin = new System.Windows.Forms.Padding(5);
             this.btnReceteOlustur.Name = "btnReceteOlustur";
             this.btnReceteOlustur.Size = new System.Drawing.Size(175, 35);
-            this.btnReceteOlustur.TabIndex = 76;
+            this.btnReceteOlustur.TabIndex = 2;
             this.btnReceteOlustur.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnReceteOlustur.Click += new System.EventHandler(this.btnReceteOlustur_Click);
             // 
@@ -467,7 +467,7 @@
             this.dtpReceteTarih.Location = new System.Drawing.Point(398, 64);
             this.dtpReceteTarih.Name = "dtpReceteTarih";
             this.dtpReceteTarih.Size = new System.Drawing.Size(175, 35);
-            this.dtpReceteTarih.TabIndex = 62;
+            this.dtpReceteTarih.TabIndex = 1;
             this.dtpReceteTarih.Value = new System.DateTime(2017, 11, 24, 19, 24, 18, 0);
             // 
             // bunifuCustomLabel17
@@ -494,7 +494,7 @@
             this.txtIlacAdi.Margin = new System.Windows.Forms.Padding(4, 20, 4, 4);
             this.txtIlacAdi.Name = "txtIlacAdi";
             this.txtIlacAdi.Size = new System.Drawing.Size(149, 35);
-            this.txtIlacAdi.TabIndex = 55;
+            this.txtIlacAdi.TabIndex = 3;
             this.txtIlacAdi.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel14
@@ -523,7 +523,7 @@
             this.txtIlacKullanimSikligi.Margin = new System.Windows.Forms.Padding(4);
             this.txtIlacKullanimSikligi.Name = "txtIlacKullanimSikligi";
             this.txtIlacKullanimSikligi.Size = new System.Drawing.Size(149, 35);
-            this.txtIlacKullanimSikligi.TabIndex = 60;
+            this.txtIlacKullanimSikligi.TabIndex = 4;
             this.txtIlacKullanimSikligi.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel15
@@ -552,7 +552,7 @@
             this.txtSigortaKurumu.Margin = new System.Windows.Forms.Padding(4);
             this.txtSigortaKurumu.Name = "txtSigortaKurumu";
             this.txtSigortaKurumu.Size = new System.Drawing.Size(149, 35);
-            this.txtSigortaKurumu.TabIndex = 58;
+            this.txtSigortaKurumu.TabIndex = 0;
             this.txtSigortaKurumu.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel16
@@ -640,7 +640,7 @@
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(543, 529);
-            this.panel4.TabIndex = 1;
+            this.panel4.TabIndex = 0;
             // 
             // btnTahlilGetir
             // 
@@ -668,7 +668,7 @@
             this.cbTahliller.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(62)))));
             this.cbTahliller.selectedIndex = -1;
             this.cbTahliller.Size = new System.Drawing.Size(131, 35);
-            this.cbTahliller.TabIndex = 70;
+            this.cbTahliller.TabIndex = 7;
             // 
             // bunifuCustomLabel43
             // 
@@ -728,7 +728,7 @@
             this.btnTahlilIste.Margin = new System.Windows.Forms.Padding(5);
             this.btnTahlilIste.Name = "btnTahlilIste";
             this.btnTahlilIste.Size = new System.Drawing.Size(120, 35);
-            this.btnTahlilIste.TabIndex = 80;
+            this.btnTahlilIste.TabIndex = 7;
             this.btnTahlilIste.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnTahlilIste.Click += new System.EventHandler(this.btnTahlilIste_Click);
             // 
@@ -747,7 +747,7 @@
             this.txtIstenenTahliller.Margin = new System.Windows.Forms.Padding(4);
             this.txtIstenenTahliller.Name = "txtIstenenTahliller";
             this.txtIstenenTahliller.Size = new System.Drawing.Size(334, 35);
-            this.txtIstenenTahliller.TabIndex = 79;
+            this.txtIstenenTahliller.TabIndex = 6;
             this.txtIstenenTahliller.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel18
@@ -782,7 +782,7 @@
             this.btnSikayetEkle.Margin = new System.Windows.Forms.Padding(5);
             this.btnSikayetEkle.Name = "btnSikayetEkle";
             this.btnSikayetEkle.Size = new System.Drawing.Size(120, 35);
-            this.btnSikayetEkle.TabIndex = 76;
+            this.btnSikayetEkle.TabIndex = 1;
             this.btnSikayetEkle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSikayetEkle.Click += new System.EventHandler(this.btnSikayetEkle_Click);
             // 
@@ -808,7 +808,7 @@
             this.btnSikayetGuncelle.Margin = new System.Windows.Forms.Padding(5);
             this.btnSikayetGuncelle.Name = "btnSikayetGuncelle";
             this.btnSikayetGuncelle.Size = new System.Drawing.Size(120, 35);
-            this.btnSikayetGuncelle.TabIndex = 75;
+            this.btnSikayetGuncelle.TabIndex = 2;
             this.btnSikayetGuncelle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSikayetGuncelle.Click += new System.EventHandler(this.btnSikayetGuncelle_Click);
             // 
@@ -834,7 +834,7 @@
             this.btnTeshisKoy.Margin = new System.Windows.Forms.Padding(5);
             this.btnTeshisKoy.Name = "btnTeshisKoy";
             this.btnTeshisKoy.Size = new System.Drawing.Size(120, 35);
-            this.btnTeshisKoy.TabIndex = 74;
+            this.btnTeshisKoy.TabIndex = 4;
             this.btnTeshisKoy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnTeshisKoy.Click += new System.EventHandler(this.btnTeshisKoy_Click);
             // 
@@ -860,7 +860,7 @@
             this.btnTeshisGuncelle.Margin = new System.Windows.Forms.Padding(5);
             this.btnTeshisGuncelle.Name = "btnTeshisGuncelle";
             this.btnTeshisGuncelle.Size = new System.Drawing.Size(120, 35);
-            this.btnTeshisGuncelle.TabIndex = 73;
+            this.btnTeshisGuncelle.TabIndex = 5;
             this.btnTeshisGuncelle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnTeshisGuncelle.Click += new System.EventHandler(this.btnTeshisGuncelle_Click);
             // 
@@ -879,7 +879,7 @@
             this.txtTeshis.Margin = new System.Windows.Forms.Padding(4);
             this.txtTeshis.Name = "txtTeshis";
             this.txtTeshis.Size = new System.Drawing.Size(334, 35);
-            this.txtTeshis.TabIndex = 72;
+            this.txtTeshis.TabIndex = 3;
             this.txtTeshis.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel13
@@ -908,7 +908,7 @@
             this.txtHastaSikayeti.Margin = new System.Windows.Forms.Padding(4);
             this.txtHastaSikayeti.Name = "txtHastaSikayeti";
             this.txtHastaSikayeti.Size = new System.Drawing.Size(334, 35);
-            this.txtHastaSikayeti.TabIndex = 72;
+            this.txtHastaSikayeti.TabIndex = 0;
             this.txtHastaSikayeti.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel10
@@ -952,7 +952,7 @@
             this.txtKanGrubu.Margin = new System.Windows.Forms.Padding(4);
             this.txtKanGrubu.Name = "txtKanGrubu";
             this.txtKanGrubu.Size = new System.Drawing.Size(175, 35);
-            this.txtKanGrubu.TabIndex = 67;
+            this.txtKanGrubu.TabIndex = 4;
             this.txtKanGrubu.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel11
@@ -981,7 +981,7 @@
             this.txtRandevuSaat.Margin = new System.Windows.Forms.Padding(4);
             this.txtRandevuSaat.Name = "txtRandevuSaat";
             this.txtRandevuSaat.Size = new System.Drawing.Size(175, 35);
-            this.txtRandevuSaat.TabIndex = 65;
+            this.txtRandevuSaat.TabIndex = 6;
             this.txtRandevuSaat.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel9
@@ -1010,7 +1010,7 @@
             this.txtRandevuTarih.Margin = new System.Windows.Forms.Padding(4);
             this.txtRandevuTarih.Name = "txtRandevuTarih";
             this.txtRandevuTarih.Size = new System.Drawing.Size(175, 35);
-            this.txtRandevuTarih.TabIndex = 63;
+            this.txtRandevuTarih.TabIndex = 5;
             this.txtRandevuTarih.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel7
@@ -1039,7 +1039,7 @@
             this.txtDoktorAdi.Margin = new System.Windows.Forms.Padding(4);
             this.txtDoktorAdi.Name = "txtDoktorAdi";
             this.txtDoktorAdi.Size = new System.Drawing.Size(149, 35);
-            this.txtDoktorAdi.TabIndex = 61;
+            this.txtDoktorAdi.TabIndex = 3;
             this.txtDoktorAdi.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel5
@@ -1067,7 +1067,7 @@
             this.txtAd.Margin = new System.Windows.Forms.Padding(4, 20, 4, 4);
             this.txtAd.Name = "txtAd";
             this.txtAd.Size = new System.Drawing.Size(149, 35);
-            this.txtAd.TabIndex = 44;
+            this.txtAd.TabIndex = 1;
             this.txtAd.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel6
@@ -1096,7 +1096,7 @@
             this.txtKlinikAdi.Margin = new System.Windows.Forms.Padding(4);
             this.txtKlinikAdi.Name = "txtKlinikAdi";
             this.txtKlinikAdi.Size = new System.Drawing.Size(149, 35);
-            this.txtKlinikAdi.TabIndex = 54;
+            this.txtKlinikAdi.TabIndex = 2;
             this.txtKlinikAdi.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel12
@@ -1125,7 +1125,7 @@
             this.txtTCKimlikNo.Margin = new System.Windows.Forms.Padding(4);
             this.txtTCKimlikNo.Name = "txtTCKimlikNo";
             this.txtTCKimlikNo.Size = new System.Drawing.Size(149, 35);
-            this.txtTCKimlikNo.TabIndex = 47;
+            this.txtTCKimlikNo.TabIndex = 0;
             this.txtTCKimlikNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel4
@@ -1268,7 +1268,7 @@
             this.txtTCKimlikNoAra.Margin = new System.Windows.Forms.Padding(4);
             this.txtTCKimlikNoAra.Name = "txtTCKimlikNoAra";
             this.txtTCKimlikNoAra.Size = new System.Drawing.Size(175, 35);
-            this.txtTCKimlikNoAra.TabIndex = 21;
+            this.txtTCKimlikNoAra.TabIndex = 2;
             this.txtTCKimlikNoAra.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtTCKimlikNoAra.OnValueChanged += new System.EventHandler(this.txtAdSoyadAra_OnValueChanged);
             // 
@@ -1286,7 +1286,7 @@
             this.txtTelefonAra.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelefonAra.Name = "txtTelefonAra";
             this.txtTelefonAra.Size = new System.Drawing.Size(175, 35);
-            this.txtTelefonAra.TabIndex = 20;
+            this.txtTelefonAra.TabIndex = 1;
             this.txtTelefonAra.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtTelefonAra.OnValueChanged += new System.EventHandler(this.txtAdSoyadAra_OnValueChanged);
             // 
@@ -1304,7 +1304,7 @@
             this.txtAdSoyadAra.Margin = new System.Windows.Forms.Padding(4);
             this.txtAdSoyadAra.Name = "txtAdSoyadAra";
             this.txtAdSoyadAra.Size = new System.Drawing.Size(175, 35);
-            this.txtAdSoyadAra.TabIndex = 15;
+            this.txtAdSoyadAra.TabIndex = 0;
             this.txtAdSoyadAra.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtAdSoyadAra.OnValueChanged += new System.EventHandler(this.txtAdSoyadAra_OnValueChanged);
             // 

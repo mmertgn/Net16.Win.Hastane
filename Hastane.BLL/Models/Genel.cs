@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace Hastane.BLL.Models
 {
-    public class Genel
+    public static class Genel
     {
         public static string KullaniciAdi;
         public static string KullaniciSoyadi; 
         public static int LoginKullaniciID;
         public static int ReceteId;
-
+        public static bool YoneticiMi = false;
+        public static string PersonelUnvan;
     }
 }

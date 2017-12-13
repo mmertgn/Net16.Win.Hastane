@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPersonelIslemleri));
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvPersoneller = new ns1.BunifuCustomDataGrid();
@@ -98,28 +98,28 @@
             // 
             this.dgvPersoneller.AllowUserToAddRows = false;
             this.dgvPersoneller.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvPersoneller.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvPersoneller.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPersoneller.BackgroundColor = System.Drawing.Color.White;
             this.dgvPersoneller.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvPersoneller.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPersoneller.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPersoneller.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPersoneller.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle27.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle27.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPersoneller.DefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPersoneller.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPersoneller.DoubleBuffered = true;
             this.dgvPersoneller.EnableHeadersVisualStyles = false;
             this.dgvPersoneller.GridColor = System.Drawing.Color.White;
@@ -129,18 +129,18 @@
             this.dgvPersoneller.Name = "dgvPersoneller";
             this.dgvPersoneller.ReadOnly = true;
             this.dgvPersoneller.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle28.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPersoneller.RowHeadersDefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPersoneller.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvPersoneller.RowHeadersWidth = 10;
             this.dgvPersoneller.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPersoneller.Size = new System.Drawing.Size(744, 534);
-            this.dgvPersoneller.TabIndex = 30;
+            this.dgvPersoneller.TabIndex = 2;
             this.dgvPersoneller.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvPersoneller_CellMouseClick);
             // 
             // txtPersonelKoduAra
@@ -157,7 +157,7 @@
             this.txtPersonelKoduAra.Margin = new System.Windows.Forms.Padding(4);
             this.txtPersonelKoduAra.Name = "txtPersonelKoduAra";
             this.txtPersonelKoduAra.Size = new System.Drawing.Size(173, 35);
-            this.txtPersonelKoduAra.TabIndex = 28;
+            this.txtPersonelKoduAra.TabIndex = 1;
             this.txtPersonelKoduAra.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtPersonelKoduAra.OnValueChanged += new System.EventHandler(this.txtPersonelAdSoyadAra_OnValueChanged);
             // 
@@ -185,7 +185,7 @@
             this.txtPersonelAdSoyadAra.Margin = new System.Windows.Forms.Padding(4);
             this.txtPersonelAdSoyadAra.Name = "txtPersonelAdSoyadAra";
             this.txtPersonelAdSoyadAra.Size = new System.Drawing.Size(173, 35);
-            this.txtPersonelAdSoyadAra.TabIndex = 25;
+            this.txtPersonelAdSoyadAra.TabIndex = 0;
             this.txtPersonelAdSoyadAra.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtPersonelAdSoyadAra.OnValueChanged += new System.EventHandler(this.txtPersonelAdSoyadAra_OnValueChanged);
             // 
@@ -294,7 +294,7 @@
             this.txtPersonelEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtPersonelEmail.Name = "txtPersonelEmail";
             this.txtPersonelEmail.Size = new System.Drawing.Size(241, 35);
-            this.txtPersonelEmail.TabIndex = 84;
+            this.txtPersonelEmail.TabIndex = 3;
             this.txtPersonelEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel12
@@ -343,7 +343,7 @@
             this.btnPersonelSil.Margin = new System.Windows.Forms.Padding(5);
             this.btnPersonelSil.Name = "btnPersonelSil";
             this.btnPersonelSil.Size = new System.Drawing.Size(190, 41);
-            this.btnPersonelSil.TabIndex = 81;
+            this.btnPersonelSil.TabIndex = 12;
             this.btnPersonelSil.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnPersonelSil.Click += new System.EventHandler(this.btnPersonelSil_Click);
             // 
@@ -369,7 +369,7 @@
             this.btnPersonelEkle.Margin = new System.Windows.Forms.Padding(5);
             this.btnPersonelEkle.Name = "btnPersonelEkle";
             this.btnPersonelEkle.Size = new System.Drawing.Size(157, 41);
-            this.btnPersonelEkle.TabIndex = 80;
+            this.btnPersonelEkle.TabIndex = 11;
             this.btnPersonelEkle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnPersonelEkle.Click += new System.EventHandler(this.btnPersonelEkle_Click);
             // 
@@ -395,7 +395,7 @@
             this.btnPersonelGuncelle.Margin = new System.Windows.Forms.Padding(5);
             this.btnPersonelGuncelle.Name = "btnPersonelGuncelle";
             this.btnPersonelGuncelle.Size = new System.Drawing.Size(360, 41);
-            this.btnPersonelGuncelle.TabIndex = 79;
+            this.btnPersonelGuncelle.TabIndex = 13;
             this.btnPersonelGuncelle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnPersonelGuncelle.Click += new System.EventHandler(this.btnPersonelGuncelle_Click);
             // 
@@ -409,7 +409,7 @@
             this.dtpPersonelDogumTarihi.Location = new System.Drawing.Point(141, 363);
             this.dtpPersonelDogumTarihi.Name = "dtpPersonelDogumTarihi";
             this.dtpPersonelDogumTarihi.Size = new System.Drawing.Size(241, 35);
-            this.dtpPersonelDogumTarihi.TabIndex = 78;
+            this.dtpPersonelDogumTarihi.TabIndex = 7;
             this.dtpPersonelDogumTarihi.Value = new System.DateTime(2017, 11, 24, 19, 24, 18, 0);
             // 
             // bunifuCustomLabel11
@@ -437,7 +437,7 @@
             this.txtTCKimlikNo.Margin = new System.Windows.Forms.Padding(4);
             this.txtTCKimlikNo.Name = "txtTCKimlikNo";
             this.txtTCKimlikNo.Size = new System.Drawing.Size(241, 35);
-            this.txtTCKimlikNo.TabIndex = 76;
+            this.txtTCKimlikNo.TabIndex = 0;
             this.txtTCKimlikNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel6
@@ -463,7 +463,7 @@
             this.cbKlinikler.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(62)))));
             this.cbKlinikler.selectedIndex = -1;
             this.cbKlinikler.Size = new System.Drawing.Size(240, 35);
-            this.cbKlinikler.TabIndex = 74;
+            this.cbKlinikler.TabIndex = 10;
             // 
             // bunifuCustomLabel3
             // 
@@ -488,7 +488,7 @@
             this.cbUnvanlar.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(62)))));
             this.cbUnvanlar.selectedIndex = -1;
             this.cbUnvanlar.Size = new System.Drawing.Size(240, 35);
-            this.cbUnvanlar.TabIndex = 72;
+            this.cbUnvanlar.TabIndex = 8;
             // 
             // bunifuCustomLabel43
             // 
@@ -514,7 +514,7 @@
             this.txtPersonelEvTel.Margin = new System.Windows.Forms.Padding(4);
             this.txtPersonelEvTel.Name = "txtPersonelEvTel";
             this.txtPersonelEvTel.Size = new System.Drawing.Size(241, 35);
-            this.txtPersonelEvTel.TabIndex = 38;
+            this.txtPersonelEvTel.TabIndex = 5;
             this.txtPersonelEvTel.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // txtPersonelCepTel
@@ -531,7 +531,7 @@
             this.txtPersonelCepTel.Margin = new System.Windows.Forms.Padding(4);
             this.txtPersonelCepTel.Name = "txtPersonelCepTel";
             this.txtPersonelCepTel.Size = new System.Drawing.Size(241, 35);
-            this.txtPersonelCepTel.TabIndex = 35;
+            this.txtPersonelCepTel.TabIndex = 4;
             this.txtPersonelCepTel.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel7
@@ -569,7 +569,7 @@
             this.txtSicilNo.Margin = new System.Windows.Forms.Padding(4);
             this.txtSicilNo.Name = "txtSicilNo";
             this.txtSicilNo.Size = new System.Drawing.Size(241, 35);
-            this.txtSicilNo.TabIndex = 34;
+            this.txtSicilNo.TabIndex = 9;
             this.txtSicilNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // txtPersonelAdres
@@ -586,7 +586,7 @@
             this.txtPersonelAdres.Margin = new System.Windows.Forms.Padding(4);
             this.txtPersonelAdres.Name = "txtPersonelAdres";
             this.txtPersonelAdres.Size = new System.Drawing.Size(241, 35);
-            this.txtPersonelAdres.TabIndex = 31;
+            this.txtPersonelAdres.TabIndex = 6;
             this.txtPersonelAdres.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel9
@@ -624,7 +624,7 @@
             this.txtPersonelSoyad.Margin = new System.Windows.Forms.Padding(4);
             this.txtPersonelSoyad.Name = "txtPersonelSoyad";
             this.txtPersonelSoyad.Size = new System.Drawing.Size(241, 35);
-            this.txtPersonelSoyad.TabIndex = 30;
+            this.txtPersonelSoyad.TabIndex = 2;
             this.txtPersonelSoyad.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel5
@@ -652,7 +652,7 @@
             this.txtPersonelAd.Margin = new System.Windows.Forms.Padding(4);
             this.txtPersonelAd.Name = "txtPersonelAd";
             this.txtPersonelAd.Size = new System.Drawing.Size(241, 35);
-            this.txtPersonelAd.TabIndex = 23;
+            this.txtPersonelAd.TabIndex = 1;
             this.txtPersonelAd.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel4

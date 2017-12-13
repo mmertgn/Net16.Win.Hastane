@@ -100,7 +100,7 @@
             this.txtSifre.Margin = new System.Windows.Forms.Padding(4);
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.Size = new System.Drawing.Size(229, 44);
-            this.txtSifre.TabIndex = 17;
+            this.txtSifre.TabIndex = 1;
             this.txtSifre.Text = "Şifre";
             this.txtSifre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -118,7 +118,7 @@
             this.txtKullaniciAdi.Margin = new System.Windows.Forms.Padding(4);
             this.txtKullaniciAdi.Name = "txtKullaniciAdi";
             this.txtKullaniciAdi.Size = new System.Drawing.Size(229, 44);
-            this.txtKullaniciAdi.TabIndex = 16;
+            this.txtKullaniciAdi.TabIndex = 0;
             this.txtKullaniciAdi.Text = "Kullanıcı Adı";
             this.txtKullaniciAdi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -130,7 +130,7 @@
             this.btnCikis.Margin = new System.Windows.Forms.Padding(0);
             this.btnCikis.Name = "btnCikis";
             this.btnCikis.Size = new System.Drawing.Size(276, 38);
-            this.btnCikis.TabIndex = 1;
+            this.btnCikis.TabIndex = 3;
             this.btnCikis.Text = "Çıkış";
             this.btnCikis.UseVisualStyleBackColor = false;
             this.btnCikis.Click += new System.EventHandler(this.btnCikis_Click);
@@ -164,7 +164,7 @@
             this.btnGiris.Margin = new System.Windows.Forms.Padding(0);
             this.btnGiris.Name = "btnGiris";
             this.btnGiris.Size = new System.Drawing.Size(276, 38);
-            this.btnGiris.TabIndex = 4;
+            this.btnGiris.TabIndex = 2;
             this.btnGiris.Text = "Giriş";
             this.btnGiris.UseVisualStyleBackColor = false;
             this.btnGiris.Click += new System.EventHandler(this.btnGiris_Click);
@@ -182,9 +182,11 @@
             // 
             // FormGiris
             // 
+            this.AcceptButton = this.btnGiris;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(214)))), ((int)(((byte)(222)))));
+            this.CancelButton = this.btnCikis;
             this.ClientSize = new System.Drawing.Size(1016, 561);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;

@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormOdemeIslemleri));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.TxtTCNoAra = new ns1.BunifuMetroTextbox();
             this.bunifuCustomLabel3 = new ns1.BunifuCustomLabel();
             this.txtTelefonAra = new ns1.BunifuMetroTextbox();
@@ -59,14 +60,13 @@
             this.bunifuCustomLabel19 = new ns1.BunifuCustomLabel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.bunifuThinButton22 = new ns1.BunifuThinButton2();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHastaKabuller)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.bunifuCards3.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -86,6 +86,16 @@
             this.panel1.Size = new System.Drawing.Size(657, 676);
             this.panel1.TabIndex = 0;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Hastane.PL.Properties.Resources.magnifying_glass;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 64);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 31;
+            this.pictureBox1.TabStop = false;
+            // 
             // TxtTCNoAra
             // 
             this.TxtTCNoAra.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
@@ -100,7 +110,7 @@
             this.TxtTCNoAra.Margin = new System.Windows.Forms.Padding(4);
             this.TxtTCNoAra.Name = "TxtTCNoAra";
             this.TxtTCNoAra.Size = new System.Drawing.Size(113, 35);
-            this.TxtTCNoAra.TabIndex = 30;
+            this.TxtTCNoAra.TabIndex = 2;
             this.TxtTCNoAra.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.TxtTCNoAra.OnValueChanged += new System.EventHandler(this.txtAdSoyadAra_OnValueChanged);
             // 
@@ -129,7 +139,7 @@
             this.txtTelefonAra.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelefonAra.Name = "txtTelefonAra";
             this.txtTelefonAra.Size = new System.Drawing.Size(113, 35);
-            this.txtTelefonAra.TabIndex = 28;
+            this.txtTelefonAra.TabIndex = 1;
             this.txtTelefonAra.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtTelefonAra.OnValueChanged += new System.EventHandler(this.txtAdSoyadAra_OnValueChanged);
             // 
@@ -147,7 +157,7 @@
             this.txtAdSoyadAra.Margin = new System.Windows.Forms.Padding(4);
             this.txtAdSoyadAra.Name = "txtAdSoyadAra";
             this.txtAdSoyadAra.Size = new System.Drawing.Size(113, 35);
-            this.txtAdSoyadAra.TabIndex = 24;
+            this.txtAdSoyadAra.TabIndex = 0;
             this.txtAdSoyadAra.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtAdSoyadAra.OnValueChanged += new System.EventHandler(this.txtAdSoyadAra_OnValueChanged);
             // 
@@ -176,21 +186,21 @@
             // 
             this.dgvHastaKabuller.AllowUserToAddRows = false;
             this.dgvHastaKabuller.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvHastaKabuller.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvHastaKabuller.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvHastaKabuller.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvHastaKabuller.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvHastaKabuller.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgvHastaKabuller.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvHastaKabuller.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvHastaKabuller.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvHastaKabuller.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvHastaKabuller.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHastaKabuller.DoubleBuffered = true;
             this.dgvHastaKabuller.EnableHeadersVisualStyles = false;
@@ -204,7 +214,7 @@
             this.dgvHastaKabuller.RowHeadersWidth = 4;
             this.dgvHastaKabuller.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvHastaKabuller.Size = new System.Drawing.Size(627, 528);
-            this.dgvHastaKabuller.TabIndex = 23;
+            this.dgvHastaKabuller.TabIndex = 3;
             this.dgvHastaKabuller.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvRandevular_CellMouseClick);
             // 
             // panel4
@@ -295,7 +305,7 @@
             this.btnIslemiBitir.Margin = new System.Windows.Forms.Padding(5);
             this.btnIslemiBitir.Name = "btnIslemiBitir";
             this.btnIslemiBitir.Size = new System.Drawing.Size(173, 35);
-            this.btnIslemiBitir.TabIndex = 87;
+            this.btnIslemiBitir.TabIndex = 4;
             this.btnIslemiBitir.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnIslemiBitir.Click += new System.EventHandler(this.btnIslemiBitir_Click);
             // 
@@ -321,7 +331,7 @@
             this.btnFaturaYazdir.Margin = new System.Windows.Forms.Padding(5);
             this.btnFaturaYazdir.Name = "btnFaturaYazdir";
             this.btnFaturaYazdir.Size = new System.Drawing.Size(173, 35);
-            this.btnFaturaYazdir.TabIndex = 86;
+            this.btnFaturaYazdir.TabIndex = 3;
             this.btnFaturaYazdir.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnFaturaYazdir.Click += new System.EventHandler(this.btnFaturaYazdir_Click);
             // 
@@ -340,7 +350,7 @@
             this.txtGenelToplam.Margin = new System.Windows.Forms.Padding(4);
             this.txtGenelToplam.Name = "txtGenelToplam";
             this.txtGenelToplam.Size = new System.Drawing.Size(113, 35);
-            this.txtGenelToplam.TabIndex = 85;
+            this.txtGenelToplam.TabIndex = 2;
             this.txtGenelToplam.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel6
@@ -369,7 +379,7 @@
             this.txtKurum.Margin = new System.Windows.Forms.Padding(4);
             this.txtKurum.Name = "txtKurum";
             this.txtKurum.Size = new System.Drawing.Size(113, 35);
-            this.txtKurum.TabIndex = 83;
+            this.txtKurum.TabIndex = 0;
             this.txtKurum.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel5
@@ -398,7 +408,7 @@
             this.txtKDV.Margin = new System.Windows.Forms.Padding(4);
             this.txtKDV.Name = "txtKDV";
             this.txtKDV.Size = new System.Drawing.Size(113, 35);
-            this.txtKDV.TabIndex = 81;
+            this.txtKDV.TabIndex = 1;
             this.txtKDV.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel4
@@ -511,16 +521,6 @@
             this.bunifuThinButton22.TabIndex = 1;
             this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Hastane.PL.Properties.Resources.magnifying_glass;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 64);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 31;
-            this.pictureBox1.TabStop = false;
-            // 
             // FormOdemeIslemleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -534,6 +534,7 @@
             this.Load += new System.EventHandler(this.FormOdemeIslemleri_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHastaKabuller)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -541,7 +542,6 @@
             this.bunifuCards3.ResumeLayout(false);
             this.bunifuCards3.PerformLayout();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

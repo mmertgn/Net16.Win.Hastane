@@ -30,8 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormKullaniciBilgileri));
             this.pnlContainer = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.bunifuThinButton21 = new ns1.BunifuThinButton2();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.bunifuCustomLabel1 = new ns1.BunifuCustomLabel();
+            this.txtKullaniciAdi = new ns1.BunifuMetroTextbox();
+            this.txtSifre = new ns1.BunifuMetroTextbox();
+            this.bunifuCustomLabel2 = new ns1.BunifuCustomLabel();
             this.txtEmail = new ns1.BunifuMetroTextbox();
             this.bunifuCustomLabel12 = new ns1.BunifuCustomLabel();
             this.btnGuncelle = new ns1.BunifuThinButton2();
@@ -55,14 +58,11 @@
             this.bunifuCustomLabel5 = new ns1.BunifuCustomLabel();
             this.txtPersonelAd = new ns1.BunifuMetroTextbox();
             this.lblAd = new ns1.BunifuCustomLabel();
-            this.bunifuCustomLabel1 = new ns1.BunifuCustomLabel();
-            this.txtKullaniciAdi = new ns1.BunifuMetroTextbox();
-            this.txtSifre = new ns1.BunifuMetroTextbox();
-            this.bunifuCustomLabel2 = new ns1.BunifuCustomLabel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.bunifuThinButton21 = new ns1.BunifuThinButton2();
             this.pnlContainer.SuspendLayout();
-            this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlContainer
@@ -102,41 +102,70 @@
             this.pnlContainer.Size = new System.Drawing.Size(1185, 715);
             this.pnlContainer.TabIndex = 0;
             // 
-            // panel6
+            // pictureBox1
             // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.panel6.Controls.Add(this.bunifuThinButton21);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1185, 56);
-            this.panel6.TabIndex = 2;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(54, 199);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(288, 190);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 114;
+            this.pictureBox1.TabStop = false;
             // 
-            // bunifuThinButton21
+            // bunifuCustomLabel1
             // 
-            this.bunifuThinButton21.ActiveBorderThickness = 1;
-            this.bunifuThinButton21.ActiveCornerRadius = 30;
-            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
-            this.bunifuThinButton21.ButtonText = "Kullanıcı Bilgileri";
-            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.bunifuThinButton21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuThinButton21.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton21.ForeColor = System.Drawing.Color.White;
-            this.bunifuThinButton21.IdleBorderThickness = 1;
-            this.bunifuThinButton21.IdleCornerRadius = 20;
-            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton21.Location = new System.Drawing.Point(0, 0);
-            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.bunifuThinButton21.Name = "bunifuThinButton21";
-            this.bunifuThinButton21.Size = new System.Drawing.Size(1185, 56);
-            this.bunifuThinButton21.TabIndex = 1;
-            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuCustomLabel1.AutoSize = true;
+            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(360, 371);
+            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(84, 17);
+            this.bunifuCustomLabel1.TabIndex = 113;
+            this.bunifuCustomLabel1.Text = "Kullanıcı Adı";
+            this.bunifuCustomLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtKullaniciAdi
+            // 
+            this.txtKullaniciAdi.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.txtKullaniciAdi.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtKullaniciAdi.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.txtKullaniciAdi.BorderThickness = 3;
+            this.txtKullaniciAdi.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtKullaniciAdi.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtKullaniciAdi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.txtKullaniciAdi.isPassword = false;
+            this.txtKullaniciAdi.Location = new System.Drawing.Point(478, 360);
+            this.txtKullaniciAdi.Margin = new System.Windows.Forms.Padding(4);
+            this.txtKullaniciAdi.Name = "txtKullaniciAdi";
+            this.txtKullaniciAdi.Size = new System.Drawing.Size(241, 35);
+            this.txtKullaniciAdi.TabIndex = 4;
+            this.txtKullaniciAdi.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // txtSifre
+            // 
+            this.txtSifre.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.txtSifre.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtSifre.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.txtSifre.BorderThickness = 3;
+            this.txtSifre.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSifre.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtSifre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.txtSifre.isPassword = true;
+            this.txtSifre.Location = new System.Drawing.Point(478, 403);
+            this.txtSifre.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSifre.Name = "txtSifre";
+            this.txtSifre.Size = new System.Drawing.Size(241, 35);
+            this.txtSifre.TabIndex = 5;
+            this.txtSifre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // bunifuCustomLabel2
+            // 
+            this.bunifuCustomLabel2.AutoSize = true;
+            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(360, 412);
+            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(37, 17);
+            this.bunifuCustomLabel2.TabIndex = 111;
+            this.bunifuCustomLabel2.Text = "Şifre";
             // 
             // txtEmail
             // 
@@ -152,7 +181,7 @@
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(241, 35);
-            this.txtEmail.TabIndex = 109;
+            this.txtEmail.TabIndex = 3;
             this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel12
@@ -188,8 +217,9 @@
             this.btnGuncelle.Margin = new System.Windows.Forms.Padding(5);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(360, 41);
-            this.btnGuncelle.TabIndex = 105;
+            this.btnGuncelle.TabIndex = 13;
             this.btnGuncelle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // dtpDogumTarihi
             // 
@@ -201,7 +231,7 @@
             this.dtpDogumTarihi.Location = new System.Drawing.Point(889, 317);
             this.dtpDogumTarihi.Name = "dtpDogumTarihi";
             this.dtpDogumTarihi.Size = new System.Drawing.Size(241, 35);
-            this.dtpDogumTarihi.TabIndex = 104;
+            this.dtpDogumTarihi.TabIndex = 9;
             this.dtpDogumTarihi.Value = new System.DateTime(2017, 11, 24, 19, 24, 18, 0);
             // 
             // bunifuCustomLabel11
@@ -229,7 +259,7 @@
             this.txtTCKimlikNo.Margin = new System.Windows.Forms.Padding(4);
             this.txtTCKimlikNo.Name = "txtTCKimlikNo";
             this.txtTCKimlikNo.Size = new System.Drawing.Size(241, 35);
-            this.txtTCKimlikNo.TabIndex = 102;
+            this.txtTCKimlikNo.TabIndex = 0;
             this.txtTCKimlikNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel6
@@ -255,7 +285,7 @@
             this.cbKlinikler.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(62)))));
             this.cbKlinikler.selectedIndex = -1;
             this.cbKlinikler.Size = new System.Drawing.Size(240, 35);
-            this.cbKlinikler.TabIndex = 100;
+            this.cbKlinikler.TabIndex = 12;
             // 
             // bunifuCustomLabel3
             // 
@@ -280,7 +310,7 @@
             this.cbUnvanlar.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(62)))));
             this.cbUnvanlar.selectedIndex = -1;
             this.cbUnvanlar.Size = new System.Drawing.Size(240, 35);
-            this.cbUnvanlar.TabIndex = 98;
+            this.cbUnvanlar.TabIndex = 10;
             // 
             // bunifuCustomLabel43
             // 
@@ -306,7 +336,7 @@
             this.txtEvTelefonu.Margin = new System.Windows.Forms.Padding(4);
             this.txtEvTelefonu.Name = "txtEvTelefonu";
             this.txtEvTelefonu.Size = new System.Drawing.Size(241, 35);
-            this.txtEvTelefonu.TabIndex = 96;
+            this.txtEvTelefonu.TabIndex = 7;
             this.txtEvTelefonu.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // txtCepTelefonu
@@ -323,7 +353,7 @@
             this.txtCepTelefonu.Margin = new System.Windows.Forms.Padding(4);
             this.txtCepTelefonu.Name = "txtCepTelefonu";
             this.txtCepTelefonu.Size = new System.Drawing.Size(241, 35);
-            this.txtCepTelefonu.TabIndex = 93;
+            this.txtCepTelefonu.TabIndex = 6;
             this.txtCepTelefonu.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel7
@@ -361,7 +391,7 @@
             this.txtSicilNo.Margin = new System.Windows.Forms.Padding(4);
             this.txtSicilNo.Name = "txtSicilNo";
             this.txtSicilNo.Size = new System.Drawing.Size(241, 35);
-            this.txtSicilNo.TabIndex = 92;
+            this.txtSicilNo.TabIndex = 11;
             this.txtSicilNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // txtAdres
@@ -378,7 +408,7 @@
             this.txtAdres.Margin = new System.Windows.Forms.Padding(4);
             this.txtAdres.Name = "txtAdres";
             this.txtAdres.Size = new System.Drawing.Size(241, 35);
-            this.txtAdres.TabIndex = 89;
+            this.txtAdres.TabIndex = 8;
             this.txtAdres.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel9
@@ -416,7 +446,7 @@
             this.txtSoyad.Margin = new System.Windows.Forms.Padding(4);
             this.txtSoyad.Name = "txtSoyad";
             this.txtSoyad.Size = new System.Drawing.Size(241, 35);
-            this.txtSoyad.TabIndex = 88;
+            this.txtSoyad.TabIndex = 2;
             this.txtSoyad.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel5
@@ -444,7 +474,7 @@
             this.txtPersonelAd.Margin = new System.Windows.Forms.Padding(4);
             this.txtPersonelAd.Name = "txtPersonelAd";
             this.txtPersonelAd.Size = new System.Drawing.Size(241, 35);
-            this.txtPersonelAd.TabIndex = 85;
+            this.txtPersonelAd.TabIndex = 1;
             this.txtPersonelAd.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // lblAd
@@ -457,70 +487,41 @@
             this.lblAd.TabIndex = 86;
             this.lblAd.Text = "Adınız";
             // 
-            // bunifuCustomLabel1
+            // panel6
             // 
-            this.bunifuCustomLabel1.AutoSize = true;
-            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(360, 371);
-            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(84, 17);
-            this.bunifuCustomLabel1.TabIndex = 113;
-            this.bunifuCustomLabel1.Text = "Kullanıcı Adı";
-            this.bunifuCustomLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.panel6.Controls.Add(this.bunifuThinButton21);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(1185, 56);
+            this.panel6.TabIndex = 2;
             // 
-            // txtKullaniciAdi
+            // bunifuThinButton21
             // 
-            this.txtKullaniciAdi.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.txtKullaniciAdi.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtKullaniciAdi.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.txtKullaniciAdi.BorderThickness = 3;
-            this.txtKullaniciAdi.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtKullaniciAdi.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtKullaniciAdi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.txtKullaniciAdi.isPassword = false;
-            this.txtKullaniciAdi.Location = new System.Drawing.Point(478, 360);
-            this.txtKullaniciAdi.Margin = new System.Windows.Forms.Padding(4);
-            this.txtKullaniciAdi.Name = "txtKullaniciAdi";
-            this.txtKullaniciAdi.Size = new System.Drawing.Size(241, 35);
-            this.txtKullaniciAdi.TabIndex = 112;
-            this.txtKullaniciAdi.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // txtSifre
-            // 
-            this.txtSifre.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.txtSifre.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtSifre.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.txtSifre.BorderThickness = 3;
-            this.txtSifre.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSifre.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtSifre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.txtSifre.isPassword = true;
-            this.txtSifre.Location = new System.Drawing.Point(478, 403);
-            this.txtSifre.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSifre.Name = "txtSifre";
-            this.txtSifre.Size = new System.Drawing.Size(241, 35);
-            this.txtSifre.TabIndex = 110;
-            this.txtSifre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // bunifuCustomLabel2
-            // 
-            this.bunifuCustomLabel2.AutoSize = true;
-            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(360, 412);
-            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(37, 17);
-            this.bunifuCustomLabel2.TabIndex = 111;
-            this.bunifuCustomLabel2.Text = "Şifre";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(54, 199);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(288, 190);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 114;
-            this.pictureBox1.TabStop = false;
+            this.bunifuThinButton21.ActiveBorderThickness = 1;
+            this.bunifuThinButton21.ActiveCornerRadius = 30;
+            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.White;
+            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
+            this.bunifuThinButton21.ButtonText = "Kullanıcı Bilgileri";
+            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.bunifuThinButton21.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bunifuThinButton21.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton21.ForeColor = System.Drawing.Color.White;
+            this.bunifuThinButton21.IdleBorderThickness = 1;
+            this.bunifuThinButton21.IdleCornerRadius = 20;
+            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton21.Location = new System.Drawing.Point(0, 0);
+            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.bunifuThinButton21.Name = "bunifuThinButton21";
+            this.bunifuThinButton21.Size = new System.Drawing.Size(1185, 56);
+            this.bunifuThinButton21.TabIndex = 1;
+            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormKullaniciBilgileri
             // 
@@ -531,10 +532,11 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormKullaniciBilgileri";
             this.Text = "FormKullaniciBilgileri";
+            this.Load += new System.EventHandler(this.FormKullaniciBilgileri_Load);
             this.pnlContainer.ResumeLayout(false);
             this.pnlContainer.PerformLayout();
-            this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel6.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

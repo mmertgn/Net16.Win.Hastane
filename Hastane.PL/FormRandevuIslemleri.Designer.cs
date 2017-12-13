@@ -201,7 +201,7 @@
             this.dgvHastalar.RowHeadersWidth = 10;
             this.dgvHastalar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvHastalar.Size = new System.Drawing.Size(443, 471);
-            this.dgvHastalar.TabIndex = 1;
+            this.dgvHastalar.TabIndex = 0;
             this.dgvHastalar.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvHastalar_CellMouseClick);
             // 
             // panel7
@@ -1017,7 +1017,7 @@
             this.lbl16.Location = new System.Drawing.Point(3, 224);
             this.lbl16.Name = "lbl16";
             this.lbl16.Size = new System.Drawing.Size(121, 36);
-            this.lbl16.TabIndex = 47;
+            this.lbl16.TabIndex = 23;
             this.lbl16.Text = "16:00";
             this.lbl16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl16.Click += new System.EventHandler(this.RandevuSaatSec);
@@ -1033,7 +1033,7 @@
             this.lbl1620.Location = new System.Drawing.Point(130, 224);
             this.lbl1620.Name = "lbl1620";
             this.lbl1620.Size = new System.Drawing.Size(121, 36);
-            this.lbl1620.TabIndex = 46;
+            this.lbl1620.TabIndex = 22;
             this.lbl1620.Text = "16:20";
             this.lbl1620.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl1620.Click += new System.EventHandler(this.RandevuSaatSec);
@@ -1049,7 +1049,7 @@
             this.lbl1640.Location = new System.Drawing.Point(257, 224);
             this.lbl1640.Name = "lbl1640";
             this.lbl1640.Size = new System.Drawing.Size(123, 36);
-            this.lbl1640.TabIndex = 26;
+            this.lbl1640.TabIndex = 21;
             this.lbl1640.Text = "16:40";
             this.lbl1640.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl1640.Click += new System.EventHandler(this.RandevuSaatSec);
@@ -1065,7 +1065,7 @@
             this.lbl9.Location = new System.Drawing.Point(3, 0);
             this.lbl9.Name = "lbl9";
             this.lbl9.Size = new System.Drawing.Size(121, 32);
-            this.lbl9.TabIndex = 24;
+            this.lbl9.TabIndex = 0;
             this.lbl9.Text = "09:00";
             this.lbl9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl9.Click += new System.EventHandler(this.RandevuSaatSec);
@@ -1081,7 +1081,7 @@
             this.lbl920.Location = new System.Drawing.Point(130, 0);
             this.lbl920.Name = "lbl920";
             this.lbl920.Size = new System.Drawing.Size(121, 32);
-            this.lbl920.TabIndex = 25;
+            this.lbl920.TabIndex = 1;
             this.lbl920.Text = "09:20";
             this.lbl920.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl920.Click += new System.EventHandler(this.RandevuSaatSec);
@@ -1097,7 +1097,7 @@
             this.lbl940.Location = new System.Drawing.Point(257, 0);
             this.lbl940.Name = "lbl940";
             this.lbl940.Size = new System.Drawing.Size(123, 32);
-            this.lbl940.TabIndex = 27;
+            this.lbl940.TabIndex = 2;
             this.lbl940.Text = "09:40";
             this.lbl940.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl940.Click += new System.EventHandler(this.RandevuSaatSec);
@@ -1113,7 +1113,7 @@
             this.lbl10.Location = new System.Drawing.Point(3, 32);
             this.lbl10.Name = "lbl10";
             this.lbl10.Size = new System.Drawing.Size(121, 32);
-            this.lbl10.TabIndex = 28;
+            this.lbl10.TabIndex = 5;
             this.lbl10.Text = "10:00";
             this.lbl10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl10.Click += new System.EventHandler(this.RandevuSaatSec);
@@ -1129,7 +1129,7 @@
             this.lbl1020.Location = new System.Drawing.Point(130, 32);
             this.lbl1020.Name = "lbl1020";
             this.lbl1020.Size = new System.Drawing.Size(121, 32);
-            this.lbl1020.TabIndex = 30;
+            this.lbl1020.TabIndex = 4;
             this.lbl1020.Text = "10:20";
             this.lbl1020.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl1020.Click += new System.EventHandler(this.RandevuSaatSec);
@@ -1145,7 +1145,7 @@
             this.lbl1040.Location = new System.Drawing.Point(257, 32);
             this.lbl1040.Name = "lbl1040";
             this.lbl1040.Size = new System.Drawing.Size(123, 32);
-            this.lbl1040.TabIndex = 29;
+            this.lbl1040.TabIndex = 3;
             this.lbl1040.Text = "10:40";
             this.lbl1040.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl1040.Click += new System.EventHandler(this.RandevuSaatSec);
@@ -1161,7 +1161,7 @@
             this.lbl11.Location = new System.Drawing.Point(3, 64);
             this.lbl11.Name = "lbl11";
             this.lbl11.Size = new System.Drawing.Size(121, 32);
-            this.lbl11.TabIndex = 31;
+            this.lbl11.TabIndex = 6;
             this.lbl11.Text = "11:00";
             this.lbl11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl11.Click += new System.EventHandler(this.RandevuSaatSec);
@@ -1177,7 +1177,7 @@
             this.lbl1120.Location = new System.Drawing.Point(130, 64);
             this.lbl1120.Name = "lbl1120";
             this.lbl1120.Size = new System.Drawing.Size(121, 32);
-            this.lbl1120.TabIndex = 32;
+            this.lbl1120.TabIndex = 7;
             this.lbl1120.Text = "11:20";
             this.lbl1120.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl1120.Click += new System.EventHandler(this.RandevuSaatSec);
@@ -1193,7 +1193,7 @@
             this.lbl1140.Location = new System.Drawing.Point(257, 64);
             this.lbl1140.Name = "lbl1140";
             this.lbl1140.Size = new System.Drawing.Size(123, 32);
-            this.lbl1140.TabIndex = 33;
+            this.lbl1140.TabIndex = 8;
             this.lbl1140.Text = "11:40";
             this.lbl1140.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl1140.Click += new System.EventHandler(this.RandevuSaatSec);
@@ -1209,7 +1209,7 @@
             this.lbl12.Location = new System.Drawing.Point(3, 96);
             this.lbl12.Name = "lbl12";
             this.lbl12.Size = new System.Drawing.Size(121, 32);
-            this.lbl12.TabIndex = 34;
+            this.lbl12.TabIndex = 11;
             this.lbl12.Text = "12:00";
             this.lbl12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl12.Click += new System.EventHandler(this.RandevuSaatSec);
@@ -1225,7 +1225,7 @@
             this.lbl1220.Location = new System.Drawing.Point(130, 96);
             this.lbl1220.Name = "lbl1220";
             this.lbl1220.Size = new System.Drawing.Size(121, 32);
-            this.lbl1220.TabIndex = 35;
+            this.lbl1220.TabIndex = 10;
             this.lbl1220.Text = "12:20";
             this.lbl1220.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl1220.Click += new System.EventHandler(this.RandevuSaatSec);
@@ -1241,7 +1241,7 @@
             this.lbl1240.Location = new System.Drawing.Point(257, 96);
             this.lbl1240.Name = "lbl1240";
             this.lbl1240.Size = new System.Drawing.Size(123, 32);
-            this.lbl1240.TabIndex = 36;
+            this.lbl1240.TabIndex = 9;
             this.lbl1240.Text = "12:40";
             this.lbl1240.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl1240.Click += new System.EventHandler(this.RandevuSaatSec);
@@ -1257,7 +1257,7 @@
             this.lbl13.Location = new System.Drawing.Point(3, 128);
             this.lbl13.Name = "lbl13";
             this.lbl13.Size = new System.Drawing.Size(121, 32);
-            this.lbl13.TabIndex = 37;
+            this.lbl13.TabIndex = 12;
             this.lbl13.Text = "13:00";
             this.lbl13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl13.Click += new System.EventHandler(this.RandevuSaatSec);
@@ -1273,7 +1273,7 @@
             this.lbl1320.Location = new System.Drawing.Point(130, 128);
             this.lbl1320.Name = "lbl1320";
             this.lbl1320.Size = new System.Drawing.Size(121, 32);
-            this.lbl1320.TabIndex = 38;
+            this.lbl1320.TabIndex = 13;
             this.lbl1320.Text = "13:20";
             this.lbl1320.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl1320.Click += new System.EventHandler(this.RandevuSaatSec);
@@ -1289,7 +1289,7 @@
             this.lbl14.Location = new System.Drawing.Point(3, 160);
             this.lbl14.Name = "lbl14";
             this.lbl14.Size = new System.Drawing.Size(121, 32);
-            this.lbl14.TabIndex = 39;
+            this.lbl14.TabIndex = 17;
             this.lbl14.Text = "14:00";
             this.lbl14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl14.Click += new System.EventHandler(this.RandevuSaatSec);
@@ -1305,7 +1305,7 @@
             this.lbl1340.Location = new System.Drawing.Point(257, 128);
             this.lbl1340.Name = "lbl1340";
             this.lbl1340.Size = new System.Drawing.Size(123, 32);
-            this.lbl1340.TabIndex = 40;
+            this.lbl1340.TabIndex = 14;
             this.lbl1340.Text = "13:40";
             this.lbl1340.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl1340.Click += new System.EventHandler(this.RandevuSaatSec);
@@ -1321,7 +1321,7 @@
             this.lbl1420.Location = new System.Drawing.Point(130, 160);
             this.lbl1420.Name = "lbl1420";
             this.lbl1420.Size = new System.Drawing.Size(121, 32);
-            this.lbl1420.TabIndex = 41;
+            this.lbl1420.TabIndex = 16;
             this.lbl1420.Text = "14:20";
             this.lbl1420.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl1420.Click += new System.EventHandler(this.RandevuSaatSec);
@@ -1337,7 +1337,7 @@
             this.lbl1440.Location = new System.Drawing.Point(257, 160);
             this.lbl1440.Name = "lbl1440";
             this.lbl1440.Size = new System.Drawing.Size(123, 32);
-            this.lbl1440.TabIndex = 42;
+            this.lbl1440.TabIndex = 15;
             this.lbl1440.Text = "14:40";
             this.lbl1440.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl1440.Click += new System.EventHandler(this.RandevuSaatSec);
@@ -1353,7 +1353,7 @@
             this.lbl15.Location = new System.Drawing.Point(3, 192);
             this.lbl15.Name = "lbl15";
             this.lbl15.Size = new System.Drawing.Size(121, 32);
-            this.lbl15.TabIndex = 43;
+            this.lbl15.TabIndex = 18;
             this.lbl15.Text = "15:00";
             this.lbl15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl15.Click += new System.EventHandler(this.RandevuSaatSec);
@@ -1369,7 +1369,7 @@
             this.lbl1520.Location = new System.Drawing.Point(130, 192);
             this.lbl1520.Name = "lbl1520";
             this.lbl1520.Size = new System.Drawing.Size(121, 32);
-            this.lbl1520.TabIndex = 44;
+            this.lbl1520.TabIndex = 19;
             this.lbl1520.Text = "15:20";
             this.lbl1520.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl1520.Click += new System.EventHandler(this.RandevuSaatSec);
@@ -1385,7 +1385,7 @@
             this.lbl1540.Location = new System.Drawing.Point(257, 192);
             this.lbl1540.Name = "lbl1540";
             this.lbl1540.Size = new System.Drawing.Size(123, 32);
-            this.lbl1540.TabIndex = 45;
+            this.lbl1540.TabIndex = 20;
             this.lbl1540.Text = "15:40";
             this.lbl1540.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl1540.Click += new System.EventHandler(this.RandevuSaatSec);

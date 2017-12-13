@@ -55,16 +55,6 @@ namespace Hastane.BLL.Services.Concretes
 
         public MessageResult Edit(Hizmetler model)
         {
-            var kontrol = _repo.GetList(x => x.HizmetID != model.HizmetID && x.HizmetAdi == model.HizmetAdi).Count;
-            if (Convert.ToBoolean(kontrol))
-            {
-                var msg = new MessageResult();
-                msg.ErrorMessage = new List<string> { "Bu Hizmet zaten var." };
-                return msg;
-            }
-
-            else
-            {
                 var _validator = new HizmetUpdateValidator();
                 ValidationResult result = _validator.Validate(model);
                 if (result.IsValid)
@@ -78,7 +68,6 @@ namespace Hastane.BLL.Services.Concretes
                 };
                 m.SuccessMessage = m.IsSucceed == true ? "Hizmet Güncelleme İşlemi Başarılı." : "Hatalı bilgiler mevcut";
                 return m;
-            }
         }
 
         public Hizmetler GetHizmetById(int id)

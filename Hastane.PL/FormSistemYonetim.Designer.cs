@@ -194,7 +194,7 @@
             this.btnKurumSil.Margin = new System.Windows.Forms.Padding(5);
             this.btnKurumSil.Name = "btnKurumSil";
             this.btnKurumSil.Size = new System.Drawing.Size(190, 41);
-            this.btnKurumSil.TabIndex = 59;
+            this.btnKurumSil.TabIndex = 5;
             this.btnKurumSil.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnKurumSil.Click += new System.EventHandler(this.btnKurumSil_Click);
             // 
@@ -220,7 +220,7 @@
             this.btnKurumEkle.Margin = new System.Windows.Forms.Padding(5);
             this.btnKurumEkle.Name = "btnKurumEkle";
             this.btnKurumEkle.Size = new System.Drawing.Size(157, 41);
-            this.btnKurumEkle.TabIndex = 58;
+            this.btnKurumEkle.TabIndex = 4;
             this.btnKurumEkle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnKurumEkle.Click += new System.EventHandler(this.btnKurumEkle_Click);
             // 
@@ -246,7 +246,7 @@
             this.btnKurumGuncelle.Margin = new System.Windows.Forms.Padding(5);
             this.btnKurumGuncelle.Name = "btnKurumGuncelle";
             this.btnKurumGuncelle.Size = new System.Drawing.Size(360, 41);
-            this.btnKurumGuncelle.TabIndex = 57;
+            this.btnKurumGuncelle.TabIndex = 6;
             this.btnKurumGuncelle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnKurumGuncelle.Click += new System.EventHandler(this.btnKurumGuncelle_Click);
             // 
@@ -264,7 +264,7 @@
             this.txtKurumIskonto.Margin = new System.Windows.Forms.Padding(4);
             this.txtKurumIskonto.Name = "txtKurumIskonto";
             this.txtKurumIskonto.Size = new System.Drawing.Size(237, 35);
-            this.txtKurumIskonto.TabIndex = 56;
+            this.txtKurumIskonto.TabIndex = 3;
             this.txtKurumIskonto.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // txtKurumAdi
@@ -281,7 +281,7 @@
             this.txtKurumAdi.Margin = new System.Windows.Forms.Padding(4);
             this.txtKurumAdi.Name = "txtKurumAdi";
             this.txtKurumAdi.Size = new System.Drawing.Size(237, 35);
-            this.txtKurumAdi.TabIndex = 53;
+            this.txtKurumAdi.TabIndex = 2;
             this.txtKurumAdi.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel4
@@ -351,7 +351,7 @@
             this.dgvKurumlar.RowHeadersWidth = 10;
             this.dgvKurumlar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvKurumlar.Size = new System.Drawing.Size(356, 117);
-            this.dgvKurumlar.TabIndex = 52;
+            this.dgvKurumlar.TabIndex = 1;
             this.dgvKurumlar.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvKurumlar_CellMouseClick);
             // 
             // txtKurumAdAra
@@ -368,7 +368,7 @@
             this.txtKurumAdAra.Margin = new System.Windows.Forms.Padding(4);
             this.txtKurumAdAra.Name = "txtKurumAdAra";
             this.txtKurumAdAra.Size = new System.Drawing.Size(220, 35);
-            this.txtKurumAdAra.TabIndex = 49;
+            this.txtKurumAdAra.TabIndex = 0;
             this.txtKurumAdAra.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtKurumAdAra.OnValueChanged += new System.EventHandler(this.txtKurumAdAra_OnValueChanged);
             // 
@@ -468,7 +468,7 @@
             this.panel8.Location = new System.Drawing.Point(0, 0);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(409, 414);
-            this.panel8.TabIndex = 1;
+            this.panel8.TabIndex = 0;
             // 
             // btnKlinikSil
             // 
@@ -492,7 +492,7 @@
             this.btnKlinikSil.Margin = new System.Windows.Forms.Padding(5);
             this.btnKlinikSil.Name = "btnKlinikSil";
             this.btnKlinikSil.Size = new System.Drawing.Size(189, 41);
-            this.btnKlinikSil.TabIndex = 48;
+            this.btnKlinikSil.TabIndex = 5;
             this.btnKlinikSil.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnKlinikSil.Click += new System.EventHandler(this.btnKlinikSil_Click);
             // 
@@ -518,7 +518,7 @@
             this.btnKlinikEkle.Margin = new System.Windows.Forms.Padding(5);
             this.btnKlinikEkle.Name = "btnKlinikEkle";
             this.btnKlinikEkle.Size = new System.Drawing.Size(157, 41);
-            this.btnKlinikEkle.TabIndex = 47;
+            this.btnKlinikEkle.TabIndex = 4;
             this.btnKlinikEkle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnKlinikEkle.Click += new System.EventHandler(this.btnKlinikEkle_Click);
             // 
@@ -544,7 +544,7 @@
             this.btnKlinikGuncelle.Margin = new System.Windows.Forms.Padding(5);
             this.btnKlinikGuncelle.Name = "btnKlinikGuncelle";
             this.btnKlinikGuncelle.Size = new System.Drawing.Size(356, 41);
-            this.btnKlinikGuncelle.TabIndex = 46;
+            this.btnKlinikGuncelle.TabIndex = 6;
             this.btnKlinikGuncelle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnKlinikGuncelle.Click += new System.EventHandler(this.btnKlinikGuncelle_Click);
             // 
@@ -562,7 +562,7 @@
             this.txtKlinikAciklama.Margin = new System.Windows.Forms.Padding(4);
             this.txtKlinikAciklama.Name = "txtKlinikAciklama";
             this.txtKlinikAciklama.Size = new System.Drawing.Size(241, 35);
-            this.txtKlinikAciklama.TabIndex = 22;
+            this.txtKlinikAciklama.TabIndex = 3;
             this.txtKlinikAciklama.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // txtKlinikAd
@@ -579,7 +579,7 @@
             this.txtKlinikAd.Margin = new System.Windows.Forms.Padding(4);
             this.txtKlinikAd.Name = "txtKlinikAd";
             this.txtKlinikAd.Size = new System.Drawing.Size(241, 35);
-            this.txtKlinikAd.TabIndex = 19;
+            this.txtKlinikAd.TabIndex = 2;
             this.txtKlinikAd.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel2
@@ -649,7 +649,7 @@
             this.dgvKlinikler.RowHeadersWidth = 10;
             this.dgvKlinikler.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvKlinikler.Size = new System.Drawing.Size(360, 117);
-            this.dgvKlinikler.TabIndex = 18;
+            this.dgvKlinikler.TabIndex = 1;
             this.dgvKlinikler.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvKlinikler_CellMouseClick);
             // 
             // txtKlinikAdAra
@@ -666,7 +666,7 @@
             this.txtKlinikAdAra.Margin = new System.Windows.Forms.Padding(4);
             this.txtKlinikAdAra.Name = "txtKlinikAdAra";
             this.txtKlinikAdAra.Size = new System.Drawing.Size(228, 35);
-            this.txtKlinikAdAra.TabIndex = 15;
+            this.txtKlinikAdAra.TabIndex = 0;
             this.txtKlinikAdAra.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtKlinikAdAra.OnValueChanged += new System.EventHandler(this.txtKlinikAdAra_OnValueChanged);
             // 
@@ -762,7 +762,7 @@
             this.cbKlinik.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(62)))));
             this.cbKlinik.selectedIndex = -1;
             this.cbKlinik.Size = new System.Drawing.Size(134, 35);
-            this.cbKlinik.TabIndex = 69;
+            this.cbKlinik.TabIndex = 3;
             // 
             // txtHizmetAciklama
             // 
@@ -778,7 +778,7 @@
             this.txtHizmetAciklama.Margin = new System.Windows.Forms.Padding(4);
             this.txtHizmetAciklama.Name = "txtHizmetAciklama";
             this.txtHizmetAciklama.Size = new System.Drawing.Size(255, 35);
-            this.txtHizmetAciklama.TabIndex = 68;
+            this.txtHizmetAciklama.TabIndex = 4;
             this.txtHizmetAciklama.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel12
@@ -816,7 +816,7 @@
             this.txtHizmetUcreti.Margin = new System.Windows.Forms.Padding(4);
             this.txtHizmetUcreti.Name = "txtHizmetUcreti";
             this.txtHizmetUcreti.Size = new System.Drawing.Size(63, 35);
-            this.txtHizmetUcreti.TabIndex = 63;
+            this.txtHizmetUcreti.TabIndex = 2;
             this.txtHizmetUcreti.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel11
@@ -851,7 +851,7 @@
             this.btnHizmetSil.Margin = new System.Windows.Forms.Padding(5);
             this.btnHizmetSil.Name = "btnHizmetSil";
             this.btnHizmetSil.Size = new System.Drawing.Size(190, 41);
-            this.btnHizmetSil.TabIndex = 62;
+            this.btnHizmetSil.TabIndex = 6;
             this.btnHizmetSil.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnHizmetSil.Click += new System.EventHandler(this.btnHizmetSil_Click);
             // 
@@ -877,7 +877,7 @@
             this.btnHizmetEkle.Margin = new System.Windows.Forms.Padding(5);
             this.btnHizmetEkle.Name = "btnHizmetEkle";
             this.btnHizmetEkle.Size = new System.Drawing.Size(154, 41);
-            this.btnHizmetEkle.TabIndex = 61;
+            this.btnHizmetEkle.TabIndex = 5;
             this.btnHizmetEkle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnHizmetEkle.Click += new System.EventHandler(this.btnHizmetEkle_Click);
             // 
@@ -903,7 +903,7 @@
             this.btnHizmetGuncelle.Margin = new System.Windows.Forms.Padding(5);
             this.btnHizmetGuncelle.Name = "btnHizmetGuncelle";
             this.btnHizmetGuncelle.Size = new System.Drawing.Size(346, 41);
-            this.btnHizmetGuncelle.TabIndex = 60;
+            this.btnHizmetGuncelle.TabIndex = 7;
             this.btnHizmetGuncelle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnHizmetGuncelle.Click += new System.EventHandler(this.btnHizmetGuncelle_Click);
             // 
@@ -921,7 +921,7 @@
             this.txtHizmetAdi.Margin = new System.Windows.Forms.Padding(4);
             this.txtHizmetAdi.Name = "txtHizmetAdi";
             this.txtHizmetAdi.Size = new System.Drawing.Size(255, 35);
-            this.txtHizmetAdi.TabIndex = 55;
+            this.txtHizmetAdi.TabIndex = 1;
             this.txtHizmetAdi.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel10
@@ -980,7 +980,7 @@
             this.dgvHizmetler.RowHeadersWidth = 10;
             this.dgvHizmetler.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvHizmetler.Size = new System.Drawing.Size(432, 171);
-            this.dgvHizmetler.TabIndex = 22;
+            this.dgvHizmetler.TabIndex = 8;
             this.dgvHizmetler.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvHizmetler_CellMouseClick);
             // 
             // txtHizmetAdiAra
@@ -997,7 +997,7 @@
             this.txtHizmetAdiAra.Margin = new System.Windows.Forms.Padding(4);
             this.txtHizmetAdiAra.Name = "txtHizmetAdiAra";
             this.txtHizmetAdiAra.Size = new System.Drawing.Size(317, 35);
-            this.txtHizmetAdiAra.TabIndex = 19;
+            this.txtHizmetAdiAra.TabIndex = 0;
             this.txtHizmetAdiAra.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtHizmetAdiAra.OnValueChanged += new System.EventHandler(this.txtHizmetAdiAra_OnValueChanged);
             // 
@@ -1120,7 +1120,7 @@
             this.btnUnvanSil.Margin = new System.Windows.Forms.Padding(5);
             this.btnUnvanSil.Name = "btnUnvanSil";
             this.btnUnvanSil.Size = new System.Drawing.Size(157, 41);
-            this.btnUnvanSil.TabIndex = 59;
+            this.btnUnvanSil.TabIndex = 4;
             this.btnUnvanSil.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnUnvanSil.Click += new System.EventHandler(this.btnUnvanSil_Click);
             // 
@@ -1146,7 +1146,7 @@
             this.btnUnvanEkle.Margin = new System.Windows.Forms.Padding(5);
             this.btnUnvanEkle.Name = "btnUnvanEkle";
             this.btnUnvanEkle.Size = new System.Drawing.Size(157, 41);
-            this.btnUnvanEkle.TabIndex = 58;
+            this.btnUnvanEkle.TabIndex = 3;
             this.btnUnvanEkle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnUnvanEkle.Click += new System.EventHandler(this.btnUnvanEkle_Click);
             // 
@@ -1172,7 +1172,7 @@
             this.btnUnvanGuncelle.Margin = new System.Windows.Forms.Padding(5);
             this.btnUnvanGuncelle.Name = "btnUnvanGuncelle";
             this.btnUnvanGuncelle.Size = new System.Drawing.Size(324, 41);
-            this.btnUnvanGuncelle.TabIndex = 57;
+            this.btnUnvanGuncelle.TabIndex = 5;
             this.btnUnvanGuncelle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnUnvanGuncelle.Click += new System.EventHandler(this.btnUnvanGuncelle_Click);
             // 
@@ -1190,7 +1190,7 @@
             this.txtUnvanAdi.Margin = new System.Windows.Forms.Padding(4);
             this.txtUnvanAdi.Name = "txtUnvanAdi";
             this.txtUnvanAdi.Size = new System.Drawing.Size(175, 35);
-            this.txtUnvanAdi.TabIndex = 53;
+            this.txtUnvanAdi.TabIndex = 2;
             this.txtUnvanAdi.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel8
@@ -1249,7 +1249,7 @@
             this.dgvUnvanlar.RowHeadersWidth = 10;
             this.dgvUnvanlar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvUnvanlar.Size = new System.Drawing.Size(307, 274);
-            this.dgvUnvanlar.TabIndex = 52;
+            this.dgvUnvanlar.TabIndex = 1;
             this.dgvUnvanlar.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvUnvanlar_CellMouseClick);
             // 
             // txtUnvanAdAra
@@ -1266,7 +1266,7 @@
             this.txtUnvanAdAra.Margin = new System.Windows.Forms.Padding(4);
             this.txtUnvanAdAra.Name = "txtUnvanAdAra";
             this.txtUnvanAdAra.Size = new System.Drawing.Size(175, 35);
-            this.txtUnvanAdAra.TabIndex = 49;
+            this.txtUnvanAdAra.TabIndex = 0;
             this.txtUnvanAdAra.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtUnvanAdAra.OnValueChanged += new System.EventHandler(this.txtUnvanAdAra_OnValueChanged);
             // 
