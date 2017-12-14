@@ -1,33 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Hastane.BLL.Services.Abstracts;
+﻿using Hastane.BLL.Services.Abstracts;
 using Hastane.DAL.DataModel;
-using Hastane.DAL.Repositories.Abstracts;
 using Ninject;
+using System;
+using System.Windows.Forms;
 
 namespace Hastane.PL
 {
     public partial class FormHastaKabul : Form
     {
-        private readonly IHastaKabulRepository _hastaKabulRepo;
         private readonly IHastaKabulService _hastaKabulService;
         private readonly IRandevuService _randevuService;
-        private readonly IRandevuRepository _randevuRepo;
         private Randevular SecilenHasta;
         public FormHastaKabul()
         {
             var container = DependecyResolver.NinjectDependecyContainer.RegisterDependency(new StandardKernel());
-            _hastaKabulRepo = container.Get<IHastaKabulRepository>();
             _hastaKabulService = container.Get<IHastaKabulService>();
             _randevuService = container.Get<IRandevuService>();
-            _randevuRepo = container.Get<IRandevuRepository>();
             InitializeComponent();
         }
 
@@ -74,16 +62,17 @@ namespace Hastane.PL
             var kabul = _randevuService.GetRandevuById(SecilenHasta.RandevuID);
 
             kabul.Geldimi = true;
-            var result = _randevuService.Edit(kabul);
 
+            DateTime tarih = TarihAyarla();
             var model2 = new HastaKabul
             {
                 HastaID = SecilenHasta.HastaID,
                 PersonelID = SecilenHasta.PersonelID,
-                GelisTarihi = SecilenHasta.Tarih,
-                KlinikID = (int) SecilenHasta.Personeller.KlinikID,
+                GelisTarihi = tarih,
+                KlinikID = (int)SecilenHasta.Personeller.KlinikID,
                 TahlilYapildiMi = true
             };
+            var result = _randevuService.Edit(kabul);
             result = _hastaKabulService.Create(model2);
             if (result.IsSucceed)
             {
@@ -97,6 +86,14 @@ namespace Hastane.PL
             Temizle();
             RandevuListele();
         }
+
+        private DateTime TarihAyarla()
+        {
+            var dizi = SecilenHasta.Saat.Split(':');
+            var t2 = new DateTime(SecilenHasta.Tarih.Year, SecilenHasta.Tarih.Month, SecilenHasta.Tarih.Day, Convert.ToInt32(dizi[0]), Convert.ToInt32(dizi[1]), 0);
+            return t2;
+        }
+
         private void Temizle()
         {
             txtHastaAdSoyad.Text = "";

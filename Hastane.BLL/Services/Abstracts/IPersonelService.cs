@@ -26,7 +26,7 @@ namespace Hastane.BLL.Services.Abstracts
     {
         public int PersonelID { get; set; }
         public int UnvanID { get; set; }
-        public int KlinikID { get; set; }
+        public int? KlinikID { get; set; }
         public string PersonelKod { get; set; }
         public string TCKNo { get; set; }
         public DateTime DogumTarihi { get; set; }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGiris));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -39,6 +40,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnGiris = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.bunifuElipse1 = new ns1.BunifuElipse(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -69,7 +71,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Hastane.PL.Properties.Resources.hospital_2;
-            this.pictureBox3.Location = new System.Drawing.Point(43, 258);
+            this.pictureBox3.Location = new System.Drawing.Point(39, 258);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(49, 43);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -79,7 +81,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Hastane.PL.Properties.Resources.hospital_1;
-            this.pictureBox2.Location = new System.Drawing.Point(43, 209);
+            this.pictureBox2.Location = new System.Drawing.Point(39, 209);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(49, 43);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -125,6 +127,7 @@
             // btnCikis
             // 
             this.btnCikis.BackColor = System.Drawing.Color.Firebrick;
+            this.btnCikis.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCikis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCikis.Location = new System.Drawing.Point(43, 344);
             this.btnCikis.Margin = new System.Windows.Forms.Padding(0);
@@ -180,6 +183,11 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Kullanıcı Girişi";
             // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 60;
+            this.bunifuElipse1.TargetControl = this;
+            // 
             // FormGiris
             // 
             this.AcceptButton = this.btnGiris;
@@ -217,6 +225,7 @@
         private ns1.BunifuMetroTextbox txtSifre;
         private ns1.BunifuMetroTextbox txtKullaniciAdi;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private ns1.BunifuElipse bunifuElipse1;
     }
 }
 

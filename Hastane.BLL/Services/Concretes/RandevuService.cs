@@ -53,7 +53,7 @@ namespace Hastane.BLL.Services.Concretes
         }
         public List<RandevuListeleFromHastaKabul> RandevuListele()
         {
-            var model = _randevuRepository.GetList(x => x.Geldimi == false).OrderBy(x => x.Saat).Select(x => new RandevuListeleFromHastaKabul
+            var model = _randevuRepository.GetList(x => x.Geldimi == false).OrderBy(x => (x.Tarih + x.Saat)).Select(x => new RandevuListeleFromHastaKabul
             {
                 RandevuId = x.RandevuID,
                 HastaId = x.HastaID,

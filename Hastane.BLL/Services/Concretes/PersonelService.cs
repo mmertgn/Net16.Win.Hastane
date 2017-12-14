@@ -151,7 +151,7 @@ namespace Hastane.BLL.Services.Concretes
             {
                 PersonelID = x.PersonelID,
                 UnvanID = x.UnvanID,
-                KlinikID = (int)x.KlinikID,
+                KlinikID = x.KlinikID,
                 PersonelKod = x.PersonelKodu,
                 TCKNo = x.TCKimlikNo,
                 DogumTarihi = x.DogumTarihi,

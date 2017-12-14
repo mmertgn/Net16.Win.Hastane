@@ -467,7 +467,7 @@
                                 <TextRun>
                                   <Value>=Fields!TahlilIcerikSonuc.Value</Value>
                                   <Style>
-                                    <FontWeight>Normal</FontWeight>
+                                    <FontWeight>Bold</FontWeight>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
